@@ -1,0 +1,940 @@
+TLHCocosFirstGame Mac
+v6
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Info.plist /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/Info.plist
+cCpResource /Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseNormal.png /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/CloseNormal.png
+cCpResource /Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseSelected.png /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/CloseSelected.png
+cCpResource /Users/huji/Documents/git/LHCocosFirstGame/Resources/HelloWorld.png /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/HelloWorld.png
+cCpResource mac/Icon.icns /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/Icon.icns
+cProcessPCH++ /var/folders/vt/z8sf8vj120l5ftjbwb1ny_n00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-eznsvcslaqshbwdynovfmjhifakh/Prefix.pch.pch mac/Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/AppDelegate.o /Users/huji/Documents/git/LHCocosFirstGame/Classes/AppDelegate.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/HelloWorldScene.o /Users/huji/Documents/git/LHCocosFirstGame/Classes/HelloWorldScene.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/main.o /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/MacOS/LHCocosFirstGame\ Mac normal x86_64
+cTouch /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+c00000000530295C100000000000000AA
+t1392678337
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c00000000537EDFF5000000000000044C
+t1400823797
+s1100
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000537EDFF500000000000001DE
+t1400823797
+s478
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c00000000537EDFF50000000000095820
+t1400823797
+s612384
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/AppKit
+c00000000537EDFF50000000000268434
+t1400823797
+s2524212
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c00000000537EDFF5000000000002848C
+t1400823797
+s165004
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000537EDFF5000000000008B334
+t1400823797
+s570164
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000537EDFF500000000000C9E38
+t1400823797
+s826936
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/IOKit
+c00000000537EDFF5000000000004426C
+t1400823797
+s279148
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
+c00000000537EDFF6000000000000A564
+t1400823798
+s42340
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL
+c00000000537EDFF6000000000000BB7C
+t1400823798
+s47996
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c00000000537EDFF60000000000055BC0
+t1400823798
+s351168
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libcurl.dylib
+c00000000537EDFF8000000000000A4C8
+t1400823800
+s42184
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib
+c00000000537EDFF800000000000044B8
+t1400823800
+s17592
+
+N/Users/huji/Documents/git/LHCocosFirstGame/Classes/AppDelegate.cpp
+c00000000538548A80000000000000556
+t1401243816
+s1366
+
+N/Users/huji/Documents/git/LHCocosFirstGame/Classes/HelloWorldScene.cpp
+c00000000538548A80000000000000AAD
+t1401243816
+s2733
+
+N/Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseNormal.png
+c00000000538548A800000000000018A7
+t1401243816
+s6311
+
+N/Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseSelected.png
+c00000000538548A8000000000000157B
+t1401243816
+s5499
+
+N/Users/huji/Documents/git/LHCocosFirstGame/Resources/HelloWorld.png
+c00000000538548A80000000000021E19
+t1401243816
+s138777
+
+N/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame Mac.build/Objects-normal/x86_64/AppDelegate.o
+t1402333639
+s1499608
+
+N/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame Mac.build/Objects-normal/x86_64/HelloWorldScene.o
+t1402333640
+s1931368
+
+N/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame Mac.build/Objects-normal/x86_64/LHCocosFirstGame Mac.LinkFileList
+c000000005395E9C600000000000001CB
+t1402333638
+s459
+
+N/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame Mac.build/Objects-normal/x86_64/main.o
+t1402333639
+s41240
+
+N/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/Icon.icns
+c00000000538548A800000000000AEE1E
+t1401243816
+s716318
+
+N/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/Info.plist
+c00000000538548A80000000000000498
+t1401243816
+s1176
+
+N/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/Prefix.pch
+c00000000538548A80000000000000092
+t1401243816
+s146
+
+N/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/main.cpp
+c00000000538548A80000000000000593
+t1401243816
+s1427
+
+N/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app
+t1402333638
+s102
+
+N/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Info.plist
+t1402333638
+s1576
+
+N/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/MacOS/LHCocosFirstGame Mac
+t1402333640
+s8427792
+
+N/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/PkgInfo
+t1402333638
+s8
+
+N/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Resources/CloseNormal.png
+t1402333638
+s6311
+
+N/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Resources/CloseSelected.png
+t1402333638
+s5499
+
+N/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Resources/HelloWorld.png
+t1402333638
+s138777
+
+N/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Resources/Icon.icns
+t1402333638
+s716318
+
+N/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libCocosDenshion Mac.a
+c000000005395E9C6000000000006BFE8
+t1402333638
+s442344
+
+N/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libbox2d Mac.a
+c000000005395E97A00000000001E6FD0
+t1402333562
+s1994704
+
+N/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libchipmunk Mac.a
+c000000005395E97A00000000000C55B8
+t1402333562
+s808376
+
+N/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libcocos2dx Mac.a
+c000000005395E9BD00000000103FE840
+t1402333629
+s272623680
+
+N/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libcocos2dx-extensions Mac.a
+c000000005395E9C400000000019390F8
+t1402333636
+s26448120
+
+N/var/folders/vt/z8sf8vj120l5ftjbwb1ny_n00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-eznsvcslaqshbwdynovfmjhifakh/Prefix.pch.pch
+t1402333638
+s124992
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesd8b73f462146b941^193840462146b941^---0#1#1#--18"Check dependencies36"EAD6223C-084F-49CD-B928-9E5A1F59E932-
+
+CCompileC build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/AppDelegate.o /Users/huji/Documents/git/LHCocosFirstGame/Classes/AppDelegate.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s424026438.271221
+e424026439.932250
+r1
+xCompileC
+xbuild/LHCocosFirstGame.build/Debug/LHCocosFirstGame Mac.build/Objects-normal/x86_64/AppDelegate.o
+x/Users/huji/Documents/git/LHCocosFirstGame/Classes/AppDelegate.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/huji/Documents/git/LHCocosFirstGame/Classes/AppDelegate.cpp
+d/Users/huji/Documents/git/LHCocosFirstGame/Classes/AppDelegate.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/cocos2d.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccConfig.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCRef.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/mac/CCPlatformDefine.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCRefPtr.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccMacros.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCConsole.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/mac/CCStdC.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCVector.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCMap.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCNS.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCGeometry.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCMath.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec2.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCMathBase.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec2.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec3.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec3.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Mat4.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec4.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec4.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Mat4.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Quaternion.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Quaternion.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCData.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCValue.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccTypes.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/mac/CCGL.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCConfiguration.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCDirector.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListener.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEvent.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCCommon.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCTouch.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventTouch.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCProtocols.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCScheduler.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/uthash.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/base64.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ZipUtils.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCProfiling.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccUTF8.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCUserDefault.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventType.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventMouse.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventCustom.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventFocus.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/MathUtil.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/MathUtil.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCVertex.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCAction.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCAnimation.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionManager.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionEase.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionTween.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLabel.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCFont.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLayer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCScene.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTransition.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCMenu.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCSprite.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCImage.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCString.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCArray.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccCArray.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCGrabber.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCGrid.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/ccShaders.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCDevice.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCThread.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/mac/CCApplication.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/desktop/CCGLView.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/external/glfw3/include/mac/glfw3.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCComponent.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/3d/CCMesh.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/audio/include/Export.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCSet.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCBool.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCDeprecated.h
+d/Users/huji/Documents/git/LHCocosFirstGame/Classes/HelloWorldScene.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/huji/Documents/git/LHCocosFirstGame/Classes/AppDelegate.cpp252"[1mCompileC[0m build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/AppDelegate.o [1m/Users/huji/Documents/git/LHCocosFirstGame/Classes/AppDelegate.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compilercb8245462146b941^87a8ee472146b941^---0#0#1#-19%DVTDocumentLocation2@73"file:///Users/huji/Documents/git/LHCocosFirstGame/Classes/AppDelegate.cpp0000000000000000^4041"[1mCompileC[0m build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/AppDelegate.o [1m/Users/huji/Documents/git/LHCocosFirstGame/Classes/AppDelegate.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=142 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_MAC -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -Wno-sign-conversion -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/LHCocosFirstGame\ Mac.hmap -I/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/include -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/base -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/physics -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/math -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/2d -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/ui -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/network -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/extensions -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/external -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/platform/mac -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/external/glfw3/include/mac -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/DerivedSources/x86_64 -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/DerivedSources -F/Users/huji/Documents/git/LHCocosFirstGame/publish/mac -include /var/folders/vt/z8sf8vj120l5ftjbwb1ny_n00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-eznsvcslaqshbwdynovfmjhifakh/Prefix.pch -MMD -MT dependencies -MF /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/AppDelegate.d --serialize-diagnostics /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/AppDelegate.dia -c /Users/huji/Documents/git/LHCocosFirstGame/Classes/AppDelegate.cpp -o /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/AppDelegate.o36"634CD97C-56D2-46BC-A2D6-6576895751AE-
+b8B0613CD-4823-4C7C-AA40-A333384AD016
+
+CCompileC build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/HelloWorldScene.o /Users/huji/Documents/git/LHCocosFirstGame/Classes/HelloWorldScene.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s424026438.271414
+e424026440.132810
+r1
+xCompileC
+xbuild/LHCocosFirstGame.build/Debug/LHCocosFirstGame Mac.build/Objects-normal/x86_64/HelloWorldScene.o
+x/Users/huji/Documents/git/LHCocosFirstGame/Classes/HelloWorldScene.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/huji/Documents/git/LHCocosFirstGame/Classes/HelloWorldScene.cpp
+d/Users/huji/Documents/git/LHCocosFirstGame/Classes/HelloWorldScene.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/cocos2d.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccConfig.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCRef.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/mac/CCPlatformDefine.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCRefPtr.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccMacros.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCConsole.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/mac/CCStdC.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCVector.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCMap.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCNS.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCGeometry.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCMath.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec2.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCMathBase.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec2.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec3.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec3.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Mat4.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec4.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec4.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Mat4.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Quaternion.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Quaternion.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCData.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCValue.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccTypes.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/mac/CCGL.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCConfiguration.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCDirector.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListener.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEvent.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCCommon.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCTouch.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventTouch.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCProtocols.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCScheduler.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/uthash.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/base64.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ZipUtils.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCProfiling.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccUTF8.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCUserDefault.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventType.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventMouse.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventCustom.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventFocus.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/MathUtil.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/MathUtil.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCVertex.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCAction.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCAnimation.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionManager.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionEase.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionTween.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLabel.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCFont.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLayer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCScene.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTransition.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCMenu.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCSprite.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCImage.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCString.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCArray.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccCArray.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCGrabber.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCGrid.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/ccShaders.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCDevice.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCThread.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/mac/CCApplication.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/desktop/CCGLView.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/external/glfw3/include/mac/glfw3.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCComponent.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/3d/CCMesh.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/audio/include/Export.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCSet.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCBool.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCDeprecated.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/huji/Documents/git/LHCocosFirstGame/Classes/HelloWorldScene.cpp260"[1mCompileC[0m build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/HelloWorldScene.o [1m/Users/huji/Documents/git/LHCocosFirstGame/Classes/HelloWorldScene.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compilerf39045462146b941^e7ff21482146b941^---0#0#1#-19%DVTDocumentLocation2@77"file:///Users/huji/Documents/git/LHCocosFirstGame/Classes/HelloWorldScene.cpp0000000000000000^4065"[1mCompileC[0m build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/HelloWorldScene.o [1m/Users/huji/Documents/git/LHCocosFirstGame/Classes/HelloWorldScene.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=142 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_MAC -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -Wno-sign-conversion -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/LHCocosFirstGame\ Mac.hmap -I/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/include -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/base -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/physics -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/math -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/2d -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/ui -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/network -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/extensions -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/external -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/platform/mac -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/external/glfw3/include/mac -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/DerivedSources/x86_64 -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/DerivedSources -F/Users/huji/Documents/git/LHCocosFirstGame/publish/mac -include /var/folders/vt/z8sf8vj120l5ftjbwb1ny_n00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-eznsvcslaqshbwdynovfmjhifakh/Prefix.pch -MMD -MT dependencies -MF /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/HelloWorldScene.d --serialize-diagnostics /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/HelloWorldScene.dia -c /Users/huji/Documents/git/LHCocosFirstGame/Classes/HelloWorldScene.cpp -o /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/HelloWorldScene.o36"65D88D78-D1A0-4D48-B6C1-C366CC079475-
+b8B0613CD-4823-4C7C-AA40-A333384AD016
+
+CCompileC build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/main.o /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s424026438.271741
+e424026439.642175
+r1
+xCompileC
+xbuild/LHCocosFirstGame.build/Debug/LHCocosFirstGame Mac.build/Objects-normal/x86_64/main.o
+x/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/main.cpp
+d/Users/huji/Documents/git/LHCocosFirstGame/Classes/AppDelegate.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/cocos2d.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccConfig.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCRef.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/mac/CCPlatformDefine.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCRefPtr.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccMacros.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCConsole.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/mac/CCStdC.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCVector.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCMap.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCNS.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCGeometry.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCMath.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec2.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCMathBase.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec2.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec3.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec3.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Mat4.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec4.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Vec4.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Mat4.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Quaternion.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/Quaternion.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCData.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCValue.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccTypes.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/mac/CCGL.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCConfiguration.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCDirector.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListener.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEvent.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCCommon.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCTouch.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventTouch.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCProtocols.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCScheduler.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/uthash.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/base64.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ZipUtils.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCProfiling.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccUTF8.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCUserDefault.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventType.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventMouse.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventCustom.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventFocus.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/MathUtil.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/MathUtil.inl
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/math/CCVertex.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCAction.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCAnimation.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionManager.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionEase.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionTween.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLabel.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCFont.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCLayer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCScene.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTransition.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCMenu.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCSprite.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCImage.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCString.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCArray.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/ccCArray.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCGrabber.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCGrid.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/ccShaders.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCDevice.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCThread.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/mac/CCApplication.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/desktop/CCGLView.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/external/glfw3/include/mac/glfw3.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCComponent.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/3d/CCMesh.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/audio/include/Export.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCSet.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCBool.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/huji/Documents/git/LHCocosFirstGame/cocos2d/cocos/deprecated/CCDeprecated.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/main.cpp191"[1mCompileC[0m build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/main.o [1mmac/main.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler36b045462146b941^5568a4472146b941^---0#0#1#-19%DVTDocumentLocation2@75"file:///Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/main.cpp0000000000000000^3961"[1mCompileC[0m build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/main.o [1mmac/main.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=142 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_MAC -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -Wno-sign-conversion -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/LHCocosFirstGame\ Mac.hmap -I/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/include -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/base -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/physics -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/math -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/2d -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/ui -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/network -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/extensions -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/external -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/platform/mac -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/external/glfw3/include/mac -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/DerivedSources/x86_64 -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/DerivedSources -F/Users/huji/Documents/git/LHCocosFirstGame/publish/mac -include /var/folders/vt/z8sf8vj120l5ftjbwb1ny_n00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-eznsvcslaqshbwdynovfmjhifakh/Prefix.pch -MMD -MT dependencies -MF /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/main.dia -c /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/main.cpp -o /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/main.o36"430C2D72-E7F0-4FAC-A7F0-7E7E1F444560-
+b8B0613CD-4823-4C7C-AA40-A333384AD016
+
+CCpResource /Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseNormal.png /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/CloseNormal.png
+s424026438.255545
+e424026438.256902
+r1
+xCpResource
+x/Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseNormal.png
+x/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Resources/CloseNormal.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Copy /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Resources/CloseNormal.png211"[1mCpResource[0m /Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseNormal.png [1m/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/CloseNormal.png[0mcf8541462146b941^e2ca41462146b941^---0#0#1#-19%DVTDocumentLocation2@123"file:///Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame%20Mac.app/Contents/Resources/CloseNormal.png00342081ddffdf42^556"[1mCpResource[0m /Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseNormal.png [1m/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/CloseNormal.png[0m    cd /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseNormal.png /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources36"DBC3DCB2-2732-440A-A01D-EBDB90DC6906-
+b8B0613CD-4823-4C7C-AA40-A333384AD016
+
+CCpResource /Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseSelected.png /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/CloseSelected.png
+s424026438.255564
+e424026438.256869
+r1
+xCpResource
+x/Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseSelected.png
+x/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Resources/CloseSelected.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Copy /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Resources/CloseSelected.png215"[1mCpResource[0m /Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseSelected.png [1m/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/CloseSelected.png[0m0e8741462146b941^cec341462146b941^---0#0#1#-19%DVTDocumentLocation2@125"file:///Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame%20Mac.app/Contents/Resources/CloseSelected.png00342081ddffdf42^562"[1mCpResource[0m /Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseSelected.png [1m/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/CloseSelected.png[0m    cd /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/huji/Documents/git/LHCocosFirstGame/Resources/CloseSelected.png /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources36"EB74154E-A666-47F5-BB20-8EB1F245698C-
+b8B0613CD-4823-4C7C-AA40-A333384AD016
+
+CCpResource /Users/huji/Documents/git/LHCocosFirstGame/Resources/HelloWorld.png /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/HelloWorld.png
+s424026438.255576
+e424026438.256888
+r1
+xCpResource
+x/Users/huji/Documents/git/LHCocosFirstGame/Resources/HelloWorld.png
+x/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Resources/HelloWorld.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Copy /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Resources/HelloWorld.png209"[1mCpResource[0m /Users/huji/Documents/git/LHCocosFirstGame/Resources/HelloWorld.png [1m/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/HelloWorld.png[0mb58741462146b941^8ac741462146b941^---0#0#1#-19%DVTDocumentLocation2@122"file:///Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame%20Mac.app/Contents/Resources/HelloWorld.png00342081ddffdf42^553"[1mCpResource[0m /Users/huji/Documents/git/LHCocosFirstGame/Resources/HelloWorld.png [1m/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/HelloWorld.png[0m    cd /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/huji/Documents/git/LHCocosFirstGame/Resources/HelloWorld.png /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources36"38D5D6F4-2B6D-4FEC-8A2F-5DDE5F7CDE72-
+b8B0613CD-4823-4C7C-AA40-A333384AD016
+
+CCpResource mac/Icon.icns /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/Icon.icns
+s424026438.255556
+e424026438.257279
+r1
+xCpResource
+xmac/Icon.icns
+x/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Resources/Icon.icns
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Copy /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Resources/Icon.icns150"[1mCpResource[0m mac/Icon.icns [1m/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/Icon.icns[0m728741462146b941^7fdd41462146b941^---0#0#1#-19%DVTDocumentLocation2@117"file:///Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame%20Mac.app/Contents/Resources/Icon.icns00342081ddffdf42^496"[1mCpResource[0m mac/Icon.icns [1m/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources/Icon.icns[0m    cd /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/Icon.icns /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Resources36"BF50703B-6402-4A8E-B97D-DFF058768128-
+b8B0613CD-4823-4C7C-AA40-A333384AD016
+
+CLd /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/MacOS/LHCocosFirstGame\ Mac normal x86_64
+s424026440.136261
+e424026440.824235
+r1
+xLd
+x/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/MacOS/LHCocosFirstGame Mac
+xnormal
+xx86_64
+d/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame Mac.build/Objects-normal/x86_64/LHCocosFirstGame Mac.LinkFileList
+d/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame Mac.build/Objects-normal/x86_64/AppDelegate.o
+d/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame Mac.build/Objects-normal/x86_64/HelloWorldScene.o
+d/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame Mac.build/Objects-normal/x86_64/main.o
+d/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libbox2d Mac.a
+d/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libchipmunk Mac.a
+d/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libcocos2dx Mac.a
+d/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libcocos2dx-extensions Mac.a
+d/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libCocosDenshion Mac.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libcurl.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/IOKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/AppKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libc++.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework/Versions/A/Frameworks/CoreImage.framework/Versions/A/CoreImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework/Versions/A/Frameworks/ScalableUserInterface.framework/Versions/A/ScalableUserInterface
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libobjc.A.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_stats.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AVFoundation.framework/Versions/A/Resources/libAVFAudio.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/CoreServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/LangAnalysis
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Link /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/MacOS/LHCocosFirstGame Mac142"[1mLd[0m /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/MacOS/LHCocosFirstGame\ Mac normal x86_640ff222482146b941^2101d3482146b941^---0#0#1#--1729"[1mLd[0m /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/MacOS/LHCocosFirstGame\ Mac normal x86_64    cd /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/huji/Documents/git/LHCocosFirstGame/publish/mac -F/Users/huji/Documents/git/LHCocosFirstGame/publish/mac -filelist /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/LHCocosFirstGame\ Mac.LinkFileList -mmacosx-version-min=10.9 -stdlib=libc++ /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libbox2d\ Mac.a /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libchipmunk\ Mac.a /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libcocos2dx\ Mac.a /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libcocos2dx-extensions\ Mac.a /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/libCocosDenshion\ Mac.a -lcurl -lz -framework IOKit -framework OpenGL -framework AppKit -framework Foundation -framework CoreGraphics -framework QuartzCore -framework OpenAL -framework AVFoundation -framework AudioToolbox -Xlinker -dependency_info -Xlinker /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/Objects-normal/x86_64/LHCocosFirstGame\ Mac_dependency_info.dat -o /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/MacOS/LHCocosFirstGame\ Mac36"04E52BCF-4369-4E50-A365-F4715A56E984-
+b8B0613CD-4823-4C7C-AA40-A333384AD016
+
+CProcessInfoPlistFile /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Info.plist /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/Info.plist
+s424026438.251580
+e424026438.254597
+r1
+xProcessInfoPlistFile
+x/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app/Contents/Info.plist
+x/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Process /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/Info.plist152"[1mProcessInfoPlistFile[0m /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Info.plist [1mmac/Info.plist[0m4a7e40462146b941^992d41462146b941^---0#0#1#-19%DVTDocumentLocation2@77"file:///Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/Info.plist0000000000000000^568"[1mProcessInfoPlistFile[0m /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Info.plist [1mmac/Info.plist[0m    cd /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac    builtin-infoPlistUtility /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/Info.plist -genpkginfo /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app/Contents/Info.plist36"BB3DCE08-44C2-4B1D-98C6-8AE3D1DF3785-
+b8B0613CD-4823-4C7C-AA40-A333384AD016
+
+CProcessPCH++ /var/folders/vt/z8sf8vj120l5ftjbwb1ny_n00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-eznsvcslaqshbwdynovfmjhifakh/Prefix.pch.pch mac/Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s424026438.257801
+e424026438.270625
+r1
+xProcessPCH++
+x/var/folders/vt/z8sf8vj120l5ftjbwb1ny_n00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-eznsvcslaqshbwdynovfmjhifakh/Prefix.pch.pch
+xmac/Prefix.pch
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection25"Precompile mac/Prefix.pch266"[1mProcessPCH++[0m /var/folders/vt/z8sf8vj120l5ftjbwb1ny_n00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-eznsvcslaqshbwdynovfmjhifakh/Prefix.pch.pch mac/Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler941242462146b941^e94945462146b941^---0#0#1#-19%DVTDocumentLocation2@77"file:///Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/Prefix.pch0000000000000000^3930"[1mProcessPCH++[0m /var/folders/vt/z8sf8vj120l5ftjbwb1ny_n00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-eznsvcslaqshbwdynovfmjhifakh/Prefix.pch.pch mac/Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch x86_64 -fmessage-length=142 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_MAC -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -Wno-sign-conversion -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/LHCocosFirstGame\ Mac.hmap -I/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/include -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/base -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/physics -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/math -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/2d -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/ui -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/network -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/extensions -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/external -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/cocos/platform/mac -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/../cocos2d/external/glfw3/include/mac -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/DerivedSources/x86_64 -I/Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/build/LHCocosFirstGame.build/Debug/LHCocosFirstGame\ Mac.build/DerivedSources -F/Users/huji/Documents/git/LHCocosFirstGame/publish/mac --serialize-diagnostics /var/folders/vt/z8sf8vj120l5ftjbwb1ny_n00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-eznsvcslaqshbwdynovfmjhifakh/Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/vt/z8sf8vj120l5ftjbwb1ny_n00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-eznsvcslaqshbwdynovfmjhifakh/Prefix.pch.d -c /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac/mac/Prefix.pch -o /var/folders/vt/z8sf8vj120l5ftjbwb1ny_n00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-eznsvcslaqshbwdynovfmjhifakh/Prefix.pch.pch36"0F397D38-0834-412B-87BC-46F26EC8FC1A-
+b8B0613CD-4823-4C7C-AA40-A333384AD016
+
+CTouch /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app
+s424026440.825249
+e424026440.832285
+r1
+xTouch
+x/Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Touch /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame Mac.app94"[1mTouch[0m /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app1e4fd3482146b941^4911d5482146b941^---0#0#1#--261"[1mTouch[0m /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app    cd /Users/huji/Documents/git/LHCocosFirstGame/proj.ios_mac    /usr/bin/touch -c /Users/huji/Documents/git/LHCocosFirstGame/publish/mac/LHCocosFirstGame\ Mac.app36"3E5E734F-24E2-41C3-8DDF-967D3FE6CE04-
+b8B0613CD-4823-4C7C-AA40-A333384AD016
+
