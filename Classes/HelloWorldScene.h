@@ -13,7 +13,8 @@ public:
     virtual bool init();  
     
     // a selector callback
-    void play(cocos2d::Ref* pSender);
+    void hard(cocos2d::Ref* pSender);
+    void easy(cocos2d::Ref* pSender);
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);

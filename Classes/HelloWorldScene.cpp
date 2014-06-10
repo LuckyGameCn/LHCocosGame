@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "PlayScene.h"
 
 USING_NS_CC;
 
@@ -9,7 +10,7 @@ Scene* HelloWorld::createScene()
     
     // 'layer' is an autorelease object
     auto layer = HelloWorld::create();
-
+    
     // add layer as a child to scene
     scene->addChild(layer);
 
@@ -33,20 +34,18 @@ bool HelloWorld::init()
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
-
-    // add a "close" icon to exit the progress. it's an autorelease object
-    auto closeItem = MenuItemImage::create(
-                                           "play.png",
-                                           "play.png",
-                                           CC_CALLBACK_1(HelloWorld::play, this));
+    auto easyLabel = LabelTTF::create("Easy", "Arial", 34);
+    auto easyItem = MenuItemLabel::create(easyLabel, CC_CALLBACK_1(HelloWorld::easy, this));
+    easyItem->setPosition(visibleSize.width/2-easyItem->getContentSize().width/2, visibleSize.height/10*6);
     
-	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 - visibleSize.width/2,
-                                origin.y + closeItem->getContentSize().height/2 + visibleSize.height/2));
+    auto hardLabel = LabelTTF::create("Hard", "Arial", 34);
+    auto hardItem = MenuItemLabel::create(hardLabel, CC_CALLBACK_1(HelloWorld::hard, this));
+    hardItem->setPosition(visibleSize.width/2-hardItem->getContentSize().width/2, visibleSize.height/10*4);
 
     // create menu, it's an autorelease object
-    auto menu = Menu::create(closeItem, NULL);
+    auto menu = Menu::create(easyItem,hardItem, NULL);
     menu->setPosition(Vec2::ZERO);
-    this->addChild(menu, 1);
+    this->addChild(menu);
 
     /////////////////////////////
     // 3. add your codes below...
@@ -54,20 +53,28 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
     
-    auto label = LabelTTF::create("Hello World", "Arial", 24);
+    auto label = LabelTTF::create("Touchy", "Arial", 54);
     
     // position the label on the center of the screen
-    label->setPosition(Vec2(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
+    label->setPosition(Vec2(visibleSize.width/2-label->getContentSize().width/2,
+                            origin.y + visibleSize.height/5*4 - label->getContentSize().height));
 
     // add the label as a child to this layer
-    this->addChild(label, 1);
+    this->addChild(label);
     
     return true;
 }
 
-
-void HelloWorld::play(Ref* pSender)
-{
-
+static void toPlay(int level){
+    auto tran =  TransitionMoveInR::create(0.3, PlayScene::createScene(level));
+    Director::getInstance()->replaceScene(tran);
 }
+
+void HelloWorld::hard(Ref* pSender){
+    toPlay(1);
+}
+
+void HelloWorld::easy(Ref* pSender){
+    toPlay(0);
+}
+
