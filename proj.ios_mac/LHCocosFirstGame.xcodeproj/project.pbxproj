@@ -60,6 +60,8 @@
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
 		A50697F3194750AD0008E3C3 /* PlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50697F1194750AD0008E3C3 /* PlayScene.cpp */; };
 		A594BDD119470429001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
+		A594BE3C194B026B001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
+		A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A594BE3F194D450C001DEF30 /* GameOverScene.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -259,6 +261,8 @@
 		A50697F1194750AD0008E3C3 /* PlayScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayScene.cpp; path = ../Classes/PlayScene.cpp; sourceTree = "<group>"; };
 		A50697F2194750AD0008E3C3 /* PlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayScene.h; path = ../Classes/PlayScene.h; sourceTree = "<group>"; };
 		A594BDD019470429001DEF30 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		A594BE3F194D450C001DEF30 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverScene.cpp; path = ../Classes/GameOverScene.cpp; sourceTree = "<group>"; };
+		A594BE40194D450C001DEF30 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = ../Classes/GameOverScene.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -335,6 +339,8 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A594BE3F194D450C001DEF30 /* GameOverScene.cpp */,
+				A594BE40194D450C001DEF30 /* GameOverScene.h */,
 				A50697F1194750AD0008E3C3 /* PlayScene.cpp */,
 				A50697F2194750AD0008E3C3 /* PlayScene.h */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
@@ -652,6 +658,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A594BE3C194B026B001DEF30 /* play.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				5087E75517EB910900C73F5D /* HelloWorld.png in Resources */,
 			);
@@ -664,6 +671,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
