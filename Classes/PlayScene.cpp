@@ -21,6 +21,7 @@ Scene* PlayScene::createScene(int level)
 
 PlayScene::~PlayScene(){
     array->release();
+    Director::getInstance()->getEventDispatcher()->removeEventListenersForTarget(this);
 }
 
 // on "init" you need to initialize your instance
@@ -65,14 +66,19 @@ void PlayScene::genBlockLine(){
     float hmargin = visibleSize.width/20;
     float width = linewidth - hmargin*2;
     float heigt = visibleSize.height/10;
-    float y = visibleSize.height;
     
     //    Vector<Sprite*> blockline(lineCount);
     CCArray *blockline = CCArray::create();
     for (int i = 0 ; i<lineCount; i++) {
+        int tag = (int)(CCRANDOM_0_1() * lineCount);
         float x = i*linewidth + hmargin + linewidth/2;
-        Sprite *block = Sprite::create("play.png", Rect(0, 0, width, heigt));
+        char fnc[10];
+        sprintf(fnc, "block%d.png",tag);
+        std::string fn(fnc);
+        Sprite *block = Sprite::create(fn, Rect(0, 0, width, heigt));
+        float y = visibleSize.height+heigt;
         block->setPosition(x, y);
+        block->setTag(tag);
         this->addChild(block);
         //        blockline.pushBack(block);
         blockline->addObject(block);
@@ -80,7 +86,7 @@ void PlayScene::genBlockLine(){
     array->addObject(blockline);
 }
 
-static float bottomHeight = 60;
+//static float bottomHeight = 60;
 
 void PlayScene::update(float dt){
     for (int i = 0; i<array->count(); i++) {
@@ -95,7 +101,7 @@ void PlayScene::update(float dt){
     
     CCArray *first = (CCArray*) array->objectAtIndex(0);
     Sprite *fs = (Sprite*) first->objectAtIndex(0);
-    if (fs->getPosition().y<=bottomHeight+fs->getContentSize().height) {
+    if (fs->getPosition().y<=fs->getContentSize().height) {
         this->gameOver();
     }
     
@@ -123,15 +129,15 @@ void PlayScene::initWithLevel(int level){
     period = 0;
     blockdt = 1;
     
-    auto starMenu = Menu::create(NULL);
-    starMenu->setPosition(Point::ZERO);
-    for (int i =0 ; i<lineCount; i++) {
-        auto starMenuItem = MenuItemImage::create("play.png","play.png", CC_CALLBACK_1(PlayScene::blockClick, this));
-        starMenuItem->setTag(i);
-        starMenuItem->setPosition(Point(i*linewidth+linewidth/2, starMenuItem->getContentSize().height/2));
-        starMenu->addChild(starMenuItem);
-    }
-    this->addChild(starMenu, 1);
+//    auto starMenu = Menu::create(NULL);
+//    starMenu->setPosition(Point::ZERO);
+//    for (int i =0 ; i<lineCount; i++) {
+//        auto starMenuItem = MenuItemImage::create("play.png","play.png", CC_CALLBACK_1(PlayScene::blockClick, this));
+//        starMenuItem->setTag(i);
+//        starMenuItem->setPosition(Point(i*linewidth+linewidth/2, starMenuItem->getContentSize().height/2));
+//        starMenu->addChild(starMenuItem);
+//    }
+//    this->addChild(starMenu, 1);
     
     // 创建一个事件监听器类型为 OneByOne 的单点触摸
     auto listener1 = EventListenerTouchOneByOne::create();
@@ -147,16 +153,29 @@ void PlayScene::initWithLevel(int level){
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener1, this);
 }
 
-void PlayScene::blockClick(Ref* pSender){
-    MenuItemImage *item = (MenuItemImage*)pSender;
-    int index = item->getTag();
+void PlayScene::blockClick(int tag[],int len){
+//    MenuItemImage *item = (MenuItemImage*)pSender;
+//    int index = item->getTag();
     CCArray *first = (CCArray*) array->objectAtIndex(0);
-    Sprite *fs = (Sprite*) first->objectAtIndex(index);
-    if (fs->getParent() == nullptr) {
-        this->gameOver();
-    }else{
-        fs->removeFromParent();
+    for (int ii = 0; ii<len; ii++) {
+        int t = tag[ii];
+        Sprite *fs = (Sprite*) first->objectAtIndex(t);
+        if (fs->getParent() == nullptr) {
+            this->gameOver();
+            return;
+        }else{
+            fs->removeFromParent();
+        }
+        for (int j = ii+1; j<len; j++) {
+            int tt = tag[j];
+            Sprite *ofs = (Sprite*) first->objectAtIndex(tt);
+            if (fs->getTag() != ofs->getTag()) {
+                this->gameOver();
+                return;
+            }
+        }
     }
+    
     bool empty = true;
     for (int i = 0 ; i<first->count(); i++) {
         Sprite *s = (Sprite*) first->objectAtIndex(i);
@@ -177,4 +196,17 @@ void PlayScene::start_play(){
     this->genBlockLine();
     
     this->scheduleUpdate();
+    
+    auto ls = EventListenerTouchAllAtOnce::create();
+    ls->onTouchesEnded = [this](const std::vector<Touch*>& touches,Event *event){
+        int touchTag[touches.size()];
+        memset(touchTag, -1, touches.size());
+        for (int i = 0; i<touches.size(); i++) {
+            Touch *touch = touches.at(i);
+            int tag = (int)(touch->getLocation().x / linewidth);
+            touchTag[i]=tag;
+        }
+        this->blockClick(touchTag,touches.size());
+    };
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(ls, this);
 }

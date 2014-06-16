@@ -16,7 +16,7 @@ public:
     virtual void draw(cocos2d::Renderer *renderer, const cocos2d::Mat4& transform, bool transformUpdated);
     void update(float dt);
     
-    void blockClick(Ref* pSender);
+    void blockClick(int tag[],int len);
     void gameOver();
     void genBlockLine();
     
