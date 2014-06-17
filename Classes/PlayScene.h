@@ -2,6 +2,8 @@
 
 NS_CC_BEGIN
 
+#define TRCOUNT 10
+
 class PlayScene : public cocos2d::Layer
 {
 public:
@@ -16,6 +18,7 @@ public:
     virtual void draw(cocos2d::Renderer *renderer, const cocos2d::Mat4& transform, bool transformUpdated);
     void update(float dt);
     
+    void collect(cocos2d::Ref* pSender);
     void blockClick(int tag[],int len);
     void gameOver();
     void genBlockLine();
@@ -33,6 +36,9 @@ private:
     float period;
     float blockdt;
     bool firsttouch;
+    float score;
+    LabelTTF *scoreLabel;
+    int touchrecord[TRCOUNT];
 };
 
 // __HELLOWORLD_SCENE_H__

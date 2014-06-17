@@ -38,11 +38,11 @@ bool GameOverScene::init()
     //    you may modify it.
     auto easyLabel = LabelTTF::create("Again", "Arial", 34);
     auto easyItem = MenuItemLabel::create(easyLabel, CC_CALLBACK_1(GameOverScene::again, this));
-    easyItem->setPosition(visibleSize.width/2-easyItem->getContentSize().width/2, visibleSize.height/10*6);
+    easyItem->setPosition(visibleSize.width/2, visibleSize.height/10*6);
     
     auto hardLabel = LabelTTF::create("Back", "Arial", 34);
     auto hardItem = MenuItemLabel::create(hardLabel, CC_CALLBACK_1(GameOverScene::back, this));
-    hardItem->setPosition(visibleSize.width/2-hardItem->getContentSize().width/2, visibleSize.height/10*4);
+    hardItem->setPosition(visibleSize.width/2, visibleSize.height/10*4);
 
     // create menu, it's an autorelease object
     auto menu = Menu::create(easyItem,hardItem, NULL);
@@ -58,7 +58,7 @@ bool GameOverScene::init()
     auto label = LabelTTF::create("Game Over", "Arial", 54);
     
     // position the label on the center of the screen
-    label->setPosition(Vec2(visibleSize.width/2-label->getContentSize().width/2,
+    label->setPosition(Vec2(visibleSize.width/2,
                             origin.y + visibleSize.height/5*4 - label->getContentSize().height));
 
     // add the label as a child to this layer

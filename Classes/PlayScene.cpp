@@ -34,19 +34,75 @@ bool PlayScene::init()
         return false;
     }
     
+    this->firsttouch = true;
+    memset(touchrecord, -1, TRCOUNT*sizeof(int));
+    
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     auto label = LabelTTF::create("Score", "Arial", 24);
-    
     // position the label on the center of the screen
-    label->setPosition(Vec2(visibleSize.width/2-label->getContentSize().width/2,
-                            origin.y + visibleSize.height/5*4 - label->getContentSize().height));
+    label->setPosition(Vec2(visibleSize.width/2,
+                            origin.y + visibleSize.height - label->getContentSize().height));
 
     // add the label as a child to this layer
-    this->addChild(label);
+    this->addChild(label,1);
+    scoreLabel = label;
+    
+//    Sprite *collect = Sprite::create("play.png", Rect(0, 0, visibleSize.width/5, visibleSize.height/10));
+//    collect->setPosition(visibleSize.width/2, collect->getContentSize().height/2);
+//    this->addChild(collect, 1);
+//    auto ls = EventListenerTouchOneByOne::create();
+//    // 设置是否吞没事件，在 onTouchBegan 方法返回 true 时吞没
+//    ls->setSwallowTouches(true);
+//    
+//    ls->onTouchBegan =  [this](Touch* touch, Event* event){
+//        return true;
+//    };
+//    ls->onTouchEnded =  [this](Touch* touch, Event* event){
+//        log("collect");
+//        if (this->firsttouch) {
+//            return;
+//        }
+//        int touches[TRCOUNT];
+//        int ii = 0;
+//        for (int i = 0 ; i<TRCOUNT; i++) {
+//            if (touchrecord[i] == 1) {
+//                touches[ii] = i;
+//                ii ++;
+//            }
+//        }
+//        this->blockClick(touches,lineCount);
+//        memset(touchrecord, -1, TRCOUNT);
+//    };
+//    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(ls, collect);
+    
+    auto hardItem = MenuItemImage::create("play.png", "play.png", CC_CALLBACK_1(PlayScene::collect, this));
+    hardItem->setPosition(visibleSize.width/2, hardItem->getContentSize().height/2);
+    
+    // create menu, it's an autorelease object
+    auto menu = Menu::create(hardItem, NULL);
+    menu->setPosition(Vec2::ZERO);
+    this->addChild(menu);
     
     return true;
+}
+
+void PlayScene::collect(cocos2d::Ref *pSender){
+    log("collect");
+//    if (this->firsttouch) {
+//        return;
+//    }
+    int touches[TRCOUNT];
+    int ii = 0;
+    for (int i = 0 ; i<TRCOUNT; i++) {
+        if (touchrecord[i] == 1) {
+            touches[ii] = i;
+            ii ++;
+        }
+    }
+    this->blockClick(touches,ii+1);
+     memset(touchrecord, -1, TRCOUNT*sizeof(int));
 }
 
 void PlayScene::draw(cocos2d::Renderer *renderer, const cocos2d::Mat4 &transform, bool transformUpdated){
@@ -71,7 +127,7 @@ void PlayScene::genBlockLine(){
     CCArray *blockline = CCArray::create();
     for (int i = 0 ; i<lineCount; i++) {
         int tag = (int)(CCRANDOM_0_1() * lineCount);
-        float x = i*linewidth + hmargin + linewidth/2;
+        float x = i*linewidth + linewidth/2;
         char fnc[10];
         sprintf(fnc, "block%d.png",tag);
         std::string fn(fnc);
@@ -79,7 +135,8 @@ void PlayScene::genBlockLine(){
         float y = visibleSize.height+heigt;
         block->setPosition(x, y);
         block->setTag(tag);
-        this->addChild(block);
+        this->addChild(block, 0);
+//        this->addChild(block);
         //        blockline.pushBack(block);
         blockline->addObject(block);
     }
@@ -128,6 +185,7 @@ void PlayScene::initWithLevel(int level){
     speed = visibleSize.height/10;
     period = 0;
     blockdt = 1;
+    score = 0;
     
     // 创建一个事件监听器类型为 OneByOne 的单点触摸
     auto listener1 = EventListenerTouchOneByOne::create();
@@ -155,6 +213,7 @@ void PlayScene::blockClick(int tag[],int len){
             this->gameOver();
             return;
         }else{
+            score++;
             fs->removeFromParent();
             rmtag = fs->getTag();
         }
@@ -183,11 +242,14 @@ void PlayScene::blockClick(int tag[],int len){
     if (empty) {
         array->removeObjectAtIndex(0);
     }
+    
+    char scc[10];
+    sprintf(scc, "%d",(int)score);
+    std::string sc(scc);
+    scoreLabel->setString(sc);
 }
 
 void PlayScene::start_play(){
-    
-    this->firsttouch = true;
     
     array = CCArray::create();
     array->retain();
@@ -196,20 +258,24 @@ void PlayScene::start_play(){
     
     this->scheduleUpdate();
     
-    auto ls = EventListenerTouchAllAtOnce::create();
-    ls->onTouchesEnded = [this](const std::vector<Touch*>& touches,Event *event){
+    auto ls = EventListenerTouchOneByOne::create();
+    ls->onTouchBegan = [this](Touch *touch,Event *event){
+        return true;
+    };
+    ls->onTouchEnded = [this](Touch *touch,Event *event){
         if(this->firsttouch){
             this->firsttouch = false;
             return;
         }
-        int touchTag[touches.size()];
-        memset(touchTag, -1, touches.size());
-        for (int i = 0; i<touches.size(); i++) {
-            Touch *touch = touches.at(i);
-            int tag = (int)(touch->getLocation().x / linewidth);
-            touchTag[i]=tag;
-        }
-        this->blockClick(touchTag,touches.size());
+//        int touchTag[touches.size()];
+//        memset(touchTag, -1, touches.size());
+//        for (int i = 0; i<touches.size(); i++) {
+//            Touch *touch = touches.at(i);
+        int tag = (int)(touch->getLocation().x / linewidth);
+        touchrecord[tag] *= -1;
+//            touchTag[i]=tag;
+//        }
+//        this->blockClick(touchTag,touches.size());
     };
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(ls, this);
 }

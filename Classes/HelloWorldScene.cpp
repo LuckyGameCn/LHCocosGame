@@ -36,15 +36,15 @@ bool HelloWorld::init()
     //    you may modify it.
     auto easyLabel = LabelTTF::create("Easy", "Arial", 34);
     auto easyItem = MenuItemLabel::create(easyLabel, CC_CALLBACK_1(HelloWorld::easy, this));
-    easyItem->setPosition(visibleSize.width/2-easyItem->getContentSize().width/2, visibleSize.height/10*6);
+    easyItem->setPosition(visibleSize.width/2, visibleSize.height/10*6);
     
     auto hardLabel = LabelTTF::create("Hard", "Arial", 34);
     auto hardItem = MenuItemLabel::create(hardLabel, CC_CALLBACK_1(HelloWorld::hard, this));
-    hardItem->setPosition(visibleSize.width/2-hardItem->getContentSize().width/2, visibleSize.height/10*5);
+    hardItem->setPosition(visibleSize.width/2, visibleSize.height/10*5);
     
     auto hellLabel = LabelTTF::create("Hell", "Arial", 34);
     auto hellItem = MenuItemLabel::create(hellLabel, CC_CALLBACK_1(HelloWorld::hell, this));
-    hellItem->setPosition(visibleSize.width/2-hellItem->getContentSize().width/2, visibleSize.height/10*4);
+    hellItem->setPosition(visibleSize.width/2, visibleSize.height/10*4);
 
     // create menu, it's an autorelease object
     auto menu = Menu::create(easyItem,hardItem,hellItem, NULL);
@@ -58,11 +58,11 @@ bool HelloWorld::init()
     // create and initialize a label
     
     auto label = LabelTTF::create("Touchy", "Arial", 54);
-    
+    label->setHorizontalAlignment(TextHAlignment::CENTER);
     // position the label on the center of the screen
-    label->setPosition(Vec2(visibleSize.width/2-label->getContentSize().width/2,
+    label->setPosition(Vec2(visibleSize.width/2,
                             origin.y + visibleSize.height/5*4 - label->getContentSize().height));
-
+    
     // add the label as a child to this layer
     this->addChild(label);
     
