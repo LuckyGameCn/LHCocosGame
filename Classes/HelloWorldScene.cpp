@@ -40,10 +40,14 @@ bool HelloWorld::init()
     
     auto hardLabel = LabelTTF::create("Hard", "Arial", 34);
     auto hardItem = MenuItemLabel::create(hardLabel, CC_CALLBACK_1(HelloWorld::hard, this));
-    hardItem->setPosition(visibleSize.width/2-hardItem->getContentSize().width/2, visibleSize.height/10*4);
+    hardItem->setPosition(visibleSize.width/2-hardItem->getContentSize().width/2, visibleSize.height/10*5);
+    
+    auto hellLabel = LabelTTF::create("Hell", "Arial", 34);
+    auto hellItem = MenuItemLabel::create(hellLabel, CC_CALLBACK_1(HelloWorld::hell, this));
+    hellItem->setPosition(visibleSize.width/2-hellItem->getContentSize().width/2, visibleSize.height/10*4);
 
     // create menu, it's an autorelease object
-    auto menu = Menu::create(easyItem,hardItem, NULL);
+    auto menu = Menu::create(easyItem,hardItem,hellItem, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu);
 
@@ -70,11 +74,15 @@ static void toPlay(int level){
     Director::getInstance()->replaceScene(tran);
 }
 
+void HelloWorld::hell(Ref *pSender){
+    toPlay(4);
+}
+
 void HelloWorld::hard(Ref* pSender){
-    toPlay(1);
+    toPlay(3);
 }
 
 void HelloWorld::easy(Ref* pSender){
-    toPlay(0);
+    toPlay(2);
 }
 

@@ -32,6 +32,7 @@ private:
     CCArray *array;
     float period;
     float blockdt;
+    bool firsttouch;
 };
 
 // __HELLOWORLD_SCENE_H__

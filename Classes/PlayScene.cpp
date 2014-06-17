@@ -122,22 +122,12 @@ void PlayScene::gameOver(){
 
 void PlayScene::initWithLevel(int level){
     plevel = level;
-    lineCount = level==0?3:4;
+    lineCount = level;
     Size visibleSize = Director::getInstance()->getVisibleSize();
     linewidth = visibleSize.width/lineCount;
     speed = visibleSize.height/10;
     period = 0;
     blockdt = 1;
-    
-//    auto starMenu = Menu::create(NULL);
-//    starMenu->setPosition(Point::ZERO);
-//    for (int i =0 ; i<lineCount; i++) {
-//        auto starMenuItem = MenuItemImage::create("play.png","play.png", CC_CALLBACK_1(PlayScene::blockClick, this));
-//        starMenuItem->setTag(i);
-//        starMenuItem->setPosition(Point(i*linewidth+linewidth/2, starMenuItem->getContentSize().height/2));
-//        starMenu->addChild(starMenuItem);
-//    }
-//    this->addChild(starMenu, 1);
     
     // 创建一个事件监听器类型为 OneByOne 的单点触摸
     auto listener1 = EventListenerTouchOneByOne::create();
@@ -156,6 +146,7 @@ void PlayScene::initWithLevel(int level){
 void PlayScene::blockClick(int tag[],int len){
 //    MenuItemImage *item = (MenuItemImage*)pSender;
 //    int index = item->getTag();
+    int rmtag = 0;
     CCArray *first = (CCArray*) array->objectAtIndex(0);
     for (int ii = 0; ii<len; ii++) {
         int t = tag[ii];
@@ -165,6 +156,7 @@ void PlayScene::blockClick(int tag[],int len){
             return;
         }else{
             fs->removeFromParent();
+            rmtag = fs->getTag();
         }
         for (int j = ii+1; j<len; j++) {
             int tt = tag[j];
@@ -181,6 +173,11 @@ void PlayScene::blockClick(int tag[],int len){
         Sprite *s = (Sprite*) first->objectAtIndex(i);
         if (s->getParent()!=nullptr) {
             empty = false;
+            
+            if (s->getTag()==rmtag) {
+                this->gameOver();
+                return;
+            }
         }
     }
     if (empty) {
@@ -189,6 +186,8 @@ void PlayScene::blockClick(int tag[],int len){
 }
 
 void PlayScene::start_play(){
+    
+    this->firsttouch = true;
     
     array = CCArray::create();
     array->retain();
@@ -199,6 +198,10 @@ void PlayScene::start_play(){
     
     auto ls = EventListenerTouchAllAtOnce::create();
     ls->onTouchesEnded = [this](const std::vector<Touch*>& touches,Event *event){
+        if(this->firsttouch){
+            this->firsttouch = false;
+            return;
+        }
         int touchTag[touches.size()];
         memset(touchTag, -1, touches.size());
         for (int i = 0; i<touches.size(); i++) {
