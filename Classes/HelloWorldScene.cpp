@@ -34,15 +34,15 @@ bool HelloWorld::init()
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
-    auto easyLabel = LabelTTF::create("Easy", "Arial", 34);
+    auto easyLabel = LabelTTF::create("Easy", "Arial", 44);
     auto easyItem = MenuItemLabel::create(easyLabel, CC_CALLBACK_1(HelloWorld::easy, this));
     easyItem->setPosition(visibleSize.width/2, visibleSize.height/10*6);
     
-    auto hardLabel = LabelTTF::create("Hard", "Arial", 34);
+    auto hardLabel = LabelTTF::create("Hard", "Arial", 44);
     auto hardItem = MenuItemLabel::create(hardLabel, CC_CALLBACK_1(HelloWorld::hard, this));
     hardItem->setPosition(visibleSize.width/2, visibleSize.height/10*5);
     
-    auto hellLabel = LabelTTF::create("Hell", "Arial", 34);
+    auto hellLabel = LabelTTF::create("Hell", "Arial", 44);
     auto hellItem = MenuItemLabel::create(hellLabel, CC_CALLBACK_1(HelloWorld::hell, this));
     hellItem->setPosition(visibleSize.width/2, visibleSize.height/10*4);
 
@@ -57,7 +57,7 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
     
-    auto label = LabelTTF::create("Touchy", "Arial", 54);
+    auto label = LabelTTF::create("Touchy", "Arial", 64);
     label->setHorizontalAlignment(TextHAlignment::CENTER);
     // position the label on the center of the screen
     label->setPosition(Vec2(visibleSize.width/2,

@@ -89,10 +89,6 @@ bool PlayScene::init()
 }
 
 void PlayScene::collect(cocos2d::Ref *pSender){
-    log("collect");
-//    if (this->firsttouch) {
-//        return;
-//    }
     int touches[TRCOUNT];
     int ii = 0;
     for (int i = 0 ; i<TRCOUNT; i++) {
@@ -101,8 +97,13 @@ void PlayScene::collect(cocos2d::Ref *pSender){
             ii ++;
         }
     }
-    this->blockClick(touches,ii+1);
-     memset(touchrecord, -1, TRCOUNT*sizeof(int));
+    if (ii==0) {
+        memset(touchrecord, -1, TRCOUNT*sizeof(int));
+        return;
+    }else{
+        this->blockClick(touches,ii);
+        memset(touchrecord, -1, TRCOUNT*sizeof(int));
+    }
 }
 
 void PlayScene::draw(cocos2d::Renderer *renderer, const cocos2d::Mat4 &transform, bool transformUpdated){
@@ -249,6 +250,23 @@ void PlayScene::blockClick(int tag[],int len){
     scoreLabel->setString(sc);
 }
 
+void PlayScene::clickline(int line,int state){
+     CCArray *first = (CCArray*) array->objectAtIndex(0);
+    Sprite *sp = (Sprite*)first->objectAtIndex(line);
+    
+    if (state == 1) {
+        ScaleTo *stos = ScaleTo::create(0.02, 0.9);
+        ScaleTo *stob = ScaleTo::create(0.1, 1.5);
+        Sequence *sq = Sequence::create(stos,stob, NULL);
+        sp->runAction(sq);
+    }else{
+        ScaleTo *stos = ScaleTo::create(0.1, 1.0);
+        ScaleTo *stob = ScaleTo::create(0.02, 1.6);
+        Sequence *sq = Sequence::create(stob,stos, NULL);
+        sp->runAction(sq);
+    }
+}
+
 void PlayScene::start_play(){
     
     array = CCArray::create();
@@ -263,16 +281,17 @@ void PlayScene::start_play(){
         return true;
     };
     ls->onTouchEnded = [this](Touch *touch,Event *event){
-        if(this->firsttouch){
-            this->firsttouch = false;
-            return;
-        }
+//        if(this->firsttouch){
+//            this->firsttouch = false;
+//            return;
+//        }
 //        int touchTag[touches.size()];
 //        memset(touchTag, -1, touches.size());
 //        for (int i = 0; i<touches.size(); i++) {
 //            Touch *touch = touches.at(i);
         int tag = (int)(touch->getLocation().x / linewidth);
         touchrecord[tag] *= -1;
+        this->clickline(tag,touchrecord[tag]);
 //            touchTag[i]=tag;
 //        }
 //        this->blockClick(touchTag,touches.size());
