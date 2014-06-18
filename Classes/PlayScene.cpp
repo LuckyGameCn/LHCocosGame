@@ -41,6 +41,7 @@ bool PlayScene::init()
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     auto label = LabelTTF::create("Score", "Arial", 24);
+    label->setColor(Color3B::BLACK);
     // position the label on the center of the screen
     label->setPosition(Vec2(visibleSize.width/2,
                             origin.y + visibleSize.height - label->getContentSize().height));
@@ -109,7 +110,7 @@ void PlayScene::collect(cocos2d::Ref *pSender){
 void PlayScene::draw(cocos2d::Renderer *renderer, const cocos2d::Mat4 &transform, bool transformUpdated){
     // 基线渲染
     glLineWidth(5.0f);//线条宽度
-    DrawPrimitives::setDrawColor4B(255,0,0,255);//颜色
+    DrawPrimitives::setDrawColor4B(0,0,0,255);//颜色
     Size visibleSize = Director::getInstance()->getVisibleSize();
     for (int i=0 ; i<lineCount-1; i++) {
         float x = (i+1)*linewidth;

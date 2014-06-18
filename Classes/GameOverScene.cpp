@@ -37,10 +37,12 @@ bool GameOverScene::init()
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
     auto easyLabel = LabelTTF::create("Again", "Arial", 44);
+    easyLabel->setColor(Color3B::BLACK);
     auto easyItem = MenuItemLabel::create(easyLabel, CC_CALLBACK_1(GameOverScene::again, this));
     easyItem->setPosition(visibleSize.width/2, visibleSize.height/10*6);
     
     auto hardLabel = LabelTTF::create("Back", "Arial", 44);
+    hardLabel->setColor(Color3B::BLACK);
     auto hardItem = MenuItemLabel::create(hardLabel, CC_CALLBACK_1(GameOverScene::back, this));
     hardItem->setPosition(visibleSize.width/2, visibleSize.height/10*4);
 
@@ -56,7 +58,7 @@ bool GameOverScene::init()
     // create and initialize a label
     
     auto label = LabelTTF::create("Game Over", "Arial", 64);
-    
+    label->setColor(Color3B::BLACK);
     // position the label on the center of the screen
     label->setPosition(Vec2(visibleSize.width/2,
                             origin.y + visibleSize.height/5*4 - label->getContentSize().height));

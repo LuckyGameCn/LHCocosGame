@@ -26,7 +26,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
     
-    glClearColor(0.52, 0.76, 0.31, 1.0);
+    glClearColor(1.0, 1.0, 1.0, 1.0);
 
     // create a scene. it's an autorelease object
     auto scene = HelloWorld::createScene();
