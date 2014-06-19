@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>angle</key>
-	<real>54</real>
+	<real>359</real>
 	<key>angleVariance</key>
-	<real>109</real>
+	<real>60</real>
 	<key>blendFuncDestination</key>
 	<integer>771</integer>
 	<key>blendFuncSource</key>
@@ -15,57 +15,57 @@
 	<key>emitterType</key>
 	<real>1</real>
 	<key>finishColorAlpha</key>
-	<real>0.16995343565940857</real>
+	<real>0.56056123971939087</real>
 	<key>finishColorBlue</key>
-	<real>0.17183396220207214</real>
+	<real>0.18445615470409393</real>
 	<key>finishColorGreen</key>
-	<real>0.65959799289703369</real>
+	<real>0.68744993209838867</real>
 	<key>finishColorRed</key>
-	<real>0.35902261734008789</real>
+	<real>0.56377142667770386</real>
 	<key>finishColorVarianceAlpha</key>
-	<real>0.5805739164352417</real>
+	<real>0.42181172966957092</real>
 	<key>finishColorVarianceBlue</key>
-	<real>0.48359280824661255</real>
+	<real>0.80045247077941895</real>
 	<key>finishColorVarianceGreen</key>
-	<real>0.92055314779281616</real>
+	<real>0.97579944133758545</real>
 	<key>finishColorVarianceRed</key>
-	<real>0.77403360605239868</real>
+	<real>0.45409795641899109</real>
 	<key>finishParticleSize</key>
-	<real>470</real>
+	<real>330</real>
 	<key>finishParticleSizeVariance</key>
-	<real>353</real>
+	<real>330</real>
 	<key>gravityx</key>
-	<real>2687.40966796875</real>
+	<real>376.13058471679688</real>
 	<key>gravityy</key>
-	<real>-1126.9764404296875</real>
+	<real>356.89309692382812</real>
 	<key>maxParticles</key>
-	<real>464</real>
+	<real>680</real>
 	<key>maxRadius</key>
-	<real>301</real>
+	<real>84</real>
 	<key>maxRadiusVariance</key>
-	<real>341</real>
+	<real>14</real>
 	<key>minRadius</key>
-	<real>36</real>
+	<real>21</real>
 	<key>particleLifespan</key>
-	<real>8</real>
-	<key>particleLifespanVariance</key>
 	<real>0.0</real>
+	<key>particleLifespanVariance</key>
+	<real>1</real>
 	<key>radialAccelVariance</key>
-	<real>-31.651515960693359</real>
+	<real>87.231117248535156</real>
 	<key>radialAcceleration</key>
-	<real>-199.26943969726562</real>
+	<real>-176.22450256347656</real>
 	<key>rotatePerSecond</key>
-	<real>69</real>
+	<real>214</real>
 	<key>rotatePerSecondVariance</key>
-	<real>65</real>
+	<real>191</real>
 	<key>rotationEnd</key>
-	<real>1145.4697265625</real>
+	<real>1558.0970458984375</real>
 	<key>rotationEndVariance</key>
-	<real>-752.94970703125</real>
+	<real>-1808.796142578125</real>
 	<key>rotationStart</key>
-	<real>73.198745727539062</real>
+	<real>-1408.3304443359375</real>
 	<key>rotationStartVariance</key>
-	<real>2608.36767578125</real>
+	<real>-1533.454833984375</real>
 	<key>sourcePositionVariancex</key>
 	<real>-22.7109375</real>
 	<key>sourcePositionVariancey</key>
@@ -75,33 +75,33 @@
 	<key>sourcePositiony</key>
 	<real>268.08087158203125</real>
 	<key>speed</key>
-	<real>715</real>
+	<real>360</real>
 	<key>speedVariance</key>
-	<real>649</real>
+	<real>256</real>
 	<key>startColorAlpha</key>
-	<real>0.88694584369659424</real>
+	<real>0.82676339149475098</real>
 	<key>startColorBlue</key>
-	<real>0.74684149026870728</real>
+	<real>0.081474088132381439</real>
 	<key>startColorGreen</key>
-	<real>0.62259280681610107</real>
+	<real>0.43675103783607483</real>
 	<key>startColorRed</key>
-	<real>0.84065067768096924</real>
+	<real>0.94380563497543335</real>
 	<key>startColorVarianceAlpha</key>
-	<real>0.036060210317373276</real>
+	<real>0.38878324627876282</real>
 	<key>startColorVarianceBlue</key>
-	<real>0.81983298063278198</real>
+	<real>0.62057214975357056</real>
 	<key>startColorVarianceGreen</key>
-	<real>0.28382536768913269</real>
+	<real>0.68928700685501099</real>
 	<key>startColorVarianceRed</key>
-	<real>0.4644189178943634</real>
+	<real>0.56373429298400879</real>
 	<key>startParticleSize</key>
-	<real>27</real>
+	<real>45</real>
 	<key>startParticleSizeVariance</key>
-	<real>74</real>
+	<real>29</real>
 	<key>tangentialAccelVariance</key>
-	<real>-129.09527587890625</real>
+	<real>345.93231201171875</real>
 	<key>tangentialAcceleration</key>
-	<real>107.26573181152344</real>
+	<real>-369.73880004882812</real>
 	<key>textureFileName</key>
 	<string>defaultEmitter.png</string>
 	<key>textureImageData</key>
