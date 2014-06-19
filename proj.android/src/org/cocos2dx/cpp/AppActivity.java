@@ -29,4 +29,32 @@ package org.cocos2dx.cpp;
 import org.cocos2dx.lib.Cocos2dxActivity;
 
 public class AppActivity extends Cocos2dxActivity {
+	public void onCreate(Bundle savedInstanceState)
+	{
+	    super.onCreate(savedInstanceState);
+
+	    // In the main Activity, assigning that activity as a receiver for C++ messages
+	    AndroidNDKHelper.SetNDKReciever(this);
+	}
+	
+	public void setAd(JSONObject prms)
+	{
+	  
+	    String setad = null;
+	    try
+	    {
+	        setad = prms.getString("setAd");
+	    }
+	    catch (JSONException e)
+	    {
+	        // TODO Auto-generated catch block
+	        e.printStackTrace();
+	    }
+
+	    if(setad.equals("1")){
+	    	//showadd
+	    }else{
+	    	//hidadd
+	    }
+	}
 }
