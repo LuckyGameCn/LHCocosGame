@@ -50,14 +50,6 @@ bool PlayScene::init()
     this->addChild(label,1);
     scoreLabel = label;
     
-//    auto hardItem = MenuItemImage::create("play.png", "play.png", CC_CALLBACK_1(PlayScene::collect, this));
-//    hardItem->setPosition(visibleSize.width/2, hardItem->getContentSize().height/2);
-    
-    // create menu, it's an autorelease object
-//    auto menu = Menu::create(hardItem, NULL);
-//    menu->setPosition(Vec2::ZERO);
-//    this->addChild(menu);
-    
     return true;
 }
 
@@ -202,6 +194,11 @@ void PlayScene::blockClick(int tag[],int len){
         score++;
         fs->removeFromParent();
         rmtag = fs->getTag();
+        ParticleSystemQuad *m_emitter = ParticleSystemQuad::create("particle.plist");
+        m_emitter->setDuration(0.5);
+        m_emitter->setPosition(fs->getPosition());
+        m_emitter->setAutoRemoveOnFinish(true);
+        this->addChild(m_emitter);
     }
 
     for (int i = 0 ; i<firstafterrm->count(); i++) {
