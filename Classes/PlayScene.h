@@ -36,7 +36,7 @@ private:
     CCArray *array;
     float period;
     float blockdt;
-    bool firsttouch;
+    bool swallow;
     float score;
     LabelTTF *scoreLabel;
     int touchrecord[TRCOUNT];

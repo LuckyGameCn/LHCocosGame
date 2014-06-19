@@ -34,7 +34,7 @@ bool PlayScene::init()
         return false;
     }
     
-    this->firsttouch = true;
+    this->swallow = false;
     memset(touchrecord, -1, TRCOUNT*sizeof(int));
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
@@ -250,8 +250,20 @@ void PlayScene::start_play(){
     ls->onTouchBegan = [this](Touch *touch,Event *event){
         return true;
     };
-    ls->onTouchEnded = [this](Touch *touch,Event *event){
-
+    ls->onTouchMoved = [this](Touch *touch,Event *event){
+        Vec2 p = touch->getPreviousLocation();
+        Vec2 c = touch->getLocation();
+        float dx = c.x - p.x;
+        if (dx>linewidth/3) {
+            this->collect(nullptr);
+            this->swallow = true;
+        }
+    };
+    ls->onTouchEnded = [this,ls](Touch *touch,Event *event){
+        if(this->swallow){
+            this->swallow = false;
+            return;
+        }
         int tag = (int)(touch->getLocation().x / linewidth);
         CCArray *first = (CCArray*) array->objectAtIndex(tag);
         if (first->count() == 0) {
