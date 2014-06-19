@@ -27,17 +27,31 @@
 #import "cocos2d.h"
 #import "CCEAGLView.h"
 
+#import "GADBannerView.h"
+#import "GADRequest.h"
+#import "IOSNDKHelper.h"
+
 @implementation RootViewController
 
-/*
+
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         // Custom initialization
+        [IOSNDKHelper SetNDKReciever:self];
     }
     return self;
 }
-*/
+
+-(void)setAd:(id)p{
+    NSDictionary *dic = p;
+    NSString *tag = [dic objectForKey:@"setAd"];
+    if ([tag isEqualToString:@"1"]) {
+        bannerView_.hidden = NO;
+    }else{
+        bannerView_.hidden = YES;
+    }
+}
 
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -107,7 +121,61 @@
 
 
 - (void)dealloc {
+    bannerView_.delegate = nil;
+    [bannerView_ release];
+    
     [super dealloc];
+}
+
+//GAD
+- (GADRequest *)createRequest {
+    GADRequest *request = [GADRequest request];
+    
+    // Make the request for a test ad. Put in an identifier for the simulator as
+    // well as any devices you want to receive test ads.
+    request.testDevices =
+    [NSArray arrayWithObjects:
+     @"6327f00c44091bbcb01c6f269ba72489",
+     // TODO: Add your device/simulator test identifiers here. They are
+     // printed to the console when the app is launched.
+     nil];
+    return request;
+}
+
+- (void)initGADBannerWithAdPositionAtTop:(BOOL)isAdPositionAtTop {
+    isAdPositionAtTop_ = isAdPositionAtTop;
+    
+    // NOTE:
+    // Add your publisher ID here and fill in the GADAdSize constant for the ad
+    // you would like to request.
+    bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
+    bannerView_.adUnitID = @"a153a14e5305ecd";
+    bannerView_.delegate = self;
+    [bannerView_ setRootViewController:self];
+    
+    [self.view addSubview:bannerView_];
+    [bannerView_ loadRequest:[self createRequest]];
+    // Use the status bar orientation since we haven't signed up for orientation
+    // change notifications for this class.
+    [self resizeViewsForOrientation:
+     [[UIApplication sharedApplication] statusBarOrientation]];
+    
+    bannerView_.hidden = YES;
+}
+
+- (void)resizeViewsForOrientation:(UIInterfaceOrientation)toInt {
+    // If the banner hasn't been created yet, no need for resizing views.
+   
+}
+
+#pragma mark GADBannerViewDelegate impl
+
+- (void)adViewDidReceiveAd:(GADBannerView *)adView {
+    NSLog(@"Received ad");
+}
+
+- (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error {
+    NSLog(@"Failed to receive ad with error: %@", [error localizedFailureReason]);
 }
 
 

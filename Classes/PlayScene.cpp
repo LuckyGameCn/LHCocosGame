@@ -50,13 +50,13 @@ bool PlayScene::init()
     this->addChild(label,1);
     scoreLabel = label;
     
-    auto hardItem = MenuItemImage::create("play.png", "play.png", CC_CALLBACK_1(PlayScene::collect, this));
-    hardItem->setPosition(visibleSize.width/2, hardItem->getContentSize().height/2);
+//    auto hardItem = MenuItemImage::create("play.png", "play.png", CC_CALLBACK_1(PlayScene::collect, this));
+//    hardItem->setPosition(visibleSize.width/2, hardItem->getContentSize().height/2);
     
     // create menu, it's an autorelease object
-    auto menu = Menu::create(hardItem, NULL);
-    menu->setPosition(Vec2::ZERO);
-    this->addChild(menu);
+//    auto menu = Menu::create(hardItem, NULL);
+//    menu->setPosition(Vec2::ZERO);
+//    this->addChild(menu);
     
     return true;
 }
@@ -253,8 +253,8 @@ void PlayScene::start_play(){
     ls->onTouchMoved = [this](Touch *touch,Event *event){
         Vec2 p = touch->getPreviousLocation();
         Vec2 c = touch->getLocation();
-        float dx = c.x - p.x;
-        if (dx>linewidth/3) {
+        float dx = p.distance(c);
+        if (dx>linewidth/5) {
             this->collect(nullptr);
             this->swallow = true;
         }

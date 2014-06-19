@@ -1,6 +1,7 @@
 #include "HelloWorldScene.h"
 #include "PlayScene.h"
 #include "GameOverScene.h"
+#include "ThirdPartyHelper.h"
 
 USING_NS_CC;
 
@@ -18,6 +19,14 @@ Scene* GameOverScene::createScene(int level)
 
     // return the scene
     return scene;
+}
+
+GameOverScene::GameOverScene(){
+    ThirdPartyHelper::setAd(SET_AD_SHOW);
+}
+
+GameOverScene::~GameOverScene(){
+    ThirdPartyHelper::setAd(SET_AD_HID);
 }
 
 // on "init" you need to initialize your instance

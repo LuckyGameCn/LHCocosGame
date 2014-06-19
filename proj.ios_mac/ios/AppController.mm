@@ -78,6 +78,8 @@ static AppDelegate s_sharedApplication;
     cocos2d::Director::getInstance()->setOpenGLView(glview);
 
     cocos2d::Application::getInstance()->run();
+    
+    [_viewController initGADBannerWithAdPositionAtTop:YES];
 
     return YES;
 }
