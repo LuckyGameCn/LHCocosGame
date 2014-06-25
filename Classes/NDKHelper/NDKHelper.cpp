@@ -173,7 +173,7 @@ void NDKHelper::PrintSelectorList()
     {
         string s = NDKHelper::selectorList[i].getGroup();
         s.append(NDKHelper::selectorList[i].getName());
-        CCLog(s.c_str());
+        //CCLog(s.c_str());
     }
 }
 
@@ -244,7 +244,7 @@ extern "C"
         jsonMethodParams = json_object_get(root, __CALLED_METHOD_PARAMS__);
         
         // Just to see on the log screen if messages are propogating properly
-        __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, jsonCharArray);
+        //__android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, jsonCharArray);
         
         NDKHelper::HandleMessage(jsonMethodName, jsonMethodParams);
         json_decref(root);

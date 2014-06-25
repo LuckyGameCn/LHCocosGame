@@ -89,6 +89,20 @@
 		A59A47FD1952CDBD00217F27 /* NDKCallbackNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59A47EF1952CDBD00217F27 /* NDKCallbackNode.cpp */; };
 		A59A47FE1952CDBD00217F27 /* NDKHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59A47F11952CDBD00217F27 /* NDKHelper.cpp */; };
 		A59A48011952FAB700217F27 /* particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A48001952FAB700217F27 /* particle.plist */; };
+		A59A48131953D49900217F27 /* p1.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A48051953D49900217F27 /* p1.plist */; };
+		A59A48141953D49900217F27 /* p2.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A48061953D49900217F27 /* p2.plist */; };
+		A59A48151953D49900217F27 /* p3.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A48071953D49900217F27 /* p3.plist */; };
+		A59A48161953D49900217F27 /* p4.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A48081953D49900217F27 /* p4.plist */; };
+		A59A48171953D49900217F27 /* p5.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A48091953D49900217F27 /* p5.plist */; };
+		A59A48181953D49900217F27 /* p6.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A480A1953D49900217F27 /* p6.plist */; };
+		A59A48191953D49900217F27 /* p7.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A480B1953D49900217F27 /* p7.plist */; };
+		A59A481A1953D49900217F27 /* p8.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A480C1953D49900217F27 /* p8.plist */; };
+		A59A481B1953D49900217F27 /* p9.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A480D1953D49900217F27 /* p9.plist */; };
+		A59A481C1953D49900217F27 /* p10.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A480E1953D49900217F27 /* p10.plist */; };
+		A59A481D1953D49900217F27 /* p11.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A480F1953D49900217F27 /* p11.plist */; };
+		A59A481E1953D49900217F27 /* p12.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A48101953D49900217F27 /* p12.plist */; };
+		A59A481F1953D49900217F27 /* p13.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A48111953D49900217F27 /* p13.plist */; };
+		A59A48201953D49900217F27 /* p14.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59A48121953D49900217F27 /* p14.plist */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -356,6 +370,20 @@
 		A59A47F11952CDBD00217F27 /* NDKHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NDKHelper.cpp; sourceTree = "<group>"; };
 		A59A47F21952CDBD00217F27 /* NDKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDKHelper.h; sourceTree = "<group>"; };
 		A59A48001952FAB700217F27 /* particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = particle.plist; sourceTree = "<group>"; };
+		A59A48051953D49900217F27 /* p1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p1.plist; sourceTree = "<group>"; };
+		A59A48061953D49900217F27 /* p2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p2.plist; sourceTree = "<group>"; };
+		A59A48071953D49900217F27 /* p3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p3.plist; sourceTree = "<group>"; };
+		A59A48081953D49900217F27 /* p4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p4.plist; sourceTree = "<group>"; };
+		A59A48091953D49900217F27 /* p5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p5.plist; sourceTree = "<group>"; };
+		A59A480A1953D49900217F27 /* p6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p6.plist; sourceTree = "<group>"; };
+		A59A480B1953D49900217F27 /* p7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p7.plist; sourceTree = "<group>"; };
+		A59A480C1953D49900217F27 /* p8.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p8.plist; sourceTree = "<group>"; };
+		A59A480D1953D49900217F27 /* p9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p9.plist; sourceTree = "<group>"; };
+		A59A480E1953D49900217F27 /* p10.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p10.plist; sourceTree = "<group>"; };
+		A59A480F1953D49900217F27 /* p11.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p11.plist; sourceTree = "<group>"; };
+		A59A48101953D49900217F27 /* p12.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p12.plist; sourceTree = "<group>"; };
+		A59A48111953D49900217F27 /* p13.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p13.plist; sourceTree = "<group>"; };
+		A59A48121953D49900217F27 /* p14.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p14.plist; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -575,6 +603,20 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A59A48051953D49900217F27 /* p1.plist */,
+				A59A48061953D49900217F27 /* p2.plist */,
+				A59A48071953D49900217F27 /* p3.plist */,
+				A59A48081953D49900217F27 /* p4.plist */,
+				A59A48091953D49900217F27 /* p5.plist */,
+				A59A480A1953D49900217F27 /* p6.plist */,
+				A59A480B1953D49900217F27 /* p7.plist */,
+				A59A480C1953D49900217F27 /* p8.plist */,
+				A59A480D1953D49900217F27 /* p9.plist */,
+				A59A480E1953D49900217F27 /* p10.plist */,
+				A59A480F1953D49900217F27 /* p11.plist */,
+				A59A48101953D49900217F27 /* p12.plist */,
+				A59A48111953D49900217F27 /* p13.plist */,
+				A59A48121953D49900217F27 /* p14.plist */,
 				A59A48001952FAB700217F27 /* particle.plist */,
 				A50697F7194F2FCC0008E3C3 /* block0.png */,
 				A50697F8194F2FCC0008E3C3 /* block1.png */,
@@ -867,22 +909,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A59A481B1953D49900217F27 /* p9.plist in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				A59A48171953D49900217F27 /* p5.plist in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
+				A59A48151953D49900217F27 /* p3.plist in Resources */,
+				A59A48191953D49900217F27 /* p7.plist in Resources */,
+				A59A481E1953D49900217F27 /* p12.plist in Resources */,
 				A59A47801952AD1100217F27 /* README.txt in Resources */,
+				A59A481A1953D49900217F27 /* p8.plist in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
+				A59A48141953D49900217F27 /* p2.plist in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				A59A48161953D49900217F27 /* p4.plist in Resources */,
 				A594BDD119470429001DEF30 /* play.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
+				A59A481F1953D49900217F27 /* p13.plist in Resources */,
+				A59A48181953D49900217F27 /* p6.plist in Resources */,
+				A59A481C1953D49900217F27 /* p10.plist in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
+				A59A481D1953D49900217F27 /* p11.plist in Resources */,
+				A59A48201953D49900217F27 /* p14.plist in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
@@ -890,6 +945,7 @@
 				A59A48011952FAB700217F27 /* particle.plist in Resources */,
 				A50697FC194F2FCC0008E3C3 /* block1.png in Resources */,
 				A50697FD194F2FCC0008E3C3 /* block2.png in Resources */,
+				A59A48131953D49900217F27 /* p1.plist in Resources */,
 				A50697FE194F2FCC0008E3C3 /* block3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1039,7 +1095,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Pang Yan (7UG66YPJ64)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;

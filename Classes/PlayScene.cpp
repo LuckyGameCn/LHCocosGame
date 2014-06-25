@@ -194,8 +194,9 @@ void PlayScene::blockClick(int tag[],int len){
         score++;
         fs->removeFromParent();
         rmtag = fs->getTag();
-        ParticleSystemQuad *m_emitter = ParticleSystemQuad::create("particle.plist");
+        ParticleSystemQuad *m_emitter = ParticleSystemQuad::create("p14.plist");
         m_emitter->setDuration(0.5);
+        m_emitter->setScale(0.3);
         m_emitter->setPosition(fs->getPosition());
         m_emitter->setAutoRemoveOnFinish(true);
         this->addChild(m_emitter);

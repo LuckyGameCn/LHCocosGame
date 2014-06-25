@@ -6,3 +6,6 @@ proj.ios_mac/LHCocosFirstGame.xcodeproj/xcuserdata
 proj.android/obj/local/armeabi/objs-debug
 
 proj.android/gen
+
+proj.android/bin
+proj.android/assets
