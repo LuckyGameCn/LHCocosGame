@@ -9,6 +9,9 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/AppDelegate.cpp \
                    ../../Classes/HelloWorldScene.cpp \
+                   ../../Classes/PlayScene.cpp \
+                   ../../Classes/ThirdPartyHelper.cpp \
+                   ../../Classes/GameOverScene.cpp \
                    ../../Classes/jansson/dump.c \
                    ../../Classes/jansson/error.c \
                    ../../Classes/jansson/hashtable.c \
@@ -47,5 +50,3 @@ $(call import-module,audio/android)
 # $(call import-module,editor-support/spine)
 # $(call import-module,editor-support/cocostudio)
 # $(call import-module,network)
-$(call import-module,extensions)
-$(call import-module,CocosDenshion/android)
