@@ -23,7 +23,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-****************************************************************************/
+ ****************************************************************************/
 package org.cocos2dx.cpp;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
@@ -40,16 +40,16 @@ import android.view.View;
 import android.view.WindowManager;
 
 public class AppActivity extends Cocos2dxActivity {
-	
+
 	private AdView mAdView;
 	private WindowManager mWm = null;
-	
-	public static final int POS_CENTER 	     = 0;
-	public static final int POS_TOP		     = 1;
-	public static final int POS_TOP_LEFT     = 2;
-	public static final int POS_TOP_RIGHT    = 3;
-	public static final int POS_BOTTOM       = 4;
-	public static final int POS_BOTTOM_LEFT  = 5;
+
+	public static final int POS_CENTER = 0;
+	public static final int POS_TOP = 1;
+	public static final int POS_TOP_LEFT = 2;
+	public static final int POS_TOP_RIGHT = 3;
+	public static final int POS_BOTTOM = 4;
+	public static final int POS_BOTTOM_LEFT = 5;
 	public static final int POS_BOTTOM_RIGHT = 6;
 
 	public static void addAdView(WindowManager mWm, View adView, int pos) {
@@ -58,7 +58,7 @@ public class AppActivity extends Cocos2dxActivity {
 		mLayoutParams.width = WindowManager.LayoutParams.WRAP_CONTENT;
 		mLayoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
 		mLayoutParams.flags |= WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
-		
+
 		switch (pos) {
 		case POS_CENTER:
 			mLayoutParams.gravity = Gravity.CENTER;
@@ -86,56 +86,46 @@ public class AppActivity extends Cocos2dxActivity {
 		}
 		mWm.addView(adView, mLayoutParams);
 	}
-	
-	public void onCreate(Bundle savedInstanceState)
-	{
-	    super.onCreate(savedInstanceState);
 
-	    // In the main Activity, assigning that activity as a receiver for C++ messages
-	    AndroidNDKHelper.SetNDKReciever(this);
-	    
-	    mAdView = new AdView(this);
-        mAdView.setAdSize(AdSize.SMART_BANNER);
-        mAdView.setAdUnitId("myAdUnitId");
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 
-        // Create an ad request.
-        AdRequest.Builder adRequestBuilder = new AdRequest.Builder();
+		// In the main Activity, assigning that activity as a receiver for C++
+		// messages
+		AndroidNDKHelper.SetNDKReciever(this);
 
-        // Optionally populate the ad request builder.
-        adRequestBuilder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
+		mAdView = new AdView(this);
+		mAdView.setAdSize(AdSize.BANNER);
+		mAdView.setAdUnitId("a153a14e5305ecd");
 
-        // Add the AdView to the view hierarchy.
-//        layout.addView(mAdView);
-
-        // Start loading the ad.
-        mAdView.loadAd(adRequestBuilder.build());
+		// Create an ad request.
+		AdRequest.Builder adRequestBuilder = new AdRequest.Builder();
+		// Optionally populate the ad request builder.
+		adRequestBuilder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
+		// Start loading the ad.
+		mAdView.loadAd(adRequestBuilder.build());
 	}
-	
-	public void setAd(JSONObject prms)
-	{
-	  
-	    String setad = null;
-	    try
-	    {
-	        setad = prms.getString("setAd");
-	    }
-	    catch (JSONException e)
-	    {
-	        // TODO Auto-generated catch block
-	        e.printStackTrace();
-	    }
 
-	    if(setad.equals("1")){
-	    	//showadd
-	    	if (null == mWm) {
+	public void setAd(JSONObject prms) {
+		String setad = null;
+		try {
+			setad = prms.getString("setAd");
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		if (setad.equals("1")) {
+			// showadd
+			if (null == mWm) {
 				mWm = (WindowManager) this.getSystemService("window");
 			}
 			addAdView(mWm, mAdView, POS_TOP);
-	    }else{
-	    	//hidadd
-	    	if (null != mWm) {
+		} else {
+			// hidadd
+			if (null != mWm) {
 				mWm.removeView(mAdView);
 			}
-	    }
+		}
 	}
 }

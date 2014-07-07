@@ -213,7 +213,7 @@ void NDKHelper::HandleMessage(json_t *methodName, json_t* methodParams)
     #include <jni.h>
     #define  LOG_TAG    "EasyNDK-for-cocos2dx"
 
-    #define CLASS_NAME "com/easyndk/classes/AndroidNDKHelper"
+    #define CLASS_NAME "org/cocos2dx/cpp/AndroidNDKHelper"
 #endif
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
