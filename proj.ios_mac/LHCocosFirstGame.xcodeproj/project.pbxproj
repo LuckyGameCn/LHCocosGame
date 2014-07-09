@@ -12,7 +12,6 @@
 		1AC6FB21180E996B004C840B /* libcocos2dx Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2dx Mac.a */; };
 		1AC6FB22180E996B004C840B /* libcocos2dx-extensions Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFB180E9839004C840B /* libcocos2dx-extensions Mac.a */; };
 		1AC6FB23180E996B004C840B /* libCocosDenshion Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB01180E9839004C840B /* libCocosDenshion Mac.a */; };
-		1AC6FB2E180E99EB004C840B /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
 		1AC6FB2F180E99EB004C840B /* libchipmunk iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0B180E9839004C840B /* libchipmunk iOS.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2dx iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2dx iOS.a */; };
 		1AC6FB31180E99EB004C840B /* libcocos2dx-extensions iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB09180E9839004C840B /* libcocos2dx-extensions iOS.a */; };
@@ -63,6 +62,7 @@
 		A50697FC194F2FCC0008E3C3 /* block1.png in Resources */ = {isa = PBXBuildFile; fileRef = A50697F8194F2FCC0008E3C3 /* block1.png */; };
 		A50697FD194F2FCC0008E3C3 /* block2.png in Resources */ = {isa = PBXBuildFile; fileRef = A50697F9194F2FCC0008E3C3 /* block2.png */; };
 		A50697FE194F2FCC0008E3C3 /* block3.png in Resources */ = {isa = PBXBuildFile; fileRef = A50697FA194F2FCC0008E3C3 /* block3.png */; };
+		A5547470196D8E2D00F152D3 /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
 		A594BDD119470429001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE3C194B026B001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A594BE3F194D450C001DEF30 /* GameOverScene.cpp */; };
@@ -465,6 +465,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5547470196D8E2D00F152D3 /* libbox2d iOS.a in Frameworks */,
 				A5AA4341196D2AD700DC3411 /* Accounts.framework in Frameworks */,
 				A5AA433F196D2AD000DC3411 /* Social.framework in Frameworks */,
 				A5AA433D196D2AC400DC3411 /* libz.dylib in Frameworks */,
@@ -482,7 +483,6 @@
 				A59A47881952B4D800217F27 /* StoreKit.framework in Frameworks */,
 				A59A47831952B30200217F27 /* libGoogleAdMobAds.a in Frameworks */,
 				A5AA431A196D299D00DC3411 /* libSocialFacebook.a in Frameworks */,
-				1AC6FB2E180E99EB004C840B /* libbox2d iOS.a in Frameworks */,
 				1AC6FB2F180E99EB004C840B /* libchipmunk iOS.a in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2dx iOS.a in Frameworks */,
 				1AC6FB31180E99EB004C840B /* libcocos2dx-extensions iOS.a in Frameworks */,
@@ -1331,7 +1331,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jian Bang (LLWK678A7W)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1368,9 +1368,9 @@
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/YiXin",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "AE41FA0A-450D-43B7-85E2-BB867294E493";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s";
@@ -1382,7 +1382,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jian Bang (LLWK678A7W)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1417,9 +1417,9 @@
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/YiXin",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "AE41FA0A-450D-43B7-85E2-BB867294E493";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s";

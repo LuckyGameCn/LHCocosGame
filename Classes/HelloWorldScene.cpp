@@ -1,7 +1,9 @@
 #include "HelloWorldScene.h"
 #include "PlayScene.h"
+#include "UMShareButton.h"
 
 USING_NS_CC;
+USING_NS_UM_SOCIAL;
 
 Scene* HelloWorld::createScene()
 {
@@ -16,6 +18,24 @@ Scene* HelloWorld::createScene()
 
     // return the scene
     return scene;
+}
+
+static void shareCallback(int platform, int stCode, string& errorMsg)
+{
+    if ( stCode == 100 )
+    {
+        CCLog("#### HelloWorld 开始分享");
+    }
+    else if ( stCode == 200 )
+    {
+        CCLog("#### HelloWorld 分享成功");
+    }
+    else
+    {
+        CCLog("#### HelloWorld 分享出错");
+    }
+    
+    CCLog("platform num is : %d.", platform);
 }
 
 // on "init" you need to initialize your instance
@@ -48,14 +68,27 @@ bool HelloWorld::init()
     hellLabel->setColor(Color3B::BLACK);
     auto hellItem = MenuItemLabel::create(hellLabel, CC_CALLBACK_1(HelloWorld::hell, this));
     hellItem->setPosition(visibleSize.width/2, visibleSize.height/10*4);
+    
+    // 创建分享按钮, 参数1为按钮正常情况下的图片, 参数2为按钮选中时的图片,参数3为友盟appkey, 参数4为分享回调
+    UMShareButton *shareButton = UMShareButton::create("play.png","play.png", "你的友盟appkey", share_selector(shareCallback)) ;
+    // 显示在友盟分享面板上的平台
+    vector<int>* platforms = new vector<int>();
+    platforms->push_back(SINA);
+    platforms->push_back(QZONE) ;
+    platforms->push_back(QQ) ;
+    // 设置友盟分享面板上显示的平台
+    shareButton->setPlatforms(platforms);
+    // 设置文本分享内容
+    shareButton->setShareContent("umeng social cocos2d-x sdk.") ;
+    // 设置要分享的图片, 图片支持本地图片和url图片, 但是url图片必须以http://或者https://开头
+    shareButton->setShareImage("/sdcard/header.jpeg") ;
+    // 设置按钮的位置
+    shareButton->setPosition(Vec2(visibleSize.width/2, 180));
 
     // create menu, it's an autorelease object
-    auto menu = Menu::create(easyItem,hardItem,hellItem, NULL);
+    auto menu = Menu::create(easyItem,hardItem,hellItem,shareButton, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu);
-
-    /////////////////////////////
-    // 3. add your codes below...
 
     // add a label shows "Hello World"
     // create and initialize a label
