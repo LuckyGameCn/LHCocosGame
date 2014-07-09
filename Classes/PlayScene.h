@@ -18,28 +18,11 @@ public:
     virtual void draw(cocos2d::Renderer *renderer, const cocos2d::Mat4& transform, bool transformUpdated);
     void update(float dt);
     
-    void clickline(int line,int state);
-    void collect(cocos2d::Ref* pSender);
-    void blockClick(int tag[],int len);
-    void gameOver();
-    void genBlockLine();
-    
-    void start_play();
     // implement the "static create()" method manually
     CREATE_FUNC(PlayScene);
     
 private:
     int plevel;
-    int lineCount;
-    float linewidth;
-    float speed;
-    CCArray *array;
-    float period;
-    float blockdt;
-    bool swallow;
-    float score;
-    LabelTTF *scoreLabel;
-    int touchrecord[TRCOUNT];
 };
 
 // __HELLOWORLD_SCENE_H__
