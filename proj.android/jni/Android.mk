@@ -23,7 +23,10 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/jansson/utf.c \
                    ../../Classes/jansson/value.c \
                    ../../Classes/NDKHelper/NDKCallbackNode.cpp \
-                   ../../Classes/NDKHelper/NDKHelper.cpp
+                   ../../Classes/NDKHelper/NDKHelper.cpp \
+                   ../../Classes/CCUMSocialController.cpp  \
+                   ../../Classes/UMShareButton.cpp \
+                   ../../Classes/CCUMSocialSDK.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes \
 					$(LOCAL_PATH)/../../Classes/NDKHelper \

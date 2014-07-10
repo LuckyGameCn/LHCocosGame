@@ -33,7 +33,9 @@ import org.json.JSONObject;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.umeng.social.CCUMSocialController;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -104,6 +106,15 @@ public class AppActivity extends Cocos2dxActivity {
 		adRequestBuilder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
 		// Start loading the ad.
 		mAdView.loadAd(adRequestBuilder.build());
+		
+		CCUMSocialController.initSocialSDK(this, "com.umeng.social.share");
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		CCUMSocialController.onActivityResult(requestCode, resultCode, data); 
+		super.onActivityResult(requestCode, resultCode, data);
 	}
 
 	public void setAd(JSONObject prms) {

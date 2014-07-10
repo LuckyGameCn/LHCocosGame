@@ -63,6 +63,8 @@
 		A50697FD194F2FCC0008E3C3 /* block2.png in Resources */ = {isa = PBXBuildFile; fileRef = A50697F9194F2FCC0008E3C3 /* block2.png */; };
 		A50697FE194F2FCC0008E3C3 /* block3.png in Resources */ = {isa = PBXBuildFile; fileRef = A50697FA194F2FCC0008E3C3 /* block3.png */; };
 		A5547470196D8E2D00F152D3 /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
+		A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547471196EBD1400F152D3 /* UMShareButton.cpp */; };
+		A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */; };
 		A594BDD119470429001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE3C194B026B001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A594BE3F194D450C001DEF30 /* GameOverScene.cpp */; };
@@ -114,8 +116,6 @@
 		A5AA4323196D299E00DC3411 /* libSocialYiXin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA4308196D299D00DC3411 /* libSocialYiXin.a */; };
 		A5AA4324196D299E00DC3411 /* UmSocialControllerIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5AA430B196D299D00DC3411 /* UmSocialControllerIOS.mm */; };
 		A5AA4325196D299E00DC3411 /* UMSocialUIObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5AA430D196D299D00DC3411 /* UMSocialUIObject.mm */; };
-		A5AA4332196D2A3C00DC3411 /* CCUMSocialSDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5AA432B196D2A3C00DC3411 /* CCUMSocialSDK.cpp */; };
-		A5AA4333196D2A3C00DC3411 /* UMShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5AA432F196D2A3C00DC3411 /* UMShareButton.cpp */; };
 		A5AA4335196D2A6B00DC3411 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA4334196D2A6B00DC3411 /* libiconv.dylib */; };
 		A5AA4337196D2A8A00DC3411 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA4336196D2A8A00DC3411 /* CoreGraphics.framework */; };
 		A5AA4339196D2A9800DC3411 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA4338196D2A9800DC3411 /* libsqlite3.dylib */; };
@@ -325,6 +325,11 @@
 		A50697F8194F2FCC0008E3C3 /* block1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block1.png; sourceTree = "<group>"; };
 		A50697F9194F2FCC0008E3C3 /* block2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block2.png; sourceTree = "<group>"; };
 		A50697FA194F2FCC0008E3C3 /* block3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block3.png; sourceTree = "<group>"; };
+		A5547471196EBD1400F152D3 /* UMShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UMShareButton.cpp; path = ../Classes/UMShareButton.cpp; sourceTree = "<group>"; };
+		A5547472196EBD1400F152D3 /* UMShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UMShareButton.h; path = ../Classes/UMShareButton.h; sourceTree = "<group>"; };
+		A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCUMSocialSDK.cpp; path = ../Classes/CCUMSocialSDK.cpp; sourceTree = "<group>"; };
+		A5547475196EBD6200F152D3 /* CCUMSocialSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCUMSocialSDK.h; path = ../Classes/CCUMSocialSDK.h; sourceTree = "<group>"; };
+		A5547476196EBD6200F152D3 /* CCUMTypeDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCUMTypeDef.h; path = ../Classes/CCUMTypeDef.h; sourceTree = "<group>"; };
 		A594BDD019470429001DEF30 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		A594BE3F194D450C001DEF30 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverScene.cpp; path = ../Classes/GameOverScene.cpp; sourceTree = "<group>"; };
 		A594BE40194D450C001DEF30 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = ../Classes/GameOverScene.h; sourceTree = "<group>"; };
@@ -439,11 +444,6 @@
 		A5AA430B196D299D00DC3411 /* UmSocialControllerIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UmSocialControllerIOS.mm; sourceTree = "<group>"; };
 		A5AA430C196D299D00DC3411 /* UMSocialUIObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialUIObject.h; sourceTree = "<group>"; };
 		A5AA430D196D299D00DC3411 /* UMSocialUIObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UMSocialUIObject.mm; sourceTree = "<group>"; };
-		A5AA432B196D2A3C00DC3411 /* CCUMSocialSDK.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCUMSocialSDK.cpp; sourceTree = "<group>"; };
-		A5AA432C196D2A3C00DC3411 /* CCUMSocialSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUMSocialSDK.h; sourceTree = "<group>"; };
-		A5AA432D196D2A3C00DC3411 /* CCUMTypeDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUMTypeDef.h; sourceTree = "<group>"; };
-		A5AA432F196D2A3C00DC3411 /* UMShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UMShareButton.cpp; sourceTree = "<group>"; };
-		A5AA4330196D2A3C00DC3411 /* UMShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMShareButton.h; sourceTree = "<group>"; };
 		A5AA4334196D2A6B00DC3411 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		A5AA4336196D2A8A00DC3411 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		A5AA4338196D2A9800DC3411 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
@@ -555,7 +555,11 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A5AA4326196D2A3C00DC3411 /* umeng */,
+				A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */,
+				A5547475196EBD6200F152D3 /* CCUMSocialSDK.h */,
+				A5547476196EBD6200F152D3 /* CCUMTypeDef.h */,
+				A5547471196EBD1400F152D3 /* UMShareButton.cpp */,
+				A5547472196EBD1400F152D3 /* UMShareButton.h */,
 				A5AA42CD196D0B8100DC3411 /* DeveloperInfoScence.cpp */,
 				A5AA42CE196D0B8100DC3411 /* DeveloperInfoScence.h */,
 				A59A47DD1952CDBD00217F27 /* jansson */,
@@ -969,35 +973,6 @@
 			path = YiXin;
 			sourceTree = "<group>";
 		};
-		A5AA4326196D2A3C00DC3411 /* umeng */ = {
-			isa = PBXGroup;
-			children = (
-				A5AA432A196D2A3C00DC3411 /* Common */,
-				A5AA432E196D2A3C00DC3411 /* ShareButton */,
-			);
-			name = umeng;
-			path = ../Classes/umeng;
-			sourceTree = "<group>";
-		};
-		A5AA432A196D2A3C00DC3411 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				A5AA432B196D2A3C00DC3411 /* CCUMSocialSDK.cpp */,
-				A5AA432C196D2A3C00DC3411 /* CCUMSocialSDK.h */,
-				A5AA432D196D2A3C00DC3411 /* CCUMTypeDef.h */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		A5AA432E196D2A3C00DC3411 /* ShareButton */ = {
-			isa = PBXGroup;
-			children = (
-				A5AA432F196D2A3C00DC3411 /* UMShareButton.cpp */,
-				A5AA4330196D2A3C00DC3411 /* UMShareButton.h */,
-			);
-			path = ShareButton;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1220,11 +1195,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A59A47F71952CDBD00217F27 /* memory.c in Sources */,
-				A5AA4333196D2A3C00DC3411 /* UMShareButton.cpp in Sources */,
 				A59A47F61952CDBD00217F27 /* load.c in Sources */,
 				A5AA42CF196D0B8100DC3411 /* DeveloperInfoScence.cpp in Sources */,
-				A5AA4332196D2A3C00DC3411 /* CCUMSocialSDK.cpp in Sources */,
+				A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */,
 				A59A47861952B36B00217F27 /* ThirdPartyHelper.cpp in Sources */,
+				A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */,
 				A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
