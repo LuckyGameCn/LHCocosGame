@@ -54,18 +54,32 @@
 }
 
 /*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
+ value
+ cat
+ */
+-(void)leaderBoardControl:(id)param{
+    NSDictionary *dic = param;
+    if ([dic objectForKey:@"value"]) {
+        NSNumber *value = [dic objectForKey:@"value"];
+        NSString *cat = [dic objectForKey:@"cat"];
+        GKScore *score = [[GKScore alloc] initWithCategory:cat];
+        score.value = [value intValue];
+        [score reportScoreWithCompletionHandler:^(NSError *error) {
+            NSLog(@"upload score error.");
+        }];
+    }else{
+        NSString *cat = [dic objectForKey:@"cat"];
+        GKLeaderboardViewController *leaderboardController = [[GKLeaderboardViewController alloc] init];
+        if (leaderboardController != NULL)
+        {
+            leaderboardController.category = cat;
+            leaderboardController.timeScope = GKLeaderboardTimeScopeWeek;
+            leaderboardController.leaderboardDelegate = self;
+            [self presentModalViewController: leaderboardController animated: YES];
+        }
+    }
 }
-*/
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-*/
 // Override to allow orientations other than the default portrait orientation.
 // This method is deprecated on ios6
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

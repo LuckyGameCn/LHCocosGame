@@ -108,6 +108,7 @@ public class AppActivity extends Cocos2dxActivity {
 		mAdView.loadAd(adRequestBuilder.build());
 		
 		CCUMSocialController.initSocialSDK(this, "com.umeng.social.share");
+		
 	}
 	
 	@Override
@@ -125,7 +126,6 @@ public class AppActivity extends Cocos2dxActivity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		if (setad.equals("1")) {
 			// showadd
 			if (null == mWm) {
@@ -137,6 +137,19 @@ public class AppActivity extends Cocos2dxActivity {
 			if (null != mWm) {
 				mWm.removeView(mAdView);
 			}
+		}
+	}
+	
+	public void leaderBoardControl(JSONObject param){
+		if (param.has("value")) {
+			try {
+				int value = param.getInt("value");
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}else{
 		}
 	}
 }

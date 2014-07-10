@@ -17,6 +17,8 @@
 class ThirdPartyHelper{
 public:
     static void setAd(int tag);
+    static void uploadScore(int score);
+    static void showLeaderBoard();
 };
 
 #endif /* defined(__LHCocosFirstGame__ThirdPartyHelper__) */

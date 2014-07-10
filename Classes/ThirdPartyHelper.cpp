@@ -19,3 +19,14 @@ void ThirdPartyHelper::setAd(int tag){
     }
     SendMessageWithParams("setAd", dic);
 }
+
+void ThirdPartyHelper::uploadScore(int score){
+    CCDictionary *dic = CCDictionary::create();
+    dic->setObject(CCInteger::create(score), "value");
+    SendMessageWithParams("leaderBoardControl", dic);
+}
+
+void ThirdPartyHelper::showLeaderBoard(){
+    CCDictionary *dic = CCDictionary::create();
+    SendMessageWithParams("leaderBoardControl", dic);
+}

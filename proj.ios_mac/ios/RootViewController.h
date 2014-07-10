@@ -24,12 +24,13 @@
  ****************************************************************************/
 
 #import <UIKit/UIKit.h>
+#import <GameKit/GameKit.h>
 
 #import "GADBannerViewDelegate.h"
 
 @class GADBannerView, GADRequest;
 
-@interface RootViewController : UIViewController<GADBannerViewDelegate> {
+@interface RootViewController : UIViewController<GADBannerViewDelegate,GKLeaderboardViewControllerDelegate> {
 @private
     GADBannerView *bannerView_;
     BOOL isAdPositionAtTop_;

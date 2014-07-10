@@ -1,6 +1,7 @@
 #include "HelloWorldScene.h"
 #include "PlayScene.h"
 #include "UMShareButton.h"
+#include "ThirdPartyHelper.h"
 
 USING_NS_CC;
 USING_NS_UM_SOCIAL;
@@ -56,17 +57,20 @@ bool HelloWorld::init()
     //    you may modify it.
     auto easyLabel = LabelTTF::create("Easy", "Arial", 44);
     easyLabel->setColor(Color3B::BLACK);
-    auto easyItem = MenuItemLabel::create(easyLabel, CC_CALLBACK_1(HelloWorld::easy, this));
+    auto easyItem = MenuItemLabel::create(easyLabel, CC_CALLBACK_1(HelloWorld::testClick, this));
+    easyItem->setTag(0);
     easyItem->setPosition(visibleSize.width/2, visibleSize.height/10*6);
     
-    auto hardLabel = LabelTTF::create("Hard", "Arial", 44);
+    auto hardLabel = LabelTTF::create("SubmitScore", "Arial", 44);
     hardLabel->setColor(Color3B::BLACK);
-    auto hardItem = MenuItemLabel::create(hardLabel, CC_CALLBACK_1(HelloWorld::hard, this));
+    auto hardItem = MenuItemLabel::create(hardLabel, CC_CALLBACK_1(HelloWorld::testClick, this));
+    hardItem->setTag(1);
     hardItem->setPosition(visibleSize.width/2, visibleSize.height/10*5);
     
-    auto hellLabel = LabelTTF::create("Hell", "Arial", 44);
+    auto hellLabel = LabelTTF::create("showLeaderBoard", "Arial", 44);
     hellLabel->setColor(Color3B::BLACK);
-    auto hellItem = MenuItemLabel::create(hellLabel, CC_CALLBACK_1(HelloWorld::hell, this));
+    auto hellItem = MenuItemLabel::create(hellLabel, CC_CALLBACK_1(HelloWorld::testClick, this));
+    hellItem->setTag(2);
     hellItem->setPosition(visibleSize.width/2, visibleSize.height/10*4);
     
     // 创建分享按钮, 参数1为按钮正常情况下的图片, 参数2为按钮选中时的图片,参数3为友盟appkey, 参数4为分享回调
@@ -111,15 +115,12 @@ static void toPlay(int level){
     Director::getInstance()->replaceScene(tran);
 }
 
-void HelloWorld::hell(Ref *pSender){
-    toPlay(4);
-}
-
-void HelloWorld::hard(Ref* pSender){
-    toPlay(3);
-}
-
-void HelloWorld::easy(Ref* pSender){
-    toPlay(2);
+void HelloWorld::testClick(Ref *pSender){
+    MenuItemLabel *l = (MenuItemLabel*)pSender;
+    if (l->getTag()==1) {
+        ThirdPartyHelper::uploadScore(88);
+    }else if (l->getTag()==2){
+        ThirdPartyHelper::showLeaderBoard();
+    }
 }
 
