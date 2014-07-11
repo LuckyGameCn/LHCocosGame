@@ -33,6 +33,10 @@ import org.json.JSONObject;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.games.Game;
+import com.google.android.gms.games.Games;
+import com.google.android.gms.plus.Plus;
 import com.umeng.social.CCUMSocialController;
 
 import android.content.Intent;
@@ -44,6 +48,7 @@ import android.view.WindowManager;
 public class AppActivity extends Cocos2dxActivity {
 
 	private AdView mAdView;
+	private GoogleApiClient mClient;
 	private WindowManager mWm = null;
 
 	public static final int POS_CENTER = 0;
@@ -108,7 +113,25 @@ public class AppActivity extends Cocos2dxActivity {
 		mAdView.loadAd(adRequestBuilder.build());
 		
 		CCUMSocialController.initSocialSDK(this, "com.umeng.social.share");
-		
+		mClient = new GoogleApiClient.Builder(this)
+        .addApi(Plus.API)
+        .addScope(Plus.SCOPE_PLUS_LOGIN)
+        .setAccountName("users.account.name@gmail.com")
+        .build();
+	}
+	
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		mClient.connect();
+	}
+	
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+		mClient.disconnect();
 	}
 	
 	@Override
@@ -140,16 +163,22 @@ public class AppActivity extends Cocos2dxActivity {
 		}
 	}
 	
+	private static String mLeaderBoardId = "";
+	private static final int REQUEST_LEADERBOARD = 624;
+	
 	public void leaderBoardControl(JSONObject param){
 		if (param.has("value")) {
 			try {
 				int value = param.getInt("value");
+				Games.Leaderboards.submitScore(mClient, mLeaderBoardId, value);
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
 		}else{
+			startActivityForResult(Games.Leaderboards.getLeaderboardIntent(mClient,
+			        mLeaderBoardId), REQUEST_LEADERBOARD);
 		}
 	}
 }
