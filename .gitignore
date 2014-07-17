@@ -1,6 +1,7 @@
 cocos2d
 proj.ios_mac/LHCocosFirstGame.xcodeproj/project.xcworkspace
 proj.ios_mac/LHCocosFirstGame.xcodeproj/xcuserdata
+proj.ios_mac/build
 proj.android/gen
 proj.android/bin
 proj.android/assets
