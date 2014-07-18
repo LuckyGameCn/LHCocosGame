@@ -6,3 +6,6 @@ proj.android/bin
 proj.android/assets
 proj.android/obj
 publish
+proj.android/libs/armeabi/libcocos2dcpp.so
+
+proj.android/libs/armeabi/gdb.setup
