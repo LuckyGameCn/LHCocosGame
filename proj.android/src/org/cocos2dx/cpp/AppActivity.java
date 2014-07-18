@@ -181,4 +181,45 @@ public class AppActivity extends Cocos2dxActivity {
 			        mLeaderBoardId), REQUEST_LEADERBOARD);
 		}
 	}
+    
+    public void showReviewAlert(JSONObject param){
+		if (param.has("title")) {
+			try {
+				String title = param.getString("title");
+                String message = param.getString("message");
+                String ok = param.getString("ok");
+                String cancel = param.getString("cancel");
+                
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage(message)
+                .setCancelable(false)
+                .setPositiveButton(ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        AppActivity.this.goReview(null);
+                    }
+                })
+                .setNegativeButton(cancel, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+                AlertDialog alert = builder.create();
+				alert.show();
+                
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+	}
+
+    
+    public void goReview(JSONObject param){
+        String appId = "com.luckyhu.game";
+        String playurl = "https://play.google.com/store/apps/details?id=" + appId;
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(playurl));
+        startActivity(i);
+    }
 }

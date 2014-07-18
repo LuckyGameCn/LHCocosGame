@@ -30,6 +30,11 @@
 #import "GADBannerView.h"
 #import "GADRequest.h"
 #import "IOSNDKHelper.h"
+#import <StoreKit/SKStoreProductViewController.h>
+
+@interface RootViewController<SKStoreProductViewControllerDelegate,UIAlertViewDelegate> ()
+
+@end
 
 @implementation RootViewController
 
@@ -78,6 +83,45 @@
             [self presentModalViewController: leaderboardController animated: YES];
         }
     }
+}
+
+-(void)showReviewAlert:(id)param{
+    NSDictionary *dic = param;
+    NSString *title = [dic objectForKey:@"title"];
+    NSString *message = [dic objectForKey:@"message"];
+    NSString *cancel = [dic objectForKey:@"cancel"];
+    NSString *ok = [dic objectForKey:@"ok"];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:cancel otherButtonTitles:ok, nil];
+    [alert show];
+}
+
+// Called when a button is clicked. The view will be automatically dismissed after this call returns
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex==1) {
+        [self goReview:nil];
+    }
+}
+
+-(void)goReview:(id)param{
+    NSString *appId = @"";
+    SKStoreProductViewController *reviewVC = [[SKStoreProductViewController alloc] init];
+    if (reviewVC) {
+        NSDictionary *dic = [NSDictionary dictionaryWithObject:appId forKey:SKStoreProductParameterITunesItemIdentifier];
+        [reviewVC setDelegate:self];
+        [reviewVC loadProductWithParameters:dic completionBlock:^(BOOL result, NSError *error) {
+            if (!result) {
+                [reviewVC dismissViewControllerAnimated:YES completion:nil];
+                NSLog(@"error loadProduct %@",error.localizedFailureReason);
+            }
+        }];
+    }else{
+        // before iOS6.0
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", appId]]];
+    }
+}
+
+-(void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController{
+    [viewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 // Override to allow orientations other than the default portrait orientation.
