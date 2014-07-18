@@ -9,3 +9,5 @@ publish
 proj.android/libs/armeabi/libcocos2dcpp.so
 
 proj.android/libs/armeabi/gdb.setup
+
+.DS_Store
