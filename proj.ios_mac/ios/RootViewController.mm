@@ -30,9 +30,8 @@
 #import "GADBannerView.h"
 #import "GADRequest.h"
 #import "IOSNDKHelper.h"
-#import <StoreKit/SKStoreProductViewController.h>
 
-@interface RootViewController<SKStoreProductViewControllerDelegate,UIAlertViewDelegate> ()
+@interface RootViewController()
 
 @end
 
