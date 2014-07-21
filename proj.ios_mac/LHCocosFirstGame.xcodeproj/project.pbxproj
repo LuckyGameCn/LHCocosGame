@@ -63,7 +63,7 @@
 		A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547471196EBD1400F152D3 /* UMShareButton.cpp */; };
 		A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */; };
 		A5547479196EC6EF00F152D3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5547478196EC6EF00F152D3 /* GameKit.framework */; };
-		A577E95C198101510006052B /* CCUMSocialController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A577E958198101510006052B /* CCUMSocialController.cpp */; };
+		A5699A9F197D6B070036FC20 /* SourceLanScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5699A9D197D6B070036FC20 /* SourceLanScene.cpp */; };
 		A577E95D198101510006052B /* LocalizedString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A577E95A198101510006052B /* LocalizedString.cpp */; };
 		A594BDD119470429001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE3C194B026B001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
@@ -328,8 +328,8 @@
 		A5547475196EBD6200F152D3 /* CCUMSocialSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCUMSocialSDK.h; path = ../Classes/CCUMSocialSDK.h; sourceTree = "<group>"; };
 		A5547476196EBD6200F152D3 /* CCUMTypeDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCUMTypeDef.h; path = ../Classes/CCUMTypeDef.h; sourceTree = "<group>"; };
 		A5547478196EC6EF00F152D3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
-		A577E958198101510006052B /* CCUMSocialController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCUMSocialController.cpp; path = ../Classes/CCUMSocialController.cpp; sourceTree = "<group>"; };
-		A577E959198101510006052B /* CCUMSocialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCUMSocialController.h; path = ../Classes/CCUMSocialController.h; sourceTree = "<group>"; };
+		A5699A9D197D6B070036FC20 /* SourceLanScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SourceLanScene.cpp; path = ../Classes/SourceLanScene.cpp; sourceTree = "<group>"; };
+		A5699A9E197D6B070036FC20 /* SourceLanScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SourceLanScene.h; path = ../Classes/SourceLanScene.h; sourceTree = "<group>"; };
 		A577E95A198101510006052B /* LocalizedString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LocalizedString.cpp; path = ../Classes/LocalizedString.cpp; sourceTree = "<group>"; };
 		A577E95B198101510006052B /* LocalizedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalizedString.h; path = ../Classes/LocalizedString.h; sourceTree = "<group>"; };
 		A594BDD019470429001DEF30 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
@@ -703,6 +703,10 @@
 		A53A891A197E8ED50051B7D4 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
+				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
+				A5699A9D197D6B070036FC20 /* SourceLanScene.cpp */,
+				A5699A9E197D6B070036FC20 /* SourceLanScene.h */,
 				A5AA42CD196D0B8100DC3411 /* DeveloperInfoScence.cpp */,
 				A5AA42CE196D0B8100DC3411 /* DeveloperInfoScence.h */,
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
@@ -722,13 +726,13 @@
 			children = (
 				A59A47841952B36B00217F27 /* ThirdPartyHelper.cpp */,
 				A59A47851952B36B00217F27 /* ThirdPartyHelper.h */,
+				A59A47841952B36B00217F27 /* ThirdPartyHelper.cpp */,
+				A59A47851952B36B00217F27 /* ThirdPartyHelper.h */,
 				A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */,
 				A5547475196EBD6200F152D3 /* CCUMSocialSDK.h */,
 				A5547476196EBD6200F152D3 /* CCUMTypeDef.h */,
 				A5547471196EBD1400F152D3 /* UMShareButton.cpp */,
 				A5547472196EBD1400F152D3 /* UMShareButton.h */,
-				A577E958198101510006052B /* CCUMSocialController.cpp */,
-				A577E959198101510006052B /* CCUMSocialController.h */,
 				A577E95A198101510006052B /* LocalizedString.cpp */,
 				A577E95B198101510006052B /* LocalizedString.h */,
 			);
@@ -1222,6 +1226,7 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				A59A47F31952CDBD00217F27 /* dump.c in Sources */,
 				A59A47FE1952CDBD00217F27 /* NDKHelper.cpp in Sources */,
+				A5699A9F197D6B070036FC20 /* SourceLanScene.cpp in Sources */,
 				A59A47F41952CDBD00217F27 /* error.c in Sources */,
 				A5AA4324196D299E00DC3411 /* UmSocialControllerIOS.mm in Sources */,
 				A59A47FC1952CDBD00217F27 /* value.c in Sources */,
@@ -1230,7 +1235,6 @@
 				A59A47FD1952CDBD00217F27 /* NDKCallbackNode.cpp in Sources */,
 				A59A47F81952CDBD00217F27 /* pack_unpack.c in Sources */,
 				A577E95D198101510006052B /* LocalizedString.cpp in Sources */,
-				A577E95C198101510006052B /* CCUMSocialController.cpp in Sources */,
 				A59A47F51952CDBD00217F27 /* hashtable.c in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				A59A47B41952C35900217F27 /* IOSNDKHelper.mm in Sources */,
