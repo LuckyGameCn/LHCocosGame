@@ -3,6 +3,14 @@
 #include "cocostudio/CocoStudio.h"
 #include "UIButton.h"
 #include "SourceLanScene.h"
+#include "RemLan.h"
+
+#define KEY_AL "al"
+#define KEY_WORDS "words"
+#define KEY_SOURCE "source"
+#define KEY_SOUND "sound"
+#define KEY_LEARN "learn"
+
 USING_NS_CC;
 Scene* ChooseModelScene::createScene(cocos2d::CCDictionary *dic)
 {
@@ -36,6 +44,24 @@ bool ChooseModelScene::initDict(cocos2d::CCDictionary *dic)
         log("parse json error.");
         return false;
     }
+    
+    RemLan *lan = RemLan::create();
+    const char *al = cocostudio::DictionaryHelper::getInstance()->getStringValue_json(jdoc, KEY_AL);
+    lan->setAl(cocos2d::CCString::create(al));
+    int count = LHDICTOOL->getArrayCount_json(jdoc, KEY_WORDS);
+    for (int i=0 ; i<count; i++) {
+        const rapidjson::Value &tv = LHDICTOOL->getDictionaryFromArray_json(jdoc, KEY_WORDS, i);
+        RemWord *word = RemWord::create();
+        const char *source = LHDICTOOL->getStringValue_json(tv, KEY_SOURCE);
+        const char *sound = LHDICTOOL->getStringValue_json(tv, KEY_SOUND);
+        const char *learn = LHDICTOOL->getStringValue_json(tv, KEY_LEARN);
+        word->setLearn(cocos2d::__String::create(learn));
+        word->setSound(cocos2d::__String::create(sound));
+        word->setSource(cocos2d::__String::create(source));
+        lan->words.pushBack(word);
+    }
+    
+    log("%s",al);
     
 	return true;
 }
