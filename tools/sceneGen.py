@@ -14,6 +14,7 @@ print "{"
 print "public:"
 print "	static cocos2d::Scene* createScene(cocos2d::CCDictionary *dic);"
 print "	bool initDict(cocos2d::CCDictionary *dic);"
+print "	virtual ~%s();" % (name)
 print "	CREATE_FUNC(%s);" % (name)
 print "};"
 print "#endif"
@@ -29,6 +30,8 @@ print "	layer->initDict(dic);"
 print "	scene->addChild(layer);"
 print "	return scene;"
 print "}\n"
+print "%s::~%s(){" % (name,name)
+print "}"
 print "bool %s::initDict(cocos2d::CCDictionary *dic)" % (name)
 print "{\n"
 print "\treturn true;\n}"
