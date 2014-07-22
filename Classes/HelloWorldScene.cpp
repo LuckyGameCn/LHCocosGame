@@ -4,6 +4,7 @@
 #include "ThirdPartyHelper.h"
 #include "UIListView.h"
 #include "UIText.h"
+#include "SourceLanScene.h"
 
 USING_NS_CC;
 USING_NS_UM_SOCIAL;
@@ -75,6 +76,8 @@ bool HelloWorld::init()
             cocos2d::ui::ListView *lv =(cocos2d::ui::ListView*) p;
             cocos2d::CCString *se = _learns.at(lv->getCurSelectedIndex());
             
+            auto tran =  TransitionFadeUp::create(0.3, SourceLanScene::createScene(se));
+            Director::getInstance()->replaceScene(tran);
         }
     });
     

@@ -9,7 +9,9 @@
 #include "SourceLanScene.h"
 #include "UIListView.h"
 #include "UIText.h"
-#include "cocostudio/CocoStudio.h"
+#include "UIButton.h"
+#include "HelloWorldScene.h"
+#include "ChooseModelScene.h"
 
 USING_NS_CC;
 
@@ -33,9 +35,17 @@ bool SourceLanScene::initLearn(cocos2d::CCString* learn){
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    std::stringstream ss;
-    ss<<learn->getCString()<<".json";
-    std::string s = cocos2d::FileUtils::getInstance()->getStringFromFile(ss.str());
+    if (learn->compare("German")==0) {
+        _sources.pushBack(cocos2d::CCString::create("中文"));
+    }else if(learn->compare("English")){
+        _sources.pushBack(cocos2d::CCString::create("中文"));
+    }else if(learn->compare("Chinese")){
+        _sources.pushBack(cocos2d::CCString::create("English"));
+        _sources.pushBack(cocos2d::CCString::create("German"));
+    }else{
+        log("error.no learn language.");
+        return false;
+    }
     
     auto list = cocos2d::ui::ListView::create();
     list->setSize(Size(visibleSize.width/3*2,visibleSize.height/5*4));
@@ -50,13 +60,28 @@ bool SourceLanScene::initLearn(cocos2d::CCString* learn){
         list->pushBackCustomItem(text);
     }
     
-    list->addEventListener([this](Ref* p, cocos2d::ui::ListView::EventType t){
+    list->addEventListener([this,learn](Ref* p, cocos2d::ui::ListView::EventType t){
         if (t == cocos2d::ui::ListView::EventType::ON_SELECTED_ITEM_END) {
             cocos2d::ui::ListView *lv =(cocos2d::ui::ListView*) p;
             cocos2d::CCString *se = _sources.at(lv->getCurSelectedIndex());
+            cocos2d::CCString *model = cocos2d::CCString::createWithFormat("%s_%s",learn->getCString(),se->getCString());
             
+            cocos2d::CCDictionary *dic = cocos2d::CCDictionary::create();
+            dic->setObject(model, "model");
+            dic->setObject(learn, "learn");
+            
+            auto tran =  TransitionFadeDown::create(0.3, ChooseModelScene::createScene(dic));
+            Director::getInstance()->replaceScene(tran);
         }
     });
+    
+    cocos2d::ui::Button *bt = cocos2d::ui::Button::create("play.png");
+    bt->addTouchEventListener([](Ref*,cocos2d::ui::Widget::TouchEventType){
+        auto tran =  TransitionFadeDown::create(0.3, HelloWorld::createScene());
+        Director::getInstance()->replaceScene(tran);
+    });
+    bt->setPosition(Vec2(40, 40));
+    this->addChild(bt);
     
     return true;
 }
