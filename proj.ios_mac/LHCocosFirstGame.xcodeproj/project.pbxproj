@@ -60,6 +60,7 @@
 		A50697F3194750AD0008E3C3 /* PlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50697F1194750AD0008E3C3 /* PlayScene.cpp */; };
 		A53A8922197EDFCB0051B7D4 /* LHPauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */; };
 		A53A891F197E8F0A0051B7D4 /* MemorizeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53A891D197E8F0A0051B7D4 /* MemorizeScene.cpp */; };
+		A53A8922197EDFCB0051B7D4 /* LHPauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */; };
 		A5547470196D8E2D00F152D3 /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
 		A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547471196EBD1400F152D3 /* UMShareButton.cpp */; };
 		A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */; };
@@ -329,6 +330,8 @@
 		A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHPauseScene.h; path = ../Classes/LHPauseScene.h; sourceTree = "<group>"; };
 		A53A891D197E8F0A0051B7D4 /* MemorizeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MemorizeScene.cpp; path = ../Classes/MemorizeScene.cpp; sourceTree = "<group>"; };
 		A53A891E197E8F0A0051B7D4 /* MemorizeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemorizeScene.h; path = ../Classes/MemorizeScene.h; sourceTree = "<group>"; };
+		A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHPauseScene.cpp; path = ../Classes/LHPauseScene.cpp; sourceTree = "<group>"; };
+		A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHPauseScene.h; path = ../Classes/LHPauseScene.h; sourceTree = "<group>"; };
 		A5547471196EBD1400F152D3 /* UMShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UMShareButton.cpp; path = ../Classes/UMShareButton.cpp; sourceTree = "<group>"; };
 		A5547472196EBD1400F152D3 /* UMShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UMShareButton.h; path = ../Classes/UMShareButton.h; sourceTree = "<group>"; };
 		A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCUMSocialSDK.cpp; path = ../Classes/CCUMSocialSDK.cpp; sourceTree = "<group>"; };
@@ -735,6 +738,8 @@
 				A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */,
 				A53A891D197E8F0A0051B7D4 /* MemorizeScene.cpp */,
 				A53A891E197E8F0A0051B7D4 /* MemorizeScene.h */,
+				A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */,
+				A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */,
 			);
 			name = Scene;
 			sourceTree = "<group>";

@@ -7,6 +7,7 @@ USING_NS_CC;
 Scene* PlayScene::createScene(cocos2d::CCDictionary *dic)
 {
 	auto scene = Scene::create();
+    scene->setTag(624);
 	auto layer = PlayScene::create();
 	layer->initDict(dic);
 	scene->addChild(layer);
