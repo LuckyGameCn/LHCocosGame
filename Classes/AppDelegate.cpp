@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "LHPauseScene.h"
 
 USING_NS_CC;
 
@@ -43,6 +44,11 @@ void AppDelegate::applicationDidEnterBackground() {
 
     // if you use SimpleAudioEngine, it must be pause
     // SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
+    
+    int sceneTag = Director::getInstance()->getRunningScene()->getTag();
+    if (sceneTag > 0) {
+        Director::getInstance()->pushScene(LHPauseScene::createScene(nullptr));
+    }
 }
 
 // this function will be called when the app is active again
