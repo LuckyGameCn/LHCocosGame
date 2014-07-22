@@ -67,6 +67,7 @@
 		A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */; };
 		A5547479196EC6EF00F152D3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5547478196EC6EF00F152D3 /* GameKit.framework */; };
 		A5699A9F197D6B070036FC20 /* SourceLanScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5699A9D197D6B070036FC20 /* SourceLanScene.cpp */; };
+		A577E8DC197E38040006052B /* ChooseModelScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A577E8DA197E38040006052B /* ChooseModelScene.cpp */; };
 		A594BDD119470429001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE3C194B026B001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A594BE3F194D450C001DEF30 /* GameOverScene.cpp */; };
@@ -335,6 +336,8 @@
 		A5547478196EC6EF00F152D3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		A5699A9D197D6B070036FC20 /* SourceLanScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SourceLanScene.cpp; path = ../Classes/SourceLanScene.cpp; sourceTree = "<group>"; };
 		A5699A9E197D6B070036FC20 /* SourceLanScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SourceLanScene.h; path = ../Classes/SourceLanScene.h; sourceTree = "<group>"; };
+		A577E8DA197E38040006052B /* ChooseModelScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ChooseModelScene.cpp; path = ../Classes/ChooseModelScene.cpp; sourceTree = "<group>"; };
+		A577E8DB197E38040006052B /* ChooseModelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseModelScene.h; path = ../Classes/ChooseModelScene.h; sourceTree = "<group>"; };
 		A594BDD019470429001DEF30 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		A594BE3F194D450C001DEF30 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverScene.cpp; path = ../Classes/GameOverScene.cpp; sourceTree = "<group>"; };
 		A594BE40194D450C001DEF30 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = ../Classes/GameOverScene.h; sourceTree = "<group>"; };
@@ -582,6 +585,8 @@
 				A59A47851952B36B00217F27 /* ThirdPartyHelper.h */,
 				A5699A9D197D6B070036FC20 /* SourceLanScene.cpp */,
 				A5699A9E197D6B070036FC20 /* SourceLanScene.h */,
+				A577E8DA197E38040006052B /* ChooseModelScene.cpp */,
+				A577E8DB197E38040006052B /* ChooseModelScene.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -1228,6 +1233,7 @@
 				A59A47B41952C35900217F27 /* IOSNDKHelper.mm in Sources */,
 				A59A47FA1952CDBD00217F27 /* strconv.c in Sources */,
 				A5AA4325196D299E00DC3411 /* UMSocialUIObject.mm in Sources */,
+				A577E8DC197E38040006052B /* ChooseModelScene.cpp in Sources */,
 				A50697F3194750AD0008E3C3 /* PlayScene.cpp in Sources */,
 				A59A47F91952CDBD00217F27 /* strbuffer.c in Sources */,
 			);
