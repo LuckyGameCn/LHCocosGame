@@ -78,13 +78,8 @@ bool GameOverScene::init()
     return true;
 }
 
-static void toPlay(int level){
-    auto tran =  TransitionMoveInR::create(0.3, PlayScene::createScene(level));
-    Director::getInstance()->replaceScene(tran);
-}
-
 void GameOverScene::again(cocos2d::Ref *pSender){
-    toPlay(rlevel);
+    
 }
 
 void GameOverScene::back(cocos2d::Ref *pSender){

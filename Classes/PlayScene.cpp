@@ -1,53 +1,73 @@
+//------.cpp
 #include "PlayScene.h"
-#include "GameOverScene.h"
-
+#include "UIText.h"
+#include "UIButton.h"
+#include "UILayout.h"
 USING_NS_CC;
-
-Scene* PlayScene::createScene(int level)
+Scene* PlayScene::createScene(cocos2d::CCDictionary *dic)
 {
-    // 'scene' is an autorelease object
-    auto scene = Scene::create();
-    
-    // 'layer' is an autorelease object
-    auto layer = PlayScene::create();
-    layer->initWithLevel(level);
-    
-    // add layer as a child to scene
-    scene->addChild(layer);
-
-    // return the scene
-    return scene;
+	auto scene = Scene::create();
+	auto layer = PlayScene::create();
+	layer->initDict(dic);
+	scene->addChild(layer);
+	return scene;
 }
 
-PlayScene::~PlayScene(){
-   
+bool PlayScene::initDict(cocos2d::CCDictionary *dic)
+{
+    remlan = (RemLan*)dic->objectForKey("lan");
+    
+    cocos2d::ui::Button *bt = cocos2d::ui::Button::create("play.png");
+    bt->addTouchEventListener([](Ref* ps,cocos2d::ui::Widget::TouchEventType type){
+        if (type == ui::Widget::TouchEventType::ENDED) {
+             Director::getInstance()->popScene();
+        }
+    });
+    bt->setPosition(Vec2(40, 40));
+    this->addChild(bt,1);
+    
+    this->genWord();
+    
+	return true;
 }
 
-// on "init" you need to initialize your instance
-bool PlayScene::init()
-{
-    //////////////////////////////
-    // 1. super init first
-    if ( !Layer::init() )
-    {
-        return false;
+void PlayScene::genWord(){
+    
+//    cocos2d::Vector<CCString*> chs;
+    std::vector<std::u16string> chs;
+    
+    int index = CCRANDOM_0_1() * remlan->words.size();
+    RemWord *w = remlan->words.at(4);
+    auto learn = w->getLearn();
+    std::string learnStr(learn->getCString());
+    std::u16string u16l;
+    StringUtils::UTF8ToUTF16(learnStr, u16l);
+    for (int i =0 ; i<u16l.length(); i++) {
+        std::u16string tmp = &u16l.at(i);
+//        const unsigned char *s = (const unsigned char*)tmp.c_str();
+//        int len = tmp.length();
+        chs.push_back(tmp);
+//        chs.pushBack(CCString::createWithData(s, len));
     }
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    //gen ui
+    Size vs = Director::getInstance()->getVisibleSize();
+    auto layout = ui::Layout::create();
+    layout->setPosition(Vec2(0, 0));
+    layout->setSize(vs);
+    this->addChild(layout, 0);
     
-    return true;
-}
-
-void PlayScene::draw(cocos2d::Renderer *renderer, const cocos2d::Mat4 &transform, bool transformUpdated){
-    // 基线渲染
-}
-
-void PlayScene::update(float dt){
-   
-}
-
-void PlayScene::initWithLevel(int level){
-    plevel = level;
-   
+    for (int i =0 ; i<chs.size(); i++) {
+        auto tbt = ui::Button::create("play.png");
+        float bw = vs.width/5;
+        tbt->setSize(Size(bw, 40));
+        tbt->setTitleFontSize(40);
+        std::u16string tmp16 = chs.at(i);
+        std::string tmp8;
+        StringUtils::UTF16ToUTF8(tmp16, tmp8);
+        tbt->setTitleText(tmp8);
+        tbt->setPosition(Vec2(bw/2+i*bw, 200));
+        tbt->setTitleColor(Color3B::RED);
+        layout->addChild(tbt);
+    }
 }
