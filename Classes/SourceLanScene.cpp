@@ -31,6 +31,10 @@ Scene* SourceLanScene::createScene(cocos2d::CCString* learn)
     return scene;
 }
 
+SourceLanScene::~SourceLanScene(){
+    CC_SAFE_RELEASE(tolearn);
+}
+
 bool SourceLanScene::initLearn(cocos2d::CCString* learn){
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
@@ -60,15 +64,16 @@ bool SourceLanScene::initLearn(cocos2d::CCString* learn){
         list->pushBackCustomItem(text);
     }
     
-    list->addEventListener([this,learn](Ref* p, cocos2d::ui::ListView::EventType t){
+    this->setTolearn(learn);
+    list->addEventListener([this](Ref* p, cocos2d::ui::ListView::EventType t){
         if (t == cocos2d::ui::ListView::EventType::ON_SELECTED_ITEM_END) {
             cocos2d::ui::ListView *lv =(cocos2d::ui::ListView*) p;
             cocos2d::CCString *se = _sources.at(lv->getCurSelectedIndex());
-            cocos2d::CCString *model = cocos2d::CCString::createWithFormat("%s_%s",learn->getCString(),se->getCString());
+            cocos2d::CCString *model = cocos2d::CCString::createWithFormat("%s_%s",this->tolearn->getCString(),se->getCString());
             
             cocos2d::CCDictionary *dic = cocos2d::CCDictionary::create();
             dic->setObject(model, "model");
-            dic->setObject(learn, "learn");
+            dic->setObject(this->tolearn, "learn");
             
             auto tran =  TransitionFadeDown::create(0.3, ChooseModelScene::createScene(dic));
             Director::getInstance()->replaceScene(tran);

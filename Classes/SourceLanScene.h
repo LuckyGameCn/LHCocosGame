@@ -23,6 +23,9 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(SourceLanScene);
     
+    virtual ~SourceLanScene();
+    CC_SYNTHESIZE_RETAIN(cocos2d::CCString*, tolearn, Tolearn);
+    
 private:
     cocos2d::Vector<cocos2d::CCString*> _sources;
 };
