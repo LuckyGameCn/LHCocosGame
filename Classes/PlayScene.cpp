@@ -34,40 +34,58 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
 
 void PlayScene::genWord(){
     
-//    cocos2d::Vector<CCString*> chs;
-    std::vector<std::u16string> chs;
+    std::u16string allchar;
     
     int index = CCRANDOM_0_1() * remlan->words.size();
-    RemWord *w = remlan->words.at(4);
+    RemWord *w = remlan->words.at(index);
+    
     auto learn = w->getLearn();
     std::string learnStr(learn->getCString());
     std::u16string u16l;
     StringUtils::UTF8ToUTF16(learnStr, u16l);
     for (int i =0 ; i<u16l.length(); i++) {
-        std::u16string tmp = &u16l.at(i);
-//        const unsigned char *s = (const unsigned char*)tmp.c_str();
-//        int len = tmp.length();
-        chs.push_back(tmp);
-//        chs.pushBack(CCString::createWithData(s, len));
+        char16_t tmp = u16l.at(i);
+        allchar.append(&tmp);
+    }
+    
+    std::string al(remlan->getAl()->getCString());
+    std::u16string alu16s;
+    StringUtils::UTF8ToUTF16(al, alu16s);
+    
+    Size vs = Director::getInstance()->getVisibleSize();
+    int lineCount = 6;
+    int columnCount = 6;
+    float bw = vs.width/lineCount;
+    float bh = vs.height/2/columnCount;
+    
+    int leftcount = lineCount*columnCount - allchar.size();
+    while(leftcount>0){
+        int in = CCRANDOM_0_1() * alu16s.size();
+        char16_t tmp = alu16s.at(in);
+        int insert = CCRANDOM_0_1() * allchar.size();
+        allchar.insert(insert, &tmp);
+        leftcount -- ;
     }
     
     //gen ui
-    Size vs = Director::getInstance()->getVisibleSize();
     auto layout = ui::Layout::create();
     layout->setPosition(Vec2(0, 0));
     layout->setSize(vs);
     this->addChild(layout, 0);
-    
-    for (int i =0 ; i<chs.size(); i++) {
+    for (int i =0 ; i<lineCount*columnCount; i++) {
+        
+        int line = i/columnCount;
+        int col = i%columnCount;
+        
         auto tbt = ui::Button::create("play.png");
-        float bw = vs.width/5;
         tbt->setSize(Size(bw, 40));
         tbt->setTitleFontSize(40);
-        std::u16string tmp16 = chs.at(i);
+        char16_t tmp16c = allchar.at(i);
+        std::u16string tmp16(&tmp16c);
         std::string tmp8;
         StringUtils::UTF16ToUTF8(tmp16, tmp8);
         tbt->setTitleText(tmp8);
-        tbt->setPosition(Vec2(bw/2+i*bw, 200));
+        tbt->setPosition(Vec2(bw/2+line*bw, vs.height/2 - col*bh));
         tbt->setTitleColor(Color3B::RED);
         layout->addChild(tbt);
     }
