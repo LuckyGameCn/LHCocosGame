@@ -28,6 +28,7 @@ THE SOFTWARE.
 #include "json/document.h"
 
 #define DICTOOL DictionaryHelper::getInstance()
+#define LHDICTOOL cocostudio::DictionaryHelper::getInstance()
 
 namespace cocostudio {
 /**

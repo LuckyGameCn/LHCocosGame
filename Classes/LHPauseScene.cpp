@@ -16,7 +16,7 @@ LHPauseScene::~LHPauseScene(){
 bool LHPauseScene::initDict(cocos2d::CCDictionary *dic)
 {
     Size vs = Director::getInstance()->getVisibleSize();
-    auto bt = ui::Button::create("play.png");
+    auto bt = ui::Button::create("pause.png");
     bt->setPosition(Vec2(vs.width/2, vs.height/2));
     bt->addTouchEventListener([](Ref*,ui::Widget::TouchEventType type){
         if (type == ui::Widget::TouchEventType::ENDED) {
@@ -24,6 +24,6 @@ bool LHPauseScene::initDict(cocos2d::CCDictionary *dic)
         }
     });
     this->addChild(bt,1);
-    log("Game Pause");
+    log("Game Paused.");
 	return true;
 }
