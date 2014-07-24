@@ -71,6 +71,9 @@
 		A577E8E2197E4EF60006052B /* RemWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A577E8E0197E4EF60006052B /* RemWord.cpp */; };
 		A577E8E6197E566E0006052B /* German_中文.json in Resources */ = {isa = PBXBuildFile; fileRef = A577E8E5197E566E0006052B /* German_中文.json */; };
 		A577E8EA197E56C10006052B /* RemLan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A577E8E8197E56C10006052B /* RemLan.cpp */; };
+		A577E9051980F2870006052B /* LocalizedString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A577E9031980F2870006052B /* LocalizedString.cpp */; };
+		A577E9091980F3640006052B /* en_ls.plist in Resources */ = {isa = PBXBuildFile; fileRef = A577E9081980F3640006052B /* en_ls.plist */; };
+		A577E90B1980F3790006052B /* ch_ls.plist in Resources */ = {isa = PBXBuildFile; fileRef = A577E90A1980F3790006052B /* ch_ls.plist */; };
 		A594BDD119470429001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE3C194B026B001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A594BE3F194D450C001DEF30 /* GameOverScene.cpp */; };
@@ -349,6 +352,10 @@
 		A577E8E5197E566E0006052B /* German_中文.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "German_中文.json"; sourceTree = "<group>"; };
 		A577E8E8197E56C10006052B /* RemLan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RemLan.cpp; path = ../Classes/RemLan.cpp; sourceTree = "<group>"; };
 		A577E8E9197E56C10006052B /* RemLan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemLan.h; path = ../Classes/RemLan.h; sourceTree = "<group>"; };
+		A577E9031980F2870006052B /* LocalizedString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LocalizedString.cpp; path = ../Classes/LocalizedString.cpp; sourceTree = "<group>"; };
+		A577E9041980F2870006052B /* LocalizedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalizedString.h; path = ../Classes/LocalizedString.h; sourceTree = "<group>"; };
+		A577E9081980F3640006052B /* en_ls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = en_ls.plist; sourceTree = "<group>"; };
+		A577E90A1980F3790006052B /* ch_ls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ch_ls.plist; sourceTree = "<group>"; };
 		A594BDD019470429001DEF30 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		A594BE3F194D450C001DEF30 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverScene.cpp; path = ../Classes/GameOverScene.cpp; sourceTree = "<group>"; };
 		A594BE40194D450C001DEF30 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = ../Classes/GameOverScene.h; sourceTree = "<group>"; };
@@ -714,6 +721,8 @@
 				A577E8E5197E566E0006052B /* German_中文.json */,
 				A594BDD019470429001DEF30 /* play.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
+				A577E9081980F3640006052B /* en_ls.plist */,
+				A577E90A1980F3790006052B /* ch_ls.plist */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -769,6 +778,15 @@
 				A577E8E9197E56C10006052B /* RemLan.h */,
 			);
 			name = Entity;
+			sourceTree = "<group>";
+		};
+		A577E90C1980F4550006052B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A577E9031980F2870006052B /* LocalizedString.cpp */,
+				A577E9041980F2870006052B /* LocalizedString.h */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		A59A475D1952AD1000217F27 /* GoogleMobileAdsSdkiOS-6.9.3 */ = {
@@ -1209,6 +1227,7 @@
 				A5AA430E196D299D00DC3411 /* UMSocialLocalizable.strings in Resources */,
 				A5AA4311196D299D00DC3411 /* UMSCommentDetailController.xib in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				A577E90B1980F3790006052B /* ch_ls.plist in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
@@ -1217,6 +1236,7 @@
 				A5AA4317196D299D00DC3411 /* UMSnsAccountViewController.xib in Resources */,
 				A594BDD119470429001DEF30 /* play.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
+				A577E9091980F3640006052B /* en_ls.plist in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				A5AA4315196D299D00DC3411 /* UMShareEditViewControlleriPad.xib in Resources */,
@@ -1268,6 +1288,7 @@
 				A59A47FB1952CDBD00217F27 /* utf.c in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				A59A47FD1952CDBD00217F27 /* NDKCallbackNode.cpp in Sources */,
+				A577E9051980F2870006052B /* LocalizedString.cpp in Sources */,
 				A59A47F81952CDBD00217F27 /* pack_unpack.c in Sources */,
 				A577E95D198101510006052B /* LocalizedString.cpp in Sources */,
 				A59A47F51952CDBD00217F27 /* hashtable.c in Sources */,
