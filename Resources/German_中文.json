@@ -1,0 +1,10 @@
+{
+	"al":"qwertyuiopasdgfhjklzxcvbnm",
+	"words":[
+		{"source":"时间","learn":"gtmbs","sound":"[o:tail]"},
+		{"source":"时","learn":"mbs","sound":"[o:il]"},
+		{"source":"间","learn":"gbs","sound":"[il]"},
+		{"source":"做做","learn":"zzbs","sound":"[zz]"},
+        {"source":"做","learn":"中文zbs","sound":"[zw]"}
+	]
+}
