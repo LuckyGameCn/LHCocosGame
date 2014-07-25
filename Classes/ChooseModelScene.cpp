@@ -75,7 +75,8 @@ bool ChooseModelScene::initDict(cocos2d::CCDictionary *dic)
     memorize->ignoreContentAdaptWithSize(false);
     memorize->setSize(Size(50,30));
     memorize->setTitleFontSize(40);
-    memorize->addTouchEventListener([this](Ref*,cocos2d::ui::Widget::TouchEventType){
+    memorize->addTouchEventListener([this](Ref*,cocos2d::ui::Widget::TouchEventType type){
+        if(type != ui::Widget::TouchEventType::ENDED) return;
         cocos2d::CCDictionary *dict = cocos2d::CCDictionary::create();
         dict->setObject(this->getRemlan(), "lan");
         auto tran =  TransitionFadeDown::create(0.3, MemorizeScene::createScene(dict));
@@ -90,7 +91,8 @@ bool ChooseModelScene::initDict(cocos2d::CCDictionary *dic)
     play->setSize(Size(50,30));
     play->setTitleFontSize(40);
     play->setTitleText("play");
-    play->addTouchEventListener([this](Ref*,cocos2d::ui::Widget::TouchEventType){
+    play->addTouchEventListener([this](Ref*,cocos2d::ui::Widget::TouchEventType type){
+        if(type != ui::Widget::TouchEventType::ENDED) return;
         cocos2d::CCDictionary *dict = cocos2d::CCDictionary::create();
         dict->setObject(this->getRemlan(), "lan");
         auto tran =  TransitionFadeDown::create(0.3, PlayScene::createScene(dict));
