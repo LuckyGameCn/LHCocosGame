@@ -3,6 +3,7 @@
 #include "UIButton.h"
 #include "UILayout.h"
 #include <iostream>
+#include "LHMacro.h"
 USING_NS_CC;
 Scene* PlayScene::createScene(cocos2d::CCDictionary *dic)
 {
@@ -30,14 +31,47 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     this->addChild(bt,1);
     
     //score
-    ui::Text *score = ui::Text::create(StringUtils::format("%lf",126.021f), nullptr, 40);
+    ui::Text *score = ui::Text::create(StringUtils::format("%ld",_scorevalue), Common_Font, 40);
     score->setPosition(Vec2(vs.width/2, vs.height - score->getContentSize().height/2));
     this->addChild(score);
     _score = score;
     
+    //time
+    ui::Text *time = ui::Text::create(StringUtils::format("%lf",_timeuse), Common_Font, 35);
+    time->setPosition(Vec2(vs.width - time->getContentSize().width/2, vs.height - time->getContentSize().height/2));
+    this->addChild(time);
+    _time = time;
+    
+    //show answer
+    auto sa = ui::Button::create(Common_NineScale);
+    sa->setSize(Size(40,40));
+    sa->setTitleText("A");
+    sa->setPosition(Vec2(vs.width - 40, vs.height - 80));
+    sa->addTouchEventListener(CC_CALLBACK_2(PlayScene::showAn, this));
+    this->addChild(sa);
+    
     this->genWord();
     
 	return true;
+}
+
+void PlayScene::showAn(Ref*,ui::Widget::TouchEventType type){
+    if (type == ui::Widget::TouchEventType::ENDED){
+        
+    }
+}
+
+void PlayScene::update(float delta){
+    _timeuse += delta;
+    _time->setString(StringUtils::format("%lf",_timeuse));
+}
+
+void PlayScene::onEnterTransitionDidFinish(){
+    scheduleUpdate();
+}
+
+void PlayScene::onExitTransitionDidStart(){
+    unscheduleUpdate();
 }
 
 void PlayScene::genWord(){
@@ -69,8 +103,7 @@ void PlayScene::genWord(){
         int in = CCRANDOM_0_1() * alu16s.size();
         char16_t tmp = alu16s[in];
         int insert = CCRANDOM_0_1() * chs.size();
-//        chs.insert(chs.begin() + insert, tmp);
-        chs.push_back(tmp);
+        chs.insert(chs.begin() + insert, tmp);
         leftcount -- ;
     }
     
@@ -89,14 +122,53 @@ void PlayScene::genWord(){
         tbt->setTitleFontSize(40);
         tbt->setScale9Enabled(true);
         char16_t tmp16c = chs.at(i);
-        std::u16string tmp16(&tmp16c);
+        std::u16string tmp16;
+        tmp16.push_back(tmp16c);
         std::string tmp8;
         StringUtils::UTF16ToUTF8(tmp16, tmp8);
         printf("u8 %s %ld u16 %ld\n",tmp8.c_str(),tmp8.length(),tmp16.length());
         tbt->setTitleText(tmp8);
         tbt->setPosition(Vec2(bw/2+line*bw, vs.height/2 - col*bh));
         tbt->setTitleColor(Color3B::RED);
+        tbt->addTouchEventListener([this](Ref*,ui::Widget::TouchEventType type){
+            if (type == ui::Widget::TouchEventType::ENDED) {
+                if (this->checkComplete()) {
+                    this->scoreAndMoveOn();
+                }else{
+                    this->wrongAn();
+                }
+            }
+        });
         layout->addChild(tbt);
     }
+    
+    std::string editstring;
+    StringUtils::UTF16ToUTF8(u16l, editstring);
+//    for (int i=0; i<chs.size(); i++) {
+//        editstring.append("_ ");
+//    }
+    auto edit = ui::Button::create("play.png");
+    edit->setTitleFontSize(35);
+    edit->setScale9Enabled(true);
+    edit->setSize(Size(vs.width/3*2,vs.height/6));
+    edit->setTitleText(editstring);
+    edit->setPosition(Vec2(vs.width/2, vs.height/4*3));
+    edit->addTouchEventListener([this](Ref*,ui::Widget::TouchEventType type){
+        if (type == ui::Widget::TouchEventType::ENDED) {
+            //remove one
+        }
+    });
+    layout->addChild(edit);
+}
+
+bool PlayScene::checkComplete(){
+    return false;
+}
+
+void PlayScene::scoreAndMoveOn(){
+    
+}
+
+void PlayScene::wrongAn(){
     
 }

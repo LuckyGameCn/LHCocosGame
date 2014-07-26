@@ -11,13 +11,23 @@ public:
 	bool initDict(cocos2d::CCDictionary *dic);
 	CREATE_FUNC(PlayScene);
     
-    virtual void OnEnt
+    virtual void onEnterTransitionDidFinish();
+    virtual void onExitTransitionDidStart();
+    void update(float delta);
     
 private:
     RemLan *remlan;
     void genWord();
     
-    float _scorevalue;
+    long _scorevalue;
     cocos2d::ui::Text *_score;
+    
+    float _timeuse;
+    cocos2d::ui::Text *_time;
+    
+    bool checkComplete();
+    void scoreAndMoveOn();
+    void wrongAn();
+    void showAn(Ref*,cocos2d::ui::Widget::TouchEventType type);
 };
 #endif

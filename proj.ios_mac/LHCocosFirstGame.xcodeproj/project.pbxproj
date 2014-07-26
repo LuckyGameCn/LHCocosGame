@@ -470,6 +470,7 @@
 		A5AA433C196D2AC400DC3411 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		A5AA433E196D2AD000DC3411 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
 		A5AA4340196D2AD700DC3411 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Accounts.framework; sourceTree = DEVELOPER_DIR; };
+		A5E1486119834FD800E54242 /* LHMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LHMacro.h; path = ../Classes/LHMacro.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -575,6 +576,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A5E1485E19834FAE00E54242 /* Common */,
 				A577E97219810C4A0006052B /* Entity */,
 				A577E9101981011A0006052B /* Utils */,
 				A53A891A197E8ED50051B7D4 /* Scene */,
@@ -1028,6 +1030,14 @@
 				A5AA4309196D299D00DC3411 /* UMSocialYiXinHandler.h */,
 			);
 			path = YiXin;
+			sourceTree = "<group>";
+		};
+		A5E1485E19834FAE00E54242 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A5E1486119834FD800E54242 /* LHMacro.h */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
