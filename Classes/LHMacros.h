@@ -9,6 +9,6 @@
 #ifndef LHCocosFirstGame_LHMacros_h
 #define LHCocosFirstGame_LHMacros_h
 
-
+#define Common_Font "Arial"
 
 #endif

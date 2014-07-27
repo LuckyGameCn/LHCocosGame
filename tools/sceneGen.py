@@ -9,6 +9,7 @@ print "//------.h"
 print "#ifndef __%s__" % (upname)
 print "#define __%s__" % (upname)
 print "#include \"cocos2d.h\""
+print "USING_NS_CC;"
 print "class %s : public cocos2d::Layer" % (name)
 print "{"
 print "public:"
@@ -21,7 +22,6 @@ print "#endif"
 
 print "//------.cpp"
 print "#include \"%s.h\"" % (name)
-print "USING_NS_CC;"
 print "Scene* %s::createScene(cocos2d::CCDictionary *dic)" % (name)
 print "{"
 print "	auto scene = Scene::create();"
