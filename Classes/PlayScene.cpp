@@ -2,6 +2,7 @@
 #include "PlayScene.h"
 #include <iostream>
 #include "LHMacro.h"
+#include "ThirdPartyHelper.h"
 USING_NS_CC;
 Scene* PlayScene::createScene(cocos2d::CCDictionary *dic)
 {
@@ -36,17 +37,19 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     
     //time
     ui::Text *time = ui::Text::create(StringUtils::format("%lf",_timeuse), Common_Font, 35);
-    time->setPosition(Vec2(vs.width - time->getContentSize().width/2, vs.height - time->getContentSize().height/2));
+    time->setPosition(Vec2(vs.width - time->getContentSize().width/2, vs.height - time->getContentSize().height/2 - 5));
     this->addChild(time);
     _time = time;
     
     //show answer
-    auto sa = ui::Button::create(Common_NineScale);
-    sa->setSize(Size(40,40));
+    auto sa = ui::Button::create();
+    sa->ignoreContentAdaptWithSize(false);
+    sa->setSize(Size(60,60));
+    sa->setTitleFontSize(40);
     sa->setTitleText("A");
     sa->setPosition(Vec2(vs.width - 40, vs.height - 80));
     sa->addTouchEventListener(CC_CALLBACK_2(PlayScene::showAn, this));
-    this->addChild(sa);
+    this->addChild(sa,1);
     
     this->genWord();
     
@@ -55,13 +58,44 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
 
 void PlayScene::showAn(Ref*,ui::Widget::TouchEventType type){
     if (type == ui::Widget::TouchEventType::ENDED){
+        std::string tmp;
+        StringUtils::UTF16ToUTF8(currentanswer, tmp);
         
+        Size vs = Director::getInstance()->getVisibleSize();
+        
+        auto layout = ui::Layout::create();
+        layout->setSize(vs);
+        layout->addTouchEventListener([layout,this](Ref*,ui::Widget::TouchEventType type){
+            if (type == ui::Widget::TouchEventType::ENDED) {
+                layout->removeFromParent();
+                ThirdPartyHelper::setAd(SET_AD_HID);
+                this->genWord();
+            }
+        });
+        this->addChild(layout,2);
+        
+        Color4B b = Color4B::BLACK;
+        b.a = 120;
+        auto lc = LayerColor::create(b, vs.width, vs.height);
+        layout->addChild(lc);
+        
+        auto an = ui::Text::create(tmp, Common_Font, 45);
+        an->setPosition(Vec2(vs.width/2, vs.height/2));
+        layout->addChild(an);
+        
+        an = ui::Text::create(currentWord->getSound()->getCString(), Common_Font, 35);
+        an->setPosition(Vec2(vs.width/2, vs.height/2 - an->getContentSize().height-5));
+        layout->addChild(an);
+        
+        ThirdPartyHelper::setAd(SET_AD_SHOW);
     }
 }
 
 void PlayScene::update(float delta){
-    _timeuse += delta;
-    _time->setString(StringUtils::format("%lf",_timeuse));
+    if (_timeuse>=0) {
+        _timeuse += delta;
+        _time->setString(StringUtils::format("%lf",_timeuse));
+    }
 }
 
 void PlayScene::onEnterTransitionDidFinish(){
@@ -74,9 +108,10 @@ void PlayScene::onExitTransitionDidStart(){
 
 void PlayScene::genWord(){
     
-//    std::u16string allchar;
-    
-    
+    if (currentlayout) {
+        currentlayout->removeFromParent();
+    }
+
     int index = CCRANDOM_0_1() * remlan->words.size();
     RemWord *w = remlan->words.at(index);
     
@@ -181,8 +216,8 @@ void PlayScene::genWord(){
     layout->addChild(edit);
     
     currentlayout = layout;
-    
     currentanswer = u16l;
+    currentWord = w;
 }
 
 int PlayScene::checkComplete(cocos2d::Ref *charbt){
@@ -225,7 +260,14 @@ void PlayScene::enableAllCharBt(bool enable){
 }
 
 void PlayScene::scoreAndMoveOn(){
+    //socre
+    int score = 1;
     
+    _scorevalue += score;
+    _score->setString(StringUtils::format("%ld",_scorevalue));
+    
+    _timeuse = -1;
+    this->genWord();
 }
 
 void PlayScene::wrongAn(){

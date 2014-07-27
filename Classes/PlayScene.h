@@ -35,6 +35,7 @@ private:
     
     std::u16string currentanswer;
     std::u16string currentedit;
+    RemWord *currentWord;
     
     cocos2d::ui::Button *editbutton;
     cocos2d::ui::Layout *currentlayout;

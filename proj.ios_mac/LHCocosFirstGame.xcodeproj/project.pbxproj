@@ -58,7 +58,7 @@
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
 		A50697F3194750AD0008E3C3 /* PlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50697F1194750AD0008E3C3 /* PlayScene.cpp */; };
-		A5132B5319855F140002F355 /* ShowAnswerScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5132B5119855F140002F355 /* ShowAnswerScene.cpp */; };
+		A5132B6419859F970002F355 /* devinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = A5132B6319859F970002F355 /* devinfo.png */; };
 		A53A8922197EDFCB0051B7D4 /* LHPauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */; };
 		A5547470196D8E2D00F152D3 /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
 		A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547471196EBD1400F152D3 /* UMShareButton.cpp */; };
@@ -327,8 +327,7 @@
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
 		A50697F1194750AD0008E3C3 /* PlayScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayScene.cpp; path = ../Classes/PlayScene.cpp; sourceTree = "<group>"; };
 		A50697F2194750AD0008E3C3 /* PlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayScene.h; path = ../Classes/PlayScene.h; sourceTree = "<group>"; };
-		A5132B5119855F140002F355 /* ShowAnswerScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShowAnswerScene.cpp; path = ../Classes/ShowAnswerScene.cpp; sourceTree = "<group>"; };
-		A5132B5219855F140002F355 /* ShowAnswerScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowAnswerScene.h; path = ../Classes/ShowAnswerScene.h; sourceTree = "<group>"; };
+		A5132B6319859F970002F355 /* devinfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devinfo.png; sourceTree = "<group>"; };
 		A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHPauseScene.cpp; path = ../Classes/LHPauseScene.cpp; sourceTree = "<group>"; };
 		A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHPauseScene.h; path = ../Classes/LHPauseScene.h; sourceTree = "<group>"; };
 		A5547471196EBD1400F152D3 /* UMShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UMShareButton.cpp; path = ../Classes/UMShareButton.cpp; sourceTree = "<group>"; };
@@ -714,6 +713,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5132B6319859F970002F355 /* devinfo.png */,
 				A577E988198246650006052B /* German_中文.json */,
 				A577E96B19810ABA0006052B /* ch_ls.plist */,
 				A577E96C19810ABA0006052B /* en_ls.plist */,
@@ -741,8 +741,6 @@
 				A50697F2194750AD0008E3C3 /* PlayScene.h */,
 				A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */,
 				A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */,
-				A5132B5119855F140002F355 /* ShowAnswerScene.cpp */,
-				A5132B5219855F140002F355 /* ShowAnswerScene.h */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -1239,6 +1237,7 @@
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				A5AA4313196D299D00DC3411 /* UMSCommentInputControlleriPad.xib in Resources */,
 				A5AA4319196D299D00DC3411 /* UMSocialSDKResourcesNew.bundle in Resources */,
+				A5132B6419859F970002F355 /* devinfo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1265,7 +1264,6 @@
 				A5AA42CF196D0B8100DC3411 /* DeveloperInfoScence.cpp in Sources */,
 				A577E98219810C680006052B /* RemLan.cpp in Sources */,
 				A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */,
-				A5132B5319855F140002F355 /* ShowAnswerScene.cpp in Sources */,
 				A59A47861952B36B00217F27 /* ThirdPartyHelper.cpp in Sources */,
 				A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,

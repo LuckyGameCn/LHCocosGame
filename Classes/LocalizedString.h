@@ -1,8 +1,9 @@
 #include "cocos2d.h"
 
-#define LHLocalizedString(__KEY__) LocalizedString::localizedString(__KEY__)
-
 using namespace cocos2d;
+
+#define LHLocalizedString(__KEY__) LocalizedString::localizedString(__KEY__)
+#define LHLocalizedCString(__KEY__) LocalizedString::localizedString(__KEY__)->getCString()
 
 class LocalizedString {
     

@@ -5,6 +5,7 @@
 #include "UIListView.h"
 #include "UIText.h"
 #include "SourceLanScene.h"
+#include "DeveloperInfoScence.h"
 
 USING_NS_CC;
 USING_NS_UM_SOCIAL;
@@ -80,6 +81,8 @@ bool HelloWorld::init()
             Director::getInstance()->replaceScene(tran);
         }
     });
+    
+    this->addChild(DeveloperInfo::DevInfoButton("devinfo.png"));
     
     return true;
 }

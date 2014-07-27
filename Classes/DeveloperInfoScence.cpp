@@ -1,5 +1,8 @@
 #include "DeveloperInfoScence.h"
-
+#include "UILayout.h"
+#include "LocalizedString.h"
+#include "UIText.h"
+#include "LHMacro.h"
 USING_NS_CC;
 
 Scene* DeveloperInfo::createScene()
@@ -12,7 +15,7 @@ Scene* DeveloperInfo::createScene()
     
     // add layer as a child to scene
     scene->addChild(layer);
-
+    
     // return the scene
     return scene;
 }
@@ -28,28 +31,46 @@ bool DeveloperInfo::init()
     }
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-
-    // create menu, it's an autorelease object
-//    auto menu = Menu::create(easyItem,hardItem,hellItem, NULL);
-//    menu->setPosition(Vec2::ZERO);
-//    this->addChild(menu);
-
-    /////////////////////////////
-    // 3. add your codes below...
-
-    // add a label shows "Hello World"
-    // create and initialize a label
     
-    auto label = LabelTTF::create("Touchy", "Arial", 64);
-    label->setColor(Color3B::BLACK);
-    label->setHorizontalAlignment(TextHAlignment::CENTER);
-    // position the label on the center of the screen
-    label->setPosition(Vec2(visibleSize.width/2,
-                            origin.y + visibleSize.height/5*4 - label->getContentSize().height));
+    std::vector<std::string> infos;
+    __String *gd = LHLocalizedString("gamedesign");
+    infos.push_back(StringUtils::format("%s: huji",gd->getCString()));
+    infos.push_back(StringUtils::format("%s: huji",LHLocalizedCString("program")));
+    infos.push_back(StringUtils::format("%s: huji",LHLocalizedCString("art")));
+    infos.push_back(StringUtils::format("%s: huji0624@gmail.com",LHLocalizedCString("email")));
     
-    // add the label as a child to this layer
-    this->addChild(label);
+    auto layout = ui::Layout::create();
+    layout->setBackGroundColor(Color3B::BLACK);
+    layout->setBackGroundColorType(ui::Layout::BackGroundColorType::SOLID);
+    layout->setSize(visibleSize);
+    this->addChild(layout);
+    
+    int half = infos.size()/2;
+    for (int i =0 ; i<infos.size(); i++) {
+        auto info = ui::Text::create(infos[i], Common_Font, 30);
+        info->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
+        info->setPosition(Vec2(visibleSize.width/2, visibleSize.height/2 + (half-i)*info->getContentSize().height));
+        layout->addChild(info);
+    }
+    
+    layout->addTouchEventListener([](Ref *ps,ui::Widget::TouchEventType type){
+        if (type == ui::Widget::TouchEventType::ENDED) {
+            Director::getInstance()->popScene();
+        }
+    });
     
     return true;
+}
+
+ui::Button* DeveloperInfo::DevInfoButton(const std::string &normalImage){
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    auto devbt = ui::Button::create(normalImage);
+    devbt->addTouchEventListener([](Ref *ps,ui::Widget::TouchEventType type){
+        if (type == ui::Widget::TouchEventType::ENDED) {
+            auto tran = TransitionMoveInB::create(0.3, DeveloperInfo::createScene());
+            Director::getInstance()->pushScene(tran);
+        }
+    });
+    devbt->setPosition(Vec2(visibleSize.width - devbt->getContentSize().width - 10, visibleSize.height - devbt->getContentSize().height - 10));
+    return devbt;
 }
