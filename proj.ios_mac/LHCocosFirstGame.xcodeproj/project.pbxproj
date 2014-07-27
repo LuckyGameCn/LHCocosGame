@@ -322,6 +322,7 @@
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
 		A50697F1194750AD0008E3C3 /* PlayScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayScene.cpp; path = ../Classes/PlayScene.cpp; sourceTree = "<group>"; };
 		A50697F2194750AD0008E3C3 /* PlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayScene.h; path = ../Classes/PlayScene.h; sourceTree = "<group>"; };
+		A5132B5819856F010002F355 /* LHMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LHMacros.h; path = ../Classes/LHMacros.h; sourceTree = "<group>"; };
 		A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHPauseScene.cpp; path = ../Classes/LHPauseScene.cpp; sourceTree = "<group>"; };
 		A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHPauseScene.h; path = ../Classes/LHPauseScene.h; sourceTree = "<group>"; };
 		A5547471196EBD1400F152D3 /* UMShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UMShareButton.cpp; path = ../Classes/UMShareButton.cpp; sourceTree = "<group>"; };
@@ -561,6 +562,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A5132B5519856EF20002F355 /* Common */,
 				A577E9101981011A0006052B /* Utils */,
 				A53A891A197E8ED50051B7D4 /* Scene */,
 				A59A47DD1952CDBD00217F27 /* jansson */,
@@ -704,6 +706,14 @@
 			);
 			name = Resources;
 			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		A5132B5519856EF20002F355 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A5132B5819856F010002F355 /* LHMacros.h */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		A53A891A197E8ED50051B7D4 /* Scene */ = {
