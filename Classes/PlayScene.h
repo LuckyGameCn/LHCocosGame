@@ -4,6 +4,8 @@
 #include "cocos2d.h"
 #include "RemLan.h"
 #include "UIText.h"
+#include "UIButton.h"
+#include "UILayout.h"
 class PlayScene : public cocos2d::Layer
 {
 public:
@@ -25,9 +27,16 @@ private:
     float _timeuse;
     cocos2d::ui::Text *_time;
     
-    bool checkComplete();
+    int checkComplete(cocos2d::Ref *charbt);
     void scoreAndMoveOn();
     void wrongAn();
     void showAn(Ref*,cocos2d::ui::Widget::TouchEventType type);
+    void enableAllCharBt(bool enable);
+    
+    std::u16string currentanswer;
+    std::u16string currentedit;
+    
+    cocos2d::ui::Button *editbutton;
+    cocos2d::ui::Layout *currentlayout;
 };
 #endif

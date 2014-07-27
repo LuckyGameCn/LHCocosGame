@@ -1,7 +1,5 @@
 //------.cpp
 #include "PlayScene.h"
-#include "UIButton.h"
-#include "UILayout.h"
 #include <iostream>
 #include "LHMacro.h"
 USING_NS_CC;
@@ -126,15 +124,17 @@ void PlayScene::genWord(){
         tmp16.push_back(tmp16c);
         std::string tmp8;
         StringUtils::UTF16ToUTF8(tmp16, tmp8);
-        printf("u8 %s %ld u16 %ld\n",tmp8.c_str(),tmp8.length(),tmp16.length());
+        tbt->setTag(6240);
         tbt->setTitleText(tmp8);
         tbt->setPosition(Vec2(bw/2+line*bw, vs.height/2 - col*bh));
         tbt->setTitleColor(Color3B::RED);
-        tbt->addTouchEventListener([this](Ref*,ui::Widget::TouchEventType type){
+        tbt->addTouchEventListener([this](Ref* charbt,ui::Widget::TouchEventType type){
+            
             if (type == ui::Widget::TouchEventType::ENDED) {
-                if (this->checkComplete()) {
+                int comp = this->checkComplete(charbt);
+                if (comp==0) {
                     this->scoreAndMoveOn();
-                }else{
+                }else if(comp==1){
                     this->wrongAn();
                 }
             }
@@ -143,26 +143,85 @@ void PlayScene::genWord(){
     }
     
     std::string editstring;
-    StringUtils::UTF16ToUTF8(u16l, editstring);
-//    for (int i=0; i<chs.size(); i++) {
-//        editstring.append("_ ");
-//    }
+    for (int i=0; i<u16l.size(); i++) {
+        editstring.append("_");
+    }
     auto edit = ui::Button::create("play.png");
+    edit->setTag(0);
     edit->setTitleFontSize(35);
     edit->setScale9Enabled(true);
     edit->setSize(Size(vs.width/3*2,vs.height/6));
     edit->setTitleText(editstring);
     edit->setPosition(Vec2(vs.width/2, vs.height/4*3));
-    edit->addTouchEventListener([this](Ref*,ui::Widget::TouchEventType type){
+    edit->addTouchEventListener([this](Ref* charbt,ui::Widget::TouchEventType type){
+        if(currentedit.size()==0){
+            return;
+        }
+        
+        ui::Button *cbt = (ui::Button*)charbt;
         if (type == ui::Widget::TouchEventType::ENDED) {
             //remove one
+            currentedit.pop_back();
+            std::string tmpedit;
+            StringUtils::UTF16ToUTF8(currentedit, tmpedit);
+            int leftcount = currentanswer.length() - currentedit.length();
+            while (leftcount>0) {
+                tmpedit.append("_");
+                leftcount--;
+            }
+            cbt->setTitleText(tmpedit);
+            
+            if (cbt->getTag()==1) {
+                this->enableAllCharBt(true);
+                cbt->setTag(0);
+            }
         }
     });
+    editbutton = edit;
     layout->addChild(edit);
+    
+    currentlayout = layout;
+    
+    currentanswer = u16l;
 }
 
-bool PlayScene::checkComplete(){
-    return false;
+int PlayScene::checkComplete(cocos2d::Ref *charbt){
+    ui::Button *cbt = (ui::Button*)charbt;
+    std::string clickchar = cbt->getTitleText();
+    std::u16string tmpu16;
+    StringUtils::UTF8ToUTF16(clickchar, tmpu16);
+    
+    currentedit.append(tmpu16);
+    
+    int leftcount = currentanswer.length() - currentedit.length();
+    std::string tmpedit;
+    StringUtils::UTF16ToUTF8(currentedit, tmpedit);
+    while (leftcount>0) {
+        tmpedit.append("_");
+        leftcount--;
+    }
+    editbutton->setTitleText(tmpedit);
+    
+    if (currentanswer.compare(currentedit)==0) {
+        return 0;
+    }else{
+        if (currentanswer.length() == currentedit.length()) {
+            return 1;
+        }else{
+            return 2;
+        }
+    }
+}
+
+void PlayScene::enableAllCharBt(bool enable){
+    Vector<Node*> children = currentlayout->getChildren();
+    for (int i =0 ; i<children.size(); i++) {
+        Node *child = children.at(i);
+        if(child->getTag()==6240){
+            ui::Button *cbt = (ui::Button*)child;
+            cbt->setEnabled(enable);
+        }
+    }
 }
 
 void PlayScene::scoreAndMoveOn(){
@@ -170,5 +229,6 @@ void PlayScene::scoreAndMoveOn(){
 }
 
 void PlayScene::wrongAn(){
-    
+    enableAllCharBt(false);
+    editbutton->setTag(1);
 }
