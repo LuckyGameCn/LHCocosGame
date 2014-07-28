@@ -12,6 +12,7 @@
 #include "UIButton.h"
 #include "HelloWorldScene.h"
 #include "ChooseModelScene.h"
+#include "DeveloperInfoScence.h"
 
 USING_NS_CC;
 
@@ -52,41 +53,51 @@ bool SourceLanScene::initLearn(cocos2d::CCString* learn){
     }
     
     auto list = cocos2d::ui::ListView::create();
-    list->setSize(Size(visibleSize.width/3*2,visibleSize.height/5*4));
+    list->setSize(Size(visibleSize.width/3*2,visibleSize.height/4));
     Size ls = list->getSize();
-    list->cocos2d::Node::setPosition(visibleSize.width/2 - ls.width/2, visibleSize.height/2 - ls.height/2);
+    list->setPosition(Vec2(visibleSize.width/2 - ls.width/2, visibleSize.height/2 - ls.height/2));
+    list->setGravity(ui::ListView::Gravity::CENTER_HORIZONTAL);
+    list->setItemsMargin(5);
     this->addChild(list);
     
     for (int i = 0 ; i < _sources.size(); i++) {
         cocos2d::CCString *s = _sources.at(i);
-        cocos2d::ui::Text *text = cocos2d::ui::Text::create(s->getCString(), "Arial", 60);
-        text->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
-        list->pushBackCustomItem(text);
+        auto *textbt = cocos2d::ui::Button::create("blue.png","gray.png");
+        textbt->ignoreContentAdaptWithSize(false);
+        textbt->setSize(Size(visibleSize.width/2,visibleSize.height/8));
+        textbt->setTitleText(s->getCString());
+        textbt->setTag(i);
+        textbt->setTitleFontSize(40);
+        textbt->setScale9Enabled(true);
+        textbt->addTouchEventListener([this](Ref* p, cocos2d::ui::Widget::TouchEventType t){
+            if (t == ui::Widget::TouchEventType::ENDED) {
+                cocos2d::ui::Button *bt =(cocos2d::ui::Button*) p;
+                
+                cocos2d::CCString *se = _sources.at(bt->getTag());
+                cocos2d::CCString *model = cocos2d::CCString::createWithFormat("%s_%s",this->tolearn->getCString(),se->getCString());
+                
+                cocos2d::CCDictionary *dic = cocos2d::CCDictionary::create();
+                dic->setObject(model, "model");
+                dic->setObject(this->tolearn, "learn");
+                
+                auto tran =  TransitionMoveInR::create(0.3, ChooseModelScene::createScene(dic));
+                Director::getInstance()->replaceScene(tran);
+            }
+        });
+        list->pushBackCustomItem(textbt);
     }
     
     this->setTolearn(learn);
-    list->addEventListener([this](Ref* p, cocos2d::ui::ListView::EventType t){
-        if (t == cocos2d::ui::ListView::EventType::ON_SELECTED_ITEM_END) {
-            cocos2d::ui::ListView *lv =(cocos2d::ui::ListView*) p;
-            cocos2d::CCString *se = _sources.at(lv->getCurSelectedIndex());
-            cocos2d::CCString *model = cocos2d::CCString::createWithFormat("%s_%s",this->tolearn->getCString(),se->getCString());
-            
-            cocos2d::CCDictionary *dic = cocos2d::CCDictionary::create();
-            dic->setObject(model, "model");
-            dic->setObject(this->tolearn, "learn");
-            
-            auto tran =  TransitionFadeDown::create(0.3, ChooseModelScene::createScene(dic));
-            Director::getInstance()->replaceScene(tran);
-        }
-    });
     
-    cocos2d::ui::Button *bt = cocos2d::ui::Button::create("play.png");
+    cocos2d::ui::Button *bt = cocos2d::ui::Button::create("back.png");
     bt->addTouchEventListener([](Ref*,cocos2d::ui::Widget::TouchEventType){
-        auto tran =  TransitionFadeDown::create(0.3, HelloWorld::createScene());
+        auto tran =  TransitionMoveInR::create(0.3, HelloWorld::createScene());
         Director::getInstance()->replaceScene(tran);
     });
-    bt->setPosition(Vec2(40, 40));
+    bt->setPosition(Vec2(bt->getContentSize().width+10, visibleSize.height - bt->getContentSize().height - 10));
     this->addChild(bt);
+    
+    this->addChild(DeveloperInfo::DevInfoButton("devinfo.png"));
     
     return true;
 }

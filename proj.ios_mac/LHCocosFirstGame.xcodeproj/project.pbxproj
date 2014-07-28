@@ -73,6 +73,9 @@
 		A577E98219810C680006052B /* RemLan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A577E97E19810C680006052B /* RemLan.cpp */; };
 		A577E98319810C680006052B /* RemWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A577E98019810C680006052B /* RemWord.cpp */; };
 		A577E989198246650006052B /* German_中文.json in Resources */ = {isa = PBXBuildFile; fileRef = A577E988198246650006052B /* German_中文.json */; };
+		A577E98D1985FAFF0006052B /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = A577E98B1985FAFF0006052B /* blue.png */; };
+		A577E98E1985FAFF0006052B /* gray.png in Resources */ = {isa = PBXBuildFile; fileRef = A577E98C1985FAFF0006052B /* gray.png */; };
+		A577E992198601F80006052B /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = A577E991198601F80006052B /* back.png */; };
 		A594BDD119470429001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE3C194B026B001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A59A47801952AD1100217F27 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = A59A477E1952AD1000217F27 /* README.txt */; };
@@ -351,6 +354,9 @@
 		A577E98019810C680006052B /* RemWord.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RemWord.cpp; path = ../Classes/RemWord.cpp; sourceTree = "<group>"; };
 		A577E98119810C680006052B /* RemWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemWord.h; path = ../Classes/RemWord.h; sourceTree = "<group>"; };
 		A577E988198246650006052B /* German_中文.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "German_中文.json"; sourceTree = "<group>"; };
+		A577E98B1985FAFF0006052B /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		A577E98C1985FAFF0006052B /* gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray.png; sourceTree = "<group>"; };
+		A577E991198601F80006052B /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		A594BDD019470429001DEF30 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		A59A47601952AD1000217F27 /* DFPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPBannerView.h; sourceTree = "<group>"; };
 		A59A47611952AD1000217F27 /* DFPExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPExtras.h; sourceTree = "<group>"; };
@@ -713,6 +719,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A577E991198601F80006052B /* back.png */,
+				A577E98B1985FAFF0006052B /* blue.png */,
+				A577E98C1985FAFF0006052B /* gray.png */,
 				A5132B6319859F970002F355 /* devinfo.png */,
 				A577E988198246650006052B /* German_中文.json */,
 				A577E96B19810ABA0006052B /* ch_ls.plist */,
@@ -1206,12 +1215,14 @@
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				A577E98E1985FAFF0006052B /* gray.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				A577E96D19810ABA0006052B /* ch_ls.plist in Resources */,
 				A5AA4314196D299D00DC3411 /* UMShareEditViewController.xib in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
+				A577E992198601F80006052B /* back.png in Resources */,
 				A5AA4316196D299D00DC3411 /* UMSLoginViewController.xib in Resources */,
 				A5AA4318196D299D00DC3411 /* UMSShareListController.xib in Resources */,
 				A5AA4312196D299D00DC3411 /* UMSCommentInputController.xib in Resources */,
@@ -1230,6 +1241,7 @@
 				A577E96E19810ABA0006052B /* en_ls.plist in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				A577E98D1985FAFF0006052B /* blue.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				A5AA4315196D299D00DC3411 /* UMShareEditViewControlleriPad.xib in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,

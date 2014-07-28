@@ -5,6 +5,7 @@
 #include "SourceLanScene.h"
 #include "MemorizeScene.h"
 #include "PlayScene.h"
+#include "DeveloperInfoScence.h"
 
 #define KEY_AL "al"
 #define KEY_WORDS "words"
@@ -24,6 +25,7 @@ Scene* ChooseModelScene::createScene(cocos2d::CCDictionary *dic)
 
 ChooseModelScene::~ChooseModelScene(){
     CC_SAFE_RELEASE(remlan);
+    CC_SAFE_RELEASE(tolearn);
 }
 
 bool ChooseModelScene::initDict(cocos2d::CCDictionary *dic)
@@ -31,17 +33,19 @@ bool ChooseModelScene::initDict(cocos2d::CCDictionary *dic)
     cocos2d::CCString *model = (cocos2d::CCString *)dic->objectForKey("model");
     cocos2d::CCString *learn = (cocos2d::CCString *)dic->objectForKey("learn");
     
+    setTolearn(learn);
+    
     Size visible = Director::getInstance()->getVisibleSize();
     
-    cocos2d::ui::Button *bt = cocos2d::ui::Button::create("play.png");
-    learn->retain();
+    cocos2d::ui::Button *bt = cocos2d::ui::Button::create("back.png");
     bt->addTouchEventListener([learn](Ref*,cocos2d::ui::Widget::TouchEventType){
-        auto tran =  TransitionFadeDown::create(0.3, SourceLanScene::createScene(learn));
+        auto tran =  TransitionMoveInR::create(0.3, SourceLanScene::createScene(learn));
         Director::getInstance()->replaceScene(tran);
-        learn->release();
     });
-    bt->setPosition(Vec2(40, 40));
+    bt->setPosition(Vec2(bt->getContentSize().width+10, visible.height - bt->getContentSize().height - 10));
     this->addChild(bt);
+    
+    this->addChild(DeveloperInfo::DevInfoButton("devinfo.png"));
     
     std::stringstream ss;
     ss<<model->getCString()<<".json";

@@ -13,5 +13,6 @@ public:
     virtual ~ChooseModelScene();
     
     CC_SYNTHESIZE_RETAIN(RemLan*, remlan, Remlan);
+    CC_SYNTHESIZE_RETAIN(cocos2d::CCString*, tolearn, Tolearn);
 };
 #endif
