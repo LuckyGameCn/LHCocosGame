@@ -87,6 +87,7 @@ bool ChooseModelScene::initDict(cocos2d::CCDictionary *dic)
     
     cocos2d::ui::Button *memorize = cocos2d::ui::Button::create("blue.png","gray.png");
     memorize->ignoreContentAdaptWithSize(false);
+    memorize->setScale9Enabled(true);
     memorize->setSize(Size(visible.width/2,visible.height/8));
     memorize->setTitleFontSize(40);
     memorize->setTitleText(LHLocalizedCString("memorize"));
@@ -104,6 +105,7 @@ bool ChooseModelScene::initDict(cocos2d::CCDictionary *dic)
     play->ignoreContentAdaptWithSize(false);
     play->setSize(Size(visible.width/2,visible.height/8));
     play->setTitleFontSize(40);
+    play->setScale9Enabled(true);
     play->setTitleText(LHLocalizedCString("crossword"));
     play->addTouchEventListener([this](Ref*,cocos2d::ui::Widget::TouchEventType type){
         if(type != ui::Widget::TouchEventType::ENDED) return;
