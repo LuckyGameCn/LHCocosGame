@@ -6,6 +6,7 @@
 #include "MemorizeScene.h"
 #include "PlayScene.h"
 #include "DeveloperInfoScence.h"
+#include "LocalizedString.h"
 
 #define KEY_AL "al"
 #define KEY_WORDS "words"
@@ -18,6 +19,7 @@ Scene* ChooseModelScene::createScene(cocos2d::CCDictionary *dic)
 {
 	auto scene = Scene::create();
 	auto layer = ChooseModelScene::create();
+    layer->initWithColor(Color4B::WHITE);
     layer->initDict(dic);
 	scene->addChild(layer);
 	return scene;
@@ -39,7 +41,7 @@ bool ChooseModelScene::initDict(cocos2d::CCDictionary *dic)
     
     cocos2d::ui::Button *bt = cocos2d::ui::Button::create("back.png");
     bt->addTouchEventListener([learn](Ref*,cocos2d::ui::Widget::TouchEventType){
-        auto tran =  TransitionMoveInR::create(0.3, SourceLanScene::createScene(learn));
+        auto tran =  TransitionSlideInL::create(0.3, SourceLanScene::createScene(learn));
         Director::getInstance()->replaceScene(tran);
     });
     bt->setPosition(Vec2(bt->getContentSize().width+10, visible.height - bt->getContentSize().height - 10));
@@ -75,34 +77,34 @@ bool ChooseModelScene::initDict(cocos2d::CCDictionary *dic)
     }
     this->setRemlan(lan);
     
-    cocos2d::ui::Button *memorize = cocos2d::ui::Button::create("play.png");
+    cocos2d::ui::Button *memorize = cocos2d::ui::Button::create("blue.png","gray.png");
     memorize->ignoreContentAdaptWithSize(false);
-    memorize->setSize(Size(50,30));
+    memorize->setSize(Size(visible.width/2,visible.height/8));
     memorize->setTitleFontSize(40);
+    memorize->setTitleText(LHLocalizedCString("memorize"));
     memorize->addTouchEventListener([this](Ref*,cocos2d::ui::Widget::TouchEventType type){
         if(type != ui::Widget::TouchEventType::ENDED) return;
         cocos2d::CCDictionary *dict = cocos2d::CCDictionary::create();
         dict->setObject(this->getRemlan(), "lan");
-        auto tran =  TransitionFadeDown::create(0.3, MemorizeScene::createScene(dict));
+        auto tran =  TransitionSlideInR::create(0.3, MemorizeScene::createScene(dict));
         Director::getInstance()->pushScene(tran);
     });
-    memorize->setPosition(Vec2(visible.width/2, 400));
+    memorize->setPosition(Vec2(visible.width/2, visible.height/2 + memorize->getContentSize().height));
     this->addChild(memorize);
     
-    cocos2d::ui::Button *play = cocos2d::ui::Button::create();
-    play->setColor(Color3B::BLUE);
+    cocos2d::ui::Button *play = cocos2d::ui::Button::create("blue.png","gray.png");
     play->ignoreContentAdaptWithSize(false);
-    play->setSize(Size(50,30));
+    play->setSize(Size(visible.width/2,visible.height/8));
     play->setTitleFontSize(40);
-    play->setTitleText("play");
+    play->setTitleText(LHLocalizedCString("crossword"));
     play->addTouchEventListener([this](Ref*,cocos2d::ui::Widget::TouchEventType type){
         if(type != ui::Widget::TouchEventType::ENDED) return;
         cocos2d::CCDictionary *dict = cocos2d::CCDictionary::create();
         dict->setObject(this->getRemlan(), "lan");
-        auto tran =  TransitionFadeDown::create(0.3, PlayScene::createScene(dict));
+        auto tran =  TransitionSlideInR::create(0.3, PlayScene::createScene(dict));
         Director::getInstance()->pushScene(tran);
     });
-    play->setPosition(Vec2(visible.width/2, 300));
+    play->setPosition(Vec2(visible.width/2, visible.height/2 - play->getContentSize().height));
     this->addChild(play);
     
 	return true;

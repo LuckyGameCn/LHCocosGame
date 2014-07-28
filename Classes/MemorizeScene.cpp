@@ -9,6 +9,7 @@ Scene* MemorizeScene::createScene(cocos2d::CCDictionary *dic)
 	auto scene = Scene::create();
     scene->setTag(624);
 	auto layer = MemorizeScene::create();
+    layer->initWithColor(Color4B::WHITE);
 	layer->initDict(dic);
 	scene->addChild(layer);
 	return scene;
@@ -19,13 +20,15 @@ bool MemorizeScene::initDict(cocos2d::CCDictionary *dic)
     RemLan *lan = (RemLan*)dic->objectForKey("lan");
     words = lan->words;
     
+    Size vs = Director::getInstance()->getVisibleSize();
+    
     this->genWord();
     
-    cocos2d::ui::Button *bt = cocos2d::ui::Button::create("play.png");
+    cocos2d::ui::Button *bt = cocos2d::ui::Button::create("back.png");
     bt->addTouchEventListener([](Ref*,cocos2d::ui::Widget::TouchEventType){
         Director::getInstance()->popScene();
     });
-    bt->setPosition(Vec2(40, 40));
+    bt->setPosition(Vec2(bt->getContentSize().width+10, vs.height - bt->getContentSize().height - 10));
     this->addChild(bt,1);
     
 	return true;

@@ -23,6 +23,7 @@ Scene* SourceLanScene::createScene(cocos2d::CCString* learn)
     
     // 'layer' is an autorelease object
     auto layer = SourceLanScene::create();
+    layer->initWithColor(Color4B::WHITE);
     layer->initLearn(learn);
     
     // add layer as a child to scene
@@ -80,7 +81,7 @@ bool SourceLanScene::initLearn(cocos2d::CCString* learn){
                 dic->setObject(model, "model");
                 dic->setObject(this->tolearn, "learn");
                 
-                auto tran =  TransitionMoveInR::create(0.3, ChooseModelScene::createScene(dic));
+                auto tran =  TransitionSlideInR::create(0.3, ChooseModelScene::createScene(dic));
                 Director::getInstance()->replaceScene(tran);
             }
         });
@@ -91,7 +92,7 @@ bool SourceLanScene::initLearn(cocos2d::CCString* learn){
     
     cocos2d::ui::Button *bt = cocos2d::ui::Button::create("back.png");
     bt->addTouchEventListener([](Ref*,cocos2d::ui::Widget::TouchEventType){
-        auto tran =  TransitionMoveInR::create(0.3, HelloWorld::createScene());
+        auto tran =  TransitionSlideInL::create(0.3, HelloWorld::createScene());
         Director::getInstance()->replaceScene(tran);
     });
     bt->setPosition(Vec2(bt->getContentSize().width+10, visibleSize.height - bt->getContentSize().height - 10));

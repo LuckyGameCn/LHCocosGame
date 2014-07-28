@@ -12,7 +12,7 @@
 #include <iostream>
 #include "cocos2d.h"
 
-class SourceLanScene : public cocos2d::Layer{
+class SourceLanScene : public cocos2d::LayerColor{
 public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene(cocos2d::CCString* learn);

@@ -6,7 +6,7 @@
 #include "UIText.h"
 #include "UIButton.h"
 #include "UILayout.h"
-class PlayScene : public cocos2d::Layer
+class PlayScene : public cocos2d::LayerColor
 {
 public:
 	static cocos2d::Scene* createScene(cocos2d::CCDictionary *dic);

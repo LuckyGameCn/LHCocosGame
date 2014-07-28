@@ -5,7 +5,7 @@
 #include "RemWord.h"
 #include "UILayout.h"
 
-class MemorizeScene : public cocos2d::Layer
+class MemorizeScene : public cocos2d::LayerColor
 {
 public:
 	static cocos2d::Scene* createScene(cocos2d::CCDictionary *dic);

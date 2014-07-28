@@ -17,7 +17,7 @@ Scene* HelloWorld::createScene()
     
     // 'layer' is an autorelease object
     auto layer = HelloWorld::create();
-    
+    layer->initWithColor(Color4B::WHITE);
     // add layer as a child to scene
     scene->addChild(layer);
 
@@ -83,7 +83,7 @@ bool HelloWorld::init()
                 cocos2d::ui::Button *bt =(cocos2d::ui::Button*) p;
                 cocos2d::CCString *se = _learns.at(bt->getTag());
                 
-                auto tran =  TransitionMoveInR::create(0.3, SourceLanScene::createScene(se));
+                auto tran =  TransitionSlideInR::create(0.3, SourceLanScene::createScene(se));
                 Director::getInstance()->replaceScene(tran);
             }
         });

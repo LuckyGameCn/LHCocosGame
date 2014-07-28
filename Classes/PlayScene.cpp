@@ -9,6 +9,7 @@ Scene* PlayScene::createScene(cocos2d::CCDictionary *dic)
 	auto scene = Scene::create();
     scene->setTag(624);
 	auto layer = PlayScene::create();
+    layer->initWithColor(Color4B::WHITE);
 	layer->initDict(dic);
 	scene->addChild(layer);
 	return scene;
@@ -20,13 +21,13 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     
     Size vs = Director::getInstance()->getVisibleSize();
     
-    cocos2d::ui::Button *bt = cocos2d::ui::Button::create("play.png");
+    cocos2d::ui::Button *bt = cocos2d::ui::Button::create("back.png");
     bt->addTouchEventListener([](Ref* ps,cocos2d::ui::Widget::TouchEventType type){
         if (type == ui::Widget::TouchEventType::ENDED) {
              Director::getInstance()->popScene();
         }
     });
-    bt->setPosition(Vec2(40, 40));
+    bt->setPosition(Vec2(bt->getContentSize().width+10, vs.height - bt->getContentSize().height - 10));
     this->addChild(bt,1);
     
     //score
@@ -75,7 +76,7 @@ void PlayScene::showAn(Ref*,ui::Widget::TouchEventType type){
         this->addChild(layout,2);
         
         Color4B b = Color4B::BLACK;
-        b.a = 120;
+        b.a = 160;
         auto lc = LayerColor::create(b, vs.width, vs.height);
         layout->addChild(lc);
         
@@ -125,11 +126,13 @@ void PlayScene::genWord(){
     std::u16string alu16s;
     StringUtils::UTF8ToUTF16(al, alu16s);
 
+    float margin = 7.0f;
+//    float hmargin = 5.0f;
     Size vs = Director::getInstance()->getVisibleSize();
     int lineCount = 6;
     int columnCount = 6;
-    float bw = vs.width/lineCount;
-    float bh = vs.height/2/columnCount;
+    float bw = (vs.width - margin*(columnCount+1))/columnCount;
+    float bh = (vs.height/2 - margin*(lineCount+1))/lineCount;
 
     int leftcount = lineCount*columnCount - chs.size();
     while(leftcount>0){
@@ -150,8 +153,9 @@ void PlayScene::genWord(){
         int line = i/columnCount;
         int col = i%columnCount;
         
-        auto tbt = ui::Button::create("play.png");
-        tbt->setSize(Size(bw, 40));
+        auto tbt = ui::Button::create("blue.png","gray.png");
+        tbt->ignoreContentAdaptWithSize(false);
+        tbt->setSize(Size(bw, bh));
         tbt->setTitleFontSize(40);
         tbt->setScale9Enabled(true);
         char16_t tmp16c = chs.at(i);
@@ -161,7 +165,7 @@ void PlayScene::genWord(){
         StringUtils::UTF16ToUTF8(tmp16, tmp8);
         tbt->setTag(6240);
         tbt->setTitleText(tmp8);
-        tbt->setPosition(Vec2(bw/2+line*bw, vs.height/2 - col*bh));
+        tbt->setPosition(Vec2(bw/2+line*(bw+margin) + margin, vs.height/2 - col*(bh+margin)));
         tbt->setTitleColor(Color3B::RED);
         tbt->addTouchEventListener([this](Ref* charbt,ui::Widget::TouchEventType type){
             
@@ -181,11 +185,11 @@ void PlayScene::genWord(){
     for (int i=0; i<u16l.size(); i++) {
         editstring.append("_");
     }
-    auto edit = ui::Button::create("play.png");
+    auto edit = ui::Button::create("green.png");
     edit->setTag(0);
-    edit->setTitleFontSize(35);
+    edit->setTitleFontSize(38);
     edit->setScale9Enabled(true);
-    edit->setSize(Size(vs.width/3*2,vs.height/6));
+    edit->setSize(Size(vs.width/3*2,vs.height/8));
     edit->setTitleText(editstring);
     edit->setPosition(Vec2(vs.width/2, vs.height/4*3));
     edit->addTouchEventListener([this](Ref* charbt,ui::Widget::TouchEventType type){
@@ -209,15 +213,21 @@ void PlayScene::genWord(){
             if (cbt->getTag()==1) {
                 this->enableAllCharBt(true);
                 cbt->setTag(0);
+                cbt->loadTextureNormal("green.png");
             }
         }
     });
     editbutton = edit;
     layout->addChild(edit);
     
+    auto tip = ui::Text::create(w->getSource()->getCString(), Common_Font, 35);
+    tip->setPosition(Vec2(editbutton->getPosition().x, editbutton->getPosition().y - tip->getContentSize().height - 10));
+    layout->addChild(tip);
+    
     currentlayout = layout;
     currentanswer = u16l;
     currentWord = w;
+    currentedit.clear();
 }
 
 int PlayScene::checkComplete(cocos2d::Ref *charbt){
@@ -273,4 +283,5 @@ void PlayScene::scoreAndMoveOn(){
 void PlayScene::wrongAn(){
     enableAllCharBt(false);
     editbutton->setTag(1);
+    editbutton->loadTextureNormal("red.png");
 }

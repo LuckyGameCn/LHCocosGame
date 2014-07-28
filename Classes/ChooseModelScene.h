@@ -3,7 +3,7 @@
 #define __CHOOSEMODELSCENE__
 #include "cocos2d.h"
 #include "RemLan.h"
-class ChooseModelScene : public cocos2d::Layer
+class ChooseModelScene : public cocos2d::LayerColor
 {
 public:
 	static cocos2d::Scene* createScene(cocos2d::CCDictionary *dic);
