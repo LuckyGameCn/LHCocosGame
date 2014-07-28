@@ -7,6 +7,7 @@
 #include "PlayScene.h"
 #include "DeveloperInfoScence.h"
 #include "LocalizedString.h"
+#include "LHMacro.h"
 
 #define KEY_AL "al"
 #define KEY_WORDS "words"
@@ -35,14 +36,21 @@ bool ChooseModelScene::initDict(cocos2d::CCDictionary *dic)
     cocos2d::CCString *model = (cocos2d::CCString *)dic->objectForKey("model");
     cocos2d::CCString *learn = (cocos2d::CCString *)dic->objectForKey("learn");
     
+    UserDefault *ud = UserDefault::getInstance();
+    ud->setStringForKey(User_Key_Learn, std::string(learn->getCString()));
+    ud->setStringForKey(User_Key_Model, std::string(model->getCString()));
+    ud->flush();
+    
     setTolearn(learn);
     
     Size visible = Director::getInstance()->getVisibleSize();
     
     cocos2d::ui::Button *bt = cocos2d::ui::Button::create("back.png");
-    bt->addTouchEventListener([learn](Ref*,cocos2d::ui::Widget::TouchEventType){
+    bt->addTouchEventListener([learn](Ref*,cocos2d::ui::Widget::TouchEventType type){
+        if (type == ui::Widget::TouchEventType::ENDED){
         auto tran =  TransitionSlideInL::create(0.3, SourceLanScene::createScene(learn));
         Director::getInstance()->replaceScene(tran);
+        }
     });
     bt->setPosition(Vec2(bt->getContentSize().width+10, visible.height - bt->getContentSize().height - 10));
     this->addChild(bt);

@@ -3,6 +3,7 @@
 #include <iostream>
 #include "LHMacro.h"
 #include "ThirdPartyHelper.h"
+#include "LocalizedString.h"
 USING_NS_CC;
 Scene* PlayScene::createScene(cocos2d::CCDictionary *dic)
 {
@@ -42,17 +43,16 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     this->addChild(time);
     _time = time;
     
+    this->genWord();
+    
     //show answer
-    auto sa = ui::Button::create();
+    auto sa = ui::Button::create("answer.png");
     sa->ignoreContentAdaptWithSize(false);
-    sa->setSize(Size(60,60));
+    sa->setSize(Size(50,50));
     sa->setTitleFontSize(40);
-    sa->setTitleText("A");
-    sa->setPosition(Vec2(vs.width - 40, vs.height - 80));
+    sa->setPosition(Vec2(editbutton->getPosition().x + editbutton->getSize().width/2 + 30, editbutton->getPosition().y + editbutton->getSize().height/2 + 30));
     sa->addTouchEventListener(CC_CALLBACK_2(PlayScene::showAn, this));
     this->addChild(sa,1);
-    
-    this->genWord();
     
 	return true;
 }
@@ -110,7 +110,12 @@ void PlayScene::onExitTransitionDidStart(){
 void PlayScene::genWord(){
     
     if (currentlayout) {
-        currentlayout->removeFromParent();
+        MoveBy *mvo = MoveBy::create(0.3f, Vec2(-Director::getInstance()->getVisibleSize().width, 0));
+        CallFuncN *cn = CallFuncN::create([](Node* node){
+            node->removeFromParent();
+        });
+        Sequence *out = Sequence::create(mvo,cn,NULL);
+        currentlayout->runAction(out);
     }
 
     int index = CCRANDOM_0_1() * remlan->words.size();
@@ -145,7 +150,7 @@ void PlayScene::genWord(){
     
     //gen ui
     auto layout = ui::Layout::create();
-    layout->setPosition(Vec2(0, 0));
+    layout->setPosition(Vec2(vs.width, 0));
     layout->setSize(vs);
     this->addChild(layout, 0);
     for (int i =0 ; i<lineCount*columnCount; i++) {
@@ -185,10 +190,11 @@ void PlayScene::genWord(){
     for (int i=0; i<u16l.size(); i++) {
         editstring.append("_");
     }
-    auto edit = ui::Button::create("green.png");
+    auto edit = ui::Button::create("gray.png","gray.png");
     edit->setTag(0);
     edit->setTitleFontSize(38);
     edit->setScale9Enabled(true);
+    edit->setTitleColor(Color3B::BLACK);
     edit->setSize(Size(vs.width/3*2,vs.height/8));
     edit->setTitleText(editstring);
     edit->setPosition(Vec2(vs.width/2, vs.height/4*3));
@@ -213,7 +219,7 @@ void PlayScene::genWord(){
             if (cbt->getTag()==1) {
                 this->enableAllCharBt(true);
                 cbt->setTag(0);
-                cbt->loadTextureNormal("green.png");
+                cbt->loadTextureNormal("gray.png");
             }
         }
     });
@@ -221,8 +227,16 @@ void PlayScene::genWord(){
     layout->addChild(edit);
     
     auto tip = ui::Text::create(w->getSource()->getCString(), Common_Font, 35);
-    tip->setPosition(Vec2(editbutton->getPosition().x, editbutton->getPosition().y - tip->getContentSize().height - 10));
+    tip->setPosition(Vec2(editbutton->getPosition().x, (editbutton->getPosition().y + vs.height/2 )/2));
+    tip->setColor(Color3B::GRAY);
     layout->addChild(tip);
+    
+    MoveBy *mvo = MoveBy::create(0.3f, Vec2(-vs.width, 0));
+    CallFuncN *cn = CallFuncN::create([this](Node* node){
+        this->_timeuse = 0.0f;
+    });
+    Sequence *out = Sequence::create(mvo,cn,NULL);
+    layout->runAction(out);
     
     currentlayout = layout;
     currentanswer = u16l;
@@ -270,14 +284,25 @@ void PlayScene::enableAllCharBt(bool enable){
 }
 
 void PlayScene::scoreAndMoveOn(){
+    editbutton->loadTextureNormal("green.png");
+    editbutton->setEnabled(false);
+    _timeuse = -1;
+    this->enableAllCharBt(false);
+    
     //socre
     int score = 1;
-    
     _scorevalue += score;
-    _score->setString(StringUtils::format("%ld",_scorevalue));
     
-    _timeuse = -1;
-    this->genWord();
+    ScaleTo *st = ScaleTo::create(0.1, 2.0f);
+    CallFuncN *cn1 = CallFuncN::create([this](Node* nd){
+        _score->setString(StringUtils::format("%ld",_scorevalue));
+    });
+    ScaleTo *stb = ScaleTo::create(0.1f, 1.0f);
+    CallFuncN *cn2 = CallFuncN::create([this](Node* nd){
+        this->genWord();
+    });
+    Sequence *sq = Sequence::create(st,cn1,stb,cn2,NULL);
+    _score->runAction(sq);
 }
 
 void PlayScene::wrongAn(){

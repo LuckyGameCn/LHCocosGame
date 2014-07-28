@@ -91,9 +91,11 @@ bool SourceLanScene::initLearn(cocos2d::CCString* learn){
     this->setTolearn(learn);
     
     cocos2d::ui::Button *bt = cocos2d::ui::Button::create("back.png");
-    bt->addTouchEventListener([](Ref*,cocos2d::ui::Widget::TouchEventType){
-        auto tran =  TransitionSlideInL::create(0.3, HelloWorld::createScene());
-        Director::getInstance()->replaceScene(tran);
+    bt->addTouchEventListener([](Ref*,cocos2d::ui::Widget::TouchEventType type){
+        if (type == ui::Widget::TouchEventType::ENDED) {
+            auto tran =  TransitionSlideInL::create(0.3, HelloWorld::createScene());
+            Director::getInstance()->replaceScene(tran);
+        }
     });
     bt->setPosition(Vec2(bt->getContentSize().width+10, visibleSize.height - bt->getContentSize().height - 10));
     this->addChild(bt);

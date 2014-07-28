@@ -25,8 +25,10 @@ bool MemorizeScene::initDict(cocos2d::CCDictionary *dic)
     this->genWord();
     
     cocos2d::ui::Button *bt = cocos2d::ui::Button::create("back.png");
-    bt->addTouchEventListener([](Ref*,cocos2d::ui::Widget::TouchEventType){
-        Director::getInstance()->popScene();
+    bt->addTouchEventListener([](Ref*,cocos2d::ui::Widget::TouchEventType type){
+        if (type == ui::Widget::TouchEventType::ENDED){
+            Director::getInstance()->popScene();
+        }
     });
     bt->setPosition(Vec2(bt->getContentSize().width+10, vs.height - bt->getContentSize().height - 10));
     this->addChild(bt,1);

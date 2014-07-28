@@ -1,6 +1,8 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "ChooseModelScene.h"
 #include "LHPauseScene.h"
+#include "LHMacro.h"
 
 USING_NS_CC;
 
@@ -27,11 +29,27 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
 
-    // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
-
-    // run
-    director->runWithScene(scene);
+    UserDefault *ud = UserDefault::getInstance();
+    std::string learn = ud->getStringForKey(User_Key_Learn,"");
+    std::string model = ud->getStringForKey(User_Key_Model,"");
+    
+    if (learn.empty()) {
+        // create a scene. it's an autorelease object
+        auto scene = HelloWorld::createScene();
+        
+        // run
+        director->runWithScene(scene);
+    }else{
+        // create a scene. it's an autorelease object
+        CCDictionary *dic = CCDictionary::create();
+        dic->setObject(CCString::create(learn), "learn");
+        dic->setObject(CCString::create(model), "model");
+        auto scene = ChooseModelScene::createScene(dic);
+        
+        // run
+        director->runWithScene(scene);
+    }
+    
 
     return true;
 }

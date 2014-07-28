@@ -134,6 +134,7 @@
 		A5AA433D196D2AC400DC3411 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA433C196D2AC400DC3411 /* libz.dylib */; };
 		A5AA433F196D2AD000DC3411 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA433E196D2AD000DC3411 /* Social.framework */; };
 		A5AA4341196D2AD700DC3411 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA4340196D2AD700DC3411 /* Accounts.framework */; };
+		A5FA68B319869D6300108DB9 /* answer.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FA68B219869D6300108DB9 /* answer.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -480,6 +481,7 @@
 		A5AA433E196D2AD000DC3411 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
 		A5AA4340196D2AD700DC3411 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Accounts.framework; sourceTree = DEVELOPER_DIR; };
 		A5E1486119834FD800E54242 /* LHMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LHMacro.h; path = ../Classes/LHMacro.h; sourceTree = "<group>"; };
+		A5FA68B219869D6300108DB9 /* answer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = answer.png; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -723,6 +725,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5FA68B219869D6300108DB9 /* answer.png */,
 				A577E99319861B0E0006052B /* green.png */,
 				A577E99419861B0E0006052B /* red.png */,
 				A577E991198601F80006052B /* back.png */,
@@ -1240,6 +1243,7 @@
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				A577E99519861B0E0006052B /* green.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
+				A5FA68B319869D6300108DB9 /* answer.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				A5AA431F196D299D00DC3411 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
@@ -1396,8 +1400,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jian Bang (LLWK678A7W)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1433,7 +1437,7 @@
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/YiXin",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = "AE41FA0A-450D-43B7-85E2-BB867294E493";
+				PROVISIONING_PROFILE = "BB792FAA-3C77-4A5A-BF07-9A8E2806E1E4";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1447,8 +1451,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jian Bang (LLWK678A7W)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1482,7 +1486,7 @@
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/YiXin",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = "AE41FA0A-450D-43B7-85E2-BB867294E493";
+				PROVISIONING_PROFILE = "BB792FAA-3C77-4A5A-BF07-9A8E2806E1E4";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
