@@ -8,6 +8,7 @@
 #include "DeveloperInfoScence.h"
 #include "LocalizedString.h"
 #include "LHMacro.h"
+#include "LHShareButton.h"
 
 #define KEY_AL "al"
 #define KEY_WORDS "words"
@@ -55,7 +56,12 @@ bool ChooseModelScene::initDict(cocos2d::CCDictionary *dic)
     bt->setPosition(Vec2(bt->getContentSize().width+10, visible.height - bt->getContentSize().height - 10));
     this->addChild(bt);
     
-    this->addChild(DeveloperInfo::DevInfoButton("devinfo.png"));
+    ui::Button *infobt = DeveloperInfo::DevInfoButton("devinfo.png");
+    this->addChild(infobt);
+    
+    LHShareButton *sharebt = LHShareButton::defaultButton("Memorize");
+    sharebt->setPosition(Vec2(infobt->getPosition().x - infobt->getContentSize().width - 30, infobt->getPosition().y));
+    this->addChild(sharebt);
     
     std::stringstream ss;
     ss<<model->getCString()<<".json";

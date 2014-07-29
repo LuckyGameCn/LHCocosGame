@@ -59,6 +59,8 @@
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
 		A50697F3194750AD0008E3C3 /* PlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50697F1194750AD0008E3C3 /* PlayScene.cpp */; };
 		A5132B6419859F970002F355 /* devinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = A5132B6319859F970002F355 /* devinfo.png */; };
+		A5132B6B1987FE900002F355 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = A5132B6A1987FE900002F355 /* share.png */; };
+		A5132B701987FEAA0002F355 /* LHShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5132B6E1987FEAA0002F355 /* LHShareButton.cpp */; };
 		A53A8922197EDFCB0051B7D4 /* LHPauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */; };
 		A5547470196D8E2D00F152D3 /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
 		A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547471196EBD1400F152D3 /* UMShareButton.cpp */; };
@@ -334,6 +336,9 @@
 		A50697F1194750AD0008E3C3 /* PlayScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayScene.cpp; path = ../Classes/PlayScene.cpp; sourceTree = "<group>"; };
 		A50697F2194750AD0008E3C3 /* PlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayScene.h; path = ../Classes/PlayScene.h; sourceTree = "<group>"; };
 		A5132B6319859F970002F355 /* devinfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devinfo.png; sourceTree = "<group>"; };
+		A5132B6A1987FE900002F355 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		A5132B6E1987FEAA0002F355 /* LHShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHShareButton.cpp; path = ../Classes/LHShareButton.cpp; sourceTree = "<group>"; };
+		A5132B6F1987FEAA0002F355 /* LHShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHShareButton.h; path = ../Classes/LHShareButton.h; sourceTree = "<group>"; };
 		A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHPauseScene.cpp; path = ../Classes/LHPauseScene.cpp; sourceTree = "<group>"; };
 		A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHPauseScene.h; path = ../Classes/LHPauseScene.h; sourceTree = "<group>"; };
 		A5547471196EBD1400F152D3 /* UMShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UMShareButton.cpp; path = ../Classes/UMShareButton.cpp; sourceTree = "<group>"; };
@@ -725,6 +730,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5132B6A1987FE900002F355 /* share.png */,
 				A5FA68B219869D6300108DB9 /* answer.png */,
 				A577E99319861B0E0006052B /* green.png */,
 				A577E99419861B0E0006052B /* red.png */,
@@ -775,6 +781,8 @@
 				A5547472196EBD1400F152D3 /* UMShareButton.h */,
 				A577E95A198101510006052B /* LocalizedString.cpp */,
 				A577E95B198101510006052B /* LocalizedString.h */,
+				A5132B6E1987FEAA0002F355 /* LHShareButton.cpp */,
+				A5132B6F1987FEAA0002F355 /* LHShareButton.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -1246,6 +1254,7 @@
 				A5FA68B319869D6300108DB9 /* answer.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				A5132B6B1987FE900002F355 /* share.png in Resources */,
 				A5AA431F196D299D00DC3411 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				A5AA4317196D299D00DC3411 /* UMSnsAccountViewController.xib in Resources */,
 				A594BDD119470429001DEF30 /* play.png in Resources */,
@@ -1311,6 +1320,7 @@
 				A59A47FA1952CDBD00217F27 /* strconv.c in Sources */,
 				A5AA4325196D299E00DC3411 /* UMSocialUIObject.mm in Sources */,
 				A50697F3194750AD0008E3C3 /* PlayScene.cpp in Sources */,
+				A5132B701987FEAA0002F355 /* LHShareButton.cpp in Sources */,
 				A577E97D19810C5E0006052B /* SourceLanScene.cpp in Sources */,
 				A59A47F91952CDBD00217F27 /* strbuffer.c in Sources */,
 				A577E97B19810C5E0006052B /* ChooseModelScene.cpp in Sources */,

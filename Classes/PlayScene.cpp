@@ -134,8 +134,12 @@ void PlayScene::genWord(){
     float margin = 7.0f;
 //    float hmargin = 5.0f;
     Size vs = Director::getInstance()->getVisibleSize();
-    int lineCount = 6;
-    int columnCount = 6;
+    int lineCount = 5;
+    int columnCount = 5;
+    if (u16l.length() >= lineCount*columnCount) {
+        lineCount = 6;
+        columnCount = 6;
+    }
     float bw = (vs.width - margin*(columnCount+1))/columnCount;
     float bh = (vs.height/2 - margin*(lineCount+1))/lineCount;
 
@@ -171,7 +175,7 @@ void PlayScene::genWord(){
         tbt->setTag(6240);
         tbt->setTitleText(tmp8);
         tbt->setPosition(Vec2(bw/2+line*(bw+margin) + margin, vs.height/2 - col*(bh+margin)));
-        tbt->setTitleColor(Color3B::RED);
+//        tbt->setTitleColor(Color3B::RED);
         tbt->addTouchEventListener([this](Ref* charbt,ui::Widget::TouchEventType type){
             
             if (type == ui::Widget::TouchEventType::ENDED) {
