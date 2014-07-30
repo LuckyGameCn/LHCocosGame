@@ -63,7 +63,6 @@ bool DeveloperInfo::init()
 }
 
 ui::Button* DeveloperInfo::DevInfoButton(const std::string &normalImage){
-    Size visibleSize = Director::getInstance()->getVisibleSize();
     auto devbt = ui::Button::create(normalImage);
     devbt->addTouchEventListener([](Ref *ps,ui::Widget::TouchEventType type){
         if (type == ui::Widget::TouchEventType::ENDED) {
@@ -71,6 +70,5 @@ ui::Button* DeveloperInfo::DevInfoButton(const std::string &normalImage){
             Director::getInstance()->pushScene(tran);
         }
     });
-    devbt->setPosition(Vec2(visibleSize.width - devbt->getContentSize().width - 10, visibleSize.height - devbt->getContentSize().height - 10));
     return devbt;
 }

@@ -126,6 +126,8 @@
 		A5AA4341196D2AD700DC3411 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA4340196D2AD700DC3411 /* Accounts.framework */; };
 		A5FA68C51988A3BD00108DB9 /* LHShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5FA68C31988A3BD00108DB9 /* LHShareButton.cpp */; };
 		A5FA68C91988A3C500108DB9 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FA68C81988A3C500108DB9 /* share.png */; };
+		A5FA68D31988A89D00108DB9 /* LHLeaderBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5FA68D11988A89D00108DB9 /* LHLeaderBoard.cpp */; };
+		A5FA68D51988B8A100108DB9 /* leaderboard.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FA68D41988B8A100108DB9 /* leaderboard.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -461,6 +463,9 @@
 		A5FA68C31988A3BD00108DB9 /* LHShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHShareButton.cpp; path = ../Classes/LHShareButton.cpp; sourceTree = "<group>"; };
 		A5FA68C41988A3BD00108DB9 /* LHShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHShareButton.h; path = ../Classes/LHShareButton.h; sourceTree = "<group>"; };
 		A5FA68C81988A3C500108DB9 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		A5FA68D11988A89D00108DB9 /* LHLeaderBoard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHLeaderBoard.cpp; path = ../Classes/LHLeaderBoard.cpp; sourceTree = "<group>"; };
+		A5FA68D21988A89D00108DB9 /* LHLeaderBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHLeaderBoard.h; path = ../Classes/LHLeaderBoard.h; sourceTree = "<group>"; };
+		A5FA68D41988B8A100108DB9 /* leaderboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaderboard.png; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -704,6 +709,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5FA68D41988B8A100108DB9 /* leaderboard.png */,
 				A5FA68C81988A3C500108DB9 /* share.png */,
 				A5132B5B198575E40002F355 /* devinfo.png */,
 				A577E96B19810ABA0006052B /* ch_ls.plist */,
@@ -754,6 +760,8 @@
 				A5547472196EBD1400F152D3 /* UMShareButton.h */,
 				A577E95A198101510006052B /* LocalizedString.cpp */,
 				A577E95B198101510006052B /* LocalizedString.h */,
+				A5FA68D11988A89D00108DB9 /* LHLeaderBoard.cpp */,
+				A5FA68D21988A89D00108DB9 /* LHLeaderBoard.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -1190,6 +1198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				A5FA68D51988B8A100108DB9 /* leaderboard.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				A577E96D19810ABA0006052B /* ch_ls.plist in Resources */,
@@ -1248,6 +1257,7 @@
 				A59A47F61952CDBD00217F27 /* load.c in Sources */,
 				A5AA42CF196D0B8100DC3411 /* DeveloperInfoScence.cpp in Sources */,
 				A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */,
+				A5FA68D31988A89D00108DB9 /* LHLeaderBoard.cpp in Sources */,
 				A59A47861952B36B00217F27 /* ThirdPartyHelper.cpp in Sources */,
 				A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */,
 				A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */,

@@ -1,9 +1,11 @@
 #include "HelloWorldScene.h"
 #include "PlayScene.h"
-#include "UMShareButton.h"
 #include "ThirdPartyHelper.h"
 #include "UIButton.h"
 #include "DeveloperInfoScence.h"
+#include "LHLeaderBoard.h"
+#include "UILayout.h"
+#include "LHShareButton.h"
 
 USING_NS_CC;
 USING_NS_UM_SOCIAL;
@@ -36,8 +38,6 @@ bool HelloWorld::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-    this->addChild(DeveloperInfo::DevInfoButton("devinfo.png"));
-    
     
     return true;
 }

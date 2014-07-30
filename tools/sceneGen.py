@@ -21,6 +21,7 @@ print "#endif"
 
 print "//------.cpp"
 print "#include \"%s.h\"" % (name)
+print "#include \"LHMacros.h\""
 print "USING_NS_CC;"
 print "Scene* %s::createScene(cocos2d::CCDictionary *dic)" % (name)
 print "{"
