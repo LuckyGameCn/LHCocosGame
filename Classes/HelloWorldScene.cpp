@@ -15,7 +15,7 @@ Scene* HelloWorld::createScene()
     
     // 'layer' is an autorelease object
     auto layer = HelloWorld::create();
-    
+    layer->initWithColor(Color4B::WHITE);
     // add layer as a child to scene
     scene->addChild(layer);
 

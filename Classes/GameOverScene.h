@@ -3,7 +3,7 @@
 #define __GAMEOVERSCENE__
 #include "cocos2d.h"
 USING_NS_CC;
-class GameOverScene : public cocos2d::Layer
+class GameOverScene : public cocos2d::LayerColor
 {
 public:
 	static cocos2d::Scene* createScene(cocos2d::CCDictionary *dic);

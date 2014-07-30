@@ -6,6 +6,7 @@ Scene* LHPauseScene::createScene(cocos2d::CCDictionary *dic)
 {
 	auto scene = Scene::create();
 	auto layer = LHPauseScene::create();
+    layer->initWithColor(Color4B::WHITE);
 	layer->initDict(dic);
 	scene->addChild(layer);
 	return scene;

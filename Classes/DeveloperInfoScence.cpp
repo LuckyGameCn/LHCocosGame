@@ -12,7 +12,7 @@ Scene* DeveloperInfo::createScene()
     
     // 'layer' is an autorelease object
     auto layer = DeveloperInfo::create();
-    
+   
     // add layer as a child to scene
     scene->addChild(layer);
 
@@ -47,7 +47,7 @@ bool DeveloperInfo::init()
     
     int half = infos.size()/2;
     for (int i =0 ; i<infos.size(); i++) {
-        auto info = ui::Text::create(infos[i], Common_Font, 30);
+        auto info = ui::Text::create(infos[i], Common_Font, 35);
         info->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
         info->setPosition(Vec2(visibleSize.width/2, visibleSize.height/2 + (half-i)*info->getContentSize().height));
         layout->addChild(info);

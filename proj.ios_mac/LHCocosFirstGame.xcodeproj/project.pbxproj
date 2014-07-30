@@ -124,6 +124,8 @@
 		A5AA433D196D2AC400DC3411 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA433C196D2AC400DC3411 /* libz.dylib */; };
 		A5AA433F196D2AD000DC3411 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA433E196D2AD000DC3411 /* Social.framework */; };
 		A5AA4341196D2AD700DC3411 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA4340196D2AD700DC3411 /* Accounts.framework */; };
+		A5FA68C51988A3BD00108DB9 /* LHShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5FA68C31988A3BD00108DB9 /* LHShareButton.cpp */; };
+		A5FA68C91988A3C500108DB9 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FA68C81988A3C500108DB9 /* share.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -456,6 +458,9 @@
 		A5AA433C196D2AC400DC3411 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		A5AA433E196D2AD000DC3411 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
 		A5AA4340196D2AD700DC3411 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Accounts.framework; sourceTree = DEVELOPER_DIR; };
+		A5FA68C31988A3BD00108DB9 /* LHShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHShareButton.cpp; path = ../Classes/LHShareButton.cpp; sourceTree = "<group>"; };
+		A5FA68C41988A3BD00108DB9 /* LHShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHShareButton.h; path = ../Classes/LHShareButton.h; sourceTree = "<group>"; };
+		A5FA68C81988A3C500108DB9 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -561,6 +566,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A5FA68CE1988A52A00108DB9 /* Game */,
 				A5132B5519856EF20002F355 /* Common */,
 				A577E9101981011A0006052B /* Utils */,
 				A53A891A197E8ED50051B7D4 /* Scene */,
@@ -698,6 +704,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5FA68C81988A3C500108DB9 /* share.png */,
 				A5132B5B198575E40002F355 /* devinfo.png */,
 				A577E96B19810ABA0006052B /* ch_ls.plist */,
 				A577E96C19810ABA0006052B /* en_ls.plist */,
@@ -736,6 +743,8 @@
 		A577E9101981011A0006052B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A5FA68C31988A3BD00108DB9 /* LHShareButton.cpp */,
+				A5FA68C41988A3BD00108DB9 /* LHShareButton.h */,
 				A59A47841952B36B00217F27 /* ThirdPartyHelper.cpp */,
 				A59A47851952B36B00217F27 /* ThirdPartyHelper.h */,
 				A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */,
@@ -1007,6 +1016,13 @@
 			path = YiXin;
 			sourceTree = "<group>";
 		};
+		A5FA68CE1988A52A00108DB9 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1200,6 +1216,7 @@
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				A5AA4315196D299D00DC3411 /* UMShareEditViewControlleriPad.xib in Resources */,
+				A5FA68C91988A3C500108DB9 /* share.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				A5132B5C198575E40002F355 /* devinfo.png in Resources */,
@@ -1247,6 +1264,7 @@
 				A59A47FD1952CDBD00217F27 /* NDKCallbackNode.cpp in Sources */,
 				A59A47F81952CDBD00217F27 /* pack_unpack.c in Sources */,
 				A577E95D198101510006052B /* LocalizedString.cpp in Sources */,
+				A5FA68C51988A3BD00108DB9 /* LHShareButton.cpp in Sources */,
 				A59A47F51952CDBD00217F27 /* hashtable.c in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				A59A47B41952C35900217F27 /* IOSNDKHelper.mm in Sources */,

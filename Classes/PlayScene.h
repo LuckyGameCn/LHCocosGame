@@ -3,7 +3,7 @@
 #define __PLAYSCENE__
 #include "cocos2d.h"
 USING_NS_CC;
-class PlayScene : public cocos2d::Layer
+class PlayScene : public cocos2d::LayerColor
 {
 public:
 	static cocos2d::Scene* createScene(cocos2d::CCDictionary *dic);
