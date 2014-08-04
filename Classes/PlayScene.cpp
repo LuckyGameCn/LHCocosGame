@@ -12,6 +12,11 @@ Scene* PlayScene::createScene(cocos2d::CCDictionary *dic)
 
 PlayScene::~PlayScene(){
 }
+
+void PlayScene::update(float delta){
+    
+}
+
 bool PlayScene::initDict(cocos2d::CCDictionary *dic)
 {
     

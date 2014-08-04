@@ -22,7 +22,7 @@ public:
                                  const char *selectedImage, const char* umAppKey,
                                  umeng::social::ShareEventHandler callback);
     
-    static LHShareButton* defaultButton(const char* shareText);
+    static LHShareButton* defaultButton(const char *normal,const char* shareText);
     /**
 	 * 设置分享回调回调
 	 * @param callback 分享回调

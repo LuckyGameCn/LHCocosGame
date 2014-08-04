@@ -9,8 +9,8 @@
 #include "LHLeaderBoard.h"
 #include "ThirdPartyHelper.h"
 
-cocos2d::ui::Button* LHLeaderBoard::defaultButton(){
-    auto bt = cocos2d::ui::Button::create("leaderboard.png");
+cocos2d::ui::Button* LHLeaderBoard::defaultButton(std::string &normal){
+    auto bt = cocos2d::ui::Button::create(normal);
     bt->addTouchEventListener([](cocos2d::Ref* ps,cocos2d::ui::Widget::TouchEventType type){
         if (type == cocos2d::ui::Widget::TouchEventType::ENDED) {
             ThirdPartyHelper::showLeaderBoard();

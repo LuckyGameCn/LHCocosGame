@@ -9,6 +9,7 @@ public:
 	static cocos2d::Scene* createScene(cocos2d::CCDictionary *dic);
 	bool initDict(cocos2d::CCDictionary *dic);
 	virtual ~PlayScene();
+    virtual void update(float delta);
 	CREATE_FUNC(PlayScene);
 };
 #endif

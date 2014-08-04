@@ -35,8 +35,8 @@ LHShareButton::LHShareButton(){
     
 }
 
-LHShareButton* LHShareButton::defaultButton(const char *shareText){
-    auto bt = LHShareButton::create("share.png", "", UMAppKey, share_selector(shareCallback));
+LHShareButton* LHShareButton::defaultButton(const char *normal,const char *shareText){
+    auto bt = LHShareButton::create(normal, "", UMAppKey, share_selector(shareCallback));
     return bt;
 }
 

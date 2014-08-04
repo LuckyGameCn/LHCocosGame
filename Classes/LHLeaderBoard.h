@@ -15,7 +15,7 @@
 
 class LHLeaderBoard{
 public:
-    static cocos2d::ui::Button* defaultButton();
+    static cocos2d::ui::Button* defaultButton(std::string &normal);
 };
 
 #endif /* defined(__LHCocosFirstGame__LHLeaderBoard__) */
