@@ -236,7 +236,7 @@ void UmSocialControllerIOS::openShareWithImagePath(vector<int>* platforms, const
         if ([imageString hasPrefix:@"http://"] || [imageString hasPrefix:@"https://"]) {
             [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:imageString];
         } else {
-            image = [UIImage imageNamed:getNSStringFromCString(imagePath)];
+            image = [UIImage imageWithContentsOfFile:getNSStringFromCString(imagePath)];
         }
     }
     

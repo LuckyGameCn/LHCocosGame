@@ -7,28 +7,28 @@
 //
 
 #include "LHShareButton.h"
+#include "LHMacros.h"
 
 USING_NS_UM_SOCIAL;
 
 #define CurrentScreen "cuurentscreen.png"
-#define UMAppKey "appkey"
 
 static void shareCallback(int platform, int stCode, string& errorMsg)
 {
     if ( stCode == 100 )
     {
-        CCLog("#### HelloWorld 开始分享");
+        log("#### HelloWorld 开始分享");
     }
     else if ( stCode == 200 )
     {
-        CCLog("#### HelloWorld 分享成功");
+        log("#### HelloWorld 分享成功");
     }
     else
     {
-        CCLog("#### HelloWorld 分享出错");
+        log("#### HelloWorld 分享出错");
     }
     
-    CCLog("platform num is : %d.", platform);
+    log("platform num is : %d.", platform);
 }
 
 LHShareButton::LHShareButton(){
@@ -36,7 +36,8 @@ LHShareButton::LHShareButton(){
 }
 
 LHShareButton* LHShareButton::defaultButton(const char *normal,const char *shareText){
-    auto bt = LHShareButton::create(normal, "", UMAppKey, share_selector(shareCallback));
+    auto bt = LHShareButton::create(normal, "", UM_APPID, share_selector(shareCallback));
+    bt->setShareContent(shareText);
     return bt;
 }
 
@@ -48,10 +49,11 @@ LHShareButton* LHShareButton::create(const char *normalImage, const char *select
     
     vector<int>* platforms = new vector<int>();
     platforms->push_back(SINA);
-    platforms->push_back(RENREN) ;
-    platforms->push_back(DOUBAN) ;
-    platforms->push_back(QZONE) ;
-    platforms->push_back(QQ) ;
+    platforms->push_back(WEIXIN) ;
+    platforms->push_back(WEIXIN_CIRCLE) ;
+    platforms->push_back(TWITTER) ;
+    platforms->push_back(INSTAGRAM) ;
+    platforms->push_back(EMAIL) ;
     // 设置友盟分享面板上显示的平台
     bt->setPlatforms(platforms);
     
@@ -65,7 +67,8 @@ LHShareButton* LHShareButton::create(const char *normalImage, const char *select
             
             rd->saveToFile(CurrentScreen,Image::Format::PNG);
             
-            bt->mSocialSDK->openShare(bt->mShareText.c_str(), CurrentScreen, bt->mCallback);
+            std::string fp = StringUtils::format("%s%s",FileUtils::getInstance()->getWritablePath().c_str(),CurrentScreen);
+            bt->mSocialSDK->openShare(bt->mShareText.c_str(), fp.c_str(), bt->mCallback);
         }
     });
     
@@ -80,6 +83,9 @@ void LHShareButton::setShareContent(const char* text) {
 
 void LHShareButton::initWithAppKey(const char *umAppKey){
     mSocialSDK = umeng::social::CCUMSocialSDK::create(umAppKey);
+    mSocialSDK->openInstagramForiOS();
+    mSocialSDK->openTwitterForiOS();
+    mSocialSDK->setWeiXinAppId(WX_APPID);
 }
 
 void LHShareButton::setShareCallback(umeng::social::ShareEventHandler callback){
