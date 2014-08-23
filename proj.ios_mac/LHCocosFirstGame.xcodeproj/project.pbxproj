@@ -64,6 +64,8 @@
 		A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547471196EBD1400F152D3 /* UMShareButton.cpp */; };
 		A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */; };
 		A5547479196EC6EF00F152D3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5547478196EC6EF00F152D3 /* GameKit.framework */; };
+		A5740DDF19A84D5300AA33AE /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5740DDE19A84D5300AA33AE /* libMobClickCppWithLibCpp.a */; };
+		A5740DE119A84DCB00AA33AE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5740DE019A84DCB00AA33AE /* StoreKit.framework */; };
 		A577E95D198101510006052B /* LocalizedString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A577E95A198101510006052B /* LocalizedString.cpp */; };
 		A577E96D19810ABA0006052B /* ch_ls.plist in Resources */ = {isa = PBXBuildFile; fileRef = A577E96B19810ABA0006052B /* ch_ls.plist */; };
 		A577E96E19810ABA0006052B /* en_ls.plist in Resources */ = {isa = PBXBuildFile; fileRef = A577E96C19810ABA0006052B /* en_ls.plist */; };
@@ -73,7 +75,6 @@
 		A59A47801952AD1100217F27 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = A59A477E1952AD1000217F27 /* README.txt */; };
 		A59A47831952B30200217F27 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A59A477D1952AD1000217F27 /* libGoogleAdMobAds.a */; };
 		A59A47861952B36B00217F27 /* ThirdPartyHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59A47841952B36B00217F27 /* ThirdPartyHelper.cpp */; };
-		A59A47881952B4D800217F27 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59A47871952B4D800217F27 /* StoreKit.framework */; };
 		A59A478A1952B4EF00217F27 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59A47891952B4EF00217F27 /* MessageUI.framework */; };
 		A59A478E1952B51600217F27 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59A478D1952B51600217F27 /* AdSupport.framework */; };
 		A59A47901952B56200217F27 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59A478F1952B56200217F27 /* SystemConfiguration.framework */; };
@@ -328,6 +329,7 @@
 		A50697F2194750AD0008E3C3 /* PlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayScene.h; path = ../Classes/PlayScene.h; sourceTree = "<group>"; };
 		A5132B5819856F010002F355 /* LHMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LHMacros.h; path = ../Classes/LHMacros.h; sourceTree = "<group>"; };
 		A5132B5B198575E40002F355 /* devinfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devinfo.png; sourceTree = "<group>"; };
+		A52B29F019A3072C004FBEBA /* MobClickCpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobClickCpp.h; path = ../Classes/MobClickCpp.h; sourceTree = "<group>"; };
 		A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHPauseScene.cpp; path = ../Classes/LHPauseScene.cpp; sourceTree = "<group>"; };
 		A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHPauseScene.h; path = ../Classes/LHPauseScene.h; sourceTree = "<group>"; };
 		A5547471196EBD1400F152D3 /* UMShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UMShareButton.cpp; path = ../Classes/UMShareButton.cpp; sourceTree = "<group>"; };
@@ -336,6 +338,8 @@
 		A5547475196EBD6200F152D3 /* CCUMSocialSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCUMSocialSDK.h; path = ../Classes/CCUMSocialSDK.h; sourceTree = "<group>"; };
 		A5547476196EBD6200F152D3 /* CCUMTypeDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCUMTypeDef.h; path = ../Classes/CCUMTypeDef.h; sourceTree = "<group>"; };
 		A5547478196EC6EF00F152D3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
+		A5740DDE19A84D5300AA33AE /* libMobClickCppWithLibCpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobClickCppWithLibCpp.a; path = ios/libMobClickCppWithLibCpp.a; sourceTree = SOURCE_ROOT; };
+		A5740DE019A84DCB00AA33AE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		A577E95A198101510006052B /* LocalizedString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LocalizedString.cpp; path = ../Classes/LocalizedString.cpp; sourceTree = "<group>"; };
 		A577E95B198101510006052B /* LocalizedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalizedString.h; path = ../Classes/LocalizedString.h; sourceTree = "<group>"; };
 		A577E96B19810ABA0006052B /* ch_ls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ch_ls.plist; sourceTree = "<group>"; };
@@ -374,7 +378,6 @@
 		A59A477E1952AD1000217F27 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		A59A47841952B36B00217F27 /* ThirdPartyHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThirdPartyHelper.cpp; path = ../Classes/ThirdPartyHelper.cpp; sourceTree = "<group>"; };
 		A59A47851952B36B00217F27 /* ThirdPartyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirdPartyHelper.h; path = ../Classes/ThirdPartyHelper.h; sourceTree = "<group>"; };
-		A59A47871952B4D800217F27 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		A59A47891952B4EF00217F27 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
 		A59A478B1952B50A00217F27 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/iAd.framework; sourceTree = DEVELOPER_DIR; };
 		A59A478D1952B51600217F27 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
@@ -480,6 +483,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5740DE119A84DCB00AA33AE /* StoreKit.framework in Frameworks */,
 				A5547479196EC6EF00F152D3 /* GameKit.framework in Frameworks */,
 				A5547470196D8E2D00F152D3 /* libbox2d iOS.a in Frameworks */,
 				A5AA4341196D2AD700DC3411 /* Accounts.framework in Frameworks */,
@@ -491,12 +495,12 @@
 				A5AA4337196D2A8A00DC3411 /* CoreGraphics.framework in Frameworks */,
 				A59A47901952B56200217F27 /* SystemConfiguration.framework in Frameworks */,
 				A5AA4335196D2A6B00DC3411 /* libiconv.dylib in Frameworks */,
+				A5740DDF19A84D5300AA33AE /* libMobClickCppWithLibCpp.a in Frameworks */,
 				A59A47941952BDC100217F27 /* MediaPlayer.framework in Frameworks */,
 				A5AA431E196D299D00DC3411 /* TencentOpenAPI.framework in Frameworks */,
 				A5AA4320196D299D00DC3411 /* libSocialTwitter.a in Frameworks */,
 				A59A478E1952B51600217F27 /* AdSupport.framework in Frameworks */,
 				A59A478A1952B4EF00217F27 /* MessageUI.framework in Frameworks */,
-				A59A47881952B4D800217F27 /* StoreKit.framework in Frameworks */,
 				A59A47831952B30200217F27 /* libGoogleAdMobAds.a in Frameworks */,
 				A5AA431A196D299D00DC3411 /* libSocialFacebook.a in Frameworks */,
 				1AC6FB2F180E99EB004C840B /* libchipmunk iOS.a in Frameworks */,
@@ -553,6 +557,7 @@
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				A5740DDE19A84D5300AA33AE /* libMobClickCppWithLibCpp.a */,
 				A5AA42D2196D299D00DC3411 /* umeng */,
 				A59A479F1952C35900217F27 /* IOSNDKHelper */,
 				A59A475D1952AD1000217F27 /* GoogleMobileAdsSdkiOS-6.9.3 */,
@@ -627,6 +632,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5740DE019A84DCB00AA33AE /* StoreKit.framework */,
 				A5547478196EC6EF00F152D3 /* GameKit.framework */,
 				A5AA4340196D2AD700DC3411 /* Accounts.framework */,
 				A5AA433E196D2AD000DC3411 /* Social.framework */,
@@ -641,7 +647,6 @@
 				A59A478D1952B51600217F27 /* AdSupport.framework */,
 				A59A478B1952B50A00217F27 /* iAd.framework */,
 				A59A47891952B4EF00217F27 /* MessageUI.framework */,
-				A59A47871952B4D800217F27 /* StoreKit.framework */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
 				503AE11A17EB9C5A00D1A890 /* IOKit.framework */,
 				503AE11117EB99EE00D1A890 /* libcurl.dylib */,
@@ -724,6 +729,7 @@
 		A5132B5519856EF20002F355 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A52B29F019A3072C004FBEBA /* MobClickCpp.h */,
 				A5132B5819856F010002F355 /* LHMacros.h */,
 			);
 			name = Common;
@@ -1088,6 +1094,11 @@
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = 7UG66YPJ64;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -1368,6 +1379,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jian Bang (LLWK678A7W)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
@@ -1403,6 +1415,7 @@
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/Twitter",
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/Wechat",
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/YiXin",
+					"$(PROJECT_DIR)/ios",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "AE41FA0A-450D-43B7-85E2-BB867294E493";
@@ -1419,6 +1432,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jian Bang (LLWK678A7W)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
@@ -1452,6 +1466,7 @@
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/Twitter",
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/Wechat",
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/YiXin",
+					"$(PROJECT_DIR)/ios",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "AE41FA0A-450D-43B7-85E2-BB867294E493";

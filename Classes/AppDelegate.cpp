@@ -1,6 +1,9 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
 #include "LHPauseScene.h"
+#include "LocalizedString.h"
+#include "MobClickCpp.h"
+#include "LHMacros.h"
 
 USING_NS_CC;
 
@@ -10,6 +13,7 @@ AppDelegate::AppDelegate() {
 
 AppDelegate::~AppDelegate() 
 {
+    MobClickCpp::end();
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
@@ -17,7 +21,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLView::create("My Game");
+        glview = GLView::create(LHLocalizedCString("appname"));
         director->setOpenGLView(glview);
     }
 
@@ -26,14 +30,14 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
-    
-    glClearColor(1.0, 1.0, 1.0, 1.0);
 
     // create a scene. it's an autorelease object
     auto scene = HelloWorld::createScene();
 
     // run
     director->runWithScene(scene);
+    
+    MobClickCpp::startWithAppkey(UM_APPID, "");
 
     return true;
 }
@@ -49,6 +53,8 @@ void AppDelegate::applicationDidEnterBackground() {
     if (sceneTag > 0) {
         Director::getInstance()->pushScene(LHPauseScene::createScene(nullptr));
     }
+    
+    MobClickCpp::applicationDidEnterBackground();
 }
 
 // this function will be called when the app is active again
@@ -57,4 +63,6 @@ void AppDelegate::applicationWillEnterForeground() {
 
     // if you use SimpleAudioEngine, it must resume here
     // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+    
+    MobClickCpp::applicationWillEnterForeground();
 }

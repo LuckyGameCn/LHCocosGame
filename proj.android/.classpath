@@ -14,5 +14,6 @@
 	<classpathentry kind="lib" path="libs/SocialSDK_tencentWB_2.jar"/>
 	<classpathentry kind="lib" path="libs/SocialSDK_WeiXin.jar"/>
 	<classpathentry kind="lib" path="libs/umeng_social_sdk.jar"/>
+	<classpathentry kind="lib" path="/Users/huji/Documents/git/LHCocosFirstGame/proj.android/libs/umeng_sdk.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
