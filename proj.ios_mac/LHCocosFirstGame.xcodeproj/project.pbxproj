@@ -66,6 +66,8 @@
 		A5547479196EC6EF00F152D3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5547478196EC6EF00F152D3 /* GameKit.framework */; };
 		A5740DDF19A84D5300AA33AE /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5740DDE19A84D5300AA33AE /* libMobClickCppWithLibCpp.a */; };
 		A5740DE119A84DCB00AA33AE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5740DE019A84DCB00AA33AE /* StoreKit.framework */; };
+		A5740DE819A8735D00AA33AE /* GuideScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5740DE619A8735D00AA33AE /* GuideScene.cpp */; };
+		A5740DEC19A875B900AA33AE /* q.png in Resources */ = {isa = PBXBuildFile; fileRef = A5740DEB19A875B900AA33AE /* q.png */; };
 		A577E95D198101510006052B /* LocalizedString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A577E95A198101510006052B /* LocalizedString.cpp */; };
 		A577E96D19810ABA0006052B /* ch_ls.plist in Resources */ = {isa = PBXBuildFile; fileRef = A577E96B19810ABA0006052B /* ch_ls.plist */; };
 		A577E96E19810ABA0006052B /* en_ls.plist in Resources */ = {isa = PBXBuildFile; fileRef = A577E96C19810ABA0006052B /* en_ls.plist */; };
@@ -340,6 +342,9 @@
 		A5547478196EC6EF00F152D3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		A5740DDE19A84D5300AA33AE /* libMobClickCppWithLibCpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobClickCppWithLibCpp.a; path = ios/libMobClickCppWithLibCpp.a; sourceTree = SOURCE_ROOT; };
 		A5740DE019A84DCB00AA33AE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		A5740DE619A8735D00AA33AE /* GuideScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GuideScene.cpp; path = ../Classes/GuideScene.cpp; sourceTree = "<group>"; };
+		A5740DE719A8735D00AA33AE /* GuideScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuideScene.h; path = ../Classes/GuideScene.h; sourceTree = "<group>"; };
+		A5740DEB19A875B900AA33AE /* q.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = q.png; sourceTree = "<group>"; };
 		A577E95A198101510006052B /* LocalizedString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LocalizedString.cpp; path = ../Classes/LocalizedString.cpp; sourceTree = "<group>"; };
 		A577E95B198101510006052B /* LocalizedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalizedString.h; path = ../Classes/LocalizedString.h; sourceTree = "<group>"; };
 		A577E96B19810ABA0006052B /* ch_ls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ch_ls.plist; sourceTree = "<group>"; };
@@ -714,6 +719,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5740DEB19A875B900AA33AE /* q.png */,
 				A5FA68D41988B8A100108DB9 /* leaderboard.png */,
 				A5FA68C81988A3C500108DB9 /* share.png */,
 				A5132B5B198575E40002F355 /* devinfo.png */,
@@ -748,6 +754,8 @@
 				A50697F2194750AD0008E3C3 /* PlayScene.h */,
 				A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */,
 				A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */,
+				A5740DE619A8735D00AA33AE /* GuideScene.cpp */,
+				A5740DE719A8735D00AA33AE /* GuideScene.h */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -1241,6 +1249,7 @@
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				A5132B5C198575E40002F355 /* devinfo.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				A5740DEC19A875B900AA33AE /* q.png in Resources */,
 				A5AA4313196D299D00DC3411 /* UMSCommentInputControlleriPad.xib in Resources */,
 				A5AA4319196D299D00DC3411 /* UMSocialSDKResourcesNew.bundle in Resources */,
 			);
@@ -1271,6 +1280,7 @@
 				A5FA68D31988A89D00108DB9 /* LHLeaderBoard.cpp in Sources */,
 				A59A47861952B36B00217F27 /* ThirdPartyHelper.cpp in Sources */,
 				A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */,
+				A5740DE819A8735D00AA33AE /* GuideScene.cpp in Sources */,
 				A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
