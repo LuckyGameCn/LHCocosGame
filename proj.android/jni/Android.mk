@@ -42,9 +42,6 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes \
 					$(LOCAL_PATH)/../../Classes/jansson \
 					$(LOCAL_PATH)/../../cocos2d/cocos/ui
 
-LOCAL_LDLIBS := libs/cocos2dx3_libMobClickCpp.a
-
-LOCAL_STATIC_LIBRARIES := android_native_app_glue
 
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocosdenshion_static
@@ -58,7 +55,6 @@ LOCAL_WHOLE_STATIC_LIBRARIES += cocostudio_static
 
 include $(BUILD_SHARED_LIBRARY)
 
-$(call import-module,android/native_app_glue)
 $(call import-module,.)
 $(call import-module,audio/android)
 # $(call import-module,ui)
