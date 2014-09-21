@@ -81,6 +81,19 @@ static AppDelegate s_sharedApplication;
     cocos2d::Application::getInstance()->run();
     
     [_viewController initGADBannerWithAdPositionAtTop:YES];
+    
+    if (![[GKLocalPlayer localPlayer] isAuthenticated]) {
+        [GKLocalPlayer localPlayer].authenticateHandler = ^(UIViewController *viewController, NSError *error) {
+            if (viewController != nil)
+            {
+                [_viewController presentModalViewController: viewController animated: YES];
+            }
+            else if ([GKLocalPlayer localPlayer].isAuthenticated)
+            {
+                
+            }//else should disable gamecenter.
+        };
+    }
 
     return YES;
 }

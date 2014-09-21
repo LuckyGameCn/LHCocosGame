@@ -30,7 +30,7 @@
 
 @class GADBannerView, GADRequest;
 
-@interface RootViewController : UIViewController<GADBannerViewDelegate,GKLeaderboardViewControllerDelegate,SKStoreProductViewControllerDelegate,UIAlertViewDelegate> {
+@interface RootViewController : UIViewController<GADBannerViewDelegate,GKGameCenterControllerDelegate,SKStoreProductViewControllerDelegate,UIAlertViewDelegate> {
 @private
     GADBannerView *bannerView_;
     BOOL isAdPositionAtTop_;

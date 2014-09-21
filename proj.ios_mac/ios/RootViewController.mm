@@ -62,26 +62,34 @@
  cat
  */
 -(void)leaderBoardControl:(id)param{
+    if (![[GKLocalPlayer localPlayer] isAuthenticated]) {
+        return;
+    }
+    
     NSDictionary *dic = param;
     if ([dic objectForKey:@"value"]) {
         NSNumber *value = [dic objectForKey:@"value"];
         NSString *cat = [dic objectForKey:@"cat"];
-        GKScore *score = [[GKScore alloc] initWithCategory:cat];
+        GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:cat];
         score.value = [value intValue];
         [score reportScoreWithCompletionHandler:^(NSError *error) {
-            NSLog(@"upload score error.");
+            NSLog(@"upload score.");
         }];
     }else{
         NSString *cat = [dic objectForKey:@"cat"];
-        GKLeaderboardViewController *leaderboardController = [[GKLeaderboardViewController alloc] init];
-        if (leaderboardController != NULL)
+        GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
+        if (gameCenterController != NULL)
         {
-            leaderboardController.category = cat;
-            leaderboardController.timeScope = GKLeaderboardTimeScopeWeek;
-            leaderboardController.leaderboardDelegate = self;
-            [self presentModalViewController: leaderboardController animated: YES];
+            gameCenterController.gameCenterDelegate = self;
+            gameCenterController.leaderboardIdentifier = cat;
+            gameCenterController.leaderboardTimeScope = GKLeaderboardTimeScopeAllTime;
+            [self presentModalViewController: gameCenterController animated: YES];
         }
     }
+}
+
+-(void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController{
+    [gameCenterViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)showReviewAlert:(id)param{

@@ -24,12 +24,14 @@ void ThirdPartyHelper::setAd(int tag){
 
 void ThirdPartyHelper::uploadScore(int score){
     CCDictionary *dic = CCDictionary::create();
-    dic->setObject(CCInteger::create(score), "value");
+    dic->setObject(CCString::create(StringUtils::format("%d",score)), "value");
+    dic->setObject(CCString::create("best"), "cat");
     SendMessageWithParams("leaderBoardControl", dic);
 }
 
 void ThirdPartyHelper::showLeaderBoard(){
     CCDictionary *dic = CCDictionary::create();
+    dic->setObject(CCString::create("best"), "cat");
     SendMessageWithParams("leaderBoardControl", dic);
 }
 
