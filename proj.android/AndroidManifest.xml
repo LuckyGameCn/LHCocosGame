@@ -64,6 +64,13 @@
             android:name="UMENG_APPKEY"
             android:value="xxxxxxxxxxxxxxxxxxxxxx" >
         </meta-data>
+        
+        <activity
+            android:name="org.cocos2dx.cpp.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     </application>
 
     <supports-screens android:anyDensity="true"

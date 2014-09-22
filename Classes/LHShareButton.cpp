@@ -86,6 +86,7 @@ void LHShareButton::initWithAppKey(const char *umAppKey){
     mSocialSDK->openInstagramForiOS();
     mSocialSDK->openTwitterForiOS();
     mSocialSDK->setWeiXinAppId(WX_APPID);
+    mSocialSDK->setTargetUrl(WX_TARGET_URL);
 }
 
 void LHShareButton::setShareCallback(umeng::social::ShareEventHandler callback){
