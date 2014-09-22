@@ -1,5 +1,6 @@
 //------.cpp
 #include "PlayScene.h"
+USING_NS_CC;
 Scene* PlayScene::createScene(cocos2d::CCDictionary *dic)
 {
 	auto scene = Scene::create();

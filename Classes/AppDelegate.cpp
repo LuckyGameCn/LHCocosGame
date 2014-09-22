@@ -3,6 +3,7 @@
 #include "LHPauseScene.h"
 #include "LocalizedString.h"
 #include "LHMacros.h"
+#include "ThirdPartyHelper.h"
 
 USING_NS_CC;
 
@@ -35,6 +36,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // run
     director->runWithScene(scene);
+    
+    ThirdPartyHelper::showReviewAlertWhenOpenTime(5);
 
     return true;
 }

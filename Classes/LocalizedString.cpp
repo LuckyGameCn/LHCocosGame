@@ -1,6 +1,7 @@
 #include "LocalizedString.h"
 
 using namespace std;
+using namespace cocos2d;
 
 LocalizedString::LocalizedString() {
 }

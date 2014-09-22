@@ -1,5 +1,6 @@
 //------.cpp
 #include "GameOverScene.h"
+USING_NS_CC;
 Scene* GameOverScene::createScene(cocos2d::CCDictionary *dic)
 {
 	auto scene = Scene::create();

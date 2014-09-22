@@ -2,7 +2,6 @@
 #ifndef __GAMEOVERSCENE__
 #define __GAMEOVERSCENE__
 #include "cocos2d.h"
-USING_NS_CC;
 class GameOverScene : public cocos2d::LayerColor
 {
 public:

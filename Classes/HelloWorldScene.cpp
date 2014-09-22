@@ -6,6 +6,9 @@
 #include "LHLeaderBoard.h"
 #include "UILayout.h"
 #include "LHShareButton.h"
+#include "UIText.h"
+#include "LocalizedString.h"
+#include "LHMacros.h"
 
 USING_NS_CC;
 USING_NS_UM_SOCIAL;
@@ -38,6 +41,19 @@ bool HelloWorld::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
+    auto appname = cocos2d::ui::Text::create(LHLocalizedCString("appname"), Common_Font, 40);
+    appname->setColor(Color3B::BLACK);
+    appname->setPosition(Vec2(visibleSize.width/2, visibleSize.height/2));
+    this->addChild(appname);
+    
+    auto play = ui::Button::create("play.png");
+    play->setPosition(Vec2(visibleSize.width/2, visibleSize.height/3));
+    play->addTouchEventListener([](Ref *ps,ui::Widget::TouchEventType type){
+        if (type == ui::Widget::TouchEventType::ENDED) {
+            Director::getInstance()->replaceScene(PlayScene::createScene(nullptr));
+        }
+    });
+    this->addChild(play);
     
     return true;
 }

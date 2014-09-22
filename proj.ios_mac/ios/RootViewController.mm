@@ -110,7 +110,7 @@
 }
 
 -(void)goReview:(id)param{
-    NSString *appId = @"";
+    NSString *appId = APP_ID;
     SKStoreProductViewController *reviewVC = [[SKStoreProductViewController alloc] init];
     if (reviewVC) {
         NSDictionary *dic = [NSDictionary dictionaryWithObject:appId forKey:SKStoreProductParameterITunesItemIdentifier];
