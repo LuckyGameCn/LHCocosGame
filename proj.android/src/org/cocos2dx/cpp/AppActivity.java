@@ -26,7 +26,10 @@ THE SOFTWARE.
  ****************************************************************************/
 package org.cocos2dx.cpp;
 
+import java.util.Locale;
+
 import org.cocos2dx.lib.Cocos2dxActivity;
+import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -42,8 +45,10 @@ import com.umeng.social.CCUMSocialController;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class AppActivity extends Cocos2dxActivity {
 
@@ -222,4 +227,39 @@ public class AppActivity extends Cocos2dxActivity {
         intent.setData(Uri.parse(playurl));
         startActivity(i);
     }
+    
+    private String getLan(){
+		Locale locale = getResources().getConfiguration().locale;
+        String language = locale.getLanguage();
+        return language;
+	}
+
+	private long mkeyTime = 0;
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	    //二次返回退出
+	    if (keyCode == KeyEvent.KEYCODE_BACK) {
+	        if ((System.currentTimeMillis() - mkeyTime) > 2000) {
+	            mkeyTime = System.currentTimeMillis();
+	            String text = null;
+	            if (getLan().endsWith("zh")) {
+					text = "再按一次退出游戏";
+				}else{
+					text = "Click Again to exit";
+				}
+	            Toast.makeText(this, text , Toast.LENGTH_LONG).show();
+	        } else {
+	            finish();
+	            System.exit(0);
+	        }
+	        return false;
+	    }
+	    return super.onKeyDown(keyCode, event);
+	}
+	
+	@Override
+	public Cocos2dxGLSurfaceView onCreateView() {
+		Cocos2dxGLSurfaceView glSurfaceView = new Cocos2dxGLSurfaceView(this);
+	    glSurfaceView.setEGLConfigChooser(5, 6, 5, 0, 16, 8);
+	    return glSurfaceView;
+	}
 }
