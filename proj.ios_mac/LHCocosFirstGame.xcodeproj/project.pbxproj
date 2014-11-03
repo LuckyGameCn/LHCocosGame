@@ -61,6 +61,7 @@
 		A5132B5C198575E40002F355 /* devinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = A5132B5B198575E40002F355 /* devinfo.png */; };
 		A51CE8FC19D056DD0032C075 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51CE8FB19D056DD0032C075 /* Images.xcassets */; };
 		A53A8922197EDFCB0051B7D4 /* LHPauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */; };
+		A53D15AF1A0759E600727F06 /* phsprite.png in Resources */ = {isa = PBXBuildFile; fileRef = A53D15AE1A0759E600727F06 /* phsprite.png */; };
 		A5547470196D8E2D00F152D3 /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
 		A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547471196EBD1400F152D3 /* UMShareButton.cpp */; };
 		A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */; };
@@ -334,6 +335,7 @@
 		A51CE8FB19D056DD0032C075 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "LHCocosFirstGame iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHPauseScene.cpp; path = ../Classes/LHPauseScene.cpp; sourceTree = "<group>"; };
 		A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHPauseScene.h; path = ../Classes/LHPauseScene.h; sourceTree = "<group>"; };
+		A53D15AE1A0759E600727F06 /* phsprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phsprite.png; sourceTree = "<group>"; };
 		A5547471196EBD1400F152D3 /* UMShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UMShareButton.cpp; path = ../Classes/UMShareButton.cpp; sourceTree = "<group>"; };
 		A5547472196EBD1400F152D3 /* UMShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UMShareButton.h; path = ../Classes/UMShareButton.h; sourceTree = "<group>"; };
 		A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCUMSocialSDK.cpp; path = ../Classes/CCUMSocialSDK.cpp; sourceTree = "<group>"; };
@@ -716,6 +718,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A53D15AE1A0759E600727F06 /* phsprite.png */,
 				A51CE8FB19D056DD0032C075 /* Images.xcassets */,
 				A5740DEB19A875B900AA33AE /* q.png */,
 				A5FA68D41988B8A100108DB9 /* leaderboard.png */,
@@ -1241,6 +1244,7 @@
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
+				A53D15AF1A0759E600727F06 /* phsprite.png in Resources */,
 				A5AA4315196D299D00DC3411 /* UMShareEditViewControlleriPad.xib in Resources */,
 				A5FA68C91988A3C500108DB9 /* share.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
