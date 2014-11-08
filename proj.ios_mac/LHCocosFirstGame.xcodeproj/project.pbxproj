@@ -128,6 +128,7 @@
 		A5AA433D196D2AC400DC3411 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA433C196D2AC400DC3411 /* libz.dylib */; };
 		A5AA433F196D2AD000DC3411 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA433E196D2AD000DC3411 /* Social.framework */; };
 		A5AA4341196D2AD700DC3411 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AA4340196D2AD700DC3411 /* Accounts.framework */; };
+		A5F9E3DB1A0E5DA20023ADB6 /* PHSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5F9E3D91A0E5DA20023ADB6 /* PHSprite.cpp */; };
 		A5FA68C51988A3BD00108DB9 /* LHShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5FA68C31988A3BD00108DB9 /* LHShareButton.cpp */; };
 		A5FA68C91988A3C500108DB9 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FA68C81988A3C500108DB9 /* share.png */; };
 		A5FA68D31988A89D00108DB9 /* LHLeaderBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5FA68D11988A89D00108DB9 /* LHLeaderBoard.cpp */; };
@@ -469,6 +470,8 @@
 		A5AA433C196D2AC400DC3411 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		A5AA433E196D2AD000DC3411 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
 		A5AA4340196D2AD700DC3411 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Accounts.framework; sourceTree = DEVELOPER_DIR; };
+		A5F9E3D91A0E5DA20023ADB6 /* PHSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PHSprite.cpp; path = ../Classes/PHSprite.cpp; sourceTree = "<group>"; };
+		A5F9E3DA1A0E5DA20023ADB6 /* PHSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PHSprite.h; path = ../Classes/PHSprite.h; sourceTree = "<group>"; };
 		A5FA68C31988A3BD00108DB9 /* LHShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHShareButton.cpp; path = ../Classes/LHShareButton.cpp; sourceTree = "<group>"; };
 		A5FA68C41988A3BD00108DB9 /* LHShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHShareButton.h; path = ../Classes/LHShareButton.h; sourceTree = "<group>"; };
 		A5FA68C81988A3C500108DB9 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
@@ -736,6 +739,8 @@
 		A5132B5519856EF20002F355 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A5F9E3D91A0E5DA20023ADB6 /* PHSprite.cpp */,
+				A5F9E3DA1A0E5DA20023ADB6 /* PHSprite.h */,
 				A5132B5819856F010002F355 /* LHMacros.h */,
 			);
 			name = Common;
@@ -1286,6 +1291,7 @@
 				A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				A5F9E3DB1A0E5DA20023ADB6 /* PHSprite.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				A59A47F31952CDBD00217F27 /* dump.c in Sources */,
 				A59A47FE1952CDBD00217F27 /* NDKHelper.cpp in Sources */,
