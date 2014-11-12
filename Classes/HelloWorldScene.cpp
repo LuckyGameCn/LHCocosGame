@@ -41,15 +41,15 @@ bool HelloWorld::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    auto bg = Sprite::createWithSpriteFrameName("bg.png");
-    bg->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-    this->addChild(bg);
+//    auto bg = Sprite::createWithSpriteFrameName("bg.png");
+//    bg->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+//    this->addChild(bg);
     
-    //    auto panel = Sprite::create("panel.png");
-    //    panel->setPosition(bg->getPosition());
-    //    panel->setScaleX(1.5);
-    //    panel->setScaleY(2);
-    //    this->addChild(panel);
+//    auto panel = Sprite::create("panel.png");
+//    panel->setPosition(bg->getPosition());
+//    panel->setScaleX(1.5);
+//    panel->setScaleY(2);
+//    this->addChild(panel);
     
     float margin = 40.0f;
     

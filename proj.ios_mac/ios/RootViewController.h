@@ -28,6 +28,10 @@
 #import <StoreKit/SKStoreProductViewController.h>
 #import "GADBannerViewDelegate.h"
 
+#define APP_ID @""
+#define ADMOB_UID @"a153a14e5305ecd"
+#define LEADERBOARD_ID @""
+
 @class GADBannerView, GADRequest;
 
 @interface RootViewController : UIViewController<GADBannerViewDelegate,GKGameCenterControllerDelegate,SKStoreProductViewControllerDelegate,UIAlertViewDelegate> {

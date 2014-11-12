@@ -247,8 +247,7 @@ public class AppActivity extends Cocos2dxActivity {
 
     
     public void goReview(JSONObject param){
-        String appId = "com.luckyhu.game";
-        String playurl = "https://play.google.com/store/apps/details?id=" + appId;
+        String playurl = "https://play.google.com/store/apps/details?id=" + getPackageName();
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(playurl));
         startActivity(intent);

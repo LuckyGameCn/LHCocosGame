@@ -117,6 +117,7 @@
 		A5F889F21A12832000AC6F64 /* lb.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F889ED1A12832000AC6F64 /* lb.png */; };
 		A5F889F31A12832000AC6F64 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F889EE1A12832000AC6F64 /* next.png */; };
 		A5F889F41A12832000AC6F64 /* replay.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F889EF1A12832000AC6F64 /* replay.png */; };
+		A5F88A021A132CCF00AC6F64 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F88A011A132CCF00AC6F64 /* Icon-57.png */; };
 		A5F9E3DB1A0E5DA20023ADB6 /* PHSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5F9E3D91A0E5DA20023ADB6 /* PHSprite.cpp */; };
 		A5FA68C51988A3BD00108DB9 /* LHShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5FA68C31988A3BD00108DB9 /* LHShareButton.cpp */; };
 		A5FA68C91988A3C500108DB9 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FA68C81988A3C500108DB9 /* share.png */; };
@@ -447,6 +448,7 @@
 		A5F889ED1A12832000AC6F64 /* lb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lb.png; sourceTree = "<group>"; };
 		A5F889EE1A12832000AC6F64 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		A5F889EF1A12832000AC6F64 /* replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = replay.png; sourceTree = "<group>"; };
+		A5F88A011A132CCF00AC6F64 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-57.png"; path = "LHCocosFirstGame iOS/Images.xcassets/AppIcon.appiconset/Icon-57.png"; sourceTree = SOURCE_ROOT; };
 		A5F9E3D91A0E5DA20023ADB6 /* PHSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PHSprite.cpp; path = ../Classes/PHSprite.cpp; sourceTree = "<group>"; };
 		A5F9E3DA1A0E5DA20023ADB6 /* PHSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PHSprite.h; path = ../Classes/PHSprite.h; sourceTree = "<group>"; };
 		A5FA68C31988A3BD00108DB9 /* LHShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHShareButton.cpp; path = ../Classes/LHShareButton.cpp; sourceTree = "<group>"; };
@@ -672,6 +674,7 @@
 		5087E77117EB970100C73F5D /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				A5F88A011A132CCF00AC6F64 /* Icon-57.png */,
 				5087E77C17EB970100C73F5D /* Info.plist */,
 			);
 			name = Icons;
@@ -1202,6 +1205,7 @@
 				A577E96E19810ABA0006052B /* en_ls.plist in Resources */,
 				A53D15AF1A0759E600727F06 /* phsprite.png in Resources */,
 				A5AA4315196D299D00DC3411 /* UMShareEditViewControlleriPad.xib in Resources */,
+				A5F88A021A132CCF00AC6F64 /* Icon-57.png in Resources */,
 				A5F889F31A12832000AC6F64 /* next.png in Resources */,
 				A5FA68C91988A3C500108DB9 /* share.png in Resources */,
 				A5132B5C198575E40002F355 /* devinfo.png in Resources */,

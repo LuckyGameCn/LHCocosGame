@@ -69,8 +69,7 @@
     NSDictionary *dic = param;
     if ([dic objectForKey:@"value"]) {
         NSNumber *value = [dic objectForKey:@"value"];
-        NSString *cat = [dic objectForKey:@"cat"];
-        GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:cat];
+        GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:LEADERBOARD_ID];
         score.value = [value intValue];
         [score reportScoreWithCompletionHandler:^(NSError *error) {
             NSLog(@"upload score.");
@@ -121,6 +120,7 @@
                 NSLog(@"error loadProduct %@",error.localizedFailureReason);
             }
         }];
+        [self presentViewController:reviewVC animated:YES completion:nil];
     }else{
         // before iOS6.0
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", appId]]];
@@ -214,7 +214,7 @@
     // Add your publisher ID here and fill in the GADAdSize constant for the ad
     // you would like to request.
     bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
-    bannerView_.adUnitID = @"a153a14e5305ecd";
+    bannerView_.adUnitID = ADMOB_UID;
     bannerView_.delegate = self;
     [bannerView_ setRootViewController:self];
     
