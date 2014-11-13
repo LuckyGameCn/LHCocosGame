@@ -30,6 +30,7 @@
 
 #define APP_ID @""
 #define ADMOB_UID @"a153a14e5305ecd"
+#define ADMOB_SCREEN_UID @"ca-app-pub-9455502179330810/4512201681"
 #define LEADERBOARD_ID @""
 
 @class GADBannerView, GADRequest;
@@ -44,5 +45,7 @@
 - (GADRequest *)createRequest;
 - (void)initGADBannerWithAdPositionAtTop:(BOOL)isAdPositionAtTop;
 - (void)resizeViewsForOrientation:(UIInterfaceOrientation)toInt;
+
+- (void)initScreenAD;
 
 @end

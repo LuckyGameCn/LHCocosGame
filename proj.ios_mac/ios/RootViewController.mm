@@ -28,11 +28,12 @@
 #import "CCEAGLView.h"
 
 #import "GADBannerView.h"
+#import "GADInterstitial.h"
 #import "GADRequest.h"
 #import "IOSNDKHelper.h"
 
-@interface RootViewController()
-
+@interface RootViewController()<GADInterstitialDelegate>
+@property(nonatomic,retain) GADInterstitial *interstitial;
 @end
 
 @implementation RootViewController
@@ -52,9 +53,28 @@
     NSString *tag = [dic objectForKey:@"setAd"];
     if ([tag isEqualToString:@"1"]) {
         bannerView_.hidden = NO;
-    }else{
+    }else if([tag isEqualToString:@"0"]){
         bannerView_.hidden = YES;
+    }else if ([tag isEqualToString:@"2"]){
+        [self showScreenAD];
     }
+}
+
+-(void)showScreenAD{
+    if ([self.interstitial isReady]) {
+        [self.interstitial presentFromRootViewController:self];
+    }
+}
+
+-(void)initScreenAD{
+    self.interstitial = [[[GADInterstitial alloc] init] autorelease];
+    self.interstitial.adUnitID = ADMOB_SCREEN_UID;
+    self.interstitial.delegate = self;
+    [self.interstitial loadRequest:[self createRequest]];
+}
+
+-(void)interstitialDidDismissScreen:(GADInterstitial *)ad{
+    [self initScreenAD];
 }
 
 /*
@@ -189,6 +209,9 @@
     bannerView_.delegate = nil;
     [bannerView_ release];
     
+    self.interstitial.delegate = nil;
+    self.interstitial = nil;
+    
     [super dealloc];
 }
 
@@ -200,7 +223,7 @@
     // well as any devices you want to receive test ads.
     request.testDevices =
     [NSArray arrayWithObjects:
-     @"6327f00c44091bbcb01c6f269ba72489",
+     GAD_SIMULATOR_ID,
      // TODO: Add your device/simulator test identifiers here. They are
      // printed to the console when the app is launched.
      nil];
@@ -220,27 +243,26 @@
     
     [self.view addSubview:bannerView_];
     [bannerView_ loadRequest:[self createRequest]];
-    // Use the status bar orientation since we haven't signed up for orientation
-    // change notifications for this class.
-    [self resizeViewsForOrientation:
-     [[UIApplication sharedApplication] statusBarOrientation]];
     
     bannerView_.hidden = YES;
-}
-
-- (void)resizeViewsForOrientation:(UIInterfaceOrientation)toInt {
-    // If the banner hasn't been created yet, no need for resizing views.
-   
 }
 
 #pragma mark GADBannerViewDelegate impl
 
 - (void)adViewDidReceiveAd:(GADBannerView *)adView {
-    NSLog(@"Received ad");
+    NSLog(@"Received banner ad");
 }
 
 - (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error {
-    NSLog(@"Failed to receive ad with error: %@", [error localizedFailureReason]);
+    NSLog(@"Failed to receive banner ad with error: %@", [error localizedFailureReason]);
+}
+
+-(void)interstitialDidReceiveAd:(GADInterstitial *)ad{
+    NSLog(@"Received Screen ad");
+}
+
+-(void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error{
+    NSLog(@"Failed to receive Screen ad with error: %@", [error localizedFailureReason]);
 }
 
 

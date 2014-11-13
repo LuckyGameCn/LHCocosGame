@@ -11,6 +11,7 @@
 
 #include <iostream>
 
+#define SET_AD_SCREEN 2
 #define SET_AD_SHOW 1
 #define SET_AD_HID 0
 

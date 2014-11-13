@@ -14,11 +14,7 @@
 
 void ThirdPartyHelper::setAd(int tag){
     CCDictionary *dic = CCDictionary::create();
-    if (tag == SET_AD_SHOW) {
-        dic->setObject(CCString::create("1"), "setAd");
-    }else{
-        dic->setObject(CCString::create("0"), "setAd");
-    }
+    dic->setObject(CCString::create(StringUtils::format("%d",tag)), "setAd");
     SendMessageWithParams("setAd", dic);
 }
 

@@ -81,6 +81,7 @@ static AppDelegate s_sharedApplication;
     cocos2d::Application::getInstance()->run();
     
     [_viewController initGADBannerWithAdPositionAtTop:YES];
+    [_viewController initScreenAD];
     
     if (![[GKLocalPlayer localPlayer] isAuthenticated]) {
         [GKLocalPlayer localPlayer].authenticateHandler = ^(UIViewController *viewController, NSError *error) {
