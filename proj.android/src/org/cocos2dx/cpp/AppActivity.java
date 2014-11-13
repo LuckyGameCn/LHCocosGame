@@ -48,10 +48,15 @@ import android.widget.Toast;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.umeng.social.CCUMSocialController;
 
 public class AppActivity extends Cocos2dxActivity {
+	
+	private static final String ADMOB_BAN_UID = "ca-app-pub-9455502179330810/2117785287";
+	private static final String ADMOB_SCR_UID = "ca-app-pub-9455502179330810/8113299685";
 
+	private InterstitialAd mInterstitial;
 	private AdView mAdView;
 	private WindowManager mWm = null;
 	private LHLeaderBoardActivity mLeaderBoard;
@@ -108,7 +113,7 @@ public class AppActivity extends Cocos2dxActivity {
 
 		mAdView = new AdView(this);
 		mAdView.setAdSize(AdSize.BANNER);
-		mAdView.setAdUnitId("ca-app-pub-9455502179330810/2117785287");
+		mAdView.setAdUnitId(ADMOB_BAN_UID);
 
 		// Create an ad request.
 		AdRequest.Builder adRequestBuilder = new AdRequest.Builder();
@@ -116,6 +121,11 @@ public class AppActivity extends Cocos2dxActivity {
 		adRequestBuilder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
 		// Start loading the ad.
 		mAdView.loadAd(adRequestBuilder.build());
+		
+		//screenad
+		mInterstitial = new InterstitialAd(this);
+		mInterstitial.setAdUnitId(ADMOB_SCR_UID);
+		mInterstitial.loadAd(adRequestBuilder.build());
 		
 		CCUMSocialController.initSocialSDK(this, "com.umeng.social.share");
 		
@@ -174,10 +184,14 @@ public class AppActivity extends Cocos2dxActivity {
 				mWm = (WindowManager) this.getSystemService("window");
 			}
 			addAdView(mWm, mAdView, POS_TOP);
-		} else {
+		} else if(setad.equals("0")) {
 			// hidadd
 			if (null != mWm) {
 				mWm.removeView(mAdView);
+			}
+		} else if(setad.equals("2")){
+			if (mInterstitial.isLoaded()) {
+				mInterstitial.show();
 			}
 		}
 	}

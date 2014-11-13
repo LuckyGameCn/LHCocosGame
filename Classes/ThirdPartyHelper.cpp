@@ -11,8 +11,20 @@
 #include "NDKHelper.h"
 
 #define LHOPENTIME "opentime"
+#define SCREEN_AD_TIME 4
 
 void ThirdPartyHelper::setAd(int tag){
+    if (tag == SET_AD_SCREEN) {
+        const char *key = "admobscreenad";
+        int time = UserDefault::getInstance()->getIntegerForKey(key, SCREEN_AD_TIME);
+        if (time !=1 ) {
+            UserDefault::getInstance()->setIntegerForKey(key, time-1);
+            return;
+        }else{
+            UserDefault::getInstance()->setIntegerForKey(key, SCREEN_AD_TIME);
+        }
+    }
+    
     CCDictionary *dic = CCDictionary::create();
     dic->setObject(CCString::create(StringUtils::format("%d",tag)), "setAd");
     SendMessageWithParams("setAd", dic);

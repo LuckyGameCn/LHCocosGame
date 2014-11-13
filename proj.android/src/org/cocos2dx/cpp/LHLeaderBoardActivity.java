@@ -8,7 +8,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.lhgame.flyingbanana.R;
+import com.luckyhu.lhgame.R;
+
 
 import android.app.AlertDialog;
 import android.content.Context;

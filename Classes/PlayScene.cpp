@@ -1,6 +1,7 @@
 //------.cpp
 #include "PlayScene.h"
 #include "ThirdPartyHelper.h"
+#include "UIButton.h"
 USING_NS_CC;
 Scene* PlayScene::createScene(cocos2d::CCDictionary *dic)
 {
@@ -21,11 +22,8 @@ void PlayScene::update(float delta){
 
 bool PlayScene::initDict(cocos2d::CCDictionary *dic)
 {
-    DelayTime *time = DelayTime::create(15);
-    CallFunc *call = CallFunc::create([](){
-    ThirdPartyHelper::setAd(SET_AD_SCREEN);
-    });
-    auto sq = Sequence::create(time,call, NULL);
-    this->runAction(sq);
+    Size vs = Director::getInstance()->getVisibleSize();
+    Vec2 vo = Director::getInstance()->getVisibleOrigin();
+    
 	return true;
 }
