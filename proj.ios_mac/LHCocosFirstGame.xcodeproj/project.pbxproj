@@ -46,6 +46,7 @@
 		A51CE8FC19D056DD0032C075 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51CE8FB19D056DD0032C075 /* Images.xcassets */; };
 		A53A8922197EDFCB0051B7D4 /* LHPauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */; };
 		A53BF7381A1E6E3E00369090 /* common.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A53BF7371A1E6E3E00369090 /* common.ttf */; };
+		A53BF73F1A1F807500369090 /* LHGameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53BF73D1A1F807500369090 /* LHGameLayer.cpp */; };
 		A53D15AF1A0759E600727F06 /* phsprite.png in Resources */ = {isa = PBXBuildFile; fileRef = A53D15AE1A0759E600727F06 /* phsprite.png */; };
 		A5547470196D8E2D00F152D3 /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
 		A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547471196EBD1400F152D3 /* UMShareButton.cpp */; };
@@ -305,6 +306,8 @@
 		A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHPauseScene.cpp; path = ../Classes/LHPauseScene.cpp; sourceTree = "<group>"; };
 		A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHPauseScene.h; path = ../Classes/LHPauseScene.h; sourceTree = "<group>"; };
 		A53BF7371A1E6E3E00369090 /* common.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = common.ttf; sourceTree = "<group>"; };
+		A53BF73D1A1F807500369090 /* LHGameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHGameLayer.cpp; path = ../Classes/LHGameLayer.cpp; sourceTree = "<group>"; };
+		A53BF73E1A1F807500369090 /* LHGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHGameLayer.h; path = ../Classes/LHGameLayer.h; sourceTree = "<group>"; };
 		A53D15AE1A0759E600727F06 /* phsprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phsprite.png; sourceTree = "<group>"; };
 		A5547471196EBD1400F152D3 /* UMShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UMShareButton.cpp; path = ../Classes/UMShareButton.cpp; sourceTree = "<group>"; };
 		A5547472196EBD1400F152D3 /* UMShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UMShareButton.h; path = ../Classes/UMShareButton.h; sourceTree = "<group>"; };
@@ -953,6 +956,8 @@
 		A5FA68CE1988A52A00108DB9 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				A53BF73D1A1F807500369090 /* LHGameLayer.cpp */,
+				A53BF73E1A1F807500369090 /* LHGameLayer.h */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -1198,6 +1203,7 @@
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				A59A47FD1952CDBD00217F27 /* NDKCallbackNode.cpp in Sources */,
 				A59A47F81952CDBD00217F27 /* pack_unpack.c in Sources */,
+				A53BF73F1A1F807500369090 /* LHGameLayer.cpp in Sources */,
 				A577E95D198101510006052B /* LocalizedString.cpp in Sources */,
 				A5FA68C51988A3BD00108DB9 /* LHShareButton.cpp in Sources */,
 				A59A47F51952CDBD00217F27 /* hashtable.c in Sources */,

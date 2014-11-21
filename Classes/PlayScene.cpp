@@ -4,18 +4,20 @@
 #include "UIButton.h"
 #include "UIText.h"
 #include "LHMacros.h"
+#include "LocalizedString.h"
 USING_NS_CC;
 Scene* PlayScene::createScene(cocos2d::CCDictionary *dic)
 {
 	auto scene = Scene::create();
 	auto layer = PlayScene::create();
-    layer->initWithColor(Color4B::BLACK);
+    layer->initWithColor(Color4B::WHITE);
 	layer->initDict(dic);
 	scene->addChild(layer);
 	return scene;
 }
 
 PlayScene::~PlayScene(){
+    delete _gameLayer;
 }
 
 void PlayScene::update(float delta){
@@ -27,10 +29,9 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     Size vs = Director::getInstance()->getVisibleSize();
     Vec2 vo = Director::getInstance()->getVisibleOrigin();
     
-    auto text = ui::Text::create("Text哈哈.>?[]{}", Common_Font, 60);
-    text->setPosition(Vec2(vs.width/2, vs.height/2));
-    text->setColor(Color3B::WHITE);
-    addChild(text);
+    _gameLayer = new LHGameLayer();
+    _gameLayer->setPosition(vo.x, vo.y);
+    addChild(_gameLayer);
     
 	return true;
 }
