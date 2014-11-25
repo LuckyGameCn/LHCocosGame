@@ -45,7 +45,6 @@
 		A5132B5C198575E40002F355 /* devinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = A5132B5B198575E40002F355 /* devinfo.png */; };
 		A51CE8FC19D056DD0032C075 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51CE8FB19D056DD0032C075 /* Images.xcassets */; };
 		A53A8922197EDFCB0051B7D4 /* LHPauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */; };
-		A53BF7381A1E6E3E00369090 /* common.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A53BF7371A1E6E3E00369090 /* common.ttf */; };
 		A53BF73F1A1F807500369090 /* LHGameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53BF73D1A1F807500369090 /* LHGameLayer.cpp */; };
 		A53D15AF1A0759E600727F06 /* phsprite.png in Resources */ = {isa = PBXBuildFile; fileRef = A53D15AE1A0759E600727F06 /* phsprite.png */; };
 		A5547470196D8E2D00F152D3 /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
@@ -305,7 +304,6 @@
 		A51CE8FB19D056DD0032C075 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "LHCocosFirstGame iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHPauseScene.cpp; path = ../Classes/LHPauseScene.cpp; sourceTree = "<group>"; };
 		A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHPauseScene.h; path = ../Classes/LHPauseScene.h; sourceTree = "<group>"; };
-		A53BF7371A1E6E3E00369090 /* common.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = common.ttf; sourceTree = "<group>"; };
 		A53BF73D1A1F807500369090 /* LHGameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHGameLayer.cpp; path = ../Classes/LHGameLayer.cpp; sourceTree = "<group>"; };
 		A53BF73E1A1F807500369090 /* LHGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHGameLayer.h; path = ../Classes/LHGameLayer.h; sourceTree = "<group>"; };
 		A53D15AE1A0759E600727F06 /* phsprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phsprite.png; sourceTree = "<group>"; };
@@ -668,7 +666,6 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A53BF7371A1E6E3E00369090 /* common.ttf */,
 				A5F889EB1A12832000AC6F64 /* back.png */,
 				A5F889EC1A12832000AC6F64 /* goreview.png */,
 				A5F889ED1A12832000AC6F64 /* lb.png */,
@@ -1143,7 +1140,6 @@
 				A5AA430E196D299D00DC3411 /* UMSocialLocalizable.strings in Resources */,
 				A5AA4311196D299D00DC3411 /* UMSCommentDetailController.xib in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
-				A53BF7381A1E6E3E00369090 /* common.ttf in Resources */,
 				A5F889F41A12832000AC6F64 /* replay.png in Resources */,
 				A5AA4317196D299D00DC3411 /* UMSnsAccountViewController.xib in Resources */,
 				A594BDD119470429001DEF30 /* play.png in Resources */,
