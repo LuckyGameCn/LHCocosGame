@@ -58,6 +58,7 @@
 		A577E95D198101510006052B /* LocalizedString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A577E95A198101510006052B /* LocalizedString.cpp */; };
 		A577E96D19810ABA0006052B /* ch_ls.plist in Resources */ = {isa = PBXBuildFile; fileRef = A577E96B19810ABA0006052B /* ch_ls.plist */; };
 		A577E96E19810ABA0006052B /* en_ls.plist in Resources */ = {isa = PBXBuildFile; fileRef = A577E96C19810ABA0006052B /* en_ls.plist */; };
+		A5831E5A1A2864B700929F1D /* LHHttpManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5831E581A2864B700929F1D /* LHHttpManager.cpp */; };
 		A594BDD119470429001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE3C194B026B001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A594BE3F194D450C001DEF30 /* GameOverScene.cpp */; };
@@ -322,6 +323,8 @@
 		A577E95B198101510006052B /* LocalizedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalizedString.h; path = ../Classes/LocalizedString.h; sourceTree = "<group>"; };
 		A577E96B19810ABA0006052B /* ch_ls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ch_ls.plist; sourceTree = "<group>"; };
 		A577E96C19810ABA0006052B /* en_ls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = en_ls.plist; sourceTree = "<group>"; };
+		A5831E581A2864B700929F1D /* LHHttpManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHHttpManager.cpp; path = ../Classes/LHHttpManager.cpp; sourceTree = "<group>"; };
+		A5831E591A2864B700929F1D /* LHHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHHttpManager.h; path = ../Classes/LHHttpManager.h; sourceTree = "<group>"; };
 		A594BDD019470429001DEF30 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		A594BE3F194D450C001DEF30 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverScene.cpp; path = ../Classes/GameOverScene.cpp; sourceTree = "<group>"; };
 		A594BE40194D450C001DEF30 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = ../Classes/GameOverScene.h; sourceTree = "<group>"; };
@@ -543,6 +546,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A5831E551A2864A100929F1D /* NetWork */,
 				A5FA68CE1988A52A00108DB9 /* Game */,
 				A5132B5519856EF20002F355 /* Common */,
 				A577E9101981011A0006052B /* Utils */,
@@ -732,6 +736,15 @@
 				A5FA68D21988A89D00108DB9 /* LHLeaderBoard.h */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		A5831E551A2864A100929F1D /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				A5831E581A2864B700929F1D /* LHHttpManager.cpp */,
+				A5831E591A2864B700929F1D /* LHHttpManager.h */,
+			);
+			name = NetWork;
 			sourceTree = "<group>";
 		};
 		A59A475D1952AD1000217F27 /* GoogleMobileAdsSdkiOS-6.9.3 */ = {
@@ -1183,6 +1196,7 @@
 				A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */,
 				A5FA68D31988A89D00108DB9 /* LHLeaderBoard.cpp in Sources */,
 				A59A47861952B36B00217F27 /* ThirdPartyHelper.cpp in Sources */,
+				A5831E5A1A2864B700929F1D /* LHHttpManager.cpp in Sources */,
 				A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */,
 				A5740DE819A8735D00AA33AE /* GuideScene.cpp in Sources */,
 				A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */,
