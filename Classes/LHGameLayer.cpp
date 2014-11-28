@@ -11,10 +11,20 @@
 USING_NS_CC;
 LHGameLayer::LHGameLayer(){
     _mapSize = Size(MAXFLOAT, MAXFLOAT);
+    
+    auto lis = EventListenerTouchOneByOne::create();
+    lis->onTouchBegan = [this](Touch* tmpTouch, Event*){
+        return true;
+    };
+    lis->onTouchMoved = [this](Touch* tmpTouch, Event*){
+    };
+    lis->onTouchEnded = [this](Touch*, Event*){
+    };
+    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(lis, this);
 }
 
 LHGameLayer::~LHGameLayer(){
-    
+    this->getEventDispatcher()->removeEventListenersForTarget(this);
 }
 
 void LHGameLayer::update(float delta){
