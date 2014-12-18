@@ -71,16 +71,6 @@
 		A59A47921952B57F00217F27 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59A47911952B57E00217F27 /* CoreTelephony.framework */; };
 		A59A47941952BDC100217F27 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59A47931952BDC100217F27 /* MediaPlayer.framework */; };
 		A59A47B41952C35900217F27 /* IOSNDKHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A59A47A21952C35900217F27 /* IOSNDKHelper.mm */; };
-		A59A47F31952CDBD00217F27 /* dump.c in Sources */ = {isa = PBXBuildFile; fileRef = A59A47DE1952CDBD00217F27 /* dump.c */; };
-		A59A47F41952CDBD00217F27 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = A59A47DF1952CDBD00217F27 /* error.c */; };
-		A59A47F51952CDBD00217F27 /* hashtable.c in Sources */ = {isa = PBXBuildFile; fileRef = A59A47E01952CDBD00217F27 /* hashtable.c */; };
-		A59A47F61952CDBD00217F27 /* load.c in Sources */ = {isa = PBXBuildFile; fileRef = A59A47E51952CDBD00217F27 /* load.c */; };
-		A59A47F71952CDBD00217F27 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = A59A47E61952CDBD00217F27 /* memory.c */; };
-		A59A47F81952CDBD00217F27 /* pack_unpack.c in Sources */ = {isa = PBXBuildFile; fileRef = A59A47E71952CDBD00217F27 /* pack_unpack.c */; };
-		A59A47F91952CDBD00217F27 /* strbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = A59A47E81952CDBD00217F27 /* strbuffer.c */; };
-		A59A47FA1952CDBD00217F27 /* strconv.c in Sources */ = {isa = PBXBuildFile; fileRef = A59A47EA1952CDBD00217F27 /* strconv.c */; };
-		A59A47FB1952CDBD00217F27 /* utf.c in Sources */ = {isa = PBXBuildFile; fileRef = A59A47EB1952CDBD00217F27 /* utf.c */; };
-		A59A47FC1952CDBD00217F27 /* value.c in Sources */ = {isa = PBXBuildFile; fileRef = A59A47ED1952CDBD00217F27 /* value.c */; };
 		A59A47FD1952CDBD00217F27 /* NDKCallbackNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59A47EF1952CDBD00217F27 /* NDKCallbackNode.cpp */; };
 		A59A47FE1952CDBD00217F27 /* NDKHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59A47F11952CDBD00217F27 /* NDKHelper.cpp */; };
 		A5AA42CF196D0B8100DC3411 /* DeveloperInfoScence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5AA42CD196D0B8100DC3411 /* DeveloperInfoScence.cpp */; };
@@ -121,6 +111,9 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		CECD83AB1A42DB7200973211 /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CECD83A81A42DB7200973211 /* libjansson.a */; };
+		CECD83AC1A42DB7200973211 /* libpomelo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CECD83A91A42DB7200973211 /* libpomelo.a */; };
+		CECD83AD1A42DB7200973211 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CECD83AA1A42DB7200973211 /* libuv.a */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -368,22 +361,6 @@
 		A59A47A01952C35900217F27 /* IOSNDKHelper-C-Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IOSNDKHelper-C-Interface.h"; sourceTree = "<group>"; };
 		A59A47A11952C35900217F27 /* IOSNDKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSNDKHelper.h; sourceTree = "<group>"; };
 		A59A47A21952C35900217F27 /* IOSNDKHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IOSNDKHelper.mm; sourceTree = "<group>"; };
-		A59A47DE1952CDBD00217F27 /* dump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dump.c; sourceTree = "<group>"; };
-		A59A47DF1952CDBD00217F27 /* error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = error.c; sourceTree = "<group>"; };
-		A59A47E01952CDBD00217F27 /* hashtable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hashtable.c; sourceTree = "<group>"; };
-		A59A47E11952CDBD00217F27 /* hashtable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hashtable.h; sourceTree = "<group>"; };
-		A59A47E21952CDBD00217F27 /* jansson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jansson.h; sourceTree = "<group>"; };
-		A59A47E31952CDBD00217F27 /* jansson_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jansson_config.h; sourceTree = "<group>"; };
-		A59A47E41952CDBD00217F27 /* jansson_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jansson_private.h; sourceTree = "<group>"; };
-		A59A47E51952CDBD00217F27 /* load.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = load.c; sourceTree = "<group>"; };
-		A59A47E61952CDBD00217F27 /* memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memory.c; sourceTree = "<group>"; };
-		A59A47E71952CDBD00217F27 /* pack_unpack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pack_unpack.c; sourceTree = "<group>"; };
-		A59A47E81952CDBD00217F27 /* strbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strbuffer.c; sourceTree = "<group>"; };
-		A59A47E91952CDBD00217F27 /* strbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strbuffer.h; sourceTree = "<group>"; };
-		A59A47EA1952CDBD00217F27 /* strconv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strconv.c; sourceTree = "<group>"; };
-		A59A47EB1952CDBD00217F27 /* utf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utf.c; sourceTree = "<group>"; };
-		A59A47EC1952CDBD00217F27 /* utf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf.h; sourceTree = "<group>"; };
-		A59A47ED1952CDBD00217F27 /* value.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = value.c; sourceTree = "<group>"; };
 		A59A47EF1952CDBD00217F27 /* NDKCallbackNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NDKCallbackNode.cpp; sourceTree = "<group>"; };
 		A59A47F01952CDBD00217F27 /* NDKCallbackNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDKCallbackNode.h; sourceTree = "<group>"; };
 		A59A47F11952CDBD00217F27 /* NDKHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NDKHelper.cpp; sourceTree = "<group>"; };
@@ -449,6 +426,9 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CECD83A81A42DB7200973211 /* libjansson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjansson.a; sourceTree = "<group>"; };
+		CECD83A91A42DB7200973211 /* libpomelo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpomelo.a; sourceTree = "<group>"; };
+		CECD83AA1A42DB7200973211 /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv.a; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -460,9 +440,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECD83AD1A42DB7200973211 /* libuv.a in Frameworks */,
 				A5740DE119A84DCB00AA33AE /* StoreKit.framework in Frameworks */,
 				A5547479196EC6EF00F152D3 /* GameKit.framework in Frameworks */,
 				A5547470196D8E2D00F152D3 /* libbox2d iOS.a in Frameworks */,
+				CECD83AC1A42DB7200973211 /* libpomelo.a in Frameworks */,
 				A5AA4341196D2AD700DC3411 /* Accounts.framework in Frameworks */,
 				A5AA433F196D2AD000DC3411 /* Social.framework in Frameworks */,
 				A5AA433D196D2AC400DC3411 /* libz.dylib in Frameworks */,
@@ -473,6 +455,7 @@
 				A59A47901952B56200217F27 /* SystemConfiguration.framework in Frameworks */,
 				A5AA4335196D2A6B00DC3411 /* libiconv.dylib in Frameworks */,
 				A59A47941952BDC100217F27 /* MediaPlayer.framework in Frameworks */,
+				CECD83AB1A42DB7200973211 /* libjansson.a in Frameworks */,
 				A5AA4320196D299D00DC3411 /* libSocialTwitter.a in Frameworks */,
 				A59A478E1952B51600217F27 /* AdSupport.framework in Frameworks */,
 				A59A478A1952B4EF00217F27 /* MessageUI.framework in Frameworks */,
@@ -528,6 +511,7 @@
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				CECD83A71A42DB7200973211 /* libs */,
 				A5AA42D2196D299D00DC3411 /* umeng */,
 				A59A479F1952C35900217F27 /* IOSNDKHelper */,
 				A59A475D1952AD1000217F27 /* GoogleMobileAdsSdkiOS-6.9.3 */,
@@ -551,7 +535,6 @@
 				A5132B5519856EF20002F355 /* Common */,
 				A577E9101981011A0006052B /* Utils */,
 				A53A891A197E8ED50051B7D4 /* Scene */,
-				A59A47DD1952CDBD00217F27 /* jansson */,
 				A59A47EE1952CDBD00217F27 /* NDKHelper */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
@@ -827,30 +810,6 @@
 			path = ios/IOSNDKHelper;
 			sourceTree = SOURCE_ROOT;
 		};
-		A59A47DD1952CDBD00217F27 /* jansson */ = {
-			isa = PBXGroup;
-			children = (
-				A59A47DE1952CDBD00217F27 /* dump.c */,
-				A59A47DF1952CDBD00217F27 /* error.c */,
-				A59A47E01952CDBD00217F27 /* hashtable.c */,
-				A59A47E11952CDBD00217F27 /* hashtable.h */,
-				A59A47E21952CDBD00217F27 /* jansson.h */,
-				A59A47E31952CDBD00217F27 /* jansson_config.h */,
-				A59A47E41952CDBD00217F27 /* jansson_private.h */,
-				A59A47E51952CDBD00217F27 /* load.c */,
-				A59A47E61952CDBD00217F27 /* memory.c */,
-				A59A47E71952CDBD00217F27 /* pack_unpack.c */,
-				A59A47E81952CDBD00217F27 /* strbuffer.c */,
-				A59A47E91952CDBD00217F27 /* strbuffer.h */,
-				A59A47EA1952CDBD00217F27 /* strconv.c */,
-				A59A47EB1952CDBD00217F27 /* utf.c */,
-				A59A47EC1952CDBD00217F27 /* utf.h */,
-				A59A47ED1952CDBD00217F27 /* value.c */,
-			);
-			name = jansson;
-			path = ../Classes/jansson;
-			sourceTree = "<group>";
-		};
 		A59A47EE1952CDBD00217F27 /* NDKHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -971,6 +930,17 @@
 			);
 			name = Game;
 			sourceTree = "<group>";
+		};
+		CECD83A71A42DB7200973211 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				CECD83A81A42DB7200973211 /* libjansson.a */,
+				CECD83A91A42DB7200973211 /* libpomelo.a */,
+				CECD83AA1A42DB7200973211 /* libuv.a */,
+			);
+			name = libs;
+			path = ios/libs;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -1189,9 +1159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A59A47F71952CDBD00217F27 /* memory.c in Sources */,
 				A53A8922197EDFCB0051B7D4 /* LHPauseScene.cpp in Sources */,
-				A59A47F61952CDBD00217F27 /* load.c in Sources */,
 				A5AA42CF196D0B8100DC3411 /* DeveloperInfoScence.cpp in Sources */,
 				A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */,
 				A5FA68D31988A89D00108DB9 /* LHLeaderBoard.cpp in Sources */,
@@ -1204,25 +1172,17 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				A5F9E3DB1A0E5DA20023ADB6 /* PHSprite.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
-				A59A47F31952CDBD00217F27 /* dump.c in Sources */,
 				A59A47FE1952CDBD00217F27 /* NDKHelper.cpp in Sources */,
-				A59A47F41952CDBD00217F27 /* error.c in Sources */,
 				A5AA4324196D299E00DC3411 /* UmSocialControllerIOS.mm in Sources */,
-				A59A47FC1952CDBD00217F27 /* value.c in Sources */,
-				A59A47FB1952CDBD00217F27 /* utf.c in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				A59A47FD1952CDBD00217F27 /* NDKCallbackNode.cpp in Sources */,
-				A59A47F81952CDBD00217F27 /* pack_unpack.c in Sources */,
 				A53BF73F1A1F807500369090 /* LHGameLayer.cpp in Sources */,
 				A577E95D198101510006052B /* LocalizedString.cpp in Sources */,
 				A5FA68C51988A3BD00108DB9 /* LHShareButton.cpp in Sources */,
-				A59A47F51952CDBD00217F27 /* hashtable.c in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				A59A47B41952C35900217F27 /* IOSNDKHelper.mm in Sources */,
-				A59A47FA1952CDBD00217F27 /* strconv.c in Sources */,
 				A5AA4325196D299E00DC3411 /* UMSocialUIObject.mm in Sources */,
 				A50697F3194750AD0008E3C3 /* PlayScene.cpp in Sources */,
-				A59A47F91952CDBD00217F27 /* strbuffer.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1334,6 +1294,9 @@
 					"$(inherited)",
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
+					"$(SRCROOT)/../libpomelo/deps/jansson/src",
+					"$(SRCROOT)/../libpomelo/deps/uv/include/**",
+					"$(SRCROOT)/../libpomelo/include/**",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -1348,6 +1311,7 @@
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/Wechat",
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/YiXin",
 					"$(PROJECT_DIR)/ios",
+					"$(PROJECT_DIR)/ios/libs",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "";
@@ -1387,6 +1351,9 @@
 					"$(inherited)",
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
+					"$(SRCROOT)/../libpomelo/deps/jansson/src",
+					"$(SRCROOT)/../libpomelo/deps/uv/include/**",
+					"$(SRCROOT)/../libpomelo/include/**",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -1401,6 +1368,7 @@
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/Wechat",
 					"$(PROJECT_DIR)/ios/umeng/UMSocial_Sdk_Extra_Frameworks/YiXin",
 					"$(PROJECT_DIR)/ios",
+					"$(PROJECT_DIR)/ios/libs",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "";
