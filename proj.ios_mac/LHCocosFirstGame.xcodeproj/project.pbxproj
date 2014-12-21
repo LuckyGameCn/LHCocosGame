@@ -43,6 +43,10 @@
 		5087E78B17EB975400C73F5D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5087E78A17EB975400C73F5D /* OpenGL.framework */; };
 		A50697F3194750AD0008E3C3 /* PlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50697F1194750AD0008E3C3 /* PlayScene.cpp */; };
 		A5132B5C198575E40002F355 /* devinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = A5132B5B198575E40002F355 /* devinfo.png */; };
+		A517489C1A4526CC006A5152 /* LHGameChat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A517489A1A4526CC006A5152 /* LHGameChat.cpp */; };
+		A51748A31A4567D4006A5152 /* Dispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51748A11A4567D4006A5152 /* Dispatcher.cpp */; };
+		A51748A61A457723006A5152 /* LHWaitAlertView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51748A41A457723006A5152 /* LHWaitAlertView.cpp */; };
+		A51748A91A45792C006A5152 /* LHGameChatView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51748A71A45792C006A5152 /* LHGameChatView.cpp */; };
 		A51CE8FC19D056DD0032C075 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51CE8FB19D056DD0032C075 /* Images.xcassets */; };
 		A53A8922197EDFCB0051B7D4 /* LHPauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */; };
 		A53BF73F1A1F807500369090 /* LHGameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A53BF73D1A1F807500369090 /* LHGameLayer.cpp */; };
@@ -62,6 +66,7 @@
 		A594BDD119470429001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE3C194B026B001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A594BE3F194D450C001DEF30 /* GameOverScene.cpp */; };
+		A594EF391A445618004B65EA /* LHPomeloManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A594EF371A445618004B65EA /* LHPomeloManager.cpp */; };
 		A59A47801952AD1100217F27 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = A59A477E1952AD1000217F27 /* README.txt */; };
 		A59A47831952B30200217F27 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A59A477D1952AD1000217F27 /* libGoogleAdMobAds.a */; };
 		A59A47861952B36B00217F27 /* ThirdPartyHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A59A47841952B36B00217F27 /* ThirdPartyHelper.cpp */; };
@@ -295,6 +300,14 @@
 		A50697F2194750AD0008E3C3 /* PlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayScene.h; path = ../Classes/PlayScene.h; sourceTree = "<group>"; };
 		A5132B5819856F010002F355 /* LHMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LHMacros.h; path = ../Classes/LHMacros.h; sourceTree = "<group>"; };
 		A5132B5B198575E40002F355 /* devinfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devinfo.png; sourceTree = "<group>"; };
+		A517489A1A4526CC006A5152 /* LHGameChat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHGameChat.cpp; path = ../Classes/LHGameChat.cpp; sourceTree = "<group>"; };
+		A517489B1A4526CC006A5152 /* LHGameChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHGameChat.h; path = ../Classes/LHGameChat.h; sourceTree = "<group>"; };
+		A51748A11A4567D4006A5152 /* Dispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Dispatcher.cpp; path = ../Classes/Dispatcher.cpp; sourceTree = "<group>"; };
+		A51748A21A4567D4006A5152 /* Dispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dispatcher.h; path = ../Classes/Dispatcher.h; sourceTree = "<group>"; };
+		A51748A41A457723006A5152 /* LHWaitAlertView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHWaitAlertView.cpp; path = ../Classes/LHWaitAlertView.cpp; sourceTree = "<group>"; };
+		A51748A51A457723006A5152 /* LHWaitAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHWaitAlertView.h; path = ../Classes/LHWaitAlertView.h; sourceTree = "<group>"; };
+		A51748A71A45792C006A5152 /* LHGameChatView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHGameChatView.cpp; path = ../Classes/LHGameChatView.cpp; sourceTree = "<group>"; };
+		A51748A81A45792C006A5152 /* LHGameChatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHGameChatView.h; path = ../Classes/LHGameChatView.h; sourceTree = "<group>"; };
 		A51CE8FB19D056DD0032C075 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "LHCocosFirstGame iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		A53A8920197EDFCB0051B7D4 /* LHPauseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHPauseScene.cpp; path = ../Classes/LHPauseScene.cpp; sourceTree = "<group>"; };
 		A53A8921197EDFCB0051B7D4 /* LHPauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHPauseScene.h; path = ../Classes/LHPauseScene.h; sourceTree = "<group>"; };
@@ -321,6 +334,8 @@
 		A594BDD019470429001DEF30 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		A594BE3F194D450C001DEF30 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverScene.cpp; path = ../Classes/GameOverScene.cpp; sourceTree = "<group>"; };
 		A594BE40194D450C001DEF30 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = ../Classes/GameOverScene.h; sourceTree = "<group>"; };
+		A594EF371A445618004B65EA /* LHPomeloManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHPomeloManager.cpp; path = ../Classes/LHPomeloManager.cpp; sourceTree = "<group>"; };
+		A594EF381A445618004B65EA /* LHPomeloManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHPomeloManager.h; path = ../Classes/LHPomeloManager.h; sourceTree = "<group>"; };
 		A59A47601952AD1000217F27 /* DFPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPBannerView.h; sourceTree = "<group>"; };
 		A59A47611952AD1000217F27 /* DFPExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPExtras.h; sourceTree = "<group>"; };
 		A59A47621952AD1000217F27 /* DFPInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPInterstitial.h; sourceTree = "<group>"; };
@@ -530,6 +545,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A51748941A45266A006A5152 /* GameChat */,
 				A5831E551A2864A100929F1D /* NetWork */,
 				A5FA68CE1988A52A00108DB9 /* Game */,
 				A5132B5519856EF20002F355 /* Common */,
@@ -675,11 +691,26 @@
 		A5132B5519856EF20002F355 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A51748A11A4567D4006A5152 /* Dispatcher.cpp */,
+				A51748A21A4567D4006A5152 /* Dispatcher.h */,
 				A5F9E3D91A0E5DA20023ADB6 /* PHSprite.cpp */,
 				A5F9E3DA1A0E5DA20023ADB6 /* PHSprite.h */,
 				A5132B5819856F010002F355 /* LHMacros.h */,
+				A51748A41A457723006A5152 /* LHWaitAlertView.cpp */,
+				A51748A51A457723006A5152 /* LHWaitAlertView.h */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		A51748941A45266A006A5152 /* GameChat */ = {
+			isa = PBXGroup;
+			children = (
+				A517489A1A4526CC006A5152 /* LHGameChat.cpp */,
+				A517489B1A4526CC006A5152 /* LHGameChat.h */,
+				A51748A71A45792C006A5152 /* LHGameChatView.cpp */,
+				A51748A81A45792C006A5152 /* LHGameChatView.h */,
+			);
+			name = GameChat;
 			sourceTree = "<group>";
 		};
 		A53A891A197E8ED50051B7D4 /* Scene */ = {
@@ -726,6 +757,8 @@
 			children = (
 				A5831E581A2864B700929F1D /* LHHttpManager.cpp */,
 				A5831E591A2864B700929F1D /* LHHttpManager.h */,
+				A594EF371A445618004B65EA /* LHPomeloManager.cpp */,
+				A594EF381A445618004B65EA /* LHPomeloManager.h */,
 			);
 			name = NetWork;
 			sourceTree = "<group>";
@@ -1159,9 +1192,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51748A61A457723006A5152 /* LHWaitAlertView.cpp in Sources */,
 				A53A8922197EDFCB0051B7D4 /* LHPauseScene.cpp in Sources */,
 				A5AA42CF196D0B8100DC3411 /* DeveloperInfoScence.cpp in Sources */,
 				A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */,
+				A51748A91A45792C006A5152 /* LHGameChatView.cpp in Sources */,
 				A5FA68D31988A89D00108DB9 /* LHLeaderBoard.cpp in Sources */,
 				A59A47861952B36B00217F27 /* ThirdPartyHelper.cpp in Sources */,
 				A5831E5A1A2864B700929F1D /* LHHttpManager.cpp in Sources */,
@@ -1174,6 +1209,9 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				A59A47FE1952CDBD00217F27 /* NDKHelper.cpp in Sources */,
 				A5AA4324196D299E00DC3411 /* UmSocialControllerIOS.mm in Sources */,
+				A51748A31A4567D4006A5152 /* Dispatcher.cpp in Sources */,
+				A517489C1A4526CC006A5152 /* LHGameChat.cpp in Sources */,
+				A594EF391A445618004B65EA /* LHPomeloManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				A59A47FD1952CDBD00217F27 /* NDKCallbackNode.cpp in Sources */,
 				A53BF73F1A1F807500369090 /* LHGameLayer.cpp in Sources */,
