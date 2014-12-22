@@ -13,6 +13,11 @@ USING_NS_CC;
 
 static LHPomeloManager *_chatManager = nullptr;
 static LHGameChatView *_chatView = nullptr;
+static int _userCount = 0;
+
+static void refreshUserCountLabel(){
+    _chatView->setTitle(StringUtils::format("----------%d-----------",_userCount));
+}
 
 ui::Button* LHGameChat::gameChatButton(){
     auto bt = ui::Button::create("q.png");
@@ -28,6 +33,7 @@ ui::Button* LHGameChat::gameChatButton(){
 //                        json_t* val = json_array_get(users,i);
                         uc++;
                     }
+                    _userCount = uc;
                     
                     if (_chatView == nullptr) {
                         float margin = 50;
@@ -40,9 +46,13 @@ ui::Button* LHGameChat::gameChatButton(){
                         auto scene = Director::getInstance()->getRunningScene();
                         _chatView->setPosition(Vec2(vo.x+margin, vo.y+margin));
                         scene->addChild(_chatView);
+                        _chatView->onSend = [](){
+                            
+                            return true;
+                        };
                     }
                     
-                    _chatView->setTitle(StringUtils::format("----------%d-----------",uc));
+                    refreshUserCountLabel();
                 };
                 _chatManager->onMessage = [](json_t *resp){
                     if(!_chatView->isShowing()) return;
@@ -51,6 +61,24 @@ ui::Button* LHGameChat::gameChatButton(){
                     json_t *from = json_object_get(resp, "from");
                     const char *fromstr = json_string_value(from);
                     _chatView->addOne(fromstr, json_string_value(msg), LHGameChat_MsgType_Left);
+                };
+                _chatManager->onAdd = [](json_t *resp){
+                    _userCount++;
+                    refreshUserCountLabel();
+                    if(!_chatView->isShowing()) return;
+                    json_t *user = json_object_get(resp, "user");
+                    const char *userstr = json_string_value(user);
+                    auto msg = StringUtils::format("%s >>",userstr);
+                    _chatView->addOne( "",msg, LHGameChat_MsgType_Middle);
+                };
+                _chatManager->onLeave = [](json_t *resp){
+                    _userCount--;
+                    refreshUserCountLabel();
+                    if(!_chatView->isShowing()) return;
+                    json_t *user = json_object_get(resp, "user");
+                    const char *userstr = json_string_value(user);
+                    auto msg = StringUtils::format("%s ~~",userstr);
+                    _chatView->addOne("",msg,  LHGameChat_MsgType_Middle);
                 };
             }else{
                 if (!_chatView->isShowing()) {

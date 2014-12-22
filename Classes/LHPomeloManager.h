@@ -15,9 +15,6 @@
 #define Pomelo_Host "127.0.0.1"
 #define Pomelo_Port 3014
 
-//#define Pomelo_Host "114.113.202.141"
-//#define Pomelo_Port 3088
-
 class LHPomeloManager{
 public:
 //    static LHPomeloManager* getInstance();
@@ -33,8 +30,12 @@ public:
     
     bool connect(const std::string& username,const std::string& channel);
     
+    void addListener(const char *event,const std::function<void(pc_client_t *client, const char *event, void *data)>& eventCallBack);
+    
     std::function<void(int status, json_t *resp)> onEnterChannel;
     std::function<void(json_t *resp)> onMessage;
+    std::function<void(json_t *resp)> onAdd;
+    std::function<void(json_t *resp)> onLeave;
     
     pc_client_t *pomeloClient;
 private:

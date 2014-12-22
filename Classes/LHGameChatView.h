@@ -13,9 +13,11 @@
 #include "UILayout.h"
 #include "UIListView.h"
 #include "UIText.h"
+#include "UITextField.h"
 
 #define LHGameChat_MsgType_Left 0
 #define LHGameChat_MsgType_Right 1
+#define LHGameChat_MsgType_Middle 2
 
 class LHGameChatView : public cocos2d::ui::Layout{
 public:
@@ -27,9 +29,12 @@ public:
     void disMiss();
     
     bool isShowing();
+    
+    std::function<bool()> onSend;
 private:
     cocos2d::ui::Text *_titleView;
     cocos2d::ui::ListView *_messageListView;
+    cocos2d::ui::TextField *_textField;
 };
 
 #endif /* defined(__LHCocosFirstGame__LHGameChatView__) */

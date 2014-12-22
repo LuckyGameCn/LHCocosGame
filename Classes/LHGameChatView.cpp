@@ -22,9 +22,15 @@ bool LHGameChatView::init(cocos2d::Size size){
     _titleView->setColor(Color3B::GRAY);
     addChild(_titleView);
     
+    float th = 50;
+    _textField = ui::TextField::create("Type here to input.", Common_Font, 30);
+    _textField->setSize(Size(size.width, th));
+    _textField->setPosition(Vec2(size.width/2, th/2));
+    addChild(_textField);
+    
     _messageListView = ui::ListView::create();
-    _messageListView->setSize(Size(size.width, size.height - _titleView->getContentSize().height));
-    _messageListView->setPosition(Vec2(0, 0));
+    _messageListView->setSize(Size(size.width, size.height - _titleView->getContentSize().height - th));
+    _messageListView->setPosition(Vec2(0, th));
 //    _messageListView->setBackGroundImage("phsprite.png");
 //    _messageListView->setBackGroundImageScale9Enabled(true);
     addChild(_messageListView);
@@ -59,17 +65,22 @@ bool LHGameChatView::isShowing(){
 }
 
 void LHGameChatView::addOne(const std::string &username, const std::string &msgstr, int type){
-    float margin = 5;
-    auto lo = ui::Layout::create();
-    auto msgt  = ui::Text::create(msgstr, Common_Font, 35);
-    msgt->setPosition(Vec2(getSize().width/2, margin+msgt->getContentSize().height/2));
-    auto unt = ui::Text::create(username, Common_Font, 30);
-    unt->setPosition(Vec2(getSize().width/2, margin*2+msgt->getContentSize().height+unt->getContentSize().height/2));
-    lo->setSize(Size(getSize().width, unt->getContentSize().height+msgt->getContentSize().height+margin*3));
-    lo->addChild(unt);
-    lo->addChild(msgt);
+    ui::Widget *cell = nullptr;
+    if (type==LHGameChat_MsgType_Middle) {
+        cell = ui::Text::create(msgstr, Common_Font, 20);
+    }else{
+        float margin = 5;
+        cell = ui::Layout::create();
+        auto msgt  = ui::Text::create(msgstr, Common_Font, 35);
+        msgt->setPosition(Vec2(getSize().width/2, margin+msgt->getContentSize().height/2));
+        auto unt = ui::Text::create(username, Common_Font, 30);
+        unt->setPosition(Vec2(getSize().width/2, margin*2+msgt->getContentSize().height+unt->getContentSize().height/2));
+        cell->setSize(Size(getSize().width, unt->getContentSize().height+msgt->getContentSize().height+margin*3));
+        cell->addChild(unt);
+        cell->addChild(msgt);
+    }
     
-    _messageListView->pushBackCustomItem(lo);
+    _messageListView->pushBackCustomItem(cell);
     _messageListView->refreshView();
     _messageListView->scrollToBottom(0.3, true);
 }

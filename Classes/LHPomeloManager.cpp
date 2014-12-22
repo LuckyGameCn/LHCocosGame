@@ -44,33 +44,28 @@ static void onChatCallback(pc_client_t *client, const char *event, void *data)
 
 static void onAddCallback(pc_client_t *client, const char *event, void *data)
 {
-//    if (!userQueue) {
-//        return;
-//    }
-//    json_t* json = (json_t* )data;
-//    json_t* user = json_object_get(json, "user");
-//    const char* msg = json_string_value(user);
-//    CCLOG("%s %s", event, msg);
-//    userQueue->addObject(CCString::create(msg));
-    return;
+    json_t* json = (json_t* )data;
+    LHPomeloManager *pm = managerByClient(client);
+    if (pm) {
+        json_incref(json);
+        Dispatcher::executeMain([json,pm](){
+            if(pm->onAdd) pm->onAdd(json);
+            json_decref(json);
+        });
+    }
 }
 
 static void onLeaveCallback(pc_client_t *client, const char *event, void *data)
 {
-//    if (!userQueue) {
-//        return;
-//    }
-//    json_t* json = (json_t* )data;
-//    json_t* user = json_object_get(json, "user");
-//    const char* msg = json_string_value(user);
-//    CCLOG("%s %s", event,msg);
-//    for (unsigned int i=0; i<userQueue->count(); i++) {
-//        CCString* cstring = (CCString* )userQueue->objectAtIndex(i);
-//        if (strcmp(cstring->getCString(),msg) == 0) {
-//            userQueue->removeObjectAtIndex(i);
-//            break;
-//        }
-//    }
+    json_t* json = (json_t* )data;
+    LHPomeloManager *pm = managerByClient(client);
+    if (pm) {
+        json_incref(json);
+        Dispatcher::executeMain([json,pm](){
+            if(pm->onLeave) pm->onLeave(json);
+            json_decref(json);
+        });
+    }
     return;
 }
 
@@ -200,6 +195,10 @@ LHPomeloManager::~LHPomeloManager(){
     if (it!=_managers.end()) {
         _managers.erase(it);
     }
+}
+
+void LHPomeloManager::addListener(const char *event, const std::function<void (pc_client_t *, const char *, void *)>& eventCallBack){
+    
 }
 
 bool LHPomeloManager::connect(const std::string& username,const std::string& channel){
