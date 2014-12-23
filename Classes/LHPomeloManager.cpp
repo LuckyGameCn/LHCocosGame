@@ -23,6 +23,11 @@ static LHPomeloManager* managerByClient(pc_client_t *client){
     return nullptr;
 }
 
+void onSendCallback(pc_request_t *req, int status, json_t *resp)
+{
+    
+}
+
 // disconnect event callback.
 static void on_close(pc_client_t *client, const char *event, void *data)
 {
@@ -199,6 +204,24 @@ LHPomeloManager::~LHPomeloManager(){
 
 void LHPomeloManager::addListener(const char *event, const std::function<void (pc_client_t *, const char *, void *)>& eventCallBack){
     
+}
+
+bool LHPomeloManager::send(const std::string &content,const std::string& target){
+    if (pomeloClient==nullptr) {
+        return false;
+    }
+    const char *route = "chat.chatHandler.send";
+    json_t *msg = json_object();
+    json_t *str = json_string(content.c_str());
+    json_object_set(msg, "content", str);
+    json_object_set(msg, "rid", json_string(_channel.c_str()));
+    json_object_set(msg, "from", json_string(_username.c_str()));
+    json_object_set(msg, "target", json_string(target.c_str()));
+    
+    pc_request_t *request = pc_request_new();
+    void (*on_send_cb)(pc_request_t * req, int status, json_t * resp) = onSendCallback;
+    int res = pc_request(pomeloClient, request, route, msg, on_send_cb);
+    return res==0;
 }
 
 bool LHPomeloManager::connect(const std::string& username,const std::string& channel){

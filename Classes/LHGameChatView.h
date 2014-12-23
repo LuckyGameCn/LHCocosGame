@@ -30,7 +30,7 @@ public:
     
     bool isShowing();
     
-    std::function<bool()> onSend;
+    std::function<bool(const std::string& content)> onSend;
 private:
     cocos2d::ui::Text *_titleView;
     cocos2d::ui::ListView *_messageListView;

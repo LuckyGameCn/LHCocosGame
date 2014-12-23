@@ -29,6 +29,7 @@ public:
     }
     
     bool connect(const std::string& username,const std::string& channel);
+    bool send(const std::string& content,const std::string& target);
     
     void addListener(const char *event,const std::function<void(pc_client_t *client, const char *event, void *data)>& eventCallBack);
     

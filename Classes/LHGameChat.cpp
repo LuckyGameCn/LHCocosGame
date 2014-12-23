@@ -46,9 +46,8 @@ ui::Button* LHGameChat::gameChatButton(){
                         auto scene = Director::getInstance()->getRunningScene();
                         _chatView->setPosition(Vec2(vo.x+margin, vo.y+margin));
                         scene->addChild(_chatView);
-                        _chatView->onSend = [](){
-                            
-                            return true;
+                        _chatView->onSend = [](const std::string& content){
+                            return _chatManager->send(content, "*");
                         };
                     }
                     
