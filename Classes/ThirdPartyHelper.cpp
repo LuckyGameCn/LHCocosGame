@@ -7,11 +7,21 @@
 //
 
 #include "ThirdPartyHelper.h"
-#include "cocos2d.h"
 #include "NDKHelper.h"
 
 #define LHOPENTIME "opentime"
 #define SCREEN_AD_TIME 4
+
+void ThirdPartyHelper::nativeControl(const std::string &action, CCDictionary *dict){
+    CCDictionary *dic = nullptr;
+    if (dict) {
+        dic = CCDictionary::createWithDictionary(dict);
+    }else{
+        dic = CCDictionary::create();
+    }
+    dic->setObject(CCString::createWithFormat("%s",action.c_str()), "action");
+    SendMessageWithParams("nitiveControl", dic);
+}
 
 void ThirdPartyHelper::setAd(int tag){
     if (tag == SET_AD_SCREEN) {

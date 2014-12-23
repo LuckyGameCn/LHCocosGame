@@ -9,7 +9,7 @@
 #ifndef __LHCocosFirstGame__ThirdPartyHelper__
 #define __LHCocosFirstGame__ThirdPartyHelper__
 
-#include <iostream>
+#include "cocos2d.h"
 
 #define SET_AD_SCREEN 2
 #define SET_AD_SHOW 1
@@ -17,6 +17,9 @@
 
 class ThirdPartyHelper{
 public:
+    //common
+    static void nativeControl(const std::string& action,cocos2d::CCDictionary *dict);
+    
     //ad
     static void setAd(int tag);
     
