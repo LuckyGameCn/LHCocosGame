@@ -5,6 +5,7 @@
 #include "UIText.h"
 #include "LHMacros.h"
 #include "LocalizedString.h"
+#include "LHGameChat.h"
 USING_NS_CC;
 Scene* PlayScene::createScene(cocos2d::CCDictionary *dic)
 {
@@ -32,6 +33,9 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     _gameLayer = new LHGameLayer();
     _gameLayer->setPosition(vo.x, vo.y);
     addChild(_gameLayer);
+    
+    auto gcb = LHGameChat::gameChatButton();
+    addChild(gcb);
     
 	return true;
 }
