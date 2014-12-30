@@ -114,7 +114,6 @@ bool LHGameChatView::init(cocos2d::Size size){
 }
 
 void LHGameChatView::disMiss(){
-    clearMessage();
     removeFromParent();
 }
 
@@ -127,6 +126,10 @@ bool LHGameChatView::isShowing(){
 }
 
 void LHGameChatView::addOne(const std::string &username, const std::string &msgstr, int type){
+    if (_messageListView->getItems().size()>LHGameChat_Max_Msg_Count) {
+        _messageListView->removeItem(0);
+    }
+    
     ui::Layout *cell = nullptr;
     if (type==LHGameChat_MsgType_Middle) {
         cell = ui::Layout::create();

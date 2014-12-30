@@ -9,6 +9,9 @@
 #include "LHGameChat.h"
 #include "LHPomeloManager.h"
 #include "LHGameChatView.h"
+#include "LHDialog.h"
+#include "LHMacros.h"
+#include "UILayout.h"
 USING_NS_CC;
 
 static LHPomeloManager *_chatManager = nullptr;
@@ -19,14 +22,52 @@ static void refreshUserCountLabel(){
     _chatView->setTitle(StringUtils::format("----------%d-----------",_userCount));
 }
 
+Node* LHGameChat::waitView(){
+    Size vs = Director::getInstance()->getVisibleSize();
+    Vec2 vo = Director::getInstance()->getVisibleOrigin();
+    
+    auto lo = ui::Layout::create();
+    Size sz = Size(vs.width/2,vs.height/4);
+    lo->setSize(sz);
+    lo->setPosition(Vec2(vs.width/2 - sz.width/2, vs.height/2 - sz.height/2));
+    lo->setBackGroundColorType(cocos2d::ui::Layout::BackGroundColorType::SOLID);
+    lo->setBackGroundColor(Color3B::GRAY);
+    lo->setBackGroundColorOpacity(200);
+    
+    auto load = ui::Text::create("Loading...", Common_Font, 30);
+    load->setColor(Color3B::GREEN);
+    load->setPosition(Vec2(sz.width/2, lo->getSize().height/2));
+    auto cancel = ui::Button::create("close.png");
+    cancel->setPosition(Vec2(sz.width/2, lo->getSize().height/2 - load->getContentSize().height - 20));
+    cancel->addTouchEventListener([](Ref *ps,ui::Widget::TouchEventType type){
+        if (type == ui::Widget::TouchEventType::ENDED) {
+            if (_chatManager) {
+                _chatManager->disconnect();
+                delete _chatManager;
+                _chatManager = nullptr;
+                
+                LHDialog::disMissDialog();
+            }
+        }
+    });
+    
+    lo->addChild(load);
+    lo->addChild(cancel);
+    return lo;
+}
+
 ui::Button* LHGameChat::gameChatButton(){
     auto bt = ui::Button::create("q.png");
     bt->addTouchEventListener([bt](Ref *ps,ui::Widget::TouchEventType type){
         if (type == ui::Widget::TouchEventType::ENDED) {
             if (_chatManager==nullptr) {
+                LHDialog::showDialog(LHGameChat::waitView());
+                
                 _chatManager = new LHPomeloManager();
                 _chatManager->connect("2dxhuji", "huji");
                 _chatManager->onEnterChannel = [bt](int status,json_t *resp){
+                    LHDialog::disMissDialog();
+                    
                     int uc = 0;
                     json_t* users = json_object_get(resp,"users");
                     for (unsigned int i=0; i<json_array_size(users); i++) {
@@ -54,7 +95,6 @@ ui::Button* LHGameChat::gameChatButton(){
                     refreshUserCountLabel();
                 };
                 _chatManager->onMessage = [](json_t *resp){
-                    if(!_chatView->isShowing()) return;
                     //{"msg": "d", "from": "huji", "target": "*"}
                     json_t *msg = json_object_get(resp, "msg");
                     json_t *from = json_object_get(resp, "from");
@@ -64,7 +104,7 @@ ui::Button* LHGameChat::gameChatButton(){
                 _chatManager->onAdd = [](json_t *resp){
                     _userCount++;
                     refreshUserCountLabel();
-                    if(!_chatView->isShowing()) return;
+                  
                     json_t *user = json_object_get(resp, "user");
                     const char *userstr = json_string_value(user);
                     auto msg = StringUtils::format("%s >>",userstr);
@@ -73,7 +113,7 @@ ui::Button* LHGameChat::gameChatButton(){
                 _chatManager->onLeave = [](json_t *resp){
                     _userCount--;
                     refreshUserCountLabel();
-                    if(!_chatView->isShowing()) return;
+                 
                     json_t *user = json_object_get(resp, "user");
                     const char *userstr = json_string_value(user);
                     auto msg = StringUtils::format("%s ~~",userstr);

@@ -15,6 +15,8 @@
 class LHGameChat{
 public:
     static cocos2d::ui::Button* gameChatButton();
+    
+    static cocos2d::Node* waitView();
 };
 
 #endif /* defined(__LHCocosFirstGame__LHGameChat__) */
