@@ -49,6 +49,36 @@ inline int heuristic(int nextx,int nexty,cocos2d::Vec2& end){
     return abs(nextx - end.x) + abs(nexty - end.y);
 }
 
+std::vector<cocos2d::Vec2> FCAlgo::B_Search(std::vector<std::vector<int> > &graph, cocos2d::Vec2 start, int len){
+    std::vector<cocos2d::Vec2> area;
+    std::queue<Vec2> fronter;
+    Map<std::string, CCInteger*> costSoFar;
+    FCVec2* fcst = FCVec2::create(start);
+    costSoFar.insert(fcst->toString(),CCInteger::create(0));
+    fronter.push(start);
+    while (!fronter.empty()) {
+        Vec2 cu = fronter.front();
+        fronter.pop();
+        FCVec2 *fccu = FCVec2::create(cu);
+        Vector<FCVec2*> neibors = getNeibors(graph,fccu);
+        int csf = costSoFar.at(fccu->toString())->getValue();
+        for (auto next : neibors) {
+            int new_cost = csf + 1;
+            if (new_cost<=len) {
+                std::string nextkey = next->toString();
+                if (costSoFar.find(nextkey)==costSoFar.end() || new_cost<costSoFar.at(nextkey)->getValue()) {
+                    Vec2 tmp = Vec2(next->x, next->y);
+                    area.push_back(tmp);
+                    fronter.push(tmp);
+                    costSoFar.insert(nextkey, CCInteger::create(new_cost));
+                }
+            }
+        }
+    }
+    
+    return area;
+}
+
 std::vector<cocos2d::Vec2>* FCAlgo::A_Star(std::vector<std::vector<int>>& graph,cocos2d::Vec2 start,cocos2d::Vec2 end){
     std::vector<cocos2d::Vec2>* path = new std::vector<cocos2d::Vec2>();
     PriorityQueue<Vec2> fronter;

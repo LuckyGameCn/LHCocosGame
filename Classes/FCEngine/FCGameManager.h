@@ -12,6 +12,7 @@
 #include "cocos2d.h"
 #include "FCObject.h"
 #include "FCMoveObject.h"
+#include "FCUnit.h"
 #include "FCAlgo.h"
 
 class FCGameManager{
@@ -30,6 +31,8 @@ public:
     FCObject* getFCObject(int tx,int ty);//return the first.
     FCObject* getFCObject(const std::string& name);
     bool removeFCObject(FCObject* fcobj);
+    
+    std::vector<cocos2d::Vec2> getMoveAbleArea(FCUnit* unit);
     
     void clickOn(std::function<bool(int tx,int ty)>& clicktile,float x,float y);
     bool move(FCMoveObject* fcobj,int tx,int ty);

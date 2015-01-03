@@ -207,8 +207,10 @@ void LHPomeloManager::addListener(const char *event, const std::function<void (p
 }
 
 void LHPomeloManager::disconnect(){
-    pc_client_disconnect(pomeloClient);
-    pc_client_destroy(pomeloClient);
+    if (pomeloClient) {
+        pc_client_disconnect(pomeloClient);
+        pc_client_destroy(pomeloClient);
+    }
 }
 
 bool LHPomeloManager::send(const std::string &content,const std::string& target){

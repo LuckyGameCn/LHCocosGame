@@ -15,8 +15,8 @@ bool FCObject::init(const std::string &name){
 }
 
 bool FCObject::init(const std::string &filename, const std::string &name){
-    aSprite = Sprite::createWithSpriteFrameName(filename);
-//    aSprite = PHSP(filename);
+//    aSprite = Sprite::createWithSpriteFrameName(filename);
+    aSprite = PHSP(filename);
     aSprite->retain();
     
     this->_name = name;

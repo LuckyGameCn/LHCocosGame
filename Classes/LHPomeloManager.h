@@ -39,7 +39,7 @@ public:
     std::function<void(json_t *resp)> onAdd;
     std::function<void(json_t *resp)> onLeave;
     
-    pc_client_t *pomeloClient;
+    pc_client_t *pomeloClient = nullptr;
 private:
     std::string _username;
     std::string _channel;

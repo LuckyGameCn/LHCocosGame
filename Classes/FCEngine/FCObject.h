@@ -38,10 +38,10 @@ public:
     int ty;
     int tag;
     cocos2d::Sprite* aSprite;
-    int mapType = FCMAPTYPE_PASS;
+    int mapType = FCMAPTYPE_BLOCK;
     
     //true means handled.do not pass on.
-    std::function<bool()> onClick;
+    std::function<bool(FCObject* me)> onClick;
     std::function<bool(FCObject* fcobj)> onObjectDidEnter;
     
     //func

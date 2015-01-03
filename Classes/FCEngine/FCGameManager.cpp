@@ -47,7 +47,7 @@ void FCGameManager::clickOn(std::function<bool(int tx,int ty)>& clicktile,float 
     }else{
         for (auto it = vc->begin();it!=vc->end();it++) {
             if ((*it)->onClick) {
-                bool res = (*it)->onClick();
+                bool res = (*it)->onClick(*it);
                 if (res) {
                     break;
                 }
@@ -239,11 +239,34 @@ bool FCGameManager::removeFCObject(FCObject *fcobj){
     }
 }
 
+std::vector<Vec2> FCGameManager::getMoveAbleArea(FCUnit *unit){
+    
+    std::vector<std::vector<int>> graph;
+    for (int i = 0 ; i<actualTileMapHeight; i++) {
+        std::vector<int> line;
+        for (int j=0; j<actualTileMapWidth; j++) {
+            auto vc = map[i][j];
+            if(vc->size()==1){
+                line.push_back(vc->at(0)->mapType);
+            }else{
+                line.push_back(FCMAPTYPE_PASS);
+            }
+        }
+        graph.push_back(line);
+    }
+    std::vector<Vec2> area = FCAlgo::B_Search(graph, Vec2(unit->tx, unit->ty), unit->moveValue);
+    return area;
+}
+
 bool FCGameManager::addFCObject(Node* node,FCObject *fcobj){
     return this->addFCObject(node, fcobj, 0);
 }
 
 bool FCGameManager::addFCObject(cocos2d::Node *node, FCObject *fcobj, int zindex){
+    CCASSERT(fcobj->tx>=0, "tx out of range");
+    CCASSERT(fcobj->ty>=0, "ty out of range");
+    CCASSERT(fcobj->tx<actualTileMapWidth, "tx out of range");
+    CCASSERT(fcobj->ty<actualTileMapHeight, "ty out of range");
     auto vc = map[fcobj->ty][fcobj->tx];
     vc->pushBack(fcobj);
     fcobj->aSprite->setPosition(tileToPosition(fcobj->tx, fcobj->ty));
