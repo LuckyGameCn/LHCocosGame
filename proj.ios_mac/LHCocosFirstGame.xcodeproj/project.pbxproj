@@ -70,6 +70,13 @@
 		A577E96D19810ABA0006052B /* ch_ls.plist in Resources */ = {isa = PBXBuildFile; fileRef = A577E96B19810ABA0006052B /* ch_ls.plist */; };
 		A577E96E19810ABA0006052B /* en_ls.plist in Resources */ = {isa = PBXBuildFile; fileRef = A577E96C19810ABA0006052B /* en_ls.plist */; };
 		A5831E5A1A2864B700929F1D /* LHHttpManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5831E581A2864B700929F1D /* LHHttpManager.cpp */; };
+		A58E4D3D1A57BB6300C298C7 /* FCAlgo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D2F1A57BB6300C298C7 /* FCAlgo.cpp */; };
+		A58E4D3E1A57BB6300C298C7 /* FCAttackObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D311A57BB6300C298C7 /* FCAttackObject.cpp */; };
+		A58E4D3F1A57BB6300C298C7 /* FCGameConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D331A57BB6300C298C7 /* FCGameConfig.cpp */; };
+		A58E4D401A57BB6300C298C7 /* FCGameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D351A57BB6300C298C7 /* FCGameLayer.cpp */; };
+		A58E4D411A57BB6300C298C7 /* FCGameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D371A57BB6300C298C7 /* FCGameManager.cpp */; };
+		A58E4D421A57BB6300C298C7 /* FCMoveObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D391A57BB6300C298C7 /* FCMoveObject.cpp */; };
+		A58E4D431A57BB6300C298C7 /* FCObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D3B1A57BB6300C298C7 /* FCObject.cpp */; };
 		A594BDD119470429001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE3C194B026B001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A594BE3F194D450C001DEF30 /* GameOverScene.cpp */; };
@@ -346,6 +353,20 @@
 		A577E96C19810ABA0006052B /* en_ls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = en_ls.plist; sourceTree = "<group>"; };
 		A5831E581A2864B700929F1D /* LHHttpManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHHttpManager.cpp; path = ../Classes/LHHttpManager.cpp; sourceTree = "<group>"; };
 		A5831E591A2864B700929F1D /* LHHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHHttpManager.h; path = ../Classes/LHHttpManager.h; sourceTree = "<group>"; };
+		A58E4D2F1A57BB6300C298C7 /* FCAlgo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCAlgo.cpp; sourceTree = "<group>"; };
+		A58E4D301A57BB6300C298C7 /* FCAlgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAlgo.h; sourceTree = "<group>"; };
+		A58E4D311A57BB6300C298C7 /* FCAttackObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCAttackObject.cpp; sourceTree = "<group>"; };
+		A58E4D321A57BB6300C298C7 /* FCAttackObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAttackObject.h; sourceTree = "<group>"; };
+		A58E4D331A57BB6300C298C7 /* FCGameConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCGameConfig.cpp; sourceTree = "<group>"; };
+		A58E4D341A57BB6300C298C7 /* FCGameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGameConfig.h; sourceTree = "<group>"; };
+		A58E4D351A57BB6300C298C7 /* FCGameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCGameLayer.cpp; sourceTree = "<group>"; };
+		A58E4D361A57BB6300C298C7 /* FCGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGameLayer.h; sourceTree = "<group>"; };
+		A58E4D371A57BB6300C298C7 /* FCGameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCGameManager.cpp; sourceTree = "<group>"; };
+		A58E4D381A57BB6300C298C7 /* FCGameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGameManager.h; sourceTree = "<group>"; };
+		A58E4D391A57BB6300C298C7 /* FCMoveObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCMoveObject.cpp; sourceTree = "<group>"; };
+		A58E4D3A1A57BB6300C298C7 /* FCMoveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCMoveObject.h; sourceTree = "<group>"; };
+		A58E4D3B1A57BB6300C298C7 /* FCObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCObject.cpp; sourceTree = "<group>"; };
+		A58E4D3C1A57BB6300C298C7 /* FCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCObject.h; sourceTree = "<group>"; };
 		A594BDD019470429001DEF30 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		A594BE3F194D450C001DEF30 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverScene.cpp; path = ../Classes/GameOverScene.cpp; sourceTree = "<group>"; };
 		A594BE40194D450C001DEF30 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = ../Classes/GameOverScene.h; sourceTree = "<group>"; };
@@ -560,6 +581,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A58E4D2E1A57BB6300C298C7 /* FCEngine */,
 				A51748941A45266A006A5152 /* GameChat */,
 				A5831E551A2864A100929F1D /* NetWork */,
 				A5FA68CE1988A52A00108DB9 /* Game */,
@@ -784,6 +806,28 @@
 				A594EF381A445618004B65EA /* LHPomeloManager.h */,
 			);
 			name = NetWork;
+			sourceTree = "<group>";
+		};
+		A58E4D2E1A57BB6300C298C7 /* FCEngine */ = {
+			isa = PBXGroup;
+			children = (
+				A58E4D2F1A57BB6300C298C7 /* FCAlgo.cpp */,
+				A58E4D301A57BB6300C298C7 /* FCAlgo.h */,
+				A58E4D311A57BB6300C298C7 /* FCAttackObject.cpp */,
+				A58E4D321A57BB6300C298C7 /* FCAttackObject.h */,
+				A58E4D331A57BB6300C298C7 /* FCGameConfig.cpp */,
+				A58E4D341A57BB6300C298C7 /* FCGameConfig.h */,
+				A58E4D351A57BB6300C298C7 /* FCGameLayer.cpp */,
+				A58E4D361A57BB6300C298C7 /* FCGameLayer.h */,
+				A58E4D371A57BB6300C298C7 /* FCGameManager.cpp */,
+				A58E4D381A57BB6300C298C7 /* FCGameManager.h */,
+				A58E4D391A57BB6300C298C7 /* FCMoveObject.cpp */,
+				A58E4D3A1A57BB6300C298C7 /* FCMoveObject.h */,
+				A58E4D3B1A57BB6300C298C7 /* FCObject.cpp */,
+				A58E4D3C1A57BB6300C298C7 /* FCObject.h */,
+			);
+			name = FCEngine;
+			path = ../Classes/FCEngine;
 			sourceTree = "<group>";
 		};
 		A59A475D1952AD1000217F27 /* GoogleMobileAdsSdkiOS-6.9.3 */ = {
@@ -1222,11 +1266,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A51748A61A457723006A5152 /* LHWaitAlertView.cpp in Sources */,
+				A58E4D3D1A57BB6300C298C7 /* FCAlgo.cpp in Sources */,
+				A58E4D3F1A57BB6300C298C7 /* FCGameConfig.cpp in Sources */,
 				A53A8922197EDFCB0051B7D4 /* LHPauseScene.cpp in Sources */,
 				A5AA42CF196D0B8100DC3411 /* DeveloperInfoScence.cpp in Sources */,
 				A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */,
 				A51748A91A45792C006A5152 /* LHGameChatView.cpp in Sources */,
 				A5FA68D31988A89D00108DB9 /* LHLeaderBoard.cpp in Sources */,
+				A58E4D421A57BB6300C298C7 /* FCMoveObject.cpp in Sources */,
 				A59A47861952B36B00217F27 /* ThirdPartyHelper.cpp in Sources */,
 				A5831E5A1A2864B700929F1D /* LHHttpManager.cpp in Sources */,
 				A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */,
@@ -1240,14 +1287,18 @@
 				A59A47FE1952CDBD00217F27 /* NDKHelper.cpp in Sources */,
 				A5AA4324196D299E00DC3411 /* UmSocialControllerIOS.mm in Sources */,
 				A51748A31A4567D4006A5152 /* Dispatcher.cpp in Sources */,
+				A58E4D431A57BB6300C298C7 /* FCObject.cpp in Sources */,
 				A517489C1A4526CC006A5152 /* LHGameChat.cpp in Sources */,
 				A594EF391A445618004B65EA /* LHPomeloManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				A59A47FD1952CDBD00217F27 /* NDKCallbackNode.cpp in Sources */,
 				A53BF73F1A1F807500369090 /* LHGameLayer.cpp in Sources */,
 				A577E95D198101510006052B /* LocalizedString.cpp in Sources */,
+				A58E4D411A57BB6300C298C7 /* FCGameManager.cpp in Sources */,
 				A5FA68C51988A3BD00108DB9 /* LHShareButton.cpp in Sources */,
+				A58E4D3E1A57BB6300C298C7 /* FCAttackObject.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
+				A58E4D401A57BB6300C298C7 /* FCGameLayer.cpp in Sources */,
 				A59A47B41952C35900217F27 /* IOSNDKHelper.mm in Sources */,
 				A5AA4325196D299E00DC3411 /* UMSocialUIObject.mm in Sources */,
 				A50697F3194750AD0008E3C3 /* PlayScene.cpp in Sources */,
