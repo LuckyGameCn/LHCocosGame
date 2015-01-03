@@ -12,6 +12,35 @@
 #include "LHDialog.h"
 #include "UIImageView.h"
 USING_NS_CC;
+
+std::string myWrap(std::string str,int length)
+{
+    unsigned int beginPos = 0;  //字符串的初始位置
+    std::string resultStr;		//返回的字符串
+    
+    std::vector<std::string > str_vec;  //创建一个字符串类型的顺序容器
+    do
+    {
+        str_vec.push_back(str.substr(beginPos,length)); //substr函数的作用类似剪刀，将str中从beginPos到length之间的字符串剪下来，单独放入容器中
+        if (beginPos+length >str.size())
+        {
+            break;  //当要裁剪的长度超出str的长度，则退出循环
+        }
+        else
+        {
+            beginPos += length;
+        }
+        
+    } while (true);
+    
+    for (unsigned int i = 0;i<str_vec.size();++i)
+    {
+        resultStr.append(str_vec.at(i)).append("\n"); //从容器逐一取出之前裁剪好的一段段字符串，分别在字符串后面加上换行符。append()类似胶水，将\n粘到字符串后面
+    }
+    
+    return resultStr;  
+}
+
 bool LHGameChatView::init(cocos2d::Size size){
     if (!Layout::init()) {
         return false;
@@ -85,7 +114,6 @@ bool LHGameChatView::init(cocos2d::Size size){
 }
 
 void LHGameChatView::disMiss(){
-    clearMessage();
     removeFromParent();
 }
 
@@ -98,6 +126,10 @@ bool LHGameChatView::isShowing(){
 }
 
 void LHGameChatView::addOne(const std::string &username, const std::string &msgstr, int type){
+    if (_messageListView->getItems().size()>LHGameChat_Max_Msg_Count) {
+        _messageListView->removeItem(0);
+    }
+    
     ui::Layout *cell = nullptr;
     if (type==LHGameChat_MsgType_Middle) {
         cell = ui::Layout::create();
@@ -111,27 +143,21 @@ void LHGameChatView::addOne(const std::string &username, const std::string &msgs
         cell->setBackGroundImageScale9Enabled(true);
     }else{
         float margin = 5;
-        float umargin = 10;
+        float umargin = 5;
+        float mmargin = 15;
         cell = ui::Layout::create();
         auto msgt  = ui::Text::create("", Common_Font, 35);
-        float contentwidth = getSize().width/10*8;
-//        msgt->setTextAreaSize(Size(contentwidth,0));
-        Label *lb = (Label*)msgt->getVirtualRenderer();
-        lb->setMaxLineWidth(contentwidth);
-        lb->setLineBreakWithoutSpace(true);
-        msgt->setString(msgstr);
+        msgt->setString(myWrap(msgstr, 25));
         
         auto unt = ui::Text::create(username, Common_Font, 25);
         unt->setColor(Color3B::GRAY);
         if (type==LHGameChat_MsgType_Right) {
             unt->setPosition(Vec2(-umargin+getSize().width-unt->getContentSize().width/2, margin*2+msgt->getContentSize().height+unt->getContentSize().height/2));
-            msgt->setTextHorizontalAlignment(cocos2d::TextHAlignment::RIGHT);
-            msgt->setPosition(Vec2(getSize().width-msgt->getVirtualRenderer()->getContentSize().width/2, margin+msgt->getContentSize().height/2));
+            msgt->setPosition(Vec2(-mmargin+getSize().width-msgt->getVirtualRendererSize().width/2, margin+msgt->getContentSize().height/2));
             cell->setBackGroundImage("grayback.png");
         }else{
             unt->setPosition(Vec2(umargin+unt->getContentSize().width/2, margin*2+msgt->getContentSize().height+unt->getContentSize().height/2));
-            msgt->setTextHorizontalAlignment(cocos2d::TextHAlignment::LEFT);
-            msgt->setPosition(Vec2(msgt->getVirtualRenderer()->getContentSize().width/2, margin+msgt->getContentSize().height/2));
+            msgt->setPosition(Vec2(mmargin+msgt->getVirtualRendererSize().width/2, margin+msgt->getContentSize().height/2));
             cell->setBackGroundImage("lblueback.png");
         }
         

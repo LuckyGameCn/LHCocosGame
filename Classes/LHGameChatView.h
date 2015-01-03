@@ -15,6 +15,8 @@
 #include "UIText.h"
 #include "UITextField.h"
 
+#define LHGameChat_Max_Msg_Count 100
+
 #define LHGameChat_MsgType_Left 0
 #define LHGameChat_MsgType_Right 1
 #define LHGameChat_MsgType_Middle 2
