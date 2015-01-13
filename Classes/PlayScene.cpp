@@ -20,7 +20,6 @@ Scene* PlayScene::createScene(cocos2d::CCDictionary *dic)
 }
 
 PlayScene::~PlayScene(){
-    delete _gameLayer;
 }
 
 void PlayScene::update(float delta){
@@ -39,8 +38,6 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     
     std::function<bool(FCObject *me)> onClick = [this](FCObject *me){
         
-        _gameLayer->drawMoveAbleArea((FCUnit*)me);
-        
         return true;
     };
     
@@ -56,7 +53,6 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     _gameLayer->addFCObject(u1);
     _gameLayer->addFCObject(u2);
     _gameLayer->onClick = [this,u1](int tx,int ty){
-        _gameLayer->cleanMoveAbleArea();
         u1->move(tx, ty);
         return false;
     };

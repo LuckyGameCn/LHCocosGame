@@ -136,9 +136,12 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		CE5B9A431A64F65300B28AE0 /* FCAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9A411A64F65300B28AE0 /* FCAction.cpp */; };
 		CECD83AB1A42DB7200973211 /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CECD83A81A42DB7200973211 /* libjansson.a */; };
 		CECD83AC1A42DB7200973211 /* libpomelo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CECD83A91A42DB7200973211 /* libpomelo.a */; };
 		CECD83AD1A42DB7200973211 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CECD83AA1A42DB7200973211 /* libuv.a */; };
+		CEF681431A5921A4008E4986 /* FCGameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF681411A5921A4008E4986 /* FCGameController.cpp */; };
+		CEF681481A594018008E4986 /* FCCalEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF681461A594018008E4986 /* FCCalEngine.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -495,9 +498,15 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE5B9A411A64F65300B28AE0 /* FCAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCAction.cpp; sourceTree = "<group>"; };
+		CE5B9A421A64F65300B28AE0 /* FCAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAction.h; sourceTree = "<group>"; };
 		CECD83A81A42DB7200973211 /* libjansson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjansson.a; sourceTree = "<group>"; };
 		CECD83A91A42DB7200973211 /* libpomelo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpomelo.a; sourceTree = "<group>"; };
 		CECD83AA1A42DB7200973211 /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv.a; sourceTree = "<group>"; };
+		CEF681411A5921A4008E4986 /* FCGameController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCGameController.cpp; sourceTree = "<group>"; };
+		CEF681421A5921A4008E4986 /* FCGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGameController.h; sourceTree = "<group>"; };
+		CEF681461A594018008E4986 /* FCCalEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCCalEngine.cpp; sourceTree = "<group>"; };
+		CEF681471A594018008E4986 /* FCCalEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCalEngine.h; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -854,6 +863,12 @@
 				A58E4D531A57BE8E00C298C7 /* FCHero.h */,
 				A58E4D551A57C7C400C298C7 /* FCItem.cpp */,
 				A58E4D561A57C7C400C298C7 /* FCItem.h */,
+				CEF681411A5921A4008E4986 /* FCGameController.cpp */,
+				CEF681421A5921A4008E4986 /* FCGameController.h */,
+				CEF681461A594018008E4986 /* FCCalEngine.cpp */,
+				CEF681471A594018008E4986 /* FCCalEngine.h */,
+				CE5B9A411A64F65300B28AE0 /* FCAction.cpp */,
+				CE5B9A421A64F65300B28AE0 /* FCAction.h */,
 			);
 			name = FCEngine;
 			path = ../Classes/FCEngine;
@@ -1308,6 +1323,7 @@
 				A58E4D3D1A57BB6300C298C7 /* FCAlgo.cpp in Sources */,
 				A58E4D3F1A57BB6300C298C7 /* FCGameConfig.cpp in Sources */,
 				A53A8922197EDFCB0051B7D4 /* LHPauseScene.cpp in Sources */,
+				CE5B9A431A64F65300B28AE0 /* FCAction.cpp in Sources */,
 				A58E4D491A57BE3000C298C7 /* FCUnit.cpp in Sources */,
 				A5AA42CF196D0B8100DC3411 /* DeveloperInfoScence.cpp in Sources */,
 				A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */,
@@ -1333,6 +1349,7 @@
 				A594EF391A445618004B65EA /* LHPomeloManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				A59A47FD1952CDBD00217F27 /* NDKCallbackNode.cpp in Sources */,
+				CEF681481A594018008E4986 /* FCCalEngine.cpp in Sources */,
 				A58E4D511A57BE8100C298C7 /* FCSkill.cpp in Sources */,
 				A53BF73F1A1F807500369090 /* LHGameLayer.cpp in Sources */,
 				A577E95D198101510006052B /* LocalizedString.cpp in Sources */,
@@ -1340,6 +1357,7 @@
 				A58E4D4E1A57BE6200C298C7 /* FCBuff.cpp in Sources */,
 				A58E4D411A57BB6300C298C7 /* FCGameManager.cpp in Sources */,
 				A5FA68C51988A3BD00108DB9 /* LHShareButton.cpp in Sources */,
+				CEF681431A5921A4008E4986 /* FCGameController.cpp in Sources */,
 				A58E4D3E1A57BB6300C298C7 /* FCAttackObject.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				A58E4D401A57BB6300C298C7 /* FCGameLayer.cpp in Sources */,

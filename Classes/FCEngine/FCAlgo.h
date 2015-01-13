@@ -62,6 +62,7 @@ public:
     //-1 means block.
     static std::vector<cocos2d::Vec2>* A_Star(std::vector<std::vector<int>>& graph,cocos2d::Vec2 start,cocos2d::Vec2 end);
     static std::vector<cocos2d::Vec2> B_Search(std::vector<std::vector<int>>& graph,cocos2d::Vec2 start,int len);
+    static std::vector<cocos2d::Vec2> B_Search_Noround(std::vector<std::vector<int>>& graph,cocos2d::Vec2 start,int len);
 };
 
 #endif /* defined(__LHCocosFirstGame__FCAlgo__) */

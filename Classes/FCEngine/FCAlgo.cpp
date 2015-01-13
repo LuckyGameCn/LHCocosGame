@@ -79,6 +79,34 @@ std::vector<cocos2d::Vec2> FCAlgo::B_Search(std::vector<std::vector<int> > &grap
     return area;
 }
 
+std::vector<cocos2d::Vec2> FCAlgo::B_Search_Noround(std::vector<std::vector<int> > &graph, cocos2d::Vec2 start, int len){
+    std::vector<cocos2d::Vec2> area;
+    std::queue<Vec2> fronter;
+    std::set<std::string> visited;
+    FCVec2* fcst = FCVec2::create(start);
+    visited.insert(fcst->toString());
+    fronter.push(start);
+    while (!fronter.empty()) {
+        Vec2 cu = fronter.front();
+        fronter.pop();
+        FCVec2 *fccu = FCVec2::create(cu);
+        Vector<FCVec2*> neibors = getNeibors(graph,fccu);
+        for (auto next : neibors) {
+            int xlen = abs(next->x - start.x);
+            int ylen = abs(next->y - start.y);
+            std::string nextkey = next->toString();
+            if (visited.find(nextkey)==visited.end() && xlen+ylen<=len) {
+                Vec2 tmp = Vec2(next->x, next->y);
+                area.push_back(tmp);
+                fronter.push(tmp);
+                visited.insert(nextkey);
+            }
+        }
+    }
+    
+    return area;
+}
+
 std::vector<cocos2d::Vec2>* FCAlgo::A_Star(std::vector<std::vector<int>>& graph,cocos2d::Vec2 start,cocos2d::Vec2 end){
     std::vector<cocos2d::Vec2>* path = new std::vector<cocos2d::Vec2>();
     PriorityQueue<Vec2> fronter;

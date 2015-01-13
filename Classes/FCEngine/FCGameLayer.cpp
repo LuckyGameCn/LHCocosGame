@@ -120,24 +120,6 @@ bool FCGameLayer::addFCObjects(cocos2d::Vector<FCObject *> &fcobjs){
     return FCGameManager::getInstance()->addFCObjects(this, fcobjs);
 }
 
-std::vector<Vec2> FCGameLayer::drawMoveAbleArea(FCUnit *unit){
-    std::vector<Vec2> area = FCGameManager::getInstance()->getMoveAbleArea(unit);
-    for (auto point : area){
-        auto sp = Sprite::create("lgreenback.png");
-        sp->setPosition(FCGameManager::getInstance()->tileToPosition(point.x,point.y));
-        addChild(sp);
-        _tmpSprite.pushBack(sp);
-    }
-    return area;
-}
-
-void FCGameLayer::cleanMoveAbleArea(){
-    for ( auto sp : _tmpSprite){
-        sp->removeFromParent();
-    }
-    _tmpSprite.clear();
-}
-
 void FCGameLayer::clear(){
     cleanup();
     removeAllChildren();

@@ -27,7 +27,8 @@ public:
     int baseUpAttack;
     int baseDeffence;
     int baseMagicDeffence;
-    int baseHeathVolume;
+    int baseHealthVolume;
+    int healthValue;
     int baseMagicVolume;
     
     int baseMoveVolume;
@@ -35,6 +36,9 @@ public:
     
     void addBuff(FCBuff* buff);
     void addSkill(FCSkill* skill);
+    
+    //action
+    void attack(FCUnit *unit);
 private:
     cocos2d::Vector<FCBuff*> _buffs;
     cocos2d::Vector<FCSkill*> _skills;
