@@ -9,6 +9,9 @@
 #include "FCGameController.h"
 #include "Dispatcher.h"
 
+//actions
+#include "FCCreateUnitAction.h"
+
 static FCGameController *_instance =  nullptr;
 
 FCGameController* FCGameController::getInstance(){
@@ -22,11 +25,28 @@ void FCGameController::connect(){
     if (!_pomeloManager) {
         _pomeloManager = new LHPomeloManager();
         _pomeloManager->connect("2dxhuji", "fcgame");
-        _pomeloManager->onMessage = [](json_t *resp){
-            
+        _pomeloManager->onEnterChannel = [this](int status, json_t *resp){
+            this->registerDispatch();
+            this->nextAction();
         };
-        this->registerDispatch();
-        this->nextAction();
+        _pomeloManager->onMessage = [this](json_t *resp){
+             json_t *msg = json_object_get(resp, "msg");
+            const char *msgvalue = json_string_value(msg);
+            char *p = strstr(msgvalue, "#");
+            if (p) {
+                char type[10];
+                memcpy(type, msgvalue, p-msgvalue);
+                FCAction *ac = nullptr;
+                if (strcmp(type, "C")) {
+                    ac = new FCCreateUnitAction();
+                    ac->autorelease();
+                    ac->initFrom(msg);
+                }
+                if (ac) {
+                    _waitingActions.pushBack(ac);
+                }
+            }
+        };
     }
 }
 

@@ -46,11 +46,15 @@ void FCGameManager::clickOn(std::function<bool(int tx,int ty)>& clicktile,float 
         return;
     }else{
         for (auto it = vc->begin();it!=vc->end();it++) {
-            if ((*it)->onClick) {
-                bool res = (*it)->onClick(*it);
-                if (res) {
-                    break;
+            if((*it)->clickEnable){
+                if ((*it)->onClick) {
+                    bool res = (*it)->onClick(*it);
+                    if (res) {
+                        break;
+                    }
                 }
+            }else{
+                break;
             }
         }
     }
@@ -254,7 +258,25 @@ std::vector<Vec2> FCGameManager::getMoveAbleArea(FCUnit *unit){
         }
         graph.push_back(line);
     }
-    std::vector<Vec2> area = FCAlgo::B_Search(graph, Vec2(unit->tx, unit->ty), unit->moveValue);
+    std::vector<Vec2> area = FCAlgo::B_Search(graph, Vec2(unit->tx, unit->ty), unit->actionValue);
+    return area;
+}
+
+std::vector<Vec2> FCGameManager::getActionAbleArea(FCUnit *unit,int range){
+    std::vector<std::vector<int>> graph;
+    for (int i = 0 ; i<actualTileMapHeight; i++) {
+        std::vector<int> line;
+        for (int j=0; j<actualTileMapWidth; j++) {
+            auto vc = map[i][j];
+            if(vc->size()==1){
+                line.push_back(vc->at(0)->mapType);
+            }else{
+                line.push_back(FCMAPTYPE_PASS);
+            }
+        }
+        graph.push_back(line);
+    }
+    std::vector<Vec2> area = FCAlgo::B_Search_Noround(graph, Vec2(unit->tx, unit->ty), range);
     return area;
 }
 

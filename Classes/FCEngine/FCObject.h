@@ -39,6 +39,7 @@ public:
     int tag;
     cocos2d::Sprite* aSprite;
     int mapType = FCMAPTYPE_BLOCK;
+    bool clickEnable = false;
     
     //true means handled.do not pass on.
     std::function<bool(FCObject* me)> onClick;

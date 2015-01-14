@@ -33,6 +33,7 @@ public:
     bool removeFCObject(FCObject* fcobj);
     
     std::vector<cocos2d::Vec2> getMoveAbleArea(FCUnit* unit);
+    std::vector<cocos2d::Vec2> getActionAbleArea(FCUnit* unit,int range);
     
     void clickOn(std::function<bool(int tx,int ty)>& clicktile,float x,float y);
     bool move(FCMoveObject* fcobj,int tx,int ty);

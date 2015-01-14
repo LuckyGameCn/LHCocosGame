@@ -8,11 +8,12 @@
 
 #include "FCUnitFactory.h"
 
-FCUnit* FCUnitFactory::createNomalSoldier(){
+FCUnit* FCUnitFactory::createNomalSoldier(FCCreateUnitAction *ac){
     auto unit = new FCUnit();
     unit->autorelease();
     unit->init("sodlier");
-    unit->baseMoveVolume = 5;
-    unit->moveValue = 5;
+    unit->tag=ac->tag;
+    unit->tx=ac->tx;
+    unit->ty=ac->ty;
     return unit;
 }

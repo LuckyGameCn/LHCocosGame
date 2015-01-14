@@ -10,10 +10,11 @@
 #define __LHCocosFirstGame__FCUnitFactory__
 
 #include "FCUnit.h"
+#include "FCCreateUnitAction.h"
 
 class FCUnitFactory{
 public:
-    static FCUnit* createNomalSoldier();
+    static FCUnit* createNomalSoldier(FCCreateUnitAction *ac);
 };
 
 #endif /* defined(__LHCocosFirstGame__FCUnitFactory__) */

@@ -20,25 +20,23 @@ public:
     
     };
     
-    int team;
-    int controller;
+    int baseDownAttack=10;
+    int baseUpAttack=20;
+    int baseDeffence=5;
+    int baseMagicDeffence=10;
+    int baseHealthVolume=500;
+    int healthValue=baseHealthVolume;
+    int baseMagicVolume=300;
+    int magicValue=baseMagicVolume;
     
-    int baseDownAttack;
-    int baseUpAttack;
-    int baseDeffence;
-    int baseMagicDeffence;
-    int baseHealthVolume;
-    int healthValue;
-    int baseMagicVolume;
-    
-    int baseMoveVolume;
-    int moveValue;
+    int baseMoveVolume=10;
+    int actionValue=baseMoveVolume;
     
     void addBuff(FCBuff* buff);
     void addSkill(FCSkill* skill);
     
     //action
-    void attack(FCUnit *unit);
+    void attack(FCUnit *unit,const std::function<void()>& done);
 private:
     cocos2d::Vector<FCBuff*> _buffs;
     cocos2d::Vector<FCSkill*> _skills;
