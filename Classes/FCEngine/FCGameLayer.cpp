@@ -70,6 +70,30 @@ void FCGameLayer::setVisibleSize(cocos2d::Vec2 vs){
     _visibleSize = vs;
 }
 
+FCObject* FCGameLayer::getFCObject(int tag){
+    return FCGameManager::getInstance()->getFCObject(tag);
+}
+
+void FCGameLayer::drawTmpSprites(std::vector<cocos2d::Vec2> pos,const std::string& fname){
+    clearTmpSprites();
+    for (auto v : pos){
+        auto sp = Sprite::create(fname);
+        sp->setPosition(FCGameManager::getInstance()->tileToPosition(v.x, v.y));
+        addChild(sp);
+        _tmpSprite.pushBack(sp);
+    }
+}
+
+void FCGameLayer::clearTmpSprites(){
+    if (_tmpSprite.size()==0) {
+        return;
+    }
+    for (auto sp : _tmpSprite){
+        sp->removeFromParent();
+    }
+    _tmpSprite.clear();
+}
+
 bool FCGameLayer::setTiledMap(const std::string &tiledmap,float ts,std::function<cocos2d::Vector<FCObject*>(TMXObjectGroup* group)> callback){
     _map = TMXTiledMap::create(tiledmap);
     if (!_map) {

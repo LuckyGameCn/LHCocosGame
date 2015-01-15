@@ -13,7 +13,12 @@
 
 class FCShowUIAction : public FCAction{
 public:
+    FCShowUIAction(){
+        this->acType=FCActionShowUI;
+    };
     virtual void initFrom(json_t *jt) override;
+    
+    std::string content;
 };
 
 #endif /* defined(__LHCocosFirstGame__FCShowUIAction__) */

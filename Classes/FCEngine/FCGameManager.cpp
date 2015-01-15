@@ -219,6 +219,20 @@ FCObject* FCGameManager::getFCObject(const std::string &name){
     return nullptr;
 }
 
+FCObject* FCGameManager::getFCObject(int tag){
+    for (int i = 0 ; i<actualTileMapHeight; i++) {
+        for (int j=0; j<actualTileMapWidth; j++) {
+            auto vc = map[i][j];
+            for ( auto obj : *vc ){
+                if (obj->tag==tag) {
+                    return obj;
+                }
+            }
+        }
+    }
+    return nullptr;
+}
+
 FCObject* FCGameManager::getFCObject(int tx, int ty){
     auto vc = getFCObjects(tx, ty);
     if (vc) {

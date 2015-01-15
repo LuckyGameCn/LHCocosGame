@@ -30,6 +30,7 @@ public:
     cocos2d::Vector<FCObject*>* getFCObjects(int tx,int ty);
     FCObject* getFCObject(int tx,int ty);//return the first.
     FCObject* getFCObject(const std::string& name);
+    FCObject* getFCObject(int tag);
     bool removeFCObject(FCObject* fcobj);
     
     std::vector<cocos2d::Vec2> getMoveAbleArea(FCUnit* unit);

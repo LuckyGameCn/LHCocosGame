@@ -37,6 +37,9 @@ typedef enum {
     FCActionNone,
     FCActionCreateUnit,
     FCActionMove,
+    FCActionControl,
+    FCActionAttack,
+    FCActionShowUI,
 }FCActionType;
 
 class FCAction : public cocos2d::Ref{

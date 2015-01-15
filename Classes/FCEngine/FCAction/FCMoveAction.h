@@ -13,7 +13,14 @@
 
 class FCMoveAction : public FCAction{
 public:
+    FCMoveAction(){
+        this->acType=FCActionMove;
+    };
     virtual void initFrom(json_t *jt) override;
+    
+    int ttag;
+    int tx;
+    int ty;
 };
 
 #endif /* defined(__LHCocosFirstGame__FCMoveAction__) */

@@ -11,5 +11,5 @@
 void FCControlAction::initFrom(json_t *jt){
     const char *msg = json_string_value(jt);
     auto r = fcsplit(msg);
-    
+    ttag = atoi(r[1].c_str());
 }

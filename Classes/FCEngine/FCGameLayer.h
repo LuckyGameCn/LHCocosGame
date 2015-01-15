@@ -37,6 +37,13 @@ public:
     bool addFCObjects(cocos2d::Vector<FCObject*>& fcobjs);
     void clear();
     
+    //get
+    FCObject* getFCObject(int tag);
+    
+    //draw
+    void drawTmpSprites(std::vector<cocos2d::Vec2> pos,const std::string& fname);
+    void clearTmpSprites();
+    
     void focusOn(cocos2d::Vec2 center,float scale,bool animate);
     void focusOn(cocos2d::Vec2 center,float scale,bool animate,cocos2d::CallFunc* complete);
     
@@ -53,6 +60,7 @@ private:
     
     //game
     cocos2d::TMXTiledMap* _map;
+    cocos2d::Vector<cocos2d::Sprite*> _tmpSprite;
     
     int _touchMode;
 };

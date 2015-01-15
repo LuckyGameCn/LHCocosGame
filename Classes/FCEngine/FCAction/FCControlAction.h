@@ -13,7 +13,12 @@
 
 class FCControlAction : public FCAction{
 public:
+    FCControlAction(){
+        this->acType = FCActionControl;
+    };
     virtual void initFrom(json_t *jt) override;
+    
+    int ttag;
 };
 
 #endif /* defined(__LHCocosFirstGame__FCControlAction__) */

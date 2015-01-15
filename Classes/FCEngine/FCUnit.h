@@ -28,6 +28,7 @@ public:
     int healthValue=baseHealthVolume;
     int baseMagicVolume=300;
     int magicValue=baseMagicVolume;
+    int baseAttackRange=3;
     
     int baseMoveVolume=10;
     int actionValue=baseMoveVolume;

@@ -11,6 +11,10 @@
 
 //actions
 #include "FCCreateUnitAction.h"
+#include "FCControlAction.h"
+#include "FCShowUIAction.h"
+#include "FCMoveAction.h"
+#include "FCAttackAction.h"
 
 static FCGameController *_instance =  nullptr;
 
@@ -36,13 +40,22 @@ void FCGameController::connect(){
             if (p) {
                 char type[10];
                 memcpy(type, msgvalue, p-msgvalue);
+                type[p-msgvalue]='\0';
                 FCAction *ac = nullptr;
-                if (strcmp(type, "C")) {
+                if (strcmp(type, "cr")==0) {
                     ac = new FCCreateUnitAction();
-                    ac->autorelease();
-                    ac->initFrom(msg);
+                }else if(strcmp(type, "co")==0){
+                    ac = new FCControlAction();
+                }else if(strcmp(type, "su")==0){
+                    ac = new FCShowUIAction();
+                }else if(strcmp(type, "mv")==0){
+                    ac = new FCMoveAction();
+                }else if(strcmp(type, "at")==0){
+                    ac = new FCAttackAction();
                 }
                 if (ac) {
+                    ac->autorelease();
+                    ac->initFrom(msg);
                     _waitingActions.pushBack(ac);
                 }
             }
