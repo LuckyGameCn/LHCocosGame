@@ -74,7 +74,6 @@
 		A58E4D3E1A57BB6300C298C7 /* FCAttackObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D311A57BB6300C298C7 /* FCAttackObject.cpp */; };
 		A58E4D3F1A57BB6300C298C7 /* FCGameConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D331A57BB6300C298C7 /* FCGameConfig.cpp */; };
 		A58E4D401A57BB6300C298C7 /* FCGameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D351A57BB6300C298C7 /* FCGameLayer.cpp */; };
-		A58E4D411A57BB6300C298C7 /* FCGameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D371A57BB6300C298C7 /* FCGameManager.cpp */; };
 		A58E4D421A57BB6300C298C7 /* FCMoveObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D391A57BB6300C298C7 /* FCMoveObject.cpp */; };
 		A58E4D431A57BB6300C298C7 /* FCObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D3B1A57BB6300C298C7 /* FCObject.cpp */; };
 		A58E4D491A57BE3000C298C7 /* FCUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D471A57BE3000C298C7 /* FCUnit.cpp */; };
@@ -375,8 +374,6 @@
 		A58E4D341A57BB6300C298C7 /* FCGameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGameConfig.h; sourceTree = "<group>"; };
 		A58E4D351A57BB6300C298C7 /* FCGameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCGameLayer.cpp; sourceTree = "<group>"; };
 		A58E4D361A57BB6300C298C7 /* FCGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGameLayer.h; sourceTree = "<group>"; };
-		A58E4D371A57BB6300C298C7 /* FCGameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCGameManager.cpp; sourceTree = "<group>"; };
-		A58E4D381A57BB6300C298C7 /* FCGameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGameManager.h; sourceTree = "<group>"; };
 		A58E4D391A57BB6300C298C7 /* FCMoveObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCMoveObject.cpp; sourceTree = "<group>"; };
 		A58E4D3A1A57BB6300C298C7 /* FCMoveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCMoveObject.h; sourceTree = "<group>"; };
 		A58E4D3B1A57BB6300C298C7 /* FCObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCObject.cpp; sourceTree = "<group>"; };
@@ -863,8 +860,6 @@
 				A58E4D341A57BB6300C298C7 /* FCGameConfig.h */,
 				A58E4D351A57BB6300C298C7 /* FCGameLayer.cpp */,
 				A58E4D361A57BB6300C298C7 /* FCGameLayer.h */,
-				A58E4D371A57BB6300C298C7 /* FCGameManager.cpp */,
-				A58E4D381A57BB6300C298C7 /* FCGameManager.h */,
 				A58E4D391A57BB6300C298C7 /* FCMoveObject.cpp */,
 				A58E4D3A1A57BB6300C298C7 /* FCMoveObject.h */,
 				A58E4D3B1A57BB6300C298C7 /* FCObject.cpp */,
@@ -1392,7 +1387,6 @@
 				A577E95D198101510006052B /* LocalizedString.cpp in Sources */,
 				A58E4D541A57BE8E00C298C7 /* FCHero.cpp in Sources */,
 				A58E4D4E1A57BE6200C298C7 /* FCBuff.cpp in Sources */,
-				A58E4D411A57BB6300C298C7 /* FCGameManager.cpp in Sources */,
 				A5FA68C51988A3BD00108DB9 /* LHShareButton.cpp in Sources */,
 				CEF681431A5921A4008E4986 /* FCGameController.cpp in Sources */,
 				A58E4D3E1A57BB6300C298C7 /* FCAttackObject.cpp in Sources */,

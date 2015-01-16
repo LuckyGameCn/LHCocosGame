@@ -9,7 +9,6 @@
 #include "UITextField.h"
 #include "FCUnitFactory.h"
 #include "FCGameController.h"
-#include "FCGameManager.h"
 #include "UIListView.h"
 #include "FCGameController.h"
 
@@ -54,6 +53,19 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     _gameLayer->setTag(FCGL_STA_VIEW);
     addChild(_gameLayer);
     
+    _gameLayer->onClick = [this](int tx,int ty){
+        if (_actionUnit&&_gameLayer->getTag()==FCGL_STA_MOVE) {
+            if (_gameLayer->isInTmpSprites(tx, ty)) {
+                _actionUnit->move(tx, ty);
+                _actionUnit = nullptr;
+            }
+            return true;
+        }else if (_actionUnit&&_gameLayer->getTag()==FCGL_STA_ATTACK){
+            return true;
+        }
+        return false;
+    };
+    
     std::function<bool(FCObject* me)> unitOnClick =  [this](FCObject* me){
         FCUnit *unit = (FCUnit*)me;
         
@@ -81,12 +93,14 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
                         FCGameController::getInstance()->nextAction();
                         break;
                     case 1:
-                        _gameLayer->drawTmpSprites(FCGameManager::getInstance()->getMoveAbleArea(unit), "lgreenback.png");
+                        _gameLayer->drawTmpSprites(_gameLayer->getMoveAbleArea(unit), "lgreenback.png");
                         _gameLayer->setTag(FCGL_STA_MOVE);
+                        _actionUnit = unit;
                         break;
                     case 2:
-                        _gameLayer->drawTmpSprites(FCGameManager::getInstance()->getActionAbleArea(unit, unit->baseAttackRange), "lblueback.png");
+                        _gameLayer->drawTmpSprites(_gameLayer->getActionAbleArea(unit, unit->baseAttackRange), "lblueback.png");
                         _gameLayer->setTag(FCGL_STA_ATTACK);
+                        _actionUnit = unit;
                         break;
                     default:
                         break;
@@ -99,7 +113,7 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     
     FCGameController::getInstance()->onActionGet = [this,unitOnClick,vo,vs](FCAction* fcac){
         if (fcac->acType==FCActionCreateUnit) {
-            auto u1 = FCUnitFactory::createNomalSoldier((FCCreateUnitAction*)fcac);
+            auto u1 = FCUnitFactory::createNomalSoldier((FCCreateUnitAction*)fcac,_gameLayer);
             u1->onClick = unitOnClick;
             _gameLayer->addFCObject(u1);
             FCGameController::getInstance()->nextAction();

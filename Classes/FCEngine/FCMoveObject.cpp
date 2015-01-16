@@ -7,11 +7,11 @@
 //
 
 #include "FCMoveObject.h"
-#include "FCGameManager.h"
 #include "FCGameConfig.h"
+#include "FCGameLayer.h"
 USING_NS_CC;
 bool FCMoveObject::move(int tx, int ty){
-    return FCGameManager::getInstance()->move(this, tx, ty);
+    return _gameLayer->move(this, tx, ty);
 }
 
 void FCMoveObject::changePosition(int tx, int ty){
@@ -30,7 +30,7 @@ bool FCMoveObject::stopMove(const std::function<void()>& stopComplete){
         }
     }else{
         aSprite->stopAllActions();
-        Vec2 from = FCGameManager::getInstance()->tileToPosition(tx, ty);
+        Vec2 from = _gameLayer->tileToPosition(tx, ty);
         Vec2 cu = aSprite->getPosition();
         int tox = tx;
         int toy = ty;
@@ -43,11 +43,11 @@ bool FCMoveObject::stopMove(const std::function<void()>& stopComplete){
         }else if (cu.y<from.y){
             toy = toy-1;
         }
-        Vec2 to = FCGameManager::getInstance()->tileToPosition(tox, toy);
+        Vec2 to = _gameLayer->tileToPosition(tox, toy);
         float len = to.distance(cu);
         auto mvto = MoveTo::create(len/moveSpeed, to);
         auto call = CallFunc::create([stopComplete,this,tox,toy](){
-            FCGameManager::getInstance()->changePosition(this, tox, toy);
+            _gameLayer->changePosition(this, tox, toy);
             if (stopComplete) stopComplete();
         });
         auto sq = Sequence::create(mvto,call,NULL);

@@ -4,6 +4,7 @@
 #include "cocos2d.h"
 #include "LHGameLayer.h"
 #include "FCGameLayer.h"
+#include "FCUnit.h"
 class PlayScene : public cocos2d::LayerColor
 {
 public:
@@ -14,5 +15,6 @@ public:
 	CREATE_FUNC(PlayScene);
 private:
     FCGameLayer *_gameLayer;
+    FCUnit *_actionUnit;
 };
 #endif

@@ -7,19 +7,22 @@
 //
 
 #include "FCObject.h"
-#include "FCGameManager.h"
 #include "PHSprite.h"
+#include "FCGameLayer.h"
 USING_NS_CC;
-bool FCObject::init(const std::string &name){
-    return init(name, name);
+bool FCObject::init(const std::string &name,FCGameLayer *gamelayer){
+    return init(name, name, gamelayer);
 }
 
-bool FCObject::init(const std::string &filename, const std::string &name){
+bool FCObject::init(const std::string &filename, const std::string &name,FCGameLayer *gamelayer){
 //    aSprite = Sprite::createWithSpriteFrameName(filename);
     aSprite = PHSP(filename);
     aSprite->retain();
     
     this->_name = name;
+    
+    _gameLayer = gamelayer;
+    
     return true;
 }
 
@@ -32,11 +35,11 @@ Vec2 FCObject::getDirection(){
 }
 
 void FCObject::changePosition(int tx, int ty){
-    FCGameManager::getInstance()->changePosition(this, tx, ty);
+    _gameLayer->changePosition(this, tx, ty);
 }
 
 void FCObject::removeSelf(){
-    FCGameManager::getInstance()->removeFCObject(this);
+    _gameLayer->removeFCObject(this);
 }
 
 void FCObject::setDirection(Vec2 direction){

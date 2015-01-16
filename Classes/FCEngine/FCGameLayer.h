@@ -12,6 +12,7 @@
 #include "cocos2d.h"
 #include "FCObject.h"
 #include "FCUnit.h"
+#include "FCAlgo.h"
 
 #define FOCUS_ANI_TIME 0.2f
 
@@ -36,13 +37,20 @@ public:
     bool addFCObject(FCObject* fcobj,int zindex);
     bool addFCObjects(cocos2d::Vector<FCObject*>& fcobjs);
     void clear();
+    bool removeFCObject(FCObject* fcobj);
     
     //get
+    cocos2d::Vector<FCObject*>* getFCObjects(int tx,int ty);
+    FCObject* getFCObject(int tx,int ty);//return the first.
+    FCObject* getFCObject(const std::string& name);
     FCObject* getFCObject(int tag);
     
     //draw
     void drawTmpSprites(std::vector<cocos2d::Vec2> pos,const std::string& fname);
+    bool isInTmpSprites(int tx,int ty);
     void clearTmpSprites();
+    std::vector<cocos2d::Vec2> getMoveAbleArea(FCUnit* unit);
+    std::vector<cocos2d::Vec2> getActionAbleArea(FCUnit* unit,int range);
     
     void focusOn(cocos2d::Vec2 center,float scale,bool animate);
     void focusOn(cocos2d::Vec2 center,float scale,bool animate,cocos2d::CallFunc* complete);
@@ -50,7 +58,20 @@ public:
     std::function<bool(int tx,int ty)> onClick;
     bool canTouchView = true;
     bool touchEnable = true;
+    
+    void clickOn(std::function<bool(int tx,int ty)>& clicktile,float x,float y);
+    bool move(FCMoveObject* fcobj,int tx,int ty);
+    void changePosition(FCObject* fcobj,int tx,int ty);
+    
+    cocos2d::Vec2 tileToPosition(int tx,int ty);
+    cocos2d::Vec2 positionToTile(const cocos2d::Vec2& po);
+    
+    bool isBlock(int tx,int ty);
+    bool isInMap(int tx,int ty);
 private:
+    float fcTileSize;
+    cocos2d::Rect visible;
+    
     cocos2d::Size _visibleSize;
     cocos2d::Size _mapSize;
     
@@ -63,6 +84,11 @@ private:
     cocos2d::Vector<cocos2d::Sprite*> _tmpSprite;
     
     int _touchMode;
+    
+    cocos2d::Vector<FCObject*>* map[MAXTILEMAP_HEIGHT][MAXTILEMAP_WIDTH];
+    
+    int actualTileMapWidth = MAXTILEMAP_WIDTH;
+    int actualTileMapHeight = MAXTILEMAP_HEIGHT;
 };
 
 #endif /* defined(__LHCocosFirstGame__FCGameLayer__) */

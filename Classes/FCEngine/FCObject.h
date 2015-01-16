@@ -11,6 +11,8 @@
 
 #include "cocos2d.h"
 
+class FCGameLayer;
+
 #define FCMAPTYPE_BLOCK -1
 #define FCMAPTYPE_PASS 0
 
@@ -25,8 +27,8 @@ public:
         UP = 0,RIGHT = 1,DOWN = 2,LEFT = 3
     }DIRECTION;
     
-    bool init(const std::string& filename);
-    bool init(const std::string& filename,const std::string& name);
+    bool init(const std::string& filename,FCGameLayer *gamelayer);
+    bool init(const std::string& filename,const std::string& name,FCGameLayer *gamelayer);
     
     virtual ~FCObject(){
         aSprite->removeFromParent();
@@ -52,6 +54,7 @@ public:
     cocos2d::Vec2 getDirection();
     void removeSelf();
 protected:
+    FCGameLayer *_gameLayer;
 private:
     std::string _name;
     cocos2d::Vec2 _direction = FCOBJ_DI_UP;
