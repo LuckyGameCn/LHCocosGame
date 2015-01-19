@@ -54,15 +54,7 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     addChild(_gameLayer);
     
     _gameLayer->onClick = [this](int tx,int ty){
-        if (_actionUnit&&_gameLayer->getTag()==FCGL_STA_MOVE) {
-            if (_gameLayer->isInTmpSprites(tx, ty)) {
-                _actionUnit->move(tx, ty);
-                _actionUnit = nullptr;
-            }
-            return true;
-        }else if (_actionUnit&&_gameLayer->getTag()==FCGL_STA_ATTACK){
-            return true;
-        }
+        
         return false;
     };
     
@@ -93,14 +85,10 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
                         FCGameController::getInstance()->nextAction();
                         break;
                     case 1:
-                        _gameLayer->drawTmpSprites(_gameLayer->getMoveAbleArea(unit), "lgreenback.png");
-                        _gameLayer->setTag(FCGL_STA_MOVE);
-                        _actionUnit = unit;
+                
                         break;
                     case 2:
-                        _gameLayer->drawTmpSprites(_gameLayer->getActionAbleArea(unit, unit->baseAttackRange), "lblueback.png");
-                        _gameLayer->setTag(FCGL_STA_ATTACK);
-                        _actionUnit = unit;
+                    
                         break;
                     default:
                         break;

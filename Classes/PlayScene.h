@@ -15,6 +15,5 @@ public:
 	CREATE_FUNC(PlayScene);
 private:
     FCGameLayer *_gameLayer;
-    FCUnit *_actionUnit;
 };
 #endif

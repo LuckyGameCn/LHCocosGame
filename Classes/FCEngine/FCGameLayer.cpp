@@ -76,38 +76,6 @@ void FCGameLayer::setVisibleSize(cocos2d::Vec2 vs){
     _visibleSize = vs;
 }
 
-void FCGameLayer::drawTmpSprites(std::vector<cocos2d::Vec2> pos,const std::string& fname){
-    clearTmpSprites();
-    for (auto v : pos){
-        auto sp = Sprite::create(fname);
-        sp->setPosition(tileToPosition(v.x, v.y));
-        addChild(sp);
-        _tmpSprite.pushBack(sp);
-    }
-}
-
-bool FCGameLayer::isInTmpSprites(int tx, int ty){
-    for (auto sp : _tmpSprite){
-        Vec2 tp=positionToTile(sp->getPosition());
-        int tmpx=tp.x;
-        int tmpy=tp.y;
-        if (tmpx==tx&&tmpy==ty){
-            return true;
-        }
-    }
-    return false;
-}
-
-void FCGameLayer::clearTmpSprites(){
-    if (_tmpSprite.size()==0) {
-        return;
-    }
-    for (auto sp : _tmpSprite){
-        sp->removeFromParent();
-    }
-    _tmpSprite.clear();
-}
-
 bool FCGameLayer::setTiledMap(const std::string &tiledmap,float ts,std::function<cocos2d::Vector<FCObject*>(TMXObjectGroup* group)> callback){
     _map = TMXTiledMap::create(tiledmap);
     if (!_map) {
@@ -144,43 +112,6 @@ bool FCGameLayer::setTileSize(float ts){
 
 float FCGameLayer::getTileSize(){
     return fcTileSize;
-}
-
-std::vector<Vec2> FCGameLayer::getMoveAbleArea(FCUnit *unit){
-    
-    std::vector<std::vector<int>> graph;
-    for (int i = 0 ; i<actualTileMapHeight; i++) {
-        std::vector<int> line;
-        for (int j=0; j<actualTileMapWidth; j++) {
-            auto vc = map[i][j];
-            if(vc->size()==1){
-                line.push_back(vc->at(0)->mapType);
-            }else{
-                line.push_back(FCMAPTYPE_PASS);
-            }
-        }
-        graph.push_back(line);
-    }
-    std::vector<Vec2> area = FCAlgo::B_Search(graph, Vec2(unit->tx, unit->ty), unit->actionValue);
-    return area;
-}
-
-std::vector<Vec2> FCGameLayer::getActionAbleArea(FCUnit *unit,int range){
-    std::vector<std::vector<int>> graph;
-    for (int i = 0 ; i<actualTileMapHeight; i++) {
-        std::vector<int> line;
-        for (int j=0; j<actualTileMapWidth; j++) {
-            auto vc = map[i][j];
-            if(vc->size()==1){
-                line.push_back(vc->at(0)->mapType);
-            }else{
-                line.push_back(FCMAPTYPE_PASS);
-            }
-        }
-        graph.push_back(line);
-    }
-    std::vector<Vec2> area = FCAlgo::B_Search_Noround(graph, Vec2(unit->tx, unit->ty), range);
-    return area;
 }
 
 bool FCGameLayer::addFCObject(FCObject *fcobj){
