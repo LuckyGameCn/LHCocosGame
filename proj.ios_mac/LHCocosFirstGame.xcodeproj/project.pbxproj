@@ -141,6 +141,7 @@
 		CE5B9A561A663D1400B28AE0 /* FCMoveAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9A541A663D1400B28AE0 /* FCMoveAction.cpp */; };
 		CE5B9A591A663D2300B28AE0 /* FCAttackAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9A571A663D2300B28AE0 /* FCAttackAction.cpp */; };
 		CE5B9A5C1A663D9B00B28AE0 /* FCControlAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9A5A1A663D9B00B28AE0 /* FCControlAction.cpp */; };
+		CE95DA371A6E35170086CD5C /* FCSkillFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE95DA351A6E35170086CD5C /* FCSkillFactory.cpp */; };
 		CECD83AB1A42DB7200973211 /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CECD83A81A42DB7200973211 /* libjansson.a */; };
 		CECD83AC1A42DB7200973211 /* libpomelo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CECD83A91A42DB7200973211 /* libpomelo.a */; };
 		CECD83AD1A42DB7200973211 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CECD83AA1A42DB7200973211 /* libuv.a */; };
@@ -512,6 +513,8 @@
 		CE5B9A581A663D2300B28AE0 /* FCAttackAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAttackAction.h; sourceTree = "<group>"; };
 		CE5B9A5A1A663D9B00B28AE0 /* FCControlAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCControlAction.cpp; sourceTree = "<group>"; };
 		CE5B9A5B1A663D9B00B28AE0 /* FCControlAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCControlAction.h; sourceTree = "<group>"; };
+		CE95DA351A6E35170086CD5C /* FCSkillFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCSkillFactory.cpp; sourceTree = "<group>"; };
+		CE95DA361A6E35170086CD5C /* FCSkillFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSkillFactory.h; sourceTree = "<group>"; };
 		CECD83A81A42DB7200973211 /* libjansson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjansson.a; sourceTree = "<group>"; };
 		CECD83A91A42DB7200973211 /* libpomelo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpomelo.a; sourceTree = "<group>"; };
 		CECD83AA1A42DB7200973211 /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv.a; sourceTree = "<group>"; };
@@ -888,6 +891,8 @@
 			children = (
 				A58E4D591A57C87B00C298C7 /* FCUnitFactory.cpp */,
 				A58E4D5A1A57C87B00C298C7 /* FCUnitFactory.h */,
+				CE95DA351A6E35170086CD5C /* FCSkillFactory.cpp */,
+				CE95DA361A6E35170086CD5C /* FCSkillFactory.h */,
 			);
 			name = FCGame;
 			path = ../Classes/FCGame;
@@ -1380,6 +1385,7 @@
 				A594EF391A445618004B65EA /* LHPomeloManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				A59A47FD1952CDBD00217F27 /* NDKCallbackNode.cpp in Sources */,
+				CE95DA371A6E35170086CD5C /* FCSkillFactory.cpp in Sources */,
 				CE5B9A591A663D2300B28AE0 /* FCAttackAction.cpp in Sources */,
 				CEF681481A594018008E4986 /* FCCalEngine.cpp in Sources */,
 				A58E4D511A57BE8100C298C7 /* FCSkill.cpp in Sources */,

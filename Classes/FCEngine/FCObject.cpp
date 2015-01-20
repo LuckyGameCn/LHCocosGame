@@ -26,6 +26,10 @@ bool FCObject::init(const std::string &filename, const std::string &name,FCGameL
     return true;
 }
 
+FCGameLayer* FCObject::getGameLayer(){
+    return _gameLayer;
+}
+
 const std::string& FCObject::getName(){
     return this->_name;
 }

@@ -35,6 +35,7 @@ public:
     
     void addBuff(FCBuff* buff);
     void addSkill(FCSkill* skill);
+    cocos2d::Vector<FCSkill*> getSkills();
     
     //action
     void attack(FCUnit *unit,const std::function<void()>& done);

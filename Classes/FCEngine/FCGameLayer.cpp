@@ -114,6 +114,32 @@ float FCGameLayer::getTileSize(){
     return fcTileSize;
 }
 
+void FCGameLayer::enumerateMap(const std::function<bool (int, int, cocos2d::Vector<FCObject *> *)> &callback){
+    
+}
+
+void FCGameLayer::drawRange(FCSkill *skill, const std::string &name){
+    std::vector<cocos2d::Vec2> *range = skill->onSkillRange();
+    for (auto vc =range->begin() ;vc!=range->end();vc++) {
+        Vec2 po = *vc;
+        auto sp = Sprite::create(name);
+        sp->setPosition(tileToPosition(po.x, po.y));
+        sp->setTag(-1);//tag < 0.tmp sprite.
+        addChild(sp);
+    }
+    _rangeSkill = skill;
+}
+
+void FCGameLayer::clearRange(){
+    Vector<Node*> cdren = getChildren();
+    for (auto nd = cdren.begin(); nd!=cdren.end(); nd++) {
+        if ((*nd)->getTag()<0) {
+            (*nd)->removeFromParent();
+        }
+    }
+    _rangeSkill = nullptr;
+}
+
 bool FCGameLayer::addFCObject(FCObject *fcobj){
     return this->addFCObject(fcobj, 0);
 }
@@ -195,8 +221,15 @@ bool FCGameLayer::removeFCObject(FCObject *fcobj){
 void FCGameLayer::clickOn(std::function<bool(int tx,int ty)>& clicktile,float x, float y){
     int tx = x/fcTileSize;
     int ty = y/fcTileSize;
-    //    log("click %d,%d",tx,ty);
     auto vc = map[ty][tx];
+    
+    if (_rangeSkill&&_rangeSkill->onDrawedRangeClick) {
+        if(_rangeSkill->onDrawedRangeClick(tx,ty,vc)){
+            this->clearRange();
+        }
+        return;
+    }
+    
     if (clicktile && clicktile(tx,ty)) {
         return;
     }else{

@@ -27,10 +27,15 @@ void FCUnit::attack(FCUnit *unit,const std::function<void()>& done){
     if (done) done();
 }
 
+cocos2d::Vector<FCSkill*> FCUnit::getSkills(){
+    return _skills;
+}
+
 void FCUnit::addBuff(FCBuff *buff){
     
 }
 
 void FCUnit::addSkill(FCSkill *skill){
-    
+    skill->owner = this;
+    _skills.pushBack(skill);
 }

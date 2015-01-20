@@ -33,6 +33,10 @@ public:
     void setMapTileSize(int tw,int th);
     void setVisibleSize(cocos2d::Vec2 vs);
     
+    void enumerateMap(const std::function<bool(int tx,int ty,cocos2d::Vector<FCObject*>* objs)>& callback);
+    void drawRange(FCSkill *skill,const std::string& name);
+    void clearRange();
+    
     bool addFCObject(FCObject* fcobj);
     bool addFCObject(FCObject* fcobj,int zindex);
     bool addFCObjects(cocos2d::Vector<FCObject*>& fcobjs);
@@ -74,6 +78,7 @@ private:
     
     //game
     cocos2d::TMXTiledMap* _map;
+    FCSkill *_rangeSkill = nullptr;
     
     int _touchMode;
     

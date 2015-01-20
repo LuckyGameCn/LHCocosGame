@@ -48,6 +48,7 @@ public:
     std::function<bool(FCObject* fcobj)> onObjectDidEnter;
     
     //func
+    FCGameLayer* getGameLayer();
     const std::string& getName();
     void setDirection(cocos2d::Vec2 direction);
     virtual void changePosition(int tx,int ty);

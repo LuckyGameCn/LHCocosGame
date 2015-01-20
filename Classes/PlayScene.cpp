@@ -7,10 +7,12 @@
 #include "LocalizedString.h"
 #include "LHGameChat.h"
 #include "UITextField.h"
-#include "FCUnitFactory.h"
 #include "FCGameController.h"
 #include "UIListView.h"
 #include "FCGameController.h"
+
+//factory
+#include "FCUnitFactory.h"
 
 //actions
 #include "FCControlAction.h"
@@ -72,27 +74,16 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
         aclist->setPosition(Vec2(vo.x+vs.width/2-ls.width/2, vo.y+vs.height/2-ls.height/2));
         rs->addChild(aclist);
         
-        std::vector<std::string> acs={"End","Move","Attack"};
-        for (int i =0; i<acs.size(); i++) {
-            auto txt = ui::Text::create(acs[i], "", 40);
+        auto skills = unit->getSkills();
+        for (int i =0; i<skills.size(); i++) {
+            auto skill = skills.at(i);
+            auto txt = ui::Text::create(skill->name, "", 40);
             aclist->pushBackCustomItem(txt);
         }
-        aclist->addEventListener([aclist,this,unit](Ref*, ui::ListView::EventType tp){
+        aclist->addEventListener([aclist,this,skills](Ref*, ui::ListView::EventType tp){
             if (tp==ui::ListView::EventType::ON_SELECTED_ITEM_END) {
-                switch (aclist->getCurSelectedIndex()) {
-                    case 0:
-                        unit->clickEnable=false;
-                        FCGameController::getInstance()->nextAction();
-                        break;
-                    case 1:
-                
-                        break;
-                    case 2:
-                    
-                        break;
-                    default:
-                        break;
-                }
+                auto skill = skills.at(aclist->getCurSelectedIndex());
+                skill->onSkillClick();
                 aclist->removeFromParent();
             }
         });
