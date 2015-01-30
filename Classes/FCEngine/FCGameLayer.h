@@ -79,6 +79,7 @@ private:
     //game
     cocos2d::TMXTiledMap* _map;
     FCSkill *_rangeSkill = nullptr;
+    cocos2d::Vector<cocos2d::Sprite*> _rangeSprite;
     
     int _touchMode;
     

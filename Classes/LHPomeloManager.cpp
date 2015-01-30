@@ -120,52 +120,55 @@ static void requstGateCallback(pc_request_t *req, int status, json_t *resp)
     } else if(status == 0) {
         auto connectorHost = json_string_value(json_object_get(resp, "host"));
         auto connectorPort = json_number_value(json_object_get(resp, "port"));
-        pc_client_t *client = pc_client_new();
         
-        struct sockaddr_in address;
-        
-        memset(&address, 0, sizeof(struct sockaddr_in));
-        address.sin_family = AF_INET;
-        address.sin_port = htons(connectorPort);
-        address.sin_addr.s_addr = inet_addr(connectorHost);
-        
-        // add pomelo events listener
-        void (*on_disconnect)(pc_client_t *client, const char *event, void *data) = &onDisconnectCallback;
-        void (*on_chat)(pc_client_t *client, const char *event, void *data) = &onChatCallback;
-        void (*on_add)(pc_client_t *client, const char *event, void *data) = &onAddCallback;
-        void (*on_leave)(pc_client_t *client, const char *event, void *data) = &onLeaveCallback;
-        
-        pc_add_listener(client, "disconnect", on_disconnect);
-        pc_add_listener(client, "onChat", on_chat);
-        pc_add_listener(client, "onAdd", on_add);
-        pc_add_listener(client, "onLeave", on_leave);
-        
-        // try to connect to server.
-        if(pc_client_connect(client, &address)) {
-            CCLOG("fail to connect server.\n");
-            pc_client_destroy(client);
-            return ;
-        }
-        
-        LHPomeloManager *pm = managerByClient(req->client);
-        if (pm) {
-            pm->pomeloClient = client;
-            const std::string& username = pm->getUserName();
-            const std::string& channel = pm->getChannel();
+        if (connectorHost!=NULL) {
+            pc_client_t *client = pc_client_new();
             
-            const char *route = "connector.entryHandler.enter";
-            json_t *msg = json_object();
-            json_t *str = json_string(username.c_str());
-            json_t *channel_str = json_string(channel.c_str());
-            json_object_set(msg, "username", str);
-            json_object_set(msg, "rid", channel_str);
-            // decref for json object
-            json_decref(str);
-            json_decref(channel_str);
+            struct sockaddr_in address;
             
-            pc_request_t *request = pc_request_new();
-            void (*connect_cb)(pc_request_t *req, int status, json_t *resp )= &requstConnectorCallback;
-            pc_request(client, request, route, msg, connect_cb);
+            memset(&address, 0, sizeof(struct sockaddr_in));
+            address.sin_family = AF_INET;
+            address.sin_port = htons(connectorPort);
+            address.sin_addr.s_addr = inet_addr(connectorHost);
+            
+            // add pomelo events listener
+            void (*on_disconnect)(pc_client_t *client, const char *event, void *data) = &onDisconnectCallback;
+            void (*on_chat)(pc_client_t *client, const char *event, void *data) = &onChatCallback;
+            void (*on_add)(pc_client_t *client, const char *event, void *data) = &onAddCallback;
+            void (*on_leave)(pc_client_t *client, const char *event, void *data) = &onLeaveCallback;
+            
+            pc_add_listener(client, "disconnect", on_disconnect);
+            pc_add_listener(client, "onChat", on_chat);
+            pc_add_listener(client, "onAdd", on_add);
+            pc_add_listener(client, "onLeave", on_leave);
+            
+            // try to connect to server.
+            if(pc_client_connect(client, &address)) {
+                CCLOG("fail to connect server.\n");
+                pc_client_destroy(client);
+                return ;
+            }
+            
+            LHPomeloManager *pm = managerByClient(req->client);
+            if (pm) {
+                pm->pomeloClient = client;
+                const std::string& username = pm->getUserName();
+                const std::string& channel = pm->getChannel();
+                
+                const char *route = "connector.entryHandler.enter";
+                json_t *msg = json_object();
+                json_t *str = json_string(username.c_str());
+                json_t *channel_str = json_string(channel.c_str());
+                json_object_set(msg, "username", str);
+                json_object_set(msg, "rid", channel_str);
+                // decref for json object
+                json_decref(str);
+                json_decref(channel_str);
+                
+                pc_request_t *request = pc_request_new();
+                void (*connect_cb)(pc_request_t *req, int status, json_t *resp )= &requstConnectorCallback;
+                pc_request(client, request, route, msg, connect_cb);
+            }
         }
     }
     

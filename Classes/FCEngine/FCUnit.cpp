@@ -17,14 +17,18 @@ FCUnit::FCUnit(){
 void FCUnit::attack(FCUnit *unit,const std::function<void()>& done){
     int damage = FCCalEngine::attack(this, unit);
     unit->healthValue -= damage;
-    auto dtext = ui::Text::create(StringUtils::format("%d",damage), "", 20);
+    auto dtext = ui::Text::create(StringUtils::format("-%d",damage), "", 30);
     dtext->setPosition(unit->aSprite->getPosition());
+    dtext->setColor(Color3B::RED);
     unit->aSprite->getParent()->addChild(dtext);
     auto fo = FadeOut::create(1);
     auto rs = RemoveSelf::create();
     auto sq = Sequence::create(fo,rs, NULL);
     dtext->runAction(sq);
     if (done) done();
+    if (unit->healthValue<=0) {
+        unit->removeSelf();
+    }
 }
 
 cocos2d::Vector<FCSkill*> FCUnit::getSkills(){

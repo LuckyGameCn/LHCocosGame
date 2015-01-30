@@ -35,10 +35,11 @@ FCSkill* FCSkillFactory::createFCAttack(){
             return false;
         }
         
+        skill->owner->clickEnable=false;
         skill->owner->attack((FCUnit*)objs->at(0), [skill](){
             skill->owner->clickEnable=true;
         });
-        skill->owner->clickEnable=false;
+        
         
         return true;
     };
@@ -56,8 +57,8 @@ FCSkill* FCSkillFactory::createFCMove(){
     skill->onSkillRange=[skill](){
         std::vector<Vec2> *range = new std::vector<Vec2>;
         auto gl = skill->owner->getGameLayer();
-        gl->enumerateMap([range,skill](int tx, int ty, cocos2d::Vector<FCObject *> *){
-            if (tx==skill->owner->tx||ty==skill->owner->ty) {
+        gl->enumerateMap([range,skill](int tx, int ty, cocos2d::Vector<FCObject *> *vc){
+            if (vc->size()==0&&(tx==skill->owner->tx||ty==skill->owner->ty)) {
                 range->push_back(Vec2(tx, ty));
             }
             return true;

@@ -42,6 +42,26 @@ void PlayScene::update(float delta){
     
 }
 
+static void test(){
+    FCCreateUnitAction *ac = new FCCreateUnitAction();
+    ac->autorelease();
+    ac->tag=1;
+    ac->tx=3;
+    ac->ty=4;
+    FCGameController::getInstance()->onActionGet(ac);
+    
+    ac = new FCCreateUnitAction();
+    ac->autorelease();
+    ac->tag=2;
+    ac->tx=4;
+    ac->ty=4;
+    FCGameController::getInstance()->onActionGet(ac);
+    
+    FCControlAction *cac = new FCControlAction();
+    cac->ttag=1;
+    FCGameController::getInstance()->onActionGet(cac);
+}
+
 bool PlayScene::initDict(cocos2d::CCDictionary *dic)
 {
     Size vs = Director::getInstance()->getVisibleSize();
@@ -130,6 +150,8 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
         }
     };
     FCGameController::getInstance()->connect();
+    
+    test();
     
 	return true;
 }

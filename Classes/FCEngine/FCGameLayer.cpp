@@ -115,7 +115,12 @@ float FCGameLayer::getTileSize(){
 }
 
 void FCGameLayer::enumerateMap(const std::function<bool (int, int, cocos2d::Vector<FCObject *> *)> &callback){
-    
+    for (int i=0; i<actualTileMapWidth; i++) {
+        for (int j=0; j<actualTileMapHeight; j++) {
+            auto vc = map[j][i];
+            callback(i,j,vc);
+        }
+    }
 }
 
 void FCGameLayer::drawRange(FCSkill *skill, const std::string &name){
@@ -124,19 +129,20 @@ void FCGameLayer::drawRange(FCSkill *skill, const std::string &name){
         Vec2 po = *vc;
         auto sp = Sprite::create(name);
         sp->setPosition(tileToPosition(po.x, po.y));
-        sp->setTag(-1);//tag < 0.tmp sprite.
         addChild(sp);
+        _rangeSprite.pushBack(sp);
     }
     _rangeSkill = skill;
+    
+    delete range;
 }
 
 void FCGameLayer::clearRange(){
-    Vector<Node*> cdren = getChildren();
+    Vector<Sprite*> cdren = _rangeSprite;
     for (auto nd = cdren.begin(); nd!=cdren.end(); nd++) {
-        if ((*nd)->getTag()<0) {
-            (*nd)->removeFromParent();
-        }
+        (*nd)->removeFromParent();
     }
+    _rangeSprite.clear();
     _rangeSkill = nullptr;
 }
 
