@@ -27,7 +27,6 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
-#import "UMSocialSnsService.h"
 
 @implementation AppController
 
@@ -140,7 +139,7 @@ static AppDelegate s_sharedApplication;
 }
 
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    return [UMSocialSnsService handleOpenURL:url];
+    return NO;
 }
 
 #pragma mark -

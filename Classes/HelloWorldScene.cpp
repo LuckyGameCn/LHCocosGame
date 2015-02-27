@@ -11,7 +11,6 @@
 #include "LHMacros.h"
 
 USING_NS_CC;
-USING_NS_UM_SOCIAL;
 
 Scene* HelloWorld::createScene()
 {

@@ -13,8 +13,6 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
 ../../Classes/AppDelegate.cpp \
-../../Classes/CCUMSocialController.cpp \
-../../Classes/CCUMSocialSDK.cpp \
 ../../Classes/DeveloperInfoScence.cpp \
 ../../Classes/GameOverScene.cpp \
 ../../Classes/HelloWorldScene.cpp \
@@ -26,8 +24,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 ../../Classes/NDKHelper/NDKHelper.cpp \
 ../../Classes/PlayScene.cpp \
 ../../Classes/ThirdPartyHelper.cpp \
-../../Classes/LHGameLayer.cpp \
-../../Classes/UMShareButton.cpp
+../../Classes/LHGameLayer.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes \
 					$(LOCAL_PATH)/../../Classes/NDKHelper \
