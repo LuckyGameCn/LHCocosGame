@@ -2,9 +2,6 @@
 #ifndef __PLAYSCENE__
 #define __PLAYSCENE__
 #include "cocos2d.h"
-#include "LHGameLayer.h"
-#include "FCGameLayer.h"
-#include "FCUnit.h"
 class PlayScene : public cocos2d::LayerColor
 {
 public:
@@ -14,6 +11,5 @@ public:
     virtual void update(float delta);
 	CREATE_FUNC(PlayScene);
 private:
-    FCGameLayer *_gameLayer;
 };
 #endif

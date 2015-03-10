@@ -67,18 +67,6 @@
 		A577E96D19810ABA0006052B /* ch_ls.plist in Resources */ = {isa = PBXBuildFile; fileRef = A577E96B19810ABA0006052B /* ch_ls.plist */; };
 		A577E96E19810ABA0006052B /* en_ls.plist in Resources */ = {isa = PBXBuildFile; fileRef = A577E96C19810ABA0006052B /* en_ls.plist */; };
 		A5831E5A1A2864B700929F1D /* LHHttpManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5831E581A2864B700929F1D /* LHHttpManager.cpp */; };
-		A58E4D3D1A57BB6300C298C7 /* FCAlgo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D2F1A57BB6300C298C7 /* FCAlgo.cpp */; };
-		A58E4D3E1A57BB6300C298C7 /* FCAttackObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D311A57BB6300C298C7 /* FCAttackObject.cpp */; };
-		A58E4D3F1A57BB6300C298C7 /* FCGameConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D331A57BB6300C298C7 /* FCGameConfig.cpp */; };
-		A58E4D401A57BB6300C298C7 /* FCGameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D351A57BB6300C298C7 /* FCGameLayer.cpp */; };
-		A58E4D421A57BB6300C298C7 /* FCMoveObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D391A57BB6300C298C7 /* FCMoveObject.cpp */; };
-		A58E4D431A57BB6300C298C7 /* FCObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D3B1A57BB6300C298C7 /* FCObject.cpp */; };
-		A58E4D491A57BE3000C298C7 /* FCUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D471A57BE3000C298C7 /* FCUnit.cpp */; };
-		A58E4D4E1A57BE6200C298C7 /* FCBuff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D4C1A57BE6200C298C7 /* FCBuff.cpp */; };
-		A58E4D511A57BE8100C298C7 /* FCSkill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D4F1A57BE8100C298C7 /* FCSkill.cpp */; };
-		A58E4D541A57BE8E00C298C7 /* FCHero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D521A57BE8E00C298C7 /* FCHero.cpp */; };
-		A58E4D571A57C7C400C298C7 /* FCItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D551A57C7C400C298C7 /* FCItem.cpp */; };
-		A58E4D5B1A57C87B00C298C7 /* FCUnitFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A58E4D591A57C87B00C298C7 /* FCUnitFactory.cpp */; };
 		A594BDD119470429001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE3C194B026B001DEF30 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A594BDD019470429001DEF30 /* play.png */; };
 		A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A594BE3F194D450C001DEF30 /* GameOverScene.cpp */; };
@@ -115,18 +103,9 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
-		CE5B9A4D1A661BD200B28AE0 /* FCAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9A4B1A661BD200B28AE0 /* FCAction.cpp */; };
-		CE5B9A501A66206400B28AE0 /* FCCreateUnitAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9A4E1A66206400B28AE0 /* FCCreateUnitAction.cpp */; };
-		CE5B9A531A66384300B28AE0 /* FCShowUIAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9A511A66384300B28AE0 /* FCShowUIAction.cpp */; };
-		CE5B9A561A663D1400B28AE0 /* FCMoveAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9A541A663D1400B28AE0 /* FCMoveAction.cpp */; };
-		CE5B9A591A663D2300B28AE0 /* FCAttackAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9A571A663D2300B28AE0 /* FCAttackAction.cpp */; };
-		CE5B9A5C1A663D9B00B28AE0 /* FCControlAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9A5A1A663D9B00B28AE0 /* FCControlAction.cpp */; };
-		CE95DA371A6E35170086CD5C /* FCSkillFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE95DA351A6E35170086CD5C /* FCSkillFactory.cpp */; };
 		CECD83AB1A42DB7200973211 /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CECD83A81A42DB7200973211 /* libjansson.a */; };
 		CECD83AC1A42DB7200973211 /* libpomelo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CECD83A91A42DB7200973211 /* libpomelo.a */; };
 		CECD83AD1A42DB7200973211 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CECD83AA1A42DB7200973211 /* libuv.a */; };
-		CEF681431A5921A4008E4986 /* FCGameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF681411A5921A4008E4986 /* FCGameController.cpp */; };
-		CEF681481A594018008E4986 /* FCCalEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF681461A594018008E4986 /* FCCalEngine.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -341,30 +320,6 @@
 		A577E96C19810ABA0006052B /* en_ls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = en_ls.plist; sourceTree = "<group>"; };
 		A5831E581A2864B700929F1D /* LHHttpManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LHHttpManager.cpp; path = ../Classes/LHHttpManager.cpp; sourceTree = "<group>"; };
 		A5831E591A2864B700929F1D /* LHHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHHttpManager.h; path = ../Classes/LHHttpManager.h; sourceTree = "<group>"; };
-		A58E4D2F1A57BB6300C298C7 /* FCAlgo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCAlgo.cpp; sourceTree = "<group>"; };
-		A58E4D301A57BB6300C298C7 /* FCAlgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAlgo.h; sourceTree = "<group>"; };
-		A58E4D311A57BB6300C298C7 /* FCAttackObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCAttackObject.cpp; sourceTree = "<group>"; };
-		A58E4D321A57BB6300C298C7 /* FCAttackObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAttackObject.h; sourceTree = "<group>"; };
-		A58E4D331A57BB6300C298C7 /* FCGameConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCGameConfig.cpp; sourceTree = "<group>"; };
-		A58E4D341A57BB6300C298C7 /* FCGameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGameConfig.h; sourceTree = "<group>"; };
-		A58E4D351A57BB6300C298C7 /* FCGameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCGameLayer.cpp; sourceTree = "<group>"; };
-		A58E4D361A57BB6300C298C7 /* FCGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGameLayer.h; sourceTree = "<group>"; };
-		A58E4D391A57BB6300C298C7 /* FCMoveObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCMoveObject.cpp; sourceTree = "<group>"; };
-		A58E4D3A1A57BB6300C298C7 /* FCMoveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCMoveObject.h; sourceTree = "<group>"; };
-		A58E4D3B1A57BB6300C298C7 /* FCObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCObject.cpp; sourceTree = "<group>"; };
-		A58E4D3C1A57BB6300C298C7 /* FCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCObject.h; sourceTree = "<group>"; };
-		A58E4D471A57BE3000C298C7 /* FCUnit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCUnit.cpp; sourceTree = "<group>"; };
-		A58E4D481A57BE3000C298C7 /* FCUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCUnit.h; sourceTree = "<group>"; };
-		A58E4D4C1A57BE6200C298C7 /* FCBuff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCBuff.cpp; sourceTree = "<group>"; };
-		A58E4D4D1A57BE6200C298C7 /* FCBuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCBuff.h; sourceTree = "<group>"; };
-		A58E4D4F1A57BE8100C298C7 /* FCSkill.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCSkill.cpp; sourceTree = "<group>"; };
-		A58E4D501A57BE8100C298C7 /* FCSkill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSkill.h; sourceTree = "<group>"; };
-		A58E4D521A57BE8E00C298C7 /* FCHero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCHero.cpp; sourceTree = "<group>"; };
-		A58E4D531A57BE8E00C298C7 /* FCHero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHero.h; sourceTree = "<group>"; };
-		A58E4D551A57C7C400C298C7 /* FCItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCItem.cpp; sourceTree = "<group>"; };
-		A58E4D561A57C7C400C298C7 /* FCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCItem.h; sourceTree = "<group>"; };
-		A58E4D591A57C87B00C298C7 /* FCUnitFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCUnitFactory.cpp; sourceTree = "<group>"; };
-		A58E4D5A1A57C87B00C298C7 /* FCUnitFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCUnitFactory.h; sourceTree = "<group>"; };
 		A594BDD019470429001DEF30 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		A594BE3F194D450C001DEF30 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverScene.cpp; path = ../Classes/GameOverScene.cpp; sourceTree = "<group>"; };
 		A594BE40194D450C001DEF30 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = ../Classes/GameOverScene.h; sourceTree = "<group>"; };
@@ -439,27 +394,9 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		CE5B9A4B1A661BD200B28AE0 /* FCAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCAction.cpp; sourceTree = "<group>"; };
-		CE5B9A4C1A661BD200B28AE0 /* FCAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAction.h; sourceTree = "<group>"; };
-		CE5B9A4E1A66206400B28AE0 /* FCCreateUnitAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCCreateUnitAction.cpp; sourceTree = "<group>"; };
-		CE5B9A4F1A66206400B28AE0 /* FCCreateUnitAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCreateUnitAction.h; sourceTree = "<group>"; };
-		CE5B9A511A66384300B28AE0 /* FCShowUIAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCShowUIAction.cpp; sourceTree = "<group>"; };
-		CE5B9A521A66384300B28AE0 /* FCShowUIAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCShowUIAction.h; sourceTree = "<group>"; };
-		CE5B9A541A663D1400B28AE0 /* FCMoveAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCMoveAction.cpp; sourceTree = "<group>"; };
-		CE5B9A551A663D1400B28AE0 /* FCMoveAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCMoveAction.h; sourceTree = "<group>"; };
-		CE5B9A571A663D2300B28AE0 /* FCAttackAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCAttackAction.cpp; sourceTree = "<group>"; };
-		CE5B9A581A663D2300B28AE0 /* FCAttackAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAttackAction.h; sourceTree = "<group>"; };
-		CE5B9A5A1A663D9B00B28AE0 /* FCControlAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCControlAction.cpp; sourceTree = "<group>"; };
-		CE5B9A5B1A663D9B00B28AE0 /* FCControlAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCControlAction.h; sourceTree = "<group>"; };
-		CE95DA351A6E35170086CD5C /* FCSkillFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCSkillFactory.cpp; sourceTree = "<group>"; };
-		CE95DA361A6E35170086CD5C /* FCSkillFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSkillFactory.h; sourceTree = "<group>"; };
 		CECD83A81A42DB7200973211 /* libjansson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjansson.a; sourceTree = "<group>"; };
 		CECD83A91A42DB7200973211 /* libpomelo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpomelo.a; sourceTree = "<group>"; };
 		CECD83AA1A42DB7200973211 /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv.a; sourceTree = "<group>"; };
-		CEF681411A5921A4008E4986 /* FCGameController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCGameController.cpp; sourceTree = "<group>"; };
-		CEF681421A5921A4008E4986 /* FCGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGameController.h; sourceTree = "<group>"; };
-		CEF681461A594018008E4986 /* FCCalEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCCalEngine.cpp; sourceTree = "<group>"; };
-		CEF681471A594018008E4986 /* FCCalEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCalEngine.h; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -554,8 +491,6 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A58E4D581A57C84E00C298C7 /* FCGame */,
-				A58E4D2E1A57BB6300C298C7 /* FCEngine */,
 				A51748941A45266A006A5152 /* GameChat */,
 				A5831E551A2864A100929F1D /* NetWork */,
 				A5FA68CE1988A52A00108DB9 /* Game */,
@@ -777,53 +712,6 @@
 			name = NetWork;
 			sourceTree = "<group>";
 		};
-		A58E4D2E1A57BB6300C298C7 /* FCEngine */ = {
-			isa = PBXGroup;
-			children = (
-				CE5B9A4A1A661BD200B28AE0 /* FCAction */,
-				A58E4D2F1A57BB6300C298C7 /* FCAlgo.cpp */,
-				A58E4D301A57BB6300C298C7 /* FCAlgo.h */,
-				A58E4D311A57BB6300C298C7 /* FCAttackObject.cpp */,
-				A58E4D321A57BB6300C298C7 /* FCAttackObject.h */,
-				A58E4D331A57BB6300C298C7 /* FCGameConfig.cpp */,
-				A58E4D341A57BB6300C298C7 /* FCGameConfig.h */,
-				A58E4D351A57BB6300C298C7 /* FCGameLayer.cpp */,
-				A58E4D361A57BB6300C298C7 /* FCGameLayer.h */,
-				A58E4D391A57BB6300C298C7 /* FCMoveObject.cpp */,
-				A58E4D3A1A57BB6300C298C7 /* FCMoveObject.h */,
-				A58E4D3B1A57BB6300C298C7 /* FCObject.cpp */,
-				A58E4D3C1A57BB6300C298C7 /* FCObject.h */,
-				A58E4D471A57BE3000C298C7 /* FCUnit.cpp */,
-				A58E4D481A57BE3000C298C7 /* FCUnit.h */,
-				A58E4D4C1A57BE6200C298C7 /* FCBuff.cpp */,
-				A58E4D4D1A57BE6200C298C7 /* FCBuff.h */,
-				A58E4D4F1A57BE8100C298C7 /* FCSkill.cpp */,
-				A58E4D501A57BE8100C298C7 /* FCSkill.h */,
-				A58E4D521A57BE8E00C298C7 /* FCHero.cpp */,
-				A58E4D531A57BE8E00C298C7 /* FCHero.h */,
-				A58E4D551A57C7C400C298C7 /* FCItem.cpp */,
-				A58E4D561A57C7C400C298C7 /* FCItem.h */,
-				CEF681411A5921A4008E4986 /* FCGameController.cpp */,
-				CEF681421A5921A4008E4986 /* FCGameController.h */,
-				CEF681461A594018008E4986 /* FCCalEngine.cpp */,
-				CEF681471A594018008E4986 /* FCCalEngine.h */,
-			);
-			name = FCEngine;
-			path = ../Classes/FCEngine;
-			sourceTree = "<group>";
-		};
-		A58E4D581A57C84E00C298C7 /* FCGame */ = {
-			isa = PBXGroup;
-			children = (
-				A58E4D591A57C87B00C298C7 /* FCUnitFactory.cpp */,
-				A58E4D5A1A57C87B00C298C7 /* FCUnitFactory.h */,
-				CE95DA351A6E35170086CD5C /* FCSkillFactory.cpp */,
-				CE95DA361A6E35170086CD5C /* FCSkillFactory.h */,
-			);
-			name = FCGame;
-			path = ../Classes/FCGame;
-			sourceTree = "<group>";
-		};
 		A59A475D1952AD1000217F27 /* GoogleMobileAdsSdkiOS-6.9.3 */ = {
 			isa = PBXGroup;
 			children = (
@@ -923,25 +811,6 @@
 				A53BF73E1A1F807500369090 /* LHGameLayer.h */,
 			);
 			name = Game;
-			sourceTree = "<group>";
-		};
-		CE5B9A4A1A661BD200B28AE0 /* FCAction */ = {
-			isa = PBXGroup;
-			children = (
-				CE5B9A4B1A661BD200B28AE0 /* FCAction.cpp */,
-				CE5B9A4C1A661BD200B28AE0 /* FCAction.h */,
-				CE5B9A4E1A66206400B28AE0 /* FCCreateUnitAction.cpp */,
-				CE5B9A4F1A66206400B28AE0 /* FCCreateUnitAction.h */,
-				CE5B9A511A66384300B28AE0 /* FCShowUIAction.cpp */,
-				CE5B9A521A66384300B28AE0 /* FCShowUIAction.h */,
-				CE5B9A541A663D1400B28AE0 /* FCMoveAction.cpp */,
-				CE5B9A551A663D1400B28AE0 /* FCMoveAction.h */,
-				CE5B9A571A663D2300B28AE0 /* FCAttackAction.cpp */,
-				CE5B9A581A663D2300B28AE0 /* FCAttackAction.h */,
-				CE5B9A5A1A663D9B00B28AE0 /* FCControlAction.cpp */,
-				CE5B9A5B1A663D9B00B28AE0 /* FCControlAction.h */,
-			);
-			path = FCAction;
 			sourceTree = "<group>";
 		};
 		CECD83A71A42DB7200973211 /* libs */ = {
@@ -1169,19 +1038,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A51748A61A457723006A5152 /* LHWaitAlertView.cpp in Sources */,
-				A58E4D3D1A57BB6300C298C7 /* FCAlgo.cpp in Sources */,
-				CE5B9A501A66206400B28AE0 /* FCCreateUnitAction.cpp in Sources */,
-				A58E4D3F1A57BB6300C298C7 /* FCGameConfig.cpp in Sources */,
 				A53A8922197EDFCB0051B7D4 /* LHPauseScene.cpp in Sources */,
-				CE5B9A4D1A661BD200B28AE0 /* FCAction.cpp in Sources */,
-				A58E4D491A57BE3000C298C7 /* FCUnit.cpp in Sources */,
 				A5AA42CF196D0B8100DC3411 /* DeveloperInfoScence.cpp in Sources */,
 				A51748A91A45792C006A5152 /* LHGameChatView.cpp in Sources */,
 				A5FA68D31988A89D00108DB9 /* LHLeaderBoard.cpp in Sources */,
-				A58E4D421A57BB6300C298C7 /* FCMoveObject.cpp in Sources */,
 				A59A47861952B36B00217F27 /* ThirdPartyHelper.cpp in Sources */,
-				CE5B9A561A663D1400B28AE0 /* FCMoveAction.cpp in Sources */,
-				A58E4D5B1A57C87B00C298C7 /* FCUnitFactory.cpp in Sources */,
 				A5831E5A1A2864B700929F1D /* LHHttpManager.cpp in Sources */,
 				A5740DE819A8735D00AA33AE /* GuideScene.cpp in Sources */,
 				A594BE41194D450C001DEF30 /* GameOverScene.cpp in Sources */,
@@ -1190,30 +1051,17 @@
 				A5F9E3DB1A0E5DA20023ADB6 /* PHSprite.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				A51748AC1A49A619006A5152 /* LHDialog.cpp in Sources */,
-				CE5B9A5C1A663D9B00B28AE0 /* FCControlAction.cpp in Sources */,
 				A59A47FE1952CDBD00217F27 /* NDKHelper.cpp in Sources */,
 				A51748A31A4567D4006A5152 /* Dispatcher.cpp in Sources */,
-				A58E4D431A57BB6300C298C7 /* FCObject.cpp in Sources */,
 				A517489C1A4526CC006A5152 /* LHGameChat.cpp in Sources */,
 				A594EF391A445618004B65EA /* LHPomeloManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				A59A47FD1952CDBD00217F27 /* NDKCallbackNode.cpp in Sources */,
-				CE95DA371A6E35170086CD5C /* FCSkillFactory.cpp in Sources */,
-				CE5B9A591A663D2300B28AE0 /* FCAttackAction.cpp in Sources */,
-				CEF681481A594018008E4986 /* FCCalEngine.cpp in Sources */,
-				A58E4D511A57BE8100C298C7 /* FCSkill.cpp in Sources */,
 				A53BF73F1A1F807500369090 /* LHGameLayer.cpp in Sources */,
 				A577E95D198101510006052B /* LocalizedString.cpp in Sources */,
-				A58E4D541A57BE8E00C298C7 /* FCHero.cpp in Sources */,
-				A58E4D4E1A57BE6200C298C7 /* FCBuff.cpp in Sources */,
 				A5FA68C51988A3BD00108DB9 /* LHShareButton.cpp in Sources */,
-				CEF681431A5921A4008E4986 /* FCGameController.cpp in Sources */,
-				A58E4D3E1A57BB6300C298C7 /* FCAttackObject.cpp in Sources */,
-				CE5B9A531A66384300B28AE0 /* FCShowUIAction.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
-				A58E4D401A57BB6300C298C7 /* FCGameLayer.cpp in Sources */,
 				A59A47B41952C35900217F27 /* IOSNDKHelper.mm in Sources */,
-				A58E4D571A57C7C400C298C7 /* FCItem.cpp in Sources */,
 				A50697F3194750AD0008E3C3 /* PlayScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
