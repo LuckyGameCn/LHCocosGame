@@ -8,6 +8,7 @@
 
 #include "LHShareButton.h"
 #include "LHMacros.h"
+#include "NDKHelper.h"
 
 USING_NS_CC;
 
@@ -37,7 +38,14 @@ LHShareButton* LHShareButton::create(const char *normalImage, const char *select
             rd->saveToFile(CurrentScreen,Image::Format::PNG);
             
             std::string fp = StringUtils::format("%s%s",FileUtils::getInstance()->getWritablePath().c_str(),CurrentScreen);
+            
+            LHShareButton *sbt = bt;
            
+            CCDictionary *dic = CCDictionary::create();
+            dic->setObject(CCString::createWithFormat("%s",sbt->mShareText.c_str()), "sharetext");
+            dic->setObject(CCString::createWithFormat("%s",fp.c_str()), "imagepath");
+            dic->setObject(CCString::create(SHARE_TARGET_URL), "shareurl");
+//            SendMessageWithParams("shareClick", dic);
         }
     });
     

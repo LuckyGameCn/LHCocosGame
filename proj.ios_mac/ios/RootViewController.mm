@@ -48,6 +48,10 @@
     return self;
 }
 
+-(void)shareClick:(NSDictionary*)params{
+    
+}
+
 -(void)setAd:(id)p{
     NSDictionary *dic = p;
     NSString *tag = [dic objectForKey:@"setAd"];

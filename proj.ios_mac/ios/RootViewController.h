@@ -44,7 +44,7 @@
 
 - (GADRequest *)createRequest;
 - (void)initGADBannerWithAdPositionAtTop:(BOOL)isAdPositionAtTop;
-- (void)resizeViewsForOrientation:(UIInterfaceOrientation)toInt;
+//- (void)resizeViewsForOrientation:(UIInterfaceOrientation)toInt;
 
 - (void)initScreenAD;
 
