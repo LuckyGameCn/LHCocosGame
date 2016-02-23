@@ -41,6 +41,7 @@
 		5087E76B17EB910900C73F5D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		5087E78917EB974C00C73F5D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5087E78817EB974C00C73F5D /* AppKit.framework */; };
 		5087E78B17EB975400C73F5D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5087E78A17EB975400C73F5D /* OpenGL.framework */; };
+		6A1015E51C7C3BFA004D92FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A1015E41C7C3BFA004D92FB /* LaunchScreen.storyboard */; };
 		A50697F3194750AD0008E3C3 /* PlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50697F1194750AD0008E3C3 /* PlayScene.cpp */; };
 		A5132B5C198575E40002F355 /* devinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = A5132B5B198575E40002F355 /* devinfo.png */; };
 		A517489C1A4526CC006A5152 /* LHGameChat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A517489A1A4526CC006A5152 /* LHGameChat.cpp */; };
@@ -283,6 +284,7 @@
 		5087E77C17EB970100C73F5D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5087E78817EB974C00C73F5D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5087E78A17EB975400C73F5D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		6A1015E41C7C3BFA004D92FB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ios/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		A50697F1194750AD0008E3C3 /* PlayScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayScene.cpp; path = ../Classes/PlayScene.cpp; sourceTree = "<group>"; };
 		A50697F2194750AD0008E3C3 /* PlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayScene.h; path = ../Classes/PlayScene.h; sourceTree = "<group>"; };
 		A5132B5819856F010002F355 /* LHMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LHMacros.h; path = ../Classes/LHMacros.h; sourceTree = "<group>"; };
@@ -483,6 +485,7 @@
 				503AE0FD17EB989F00D1A890 /* Prefix.pch */,
 				503AE0FE17EB989F00D1A890 /* RootViewController.h */,
 				503AE0FF17EB989F00D1A890 /* RootViewController.mm */,
+				6A1015E41C7C3BFA004D92FB /* LaunchScreen.storyboard */,
 			);
 			name = ios;
 			path = Classes;
@@ -1004,6 +1007,7 @@
 				A51748B31A49B48E006A5152 /* input.png in Resources */,
 				A5F889F41A12832000AC6F64 /* replay.png in Resources */,
 				A51748BB1A49C8A3006A5152 /* lgreenback.png in Resources */,
+				6A1015E51C7C3BFA004D92FB /* LaunchScreen.storyboard in Resources */,
 				A594BDD119470429001DEF30 /* play.png in Resources */,
 				A577E96E19810ABA0006052B /* en_ls.plist in Resources */,
 				A53D15AF1A0759E600727F06 /* phsprite.png in Resources */,
@@ -1138,7 +1142,6 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1186,7 +1189,6 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
